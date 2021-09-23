@@ -1,0 +1,30 @@
+{
+	"title": "inRangeWithEqualUnder",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"GT": {
+						"courses_avg": 40
+					}
+				},
+				{
+					"LT": {
+						"courses_avg": 50
+					}
+				},
+				{
+					"EQ": {
+						"courses_avg": 35
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": []
+}

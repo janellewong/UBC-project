@@ -1,0 +1,209 @@
+{
+	"title": "not mkey",
+	"input": {
+		"WHERE": {
+			"EQ": {
+				"courses_avg": 69
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_dept"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_uuid": "15756",
+			"courses_dept": "busi",
+			"courses_id": "393",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "64832",
+			"courses_dept": "chem",
+			"courses_id": "313",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "64831",
+			"courses_dept": "chem",
+			"courses_id": "313",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "70063",
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "23351",
+			"courses_dept": "comm",
+			"courses_id": "453",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "52026",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "11512",
+			"courses_dept": "econ",
+			"courses_id": "350",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "11511",
+			"courses_dept": "econ",
+			"courses_id": "350",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "14416",
+			"courses_dept": "educ",
+			"courses_id": "172",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "14415",
+			"courses_dept": "educ",
+			"courses_id": "172",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "97164",
+			"courses_dept": "geog",
+			"courses_id": "429",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "97163",
+			"courses_dept": "geog",
+			"courses_id": "429",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "16039",
+			"courses_dept": "ital",
+			"courses_id": "405",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "16038",
+			"courses_dept": "ital",
+			"courses_id": "405",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "66916",
+			"courses_dept": "japn",
+			"courses_id": "103",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "26823",
+			"courses_dept": "japn",
+			"courses_id": "100",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "5134",
+			"courses_dept": "math",
+			"courses_id": "102",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "93342",
+			"courses_dept": "musc",
+			"courses_id": "354",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "93341",
+			"courses_dept": "musc",
+			"courses_id": "354",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "98685",
+			"courses_dept": "phys",
+			"courses_id": "109",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "80937",
+			"courses_dept": "psyc",
+			"courses_id": "331",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "89766",
+			"courses_dept": "psyc",
+			"courses_id": "320",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "89765",
+			"courses_dept": "psyc",
+			"courses_id": "320",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "67908",
+			"courses_dept": "psyc",
+			"courses_id": "304",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "80214",
+			"courses_dept": "soci",
+			"courses_id": "328",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "48934",
+			"courses_dept": "span",
+			"courses_id": "202",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "73928",
+			"courses_dept": "span",
+			"courses_id": "102",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "23832",
+			"courses_dept": "span",
+			"courses_id": "101",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "58308",
+			"courses_dept": "stat",
+			"courses_id": "241",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "83276",
+			"courses_dept": "visa",
+			"courses_id": "210",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "85316",
+			"courses_dept": "wood",
+			"courses_id": "225",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "81194",
+			"courses_dept": "wrds",
+			"courses_id": "150",
+			"courses_avg": 69
+		}
+	]
+}

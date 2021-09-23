@@ -1,0 +1,12 @@
+{
+	"title": "Invalid Query extra key",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid"]
+		},
+		"MESLEEPY": {}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

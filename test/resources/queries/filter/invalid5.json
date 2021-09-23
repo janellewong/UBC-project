@@ -1,0 +1,12 @@
+{
+	"title": "Invalid Query no column",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"ORDER": "courses_avg"
+		},
+		"MESLEEPY": {}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

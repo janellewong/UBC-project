@@ -1,0 +1,18 @@
+{
+	"title": "lowercase not",
+	"input": {
+		"WHERE": {
+			"not": {
+				"LT": {
+					"courses_avg": 98
+				}
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

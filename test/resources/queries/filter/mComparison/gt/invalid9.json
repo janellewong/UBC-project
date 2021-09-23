@@ -1,0 +1,16 @@
+{
+	"title": "invalid GT as invalid id (diff dataset)",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"bruh_avg": 69
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["bruh_uuid", "bruh_dept", "bruh_id", "bruh_avg"],
+			"ORDER": "bruh_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

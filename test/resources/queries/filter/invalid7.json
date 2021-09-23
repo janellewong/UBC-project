@@ -1,0 +1,6 @@
+{
+	"title": "Array Query",
+	"input": [],
+	"errorExpected": true,
+	"with": "InsightError"
+}

@@ -1,0 +1,26 @@
+{
+	"title": "extra key",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"courses_id": "310"
+					}
+				},
+				{
+					"IS": {
+						"courses_dept": "cpsc"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg",
+			"HELLO": "WORLD"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

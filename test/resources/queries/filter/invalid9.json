@@ -1,0 +1,10 @@
+{
+	"title": "no where",
+	"input": {
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid"]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

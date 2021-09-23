@@ -1,0 +1,11 @@
+{
+	"title": "no columns",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

@@ -1,0 +1,143 @@
+{
+	"title": "SELECT courses_uuid, courses_dept, courses_id, courses_avg WHERE courses_avg = 69.5",
+	"input": {
+		"WHERE": {
+			"EQ": {
+				"courses_avg": 69.5
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_uuid": "66486",
+			"courses_dept": "psyc",
+			"courses_id": "304",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "62280",
+			"courses_dept": "micb",
+			"courses_id": "201",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "29914",
+			"courses_dept": "math",
+			"courses_id": "340",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "3868",
+			"courses_dept": "math",
+			"courses_id": "253",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "53218",
+			"courses_dept": "ital",
+			"courses_id": "102",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "28573",
+			"courses_dept": "geog",
+			"courses_id": "350",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "37171",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "74293",
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "2773",
+			"courses_dept": "civl",
+			"courses_id": "406",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "89301",
+			"courses_dept": "chem",
+			"courses_id": "315",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "70150",
+			"courses_dept": "chem",
+			"courses_id": "315",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "54478",
+			"courses_dept": "chem",
+			"courses_id": "123",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "73518",
+			"courses_dept": "busi",
+			"courses_id": "370",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "20642",
+			"courses_dept": "biol",
+			"courses_id": "352",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "20641",
+			"courses_dept": "biol",
+			"courses_id": "352",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "18083",
+			"courses_dept": "biol",
+			"courses_id": "205",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "18082",
+			"courses_dept": "biol",
+			"courses_id": "205",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "18043",
+			"courses_dept": "biol",
+			"courses_id": "140",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "8256",
+			"courses_dept": "apsc",
+			"courses_id": "201",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "25169",
+			"courses_dept": "anth",
+			"courses_id": "220",
+			"courses_avg": 69.5
+		},
+		{
+			"courses_uuid": "25168",
+			"courses_dept": "anth",
+			"courses_id": "220",
+			"courses_avg": 69.5
+		}
+	]
+}

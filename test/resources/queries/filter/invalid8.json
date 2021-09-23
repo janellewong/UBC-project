@@ -1,0 +1,6 @@
+{
+	"title": "Null Query",
+	"input": null,
+	"errorExpected": true,
+	"with": "InsightError"
+}

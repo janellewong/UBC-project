@@ -1,0 +1,2348 @@
+{
+	"title": "IS valid asterix both sides",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_instructor": "*gregor*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg", "courses_instructor"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_uuid": "89252",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 56.2,
+			"courses_instructor": "dake, gregory;perrin, david"
+		},
+		{
+			"courses_uuid": "89249",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 58.6,
+			"courses_instructor": "dake, gregory;tanner, martin"
+		},
+		{
+			"courses_uuid": "89969",
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_avg": 59.8,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "41002",
+			"courses_dept": "musc",
+			"courses_id": "454",
+			"courses_avg": 60.04,
+			"courses_instructor": "butler, gregory g"
+		},
+		{
+			"courses_uuid": "19278",
+			"courses_dept": "musc",
+			"courses_id": "121",
+			"courses_avg": 61.82,
+			"courses_instructor": "butler, gregory g"
+		},
+		{
+			"courses_uuid": "65842",
+			"courses_dept": "musc",
+			"courses_id": "121",
+			"courses_avg": 62.4,
+			"courses_instructor": "butler, gregory g"
+		},
+		{
+			"courses_uuid": "70102",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 62.55,
+			"courses_instructor": "dake, gregory;stewart, jaclyn"
+		},
+		{
+			"courses_uuid": "66007",
+			"courses_dept": "musc",
+			"courses_id": "454",
+			"courses_avg": 63.52,
+			"courses_instructor": "butler, gregory g"
+		},
+		{
+			"courses_uuid": "24384",
+			"courses_dept": "geob",
+			"courses_id": "102",
+			"courses_avg": 63.88,
+			"courses_instructor": "donner, simon;henry, gregory h"
+		},
+		{
+			"courses_uuid": "29151",
+			"courses_dept": "geog",
+			"courses_id": "446",
+			"courses_avg": 64.5,
+			"courses_instructor": "feldman, gregory"
+		},
+		{
+			"courses_uuid": "97642",
+			"courses_dept": "frst",
+			"courses_id": "232",
+			"courses_avg": 64.55,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "40834",
+			"courses_dept": "musc",
+			"courses_id": "121",
+			"courses_avg": 64.75,
+			"courses_instructor": "butler, gregory g"
+		},
+		{
+			"courses_uuid": "64774",
+			"courses_dept": "chem",
+			"courses_id": "203",
+			"courses_avg": 64.82,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "89228",
+			"courses_dept": "chem",
+			"courses_id": "154",
+			"courses_avg": 64.97,
+			"courses_instructor": "gibson, gregory"
+		},
+		{
+			"courses_uuid": "47224",
+			"courses_dept": "math",
+			"courses_id": "437",
+			"courses_avg": 65.17,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "89253",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 65.32,
+			"courses_instructor": "dake, gregory;perrin, david"
+		},
+		{
+			"courses_uuid": "87810",
+			"courses_dept": "biol",
+			"courses_id": "111",
+			"courses_avg": 65.9,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "66198",
+			"courses_dept": "geob",
+			"courses_id": "102",
+			"courses_avg": 65.99,
+			"courses_instructor": "bovis, michael j;henry, gregory h;tba"
+		},
+		{
+			"courses_uuid": "3476",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 66.19,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "47003",
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_avg": 66.2,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "14467",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 66.68,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "54006",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 66.78,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "63143",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 67.17,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48290",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 67.21,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "95190",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 67.47,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "27209",
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_avg": 67.61,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "14459",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 67.66,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "86112",
+			"courses_dept": "biol",
+			"courses_id": "111",
+			"courses_avg": 67.7,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "37512",
+			"courses_dept": "geob",
+			"courses_id": "102",
+			"courses_avg": 67.77,
+			"courses_instructor": "hamdan, khaled;henry, gregory h"
+		},
+		{
+			"courses_uuid": "42113",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 67.79,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "88922",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 67.97,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "89250",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 68.06,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "87005",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 68.18,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "82128",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 68.28,
+			"courses_instructor": "dake, gregory;stewart, jaclyn"
+		},
+		{
+			"courses_uuid": "62149",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 68.29,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "57035",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 68.5,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "54911",
+			"courses_dept": "frst",
+			"courses_id": "232",
+			"courses_avg": 68.76,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "64344",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 68.76,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "19628",
+			"courses_dept": "biol",
+			"courses_id": "300",
+			"courses_avg": 68.82,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "4219",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 68.86,
+			"courses_instructor": "berg, celina;miller, gregor"
+		},
+		{
+			"courses_uuid": "29089",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 69.11,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "11932",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 69.11,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "88927",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 69.23,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "55056",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 69.28,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "97437",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 69.29,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "65334",
+			"courses_dept": "geob",
+			"courses_id": "102",
+			"courses_avg": 69.38,
+			"courses_instructor": "hamdan, khaled;henry, gregory h"
+		},
+		{
+			"courses_uuid": "55053",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 69.42,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "81451",
+			"courses_dept": "comm",
+			"courses_id": "291",
+			"courses_avg": 69.46,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "54105",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 69.47,
+			"courses_instructor": "bole, gregory michael;keeling, naomi;whitton, jeannette"
+		},
+		{
+			"courses_uuid": "64281",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 69.58,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42145",
+			"courses_dept": "biol",
+			"courses_id": "230",
+			"courses_avg": 69.65,
+			"courses_instructor": "crutsinger, gregory;goodey, wayne;jankowski, jill"
+		},
+		{
+			"courses_uuid": "51094",
+			"courses_dept": "geob",
+			"courses_id": "207",
+			"courses_avg": 69.67,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "89026",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 69.7,
+			"courses_instructor": "bole, gregory michael;whitton, jeannette"
+		},
+		{
+			"courses_uuid": "3485",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 69.72,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "42146",
+			"courses_dept": "biol",
+			"courses_id": "230",
+			"courses_avg": 69.8,
+			"courses_instructor": "crutsinger, gregory;goodey, wayne;jankowski, jill"
+		},
+		{
+			"courses_uuid": "54065",
+			"courses_dept": "biol",
+			"courses_id": "300",
+			"courses_avg": 69.91,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "3535",
+			"courses_dept": "geog",
+			"courses_id": "446",
+			"courses_avg": 69.92,
+			"courses_instructor": "feldman, gregory"
+		},
+		{
+			"courses_uuid": "48329",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 69.94,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "28571",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 69.98,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "54007",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 70.1,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "49850",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.11,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "81440",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 70.18,
+			"courses_instructor": "huh, woonghee tim;werker, gregory"
+		},
+		{
+			"courses_uuid": "64259",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.22,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "57087",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.23,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "79524",
+			"courses_dept": "civl",
+			"courses_id": "215",
+			"courses_avg": 70.24,
+			"courses_instructor": "lawrence, gregory"
+		},
+		{
+			"courses_uuid": "81439",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 70.28,
+			"courses_instructor": "huh, woonghee tim;werker, gregory"
+		},
+		{
+			"courses_uuid": "48337",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.37,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48206",
+			"courses_dept": "biol",
+			"courses_id": "111",
+			"courses_avg": 70.4,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "3495",
+			"courses_dept": "geog",
+			"courses_id": "353",
+			"courses_avg": 70.41,
+			"courses_instructor": "feldman, gregory"
+		},
+		{
+			"courses_uuid": "57085",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.5,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "28248",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 70.52,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "48317",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.52,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "44654",
+			"courses_dept": "geob",
+			"courses_id": "307",
+			"courses_avg": 70.57,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "18824",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.58,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "62157",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.71,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "53251",
+			"courses_dept": "civl",
+			"courses_id": "215",
+			"courses_avg": 70.73,
+			"courses_instructor": "lawrence, gregory"
+		},
+		{
+			"courses_uuid": "72319",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.75,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "62342",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.78,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "24404",
+			"courses_dept": "geob",
+			"courses_id": "307",
+			"courses_avg": 70.82,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "57091",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.83,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "19642",
+			"courses_dept": "biol",
+			"courses_id": "317",
+			"courses_avg": 70.83,
+			"courses_instructor": "stopps, gregory j"
+		},
+		{
+			"courses_uuid": "95242",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 70.9,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "81442",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 70.96,
+			"courses_instructor": "huh, woonghee tim;werker, gregory"
+		},
+		{
+			"courses_uuid": "48312",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48309",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.06,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "1248",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.07,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "87141",
+			"courses_dept": "biol",
+			"courses_id": "111",
+			"courses_avg": 71.09,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "27207",
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_avg": 71.11,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "97409",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.12,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42192",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 71.13,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "20539",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 71.23,
+			"courses_instructor": "bole, gregory michael;cooke, james"
+		},
+		{
+			"courses_uuid": "3853",
+			"courses_dept": "math",
+			"courses_id": "223",
+			"courses_avg": 71.35,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "46653",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.4,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "37163",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.42,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "12000",
+			"courses_dept": "geog",
+			"courses_id": "497",
+			"courses_avg": 71.46,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "54367",
+			"courses_dept": "wood",
+			"courses_id": "241",
+			"courses_avg": 71.5,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "57033",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.58,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48345",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.58,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "55050",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 71.63,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "65356",
+			"courses_dept": "geob",
+			"courses_id": "307",
+			"courses_avg": 71.69,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "28319",
+			"courses_dept": "geog",
+			"courses_id": "497",
+			"courses_avg": 71.74,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "95155",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.74,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "19566",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 71.76,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "89330",
+			"courses_dept": "chem",
+			"courses_id": "341",
+			"courses_avg": 71.78,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "28563",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 71.79,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "18806",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 71.96,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "31304",
+			"courses_dept": "chem",
+			"courses_id": "341",
+			"courses_avg": 71.97,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "95188",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "28256",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.05,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "45526",
+			"courses_dept": "wood",
+			"courses_id": "487",
+			"courses_avg": 72.08,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "42159",
+			"courses_dept": "biol",
+			"courses_id": "300",
+			"courses_avg": 72.08,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "37532",
+			"courses_dept": "geob",
+			"courses_id": "307",
+			"courses_avg": 72.09,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "42810",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.09,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "97376",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.1,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "29097",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.11,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "45013",
+			"courses_dept": "civl",
+			"courses_id": "215",
+			"courses_avg": 72.12,
+			"courses_instructor": "lawrence, gregory"
+		},
+		{
+			"courses_uuid": "81449",
+			"courses_dept": "comm",
+			"courses_id": "291",
+			"courses_avg": 72.13,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "20732",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 72.14,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "10733",
+			"courses_dept": "civl",
+			"courses_id": "215",
+			"courses_avg": 72.23,
+			"courses_instructor": "lawrence, gregory"
+		},
+		{
+			"courses_uuid": "41360",
+			"courses_dept": "engl",
+			"courses_id": "111",
+			"courses_avg": 72.27,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "81448",
+			"courses_dept": "comm",
+			"courses_id": "291",
+			"courses_avg": 72.37,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "6896",
+			"courses_dept": "scie",
+			"courses_id": "113",
+			"courses_avg": 72.44,
+			"courses_instructor": "bole, gregory michael;steyn, douw gerbrand"
+		},
+		{
+			"courses_uuid": "81441",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 72.44,
+			"courses_instructor": "huh, woonghee tim;werker, gregory"
+		},
+		{
+			"courses_uuid": "97407",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.48,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "55127",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 72.52,
+			"courses_instructor": "bole, gregory michael;whitton, jeannette"
+		},
+		{
+			"courses_uuid": "11940",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.53,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "97124",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.54,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "37160",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.55,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "38770",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 72.55,
+			"courses_instructor": "graham, brian;werker, gregory"
+		},
+		{
+			"courses_uuid": "46654",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 72.58,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "37188",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.65,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "20617",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 72.65,
+			"courses_instructor": "adams, keith;bole, gregory michael;whitton, jeannette"
+		},
+		{
+			"courses_uuid": "42193",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 72.68,
+			"courses_instructor": "bole, gregory michael;draghi, jeremy"
+		},
+		{
+			"courses_uuid": "87013",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.72,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "66221",
+			"courses_dept": "geob",
+			"courses_id": "307",
+			"courses_avg": 72.77,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "31224",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 72.82,
+			"courses_instructor": "dake, gregory;stewart, jaclyn"
+		},
+		{
+			"courses_uuid": "13915",
+			"courses_dept": "math",
+			"courses_id": "437",
+			"courses_avg": 72.83,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "37146",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.83,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "88937",
+			"courses_dept": "biol",
+			"courses_id": "140",
+			"courses_avg": 72.83,
+			"courses_instructor": "bole, gregory michael;pollock, carol;sun, chin"
+		},
+		{
+			"courses_uuid": "28580",
+			"courses_dept": "geog",
+			"courses_id": "353",
+			"courses_avg": 72.84,
+			"courses_instructor": "feldman, gregory"
+		},
+		{
+			"courses_uuid": "97359",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.84,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48385",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 72.87,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "48271",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 72.89,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "54409",
+			"courses_dept": "wood",
+			"courses_id": "487",
+			"courses_avg": 72.92,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "3560",
+			"courses_dept": "geog",
+			"courses_id": "497",
+			"courses_avg": 72.93,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "95193",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "97322",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 73.06,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "42194",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 73.06,
+			"courses_instructor": "bole, gregory michael;draghi, jeremy"
+		},
+		{
+			"courses_uuid": "19671",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 73.08,
+			"courses_instructor": "bole, gregory michael;keeling, naomi;whitton, jeannette"
+		},
+		{
+			"courses_uuid": "31670",
+			"courses_dept": "chem",
+			"courses_id": "330",
+			"courses_avg": 73.11,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "1249",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.13,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "72129",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 73.17,
+			"courses_instructor": "bole, gregory michael;weir, laura"
+		},
+		{
+			"courses_uuid": "93915",
+			"courses_dept": "musc",
+			"courses_id": "454",
+			"courses_avg": 73.2,
+			"courses_instructor": "butler, gregory g"
+		},
+		{
+			"courses_uuid": "57052",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.23,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "63137",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.25,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "97182",
+			"courses_dept": "geog",
+			"courses_id": "497",
+			"courses_avg": 73.31,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "84802",
+			"courses_dept": "civl",
+			"courses_id": "215",
+			"courses_avg": 73.31,
+			"courses_instructor": "lawrence, gregory"
+		},
+		{
+			"courses_uuid": "67501",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 73.33,
+			"courses_instructor": "huh, woonghee tim;werker, gregory"
+		},
+		{
+			"courses_uuid": "85318",
+			"courses_dept": "wood",
+			"courses_id": "241",
+			"courses_avg": 73.44,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "79176",
+			"courses_dept": "eosc",
+			"courses_id": "422",
+			"courses_avg": 73.44,
+			"courses_instructor": "dipple, gregory;kennedy, lori"
+		},
+		{
+			"courses_uuid": "57015",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 73.49,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "2415",
+			"courses_dept": "eosc",
+			"courses_id": "322",
+			"courses_avg": 73.5,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "45773",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 73.5,
+			"courses_instructor": "cooper, kendra;miller, gregor"
+		},
+		{
+			"courses_uuid": "61084",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.53,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "89251",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 73.54,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "41419",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.59,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "72054",
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_avg": 73.62,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "38559",
+			"courses_dept": "eosc",
+			"courses_id": "322",
+			"courses_avg": 73.63,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "81450",
+			"courses_dept": "comm",
+			"courses_id": "291",
+			"courses_avg": 73.65,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "38772",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 73.65,
+			"courses_instructor": "huh, woonghee tim;werker, gregory"
+		},
+		{
+			"courses_uuid": "18048",
+			"courses_dept": "biol",
+			"courses_id": "140",
+			"courses_avg": 73.65,
+			"courses_instructor": "bole, gregory michael;pollock, carol"
+		},
+		{
+			"courses_uuid": "50154",
+			"courses_dept": "geob",
+			"courses_id": "309",
+			"courses_avg": 73.68,
+			"courses_instructor": "christen, andreas;eaton, brett;henry, gregory h;koppes, michele"
+		},
+		{
+			"courses_uuid": "4218",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 73.7,
+			"courses_instructor": "khosravi, hassan;miller, gregor"
+		},
+		{
+			"courses_uuid": "37237",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 73.73,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "63130",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.8,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "86362",
+			"courses_dept": "eosc",
+			"courses_id": "322",
+			"courses_avg": 73.83,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "97386",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.87,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "67502",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 73.89,
+			"courses_instructor": "huh, woonghee tim;werker, gregory"
+		},
+		{
+			"courses_uuid": "97344",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "18058",
+			"courses_dept": "biol",
+			"courses_id": "140",
+			"courses_avg": 74.04,
+			"courses_instructor": "bole, gregory michael;pollock, carol"
+		},
+		{
+			"courses_uuid": "22547",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.06,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42841",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.1,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "37192",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.1,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42882",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 74.18,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "79156",
+			"courses_dept": "eosc",
+			"courses_id": "331",
+			"courses_avg": 74.19,
+			"courses_instructor": "dipple, gregory;hickey, kenneth;mortensen, james;scoates, james stewart;tosdal, richard"
+		},
+		{
+			"courses_uuid": "28637",
+			"courses_dept": "geog",
+			"courses_id": "497",
+			"courses_avg": 74.22,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "19638",
+			"courses_dept": "biol",
+			"courses_id": "306",
+			"courses_avg": 74.23,
+			"courses_instructor": "bradfield, gary;crutsinger, gregory;goodey, wayne"
+		},
+		{
+			"courses_uuid": "83389",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 74.24,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "72130",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 74.24,
+			"courses_instructor": "bole, gregory michael;weir, laura"
+		},
+		{
+			"courses_uuid": "45772",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 74.38,
+			"courses_instructor": "knorr, edwin max;miller, gregor"
+		},
+		{
+			"courses_uuid": "47577",
+			"courses_dept": "civl",
+			"courses_id": "417",
+			"courses_avg": 74.41,
+			"courses_instructor": "lawrence, gregory"
+		},
+		{
+			"courses_uuid": "42876",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 74.44,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "4327",
+			"courses_dept": "wood",
+			"courses_id": "487",
+			"courses_avg": 74.47,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "42791",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.53,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "17730",
+			"courses_dept": "eosc",
+			"courses_id": "322",
+			"courses_avg": 74.58,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "37177",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.59,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "95234",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 74.61,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "62165",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.63,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "70177",
+			"courses_dept": "chem",
+			"courses_id": "341",
+			"courses_avg": 74.69,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "38773",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 74.72,
+			"courses_instructor": "huh, woonghee tim;werker, gregory"
+		},
+		{
+			"courses_uuid": "54586",
+			"courses_dept": "chem",
+			"courses_id": "341",
+			"courses_avg": 74.72,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "64258",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.8,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "76096",
+			"courses_dept": "apbi",
+			"courses_id": "328",
+			"courses_avg": 75,
+			"courses_instructor": "stopps, gregory j"
+		},
+		{
+			"courses_uuid": "73005",
+			"courses_dept": "math",
+			"courses_id": "223",
+			"courses_avg": 75.02,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "41353",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 75.06,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "64282",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 75.1,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "57098",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 75.19,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "20616",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 75.19,
+			"courses_instructor": "adams, keith;bole, gregory michael;whitton, jeannette"
+		},
+		{
+			"courses_uuid": "70586",
+			"courses_dept": "eosc",
+			"courses_id": "322",
+			"courses_avg": 75.22,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "29177",
+			"courses_dept": "geog",
+			"courses_id": "497",
+			"courses_avg": 75.29,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "20615",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 75.35,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "42812",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 75.41,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "54507",
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_avg": 75.42,
+			"courses_instructor": "dake, gregory;stewart, jaclyn"
+		},
+		{
+			"courses_uuid": "4217",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 75.43,
+			"courses_instructor": "khosravi, hassan;miller, gregor"
+		},
+		{
+			"courses_uuid": "4079",
+			"courses_dept": "biol",
+			"courses_id": "336",
+			"courses_avg": 75.46,
+			"courses_instructor": "bole, gregory michael"
+		},
+		{
+			"courses_uuid": "89416",
+			"courses_dept": "scie",
+			"courses_id": "113",
+			"courses_avg": 75.48,
+			"courses_instructor": "bole, gregory michael;fox, joanne alison;han, andrea"
+		},
+		{
+			"courses_uuid": "19637",
+			"courses_dept": "biol",
+			"courses_id": "306",
+			"courses_avg": 75.56,
+			"courses_instructor": "bradfield, gary;crutsinger, gregory;goodey, wayne"
+		},
+		{
+			"courses_uuid": "66583",
+			"courses_dept": "wood",
+			"courses_id": "487",
+			"courses_avg": 75.57,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "64358",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 75.61,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "63104",
+			"courses_dept": "engl",
+			"courses_id": "100",
+			"courses_avg": 75.66,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "82210",
+			"courses_dept": "chem",
+			"courses_id": "341",
+			"courses_avg": 75.68,
+			"courses_instructor": "dake, gregory"
+		},
+		{
+			"courses_uuid": "59268",
+			"courses_dept": "arch",
+			"courses_id": "411",
+			"courses_avg": 75.74,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "50150",
+			"courses_dept": "geob",
+			"courses_id": "307",
+			"courses_avg": 75.78,
+			"courses_instructor": "henry, gregory h"
+		},
+		{
+			"courses_uuid": "2734",
+			"courses_dept": "civl",
+			"courses_id": "215",
+			"courses_avg": 75.99,
+			"courses_instructor": "lawrence, gregory"
+		},
+		{
+			"courses_uuid": "79140",
+			"courses_dept": "eosc",
+			"courses_id": "322",
+			"courses_avg": 76.15,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "91170",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 76.3,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "85358",
+			"courses_dept": "wood",
+			"courses_id": "487",
+			"courses_avg": 76.41,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "68929",
+			"courses_dept": "eosc",
+			"courses_id": "322",
+			"courses_avg": 76.46,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "73805",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 76.46,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "37231",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 76.55,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "49838",
+			"courses_dept": "wood",
+			"courses_id": "487",
+			"courses_avg": 76.62,
+			"courses_instructor": "smith, gregory"
+		},
+		{
+			"courses_uuid": "22532",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 76.64,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "38771",
+			"courses_dept": "comm",
+			"courses_id": "290",
+			"courses_avg": 76.8,
+			"courses_instructor": "graham, brian;werker, gregory"
+		},
+		{
+			"courses_uuid": "22593",
+			"courses_dept": "engl",
+			"courses_id": "362",
+			"courses_avg": 76.87,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "95371",
+			"courses_dept": "engl",
+			"courses_id": "362",
+			"courses_avg": 76.95,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "57131",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 76.95,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "72322",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 76.98,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "37536",
+			"courses_dept": "geob",
+			"courses_id": "309",
+			"courses_avg": 77.08,
+			"courses_instructor": "henry, gregory h;koppes, michele;moore, robert daniel"
+		},
+		{
+			"courses_uuid": "38745",
+			"courses_dept": "comm",
+			"courses_id": "204",
+			"courses_avg": 77.08,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "97531",
+			"courses_dept": "engl",
+			"courses_id": "362",
+			"courses_avg": 77.09,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "70070",
+			"courses_dept": "chem",
+			"courses_id": "123",
+			"courses_avg": 77.1,
+			"courses_instructor": "dake, gregory;li, hongbin"
+		},
+		{
+			"courses_uuid": "63245",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.11,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "47869",
+			"courses_dept": "civl",
+			"courses_id": "215",
+			"courses_avg": 77.17,
+			"courses_instructor": "lawrence, gregory"
+		},
+		{
+			"courses_uuid": "10502",
+			"courses_dept": "arch",
+			"courses_id": "511",
+			"courses_avg": 77.33,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "66225",
+			"courses_dept": "geob",
+			"courses_id": "309",
+			"courses_avg": 77.35,
+			"courses_instructor": "eaton, brett;henry, gregory h"
+		},
+		{
+			"courses_uuid": "65377",
+			"courses_dept": "geob",
+			"courses_id": "409",
+			"courses_avg": 77.4,
+			"courses_instructor": "henry, gregory h;koppes, michele"
+		},
+		{
+			"courses_uuid": "43188",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.43,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "37551",
+			"courses_dept": "geob",
+			"courses_id": "409",
+			"courses_avg": 77.5,
+			"courses_instructor": "henry, gregory h;koppes, michele"
+		},
+		{
+			"courses_uuid": "3423",
+			"courses_dept": "scie",
+			"courses_id": "113",
+			"courses_avg": 77.63,
+			"courses_instructor": "bole, gregory michael;fox, joanne alison;han, andrea"
+		},
+		{
+			"courses_uuid": "61083",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.69,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "41486",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 78.12,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "48512",
+			"courses_dept": "engl",
+			"courses_id": "362",
+			"courses_avg": 78.28,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "28454",
+			"courses_dept": "arch",
+			"courses_id": "411",
+			"courses_avg": 78.41,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "38746",
+			"courses_dept": "comm",
+			"courses_id": "204",
+			"courses_avg": 78.54,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "84874",
+			"courses_dept": "civl",
+			"courses_id": "478",
+			"courses_avg": 78.73,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "63201",
+			"courses_dept": "engl",
+			"courses_id": "490",
+			"courses_avg": 78.81,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "11230",
+			"courses_dept": "arch",
+			"courses_id": "513",
+			"courses_avg": 78.81,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "66122",
+			"courses_dept": "basc",
+			"courses_id": "550",
+			"courses_avg": 78.84,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "65360",
+			"courses_dept": "geob",
+			"courses_id": "309",
+			"courses_avg": 78.95,
+			"courses_instructor": "eaton, brett;henry, gregory h;mckendry, ian"
+		},
+		{
+			"courses_uuid": "53324",
+			"courses_dept": "civl",
+			"courses_id": "478",
+			"courses_avg": 79.08,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "5005",
+			"courses_dept": "arch",
+			"courses_id": "511",
+			"courses_avg": 79.09,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "96321",
+			"courses_dept": "comm",
+			"courses_id": "291",
+			"courses_avg": 79.37,
+			"courses_instructor": "berkowitz, jonathan;werker, gregory"
+		},
+		{
+			"courses_uuid": "66717",
+			"courses_dept": "busi",
+			"courses_id": "291",
+			"courses_avg": 79.5,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "32002",
+			"courses_dept": "math",
+			"courses_id": "437",
+			"courses_avg": 79.71,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "66121",
+			"courses_dept": "basc",
+			"courses_id": "550",
+			"courses_avg": 79.8,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "28468",
+			"courses_dept": "arch",
+			"courses_id": "511",
+			"courses_avg": 79.88,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "22331",
+			"courses_dept": "bama",
+			"courses_id": "541",
+			"courses_avg": 79.92,
+			"courses_instructor": "silk, timothy;werker, gregory"
+		},
+		{
+			"courses_uuid": "60395",
+			"courses_dept": "bama",
+			"courses_id": "541",
+			"courses_avg": 80,
+			"courses_instructor": "silk, timothy;werker, gregory"
+		},
+		{
+			"courses_uuid": "59289",
+			"courses_dept": "arch",
+			"courses_id": "513",
+			"courses_avg": 80.12,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "22330",
+			"courses_dept": "bama",
+			"courses_id": "541",
+			"courses_avg": 80.24,
+			"courses_instructor": "silk, timothy;werker, gregory"
+		},
+		{
+			"courses_uuid": "13321",
+			"courses_dept": "bama",
+			"courses_id": "541",
+			"courses_avg": 80.36,
+			"courses_instructor": "silk, timothy;werker, gregory"
+		},
+		{
+			"courses_uuid": "60394",
+			"courses_dept": "bama",
+			"courses_id": "541",
+			"courses_avg": 80.39,
+			"courses_instructor": "silk, timothy;werker, gregory"
+		},
+		{
+			"courses_uuid": "13320",
+			"courses_dept": "bama",
+			"courses_id": "541",
+			"courses_avg": 80.47,
+			"courses_instructor": "silk, timothy;werker, gregory"
+		},
+		{
+			"courses_uuid": "84795",
+			"courses_dept": "civl",
+			"courses_id": "201",
+			"courses_avg": 80.64,
+			"courses_instructor": "berube, pierre;isaacson, michael d;johnson, gregory"
+		},
+		{
+			"courses_uuid": "53246",
+			"courses_dept": "civl",
+			"courses_id": "202",
+			"courses_avg": 80.76,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "56249",
+			"courses_dept": "arch",
+			"courses_id": "511",
+			"courses_avg": 81.23,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "56271",
+			"courses_dept": "arch",
+			"courses_id": "531",
+			"courses_avg": 81.3,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "47953",
+			"courses_dept": "civl",
+			"courses_id": "478",
+			"courses_avg": 81.31,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "11226",
+			"courses_dept": "arch",
+			"courses_id": "511",
+			"courses_avg": 81.42,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "47260",
+			"courses_dept": "math",
+			"courses_id": "537",
+			"courses_avg": 81.43,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "10488",
+			"courses_dept": "arch",
+			"courses_id": "411",
+			"courses_avg": 81.47,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "66123",
+			"courses_dept": "basc",
+			"courses_id": "550",
+			"courses_avg": 81.5,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "2824",
+			"courses_dept": "civl",
+			"courses_id": "478",
+			"courses_avg": 81.73,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "98480",
+			"courses_dept": "babs",
+			"courses_id": "540",
+			"courses_avg": 81.87,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "79517",
+			"courses_dept": "civl",
+			"courses_id": "201",
+			"courses_avg": 82.06,
+			"courses_instructor": "hall, eric;isaacson, michael d;johnson, gregory"
+		},
+		{
+			"courses_uuid": "10506",
+			"courses_dept": "arch",
+			"courses_id": "513",
+			"courses_avg": 82.1,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "77507",
+			"courses_dept": "arch",
+			"courses_id": "511",
+			"courses_avg": 82.11,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "10802",
+			"courses_dept": "civl",
+			"courses_id": "445",
+			"courses_avg": 82.18,
+			"courses_instructor": "howie, john;johnson, gregory;lo, kwang victor;ventura, carlos estuardo"
+		},
+		{
+			"courses_uuid": "31376",
+			"courses_dept": "basc",
+			"courses_id": "550",
+			"courses_avg": 82.22,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "28472",
+			"courses_dept": "arch",
+			"courses_id": "513",
+			"courses_avg": 82.44,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "11208",
+			"courses_dept": "arch",
+			"courses_id": "411",
+			"courses_avg": 82.52,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "66119",
+			"courses_dept": "basc",
+			"courses_id": "524",
+			"courses_avg": 82.68,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "45006",
+			"courses_dept": "civl",
+			"courses_id": "201",
+			"courses_avg": 83.04,
+			"courses_instructor": "berube, pierre;isaacson, michael d;johnson, gregory"
+		},
+		{
+			"courses_uuid": "70633",
+			"courses_dept": "eosc",
+			"courses_id": "430",
+			"courses_avg": 83.2,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "8012",
+			"courses_dept": "thtr",
+			"courses_id": "371",
+			"courses_avg": 83.36,
+			"courses_instructor": "heatley, stephen;mcgregor, chris"
+		},
+		{
+			"courses_uuid": "25390",
+			"courses_dept": "arch",
+			"courses_id": "531",
+			"courses_avg": 83.47,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "31375",
+			"courses_dept": "basc",
+			"courses_id": "550",
+			"courses_avg": 83.57,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "37390",
+			"courses_dept": "engl",
+			"courses_id": "490",
+			"courses_avg": 83.64,
+			"courses_instructor": "mackie, gregory"
+		},
+		{
+			"courses_uuid": "47862",
+			"courses_dept": "civl",
+			"courses_id": "201",
+			"courses_avg": 83.73,
+			"courses_instructor": "isaacson, michael d;johnson, gregory;staub-french, sheryl"
+		},
+		{
+			"courses_uuid": "69123",
+			"courses_dept": "thtr",
+			"courses_id": "371",
+			"courses_avg": 83.88,
+			"courses_instructor": "heatley, stephen;mcgregor, chris"
+		},
+		{
+			"courses_uuid": "92524",
+			"courses_dept": "basc",
+			"courses_id": "550",
+			"courses_avg": 84.1,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "84622",
+			"courses_dept": "thtr",
+			"courses_id": "371",
+			"courses_avg": 84.33,
+			"courses_instructor": "heatley, stephen;mcgregor, chris"
+		},
+		{
+			"courses_uuid": "59285",
+			"courses_dept": "arch",
+			"courses_id": "511",
+			"courses_avg": 84.46,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "20659",
+			"courses_dept": "biol",
+			"courses_id": "411",
+			"courses_avg": 84.48,
+			"courses_instructor": "crutsinger, gregory"
+		},
+		{
+			"courses_uuid": "6536",
+			"courses_dept": "babs",
+			"courses_id": "540",
+			"courses_avg": 84.51,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "8046",
+			"courses_dept": "thtr",
+			"courses_id": "472",
+			"courses_avg": 84.54,
+			"courses_instructor": "heatley, stephen;mcgregor, chris"
+		},
+		{
+			"courses_uuid": "70689",
+			"courses_dept": "eosc",
+			"courses_id": "540",
+			"courses_avg": 84.54,
+			"courses_instructor": "dipple, gregory"
+		},
+		{
+			"courses_uuid": "5381",
+			"courses_dept": "math",
+			"courses_id": "539",
+			"courses_avg": 84.56,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "4007",
+			"courses_dept": "math",
+			"courses_id": "539",
+			"courses_avg": 84.67,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "92525",
+			"courses_dept": "basc",
+			"courses_id": "550",
+			"courses_avg": 84.67,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "24432",
+			"courses_dept": "geob",
+			"courses_id": "500",
+			"courses_avg": 84.71,
+			"courses_instructor": "eaton, brett;henry, gregory h"
+		},
+		{
+			"courses_uuid": "45091",
+			"courses_dept": "civl",
+			"courses_id": "478",
+			"courses_avg": 84.82,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "92526",
+			"courses_dept": "basc",
+			"courses_id": "550",
+			"courses_avg": 84.9,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "62346",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 84.91,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "5027",
+			"courses_dept": "arch",
+			"courses_id": "531",
+			"courses_avg": 84.94,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "10804",
+			"courses_dept": "civl",
+			"courses_id": "478",
+			"courses_avg": 84.99,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "36809",
+			"courses_dept": "arch",
+			"courses_id": "513",
+			"courses_avg": 85.08,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "1254",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 85.11,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "31373",
+			"courses_dept": "basc",
+			"courses_id": "524",
+			"courses_avg": 85.12,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "92255",
+			"courses_dept": "thtr",
+			"courses_id": "330",
+			"courses_avg": 85.33,
+			"courses_instructor": "mcgregor, chris;rodgers, sarah"
+		},
+		{
+			"courses_uuid": "69157",
+			"courses_dept": "thtr",
+			"courses_id": "472",
+			"courses_avg": 85.46,
+			"courses_instructor": "heatley, stephen;mcgregor, chris"
+		},
+		{
+			"courses_uuid": "36791",
+			"courses_dept": "arch",
+			"courses_id": "411",
+			"courses_avg": 85.55,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "2727",
+			"courses_dept": "civl",
+			"courses_id": "201",
+			"courses_avg": 85.6,
+			"courses_instructor": "isaacson, michael d;johnson, gregory;staub-french, sheryl"
+		},
+		{
+			"courses_uuid": "6535",
+			"courses_dept": "babs",
+			"courses_id": "540",
+			"courses_avg": 85.89,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "92522",
+			"courses_dept": "basc",
+			"courses_id": "524",
+			"courses_avg": 86.04,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "36805",
+			"courses_dept": "arch",
+			"courses_id": "511",
+			"courses_avg": 86.08,
+			"courses_instructor": "johnson, gregory"
+		},
+		{
+			"courses_uuid": "51126",
+			"courses_dept": "geob",
+			"courses_id": "500",
+			"courses_avg": 87,
+			"courses_instructor": "henry, gregory h;mckendry, ian"
+		},
+		{
+			"courses_uuid": "98479",
+			"courses_dept": "babs",
+			"courses_id": "540",
+			"courses_avg": 87.24,
+			"courses_instructor": "werker, gregory"
+		},
+		{
+			"courses_uuid": "96824",
+			"courses_dept": "etec",
+			"courses_id": "521",
+			"courses_avg": 87.25,
+			"courses_instructor": "mcgregor, heather"
+		},
+		{
+			"courses_uuid": "92304",
+			"courses_dept": "thtr",
+			"courses_id": "472",
+			"courses_avg": 87.4,
+			"courses_instructor": "mcgregor, chris"
+		},
+		{
+			"courses_uuid": "84661",
+			"courses_dept": "thtr",
+			"courses_id": "472",
+			"courses_avg": 88,
+			"courses_instructor": "mcgregor, chris"
+		},
+		{
+			"courses_uuid": "13940",
+			"courses_dept": "math",
+			"courses_id": "537",
+			"courses_avg": 88,
+			"courses_instructor": "martin, gregory"
+		},
+		{
+			"courses_uuid": "98478",
+			"courses_dept": "babs",
+			"courses_id": "540",
+			"courses_avg": 88.88,
+			"courses_instructor": "werker, gregory"
+		}
+	]
+}

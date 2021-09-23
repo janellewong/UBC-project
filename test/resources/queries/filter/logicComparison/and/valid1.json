@@ -1,0 +1,374 @@
+{
+	"title": "search query",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"courses_dept": "cpsc"
+					}
+				},
+				{
+					"IS": {
+						"courses_id": "110"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_uuid": "83393",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 67.79
+		},
+		{
+			"courses_uuid": "61085",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 67.82
+		},
+		{
+			"courses_uuid": "1255",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 68.9
+		},
+		{
+			"courses_uuid": "62347",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 69.24
+		},
+		{
+			"courses_uuid": "49854",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 69.7
+		},
+		{
+			"courses_uuid": "49850",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.11
+		},
+		{
+			"courses_uuid": "62348",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.38
+		},
+		{
+			"courses_uuid": "62345",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.47
+		},
+		{
+			"courses_uuid": "49852",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.59
+		},
+		{
+			"courses_uuid": "72319",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.75
+		},
+		{
+			"courses_uuid": "62342",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.78
+		},
+		{
+			"courses_uuid": "1250",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.83
+		},
+		{
+			"courses_uuid": "49851",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.88
+		},
+		{
+			"courses_uuid": "1252",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.9
+		},
+		{
+			"courses_uuid": "1248",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.07
+		},
+		{
+			"courses_uuid": "1251",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.09
+		},
+		{
+			"courses_uuid": "62344",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.14
+		},
+		{
+			"courses_uuid": "83390",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.18
+		},
+		{
+			"courses_uuid": "49856",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.22
+		},
+		{
+			"courses_uuid": "46653",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.4
+		},
+		{
+			"courses_uuid": "83392",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.44
+		},
+		{
+			"courses_uuid": "72323",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.6
+		},
+		{
+			"courses_uuid": "46655",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.92
+		},
+		{
+			"courses_uuid": "1256",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 72.28
+		},
+		{
+			"courses_uuid": "46654",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 72.58
+		},
+		{
+			"courses_uuid": "83395",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 72.63
+		},
+		{
+			"courses_uuid": "83391",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 72.89
+		},
+		{
+			"courses_uuid": "1249",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.13
+		},
+		{
+			"courses_uuid": "62349",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.25
+		},
+		{
+			"courses_uuid": "61084",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.53
+		},
+		{
+			"courses_uuid": "1253",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.56
+		},
+		{
+			"courses_uuid": "49853",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.83
+		},
+		{
+			"courses_uuid": "83389",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 74.24
+		},
+		{
+			"courses_uuid": "62341",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 74.79
+		},
+		{
+			"courses_uuid": "61082",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 74.95
+		},
+		{
+			"courses_uuid": "62343",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 75.06
+		},
+		{
+			"courses_uuid": "61087",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 75.29
+		},
+		{
+			"courses_uuid": "72325",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 75.36
+		},
+		{
+			"courses_uuid": "67301",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 75.81
+		},
+		{
+			"courses_uuid": "67300",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 75.81
+		},
+		{
+			"courses_uuid": "56854",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 75.89
+		},
+		{
+			"courses_uuid": "56853",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 75.89
+		},
+		{
+			"courses_uuid": "72320",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 76.59
+		},
+		{
+			"courses_uuid": "61081",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 76.94
+		},
+		{
+			"courses_uuid": "72322",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 76.98
+		},
+		{
+			"courses_uuid": "63245",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.11
+		},
+		{
+			"courses_uuid": "43189",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.43
+		},
+		{
+			"courses_uuid": "43188",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.43
+		},
+		{
+			"courses_uuid": "61083",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.69
+		},
+		{
+			"courses_uuid": "63247",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 78.7
+		},
+		{
+			"courses_uuid": "72321",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 78.85
+		},
+		{
+			"courses_uuid": "83394",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 82.32
+		},
+		{
+			"courses_uuid": "63246",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 82.43
+		},
+		{
+			"courses_uuid": "49855",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 82.44
+		},
+		{
+			"courses_uuid": "72324",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 83.43
+		},
+		{
+			"courses_uuid": "62346",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 84.91
+		},
+		{
+			"courses_uuid": "1254",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 85.11
+		},
+		{
+			"courses_uuid": "61086",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 85.46
+		}
+	]
+}

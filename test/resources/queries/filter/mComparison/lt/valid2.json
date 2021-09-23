@@ -1,0 +1,16 @@
+{
+	"title": "SELECT courses_uuid, courses_dept, courses_id, courses_avg WHERE courses_avg < -1",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"courses_avg": -1
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": []
+}

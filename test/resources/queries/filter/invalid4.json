@@ -1,0 +1,9 @@
+{
+	"title": "Invalid Query where exists",
+	"input": {
+		"WHERE": {},
+		"MESLEEPY": {}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

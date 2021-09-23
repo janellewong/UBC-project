@@ -1,0 +1,122 @@
+{
+	"title": "IS valid asterix right",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_instructor": "gregor*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg", "courses_instructor"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_uuid": "3476",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 66.19,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "14467",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 66.68,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "14459",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 67.66,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "87005",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 68.18,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "29089",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 69.11,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "11932",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 69.11,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "3485",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 69.72,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "28571",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 69.98,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "28248",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 70.52,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "28563",
+			"courses_dept": "geog",
+			"courses_id": "321",
+			"courses_avg": 71.79,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "28256",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.05,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "29097",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.11,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "11940",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.53,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "97124",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.54,
+			"courses_instructor": "gregory, derek john"
+		},
+		{
+			"courses_uuid": "87013",
+			"courses_dept": "geog",
+			"courses_id": "345",
+			"courses_avg": 72.72,
+			"courses_instructor": "gregory, derek john"
+		}
+	]
+}

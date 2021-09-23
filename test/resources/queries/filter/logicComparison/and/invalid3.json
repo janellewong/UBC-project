@@ -1,0 +1,13 @@
+{
+	"title": "invalid AND as number",
+	"input": {
+		"WHERE": {
+			"AND": 69
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

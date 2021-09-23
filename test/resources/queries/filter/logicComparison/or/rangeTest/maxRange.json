@@ -1,0 +1,86 @@
+{
+	"title": "maxRange",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"LT": {
+						"courses_avg": 35
+					}
+				},
+				{
+					"GT": {
+						"courses_avg": 100
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_uuid": "56403",
+			"courses_dept": "lfs",
+			"courses_id": "100",
+			"courses_avg": 0
+		},
+		{
+			"courses_uuid": "56402",
+			"courses_dept": "lfs",
+			"courses_id": "100",
+			"courses_avg": 0
+		},
+		{
+			"courses_uuid": "89536",
+			"courses_dept": "frst",
+			"courses_id": "202",
+			"courses_avg": 0
+		},
+		{
+			"courses_uuid": "49835",
+			"courses_dept": "wood",
+			"courses_id": "475",
+			"courses_avg": 1
+		},
+		{
+			"courses_uuid": "16428",
+			"courses_dept": "busi",
+			"courses_id": "330",
+			"courses_avg": 4
+		},
+		{
+			"courses_uuid": "16427",
+			"courses_dept": "busi",
+			"courses_id": "330",
+			"courses_avg": 4
+		},
+		{
+			"courses_uuid": "84769",
+			"courses_dept": "fopr",
+			"courses_id": "362",
+			"courses_avg": 4.5
+		},
+		{
+			"courses_uuid": "53284",
+			"courses_dept": "civl",
+			"courses_id": "403",
+			"courses_avg": 33
+		},
+		{
+			"courses_uuid": "51675",
+			"courses_dept": "phil",
+			"courses_id": "120",
+			"courses_avg": 33.2
+		},
+		{
+			"courses_uuid": "14375",
+			"courses_dept": "hist",
+			"courses_id": "102",
+			"courses_avg": 34
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"title": "invalid key",
+	"input": {
+		"WHERE": {
+			"FOOBAR": {}
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

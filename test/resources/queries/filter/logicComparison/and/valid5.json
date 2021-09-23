@@ -1,0 +1,34 @@
+{
+	"title": "ADD with impossible result",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"courses_id": "110"
+					}
+				},
+				{
+					"AND": [
+						{
+							"EQ": {
+								"courses_avg": 76
+							}
+						},
+						{
+							"EQ": {
+								"courses_avg": 75
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": []
+}

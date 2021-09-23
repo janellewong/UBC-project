@@ -1,0 +1,570 @@
+{
+	"title": "IS valid asterix left",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_instructor": "*gregor"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg", "courses_instructor"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_uuid": "63143",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 67.17,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48290",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 67.21,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "95190",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 67.47,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "57035",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 68.5,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "64344",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 68.76,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "4219",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 68.86,
+			"courses_instructor": "berg, celina;miller, gregor"
+		},
+		{
+			"courses_uuid": "97437",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 69.29,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "64281",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 69.58,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48329",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 69.94,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "49850",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.11,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "64259",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.22,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "57087",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.23,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48337",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.37,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "57085",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.5,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48317",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.52,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "18824",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.58,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "62157",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.71,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "72319",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.75,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "62342",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 70.78,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "57091",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 70.83,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "95242",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 70.9,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48312",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48309",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.06,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "1248",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.07,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "97409",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.12,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "46653",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.4,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "37163",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.42,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "57033",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.58,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "48345",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.58,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "95155",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 71.74,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "18806",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 71.96,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "95188",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42810",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.09,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "97376",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.1,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "20732",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 72.14,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "97407",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.48,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "37160",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.55,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "46654",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 72.58,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "37188",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.65,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "37146",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.83,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "97359",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 72.84,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "95193",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "1249",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.13,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "57052",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.23,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "63137",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.25,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "45773",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 73.5,
+			"courses_instructor": "cooper, kendra;miller, gregor"
+		},
+		{
+			"courses_uuid": "61084",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 73.53,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "4218",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 73.7,
+			"courses_instructor": "khosravi, hassan;miller, gregor"
+		},
+		{
+			"courses_uuid": "63130",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.8,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "97386",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 73.87,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "97344",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "22547",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.06,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42841",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.1,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "37192",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.1,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42882",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 74.18,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "83389",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 74.24,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "45772",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 74.38,
+			"courses_instructor": "knorr, edwin max;miller, gregor"
+		},
+		{
+			"courses_uuid": "42876",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 74.44,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42791",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.53,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "37177",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.59,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "95234",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 74.61,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "62165",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.63,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "64258",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 74.8,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "64282",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 75.1,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "57098",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 75.19,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "42812",
+			"courses_dept": "engl",
+			"courses_id": "112",
+			"courses_avg": 75.41,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "4217",
+			"courses_dept": "apsc",
+			"courses_id": "160",
+			"courses_avg": 75.43,
+			"courses_instructor": "khosravi, hassan;miller, gregor"
+		},
+		{
+			"courses_uuid": "64358",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 75.61,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "91170",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 76.3,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "73805",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 76.46,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "37231",
+			"courses_dept": "engl",
+			"courses_id": "220",
+			"courses_avg": 76.55,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "22532",
+			"courses_dept": "engl",
+			"courses_id": "110",
+			"courses_avg": 76.64,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "57131",
+			"courses_dept": "engl",
+			"courses_id": "221",
+			"courses_avg": 76.95,
+			"courses_instructor": "morgan, george macgregor"
+		},
+		{
+			"courses_uuid": "72322",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 76.98,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "63245",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.11,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "43188",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.43,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "61083",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.69,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "62346",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 84.91,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "1254",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 85.11,
+			"courses_instructor": "kiczales, gregor"
+		}
+	]
+}
