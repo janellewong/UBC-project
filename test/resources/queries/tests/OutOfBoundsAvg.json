@@ -1,0 +1,38 @@
+{
+  "title": "out of bounds average",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 1000
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "zool"
+              }
+            }
+          ]
+        },
+        {
+          "EQ": {
+            "courses_avg": 1000
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": false,
+  "with": []
+}
