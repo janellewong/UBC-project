@@ -1,0 +1,378 @@
+{
+  "title": "repeated columns",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 90
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "adhe"
+              }
+            }
+          ]
+        },
+        {
+          "EQ": {
+            "courses_avg": 95
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_id",
+        "courses_id",
+        "courses_avg",
+        "courses_title"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "courses_dept": "adhe",
+      "courses_id": "329",
+      "courses_avg": 90.02,
+      "courses_title": "dev wkshp/sem"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "412",
+      "courses_avg": 90.16,
+      "courses_title": "adul educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "330",
+      "courses_avg": 90.17,
+      "courses_title": "com adult educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "412",
+      "courses_avg": 90.18,
+      "courses_title": "adul educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "330",
+      "courses_avg": 90.5,
+      "courses_title": "com adult educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "330",
+      "courses_avg": 90.72,
+      "courses_title": "com adult educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "329",
+      "courses_avg": 90.82,
+      "courses_title": "dev wkshp/sem"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "330",
+      "courses_avg": 90.85,
+      "courses_title": "com adult educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "330",
+      "courses_avg": 91.29,
+      "courses_title": "com adult educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "330",
+      "courses_avg": 91.33,
+      "courses_title": "com adult educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "330",
+      "courses_avg": 91.33,
+      "courses_title": "com adult educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "330",
+      "courses_avg": 91.48,
+      "courses_title": "com adult educ"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "329",
+      "courses_avg": 92.54,
+      "courses_title": "dev wkshp/sem"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "329",
+      "courses_avg": 93.33,
+      "courses_title": "dev wkshp/sem"
+    },
+    {
+      "courses_dept": "sowk",
+      "courses_id": "570",
+      "courses_avg": 95,
+      "courses_title": "directed study"
+    },
+    {
+      "courses_dept": "rhsc",
+      "courses_id": "501",
+      "courses_avg": 95,
+      "courses_title": "eval src evidenc"
+    },
+    {
+      "courses_dept": "psyc",
+      "courses_id": "501",
+      "courses_avg": 95,
+      "courses_title": "health psych"
+    },
+    {
+      "courses_dept": "psyc",
+      "courses_id": "501",
+      "courses_avg": 95,
+      "courses_title": "health psych"
+    },
+    {
+      "courses_dept": "obst",
+      "courses_id": "549",
+      "courses_avg": 95,
+      "courses_title": "msc thesis"
+    },
+    {
+      "courses_dept": "nurs",
+      "courses_id": "424",
+      "courses_avg": 95,
+      "courses_title": "mntl hlth concrn"
+    },
+    {
+      "courses_dept": "nurs",
+      "courses_id": "424",
+      "courses_avg": 95,
+      "courses_title": "mntl hlth concrn"
+    },
+    {
+      "courses_dept": "musc",
+      "courses_id": "553",
+      "courses_avg": 95,
+      "courses_title": "ubc singers"
+    },
+    {
+      "courses_dept": "musc",
+      "courses_id": "553",
+      "courses_avg": 95,
+      "courses_title": "ubc singers"
+    },
+    {
+      "courses_dept": "musc",
+      "courses_id": "553",
+      "courses_avg": 95,
+      "courses_title": "ubc singers"
+    },
+    {
+      "courses_dept": "musc",
+      "courses_id": "553",
+      "courses_avg": 95,
+      "courses_title": "ubc singers"
+    },
+    {
+      "courses_dept": "musc",
+      "courses_id": "553",
+      "courses_avg": 95,
+      "courses_title": "ubc singers"
+    },
+    {
+      "courses_dept": "musc",
+      "courses_id": "553",
+      "courses_avg": 95,
+      "courses_title": "ubc singers"
+    },
+    {
+      "courses_dept": "mtrl",
+      "courses_id": "599",
+      "courses_avg": 95,
+      "courses_title": "masters thesis"
+    },
+    {
+      "courses_dept": "mtrl",
+      "courses_id": "564",
+      "courses_avg": 95,
+      "courses_title": "hydrmtllgcl rctr"
+    },
+    {
+      "courses_dept": "mtrl",
+      "courses_id": "564",
+      "courses_avg": 95,
+      "courses_title": "hydrmtllgcl rctr"
+    },
+    {
+      "courses_dept": "math",
+      "courses_id": "532",
+      "courses_avg": 95,
+      "courses_title": "algb geometry i"
+    },
+    {
+      "courses_dept": "math",
+      "courses_id": "532",
+      "courses_avg": 95,
+      "courses_title": "algb geometry i"
+    },
+    {
+      "courses_dept": "kin",
+      "courses_id": "500",
+      "courses_avg": 95,
+      "courses_title": "spec tpcs kin"
+    },
+    {
+      "courses_dept": "kin",
+      "courses_id": "500",
+      "courses_avg": 95,
+      "courses_title": "spec tpcs kin"
+    },
+    {
+      "courses_dept": "kin",
+      "courses_id": "499",
+      "courses_avg": 95,
+      "courses_title": "kin project"
+    },
+    {
+      "courses_dept": "epse",
+      "courses_id": "682",
+      "courses_avg": 95,
+      "courses_title": "mult des anal rs"
+    },
+    {
+      "courses_dept": "epse",
+      "courses_id": "682",
+      "courses_avg": 95,
+      "courses_title": "mult des anal rs"
+    },
+    {
+      "courses_dept": "epse",
+      "courses_id": "606",
+      "courses_avg": 95,
+      "courses_title": "coll&uni teachng"
+    },
+    {
+      "courses_dept": "edcp",
+      "courses_id": "473",
+      "courses_avg": 95,
+      "courses_title": "ict educ ethics"
+    },
+    {
+      "courses_dept": "edcp",
+      "courses_id": "473",
+      "courses_avg": 95,
+      "courses_title": "ict educ ethics"
+    },
+    {
+      "courses_dept": "econ",
+      "courses_id": "516",
+      "courses_avg": 95,
+      "courses_title": "spc tpcs macroec"
+    },
+    {
+      "courses_dept": "econ",
+      "courses_id": "516",
+      "courses_avg": 95,
+      "courses_title": "spc tpcs macroec"
+    },
+    {
+      "courses_dept": "crwr",
+      "courses_id": "599",
+      "courses_avg": 95,
+      "courses_title": "thesis"
+    },
+    {
+      "courses_dept": "crwr",
+      "courses_id": "599",
+      "courses_avg": 95,
+      "courses_title": "thesis"
+    },
+    {
+      "courses_dept": "crwr",
+      "courses_id": "599",
+      "courses_avg": 95,
+      "courses_title": "thesis"
+    },
+    {
+      "courses_dept": "crwr",
+      "courses_id": "599",
+      "courses_avg": 95,
+      "courses_title": "thesis"
+    },
+    {
+      "courses_dept": "crwr",
+      "courses_id": "599",
+      "courses_avg": 95,
+      "courses_title": "thesis"
+    },
+    {
+      "courses_dept": "crwr",
+      "courses_id": "599",
+      "courses_avg": 95,
+      "courses_title": "thesis"
+    },
+    {
+      "courses_dept": "crwr",
+      "courses_id": "599",
+      "courses_avg": 95,
+      "courses_title": "thesis"
+    },
+    {
+      "courses_dept": "cpsc",
+      "courses_id": "589",
+      "courses_avg": 95,
+      "courses_title": "m.sc major essay"
+    },
+    {
+      "courses_dept": "cpsc",
+      "courses_id": "589",
+      "courses_avg": 95,
+      "courses_title": "m.sc major essay"
+    },
+    {
+      "courses_dept": "cnps",
+      "courses_id": "535",
+      "courses_avg": 95,
+      "courses_title": "adlt psychpathlg"
+    },
+    {
+      "courses_dept": "cnps",
+      "courses_id": "535",
+      "courses_avg": 95,
+      "courses_title": "adlt psychpathlg"
+    },
+    {
+      "courses_dept": "bmeg",
+      "courses_id": "597",
+      "courses_avg": 95,
+      "courses_title": "master eng proj"
+    },
+    {
+      "courses_dept": "bmeg",
+      "courses_id": "597",
+      "courses_avg": 95,
+      "courses_title": "master eng proj"
+    },
+    {
+      "courses_dept": "adhe",
+      "courses_id": "329",
+      "courses_avg": 96.11,
+      "courses_title": "dev wkshp/sem"
+    }
+  ]
+}

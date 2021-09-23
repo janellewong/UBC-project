@@ -1,0 +1,20 @@
+{
+  "title": "no dataset with this id",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "nothing_dept": "zool"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "nothing_dept",
+        "nothing_id",
+        "nothing_avg"
+      ],
+      "ORDER": "nothing_avg"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}
