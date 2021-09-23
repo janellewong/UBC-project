@@ -1,0 +1,24 @@
+{
+	"title": "no columns (from validQuery1)",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"courses_id": "310"
+					}
+				},
+				{
+					"IS": {
+						"courses_dept": "cpsc"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

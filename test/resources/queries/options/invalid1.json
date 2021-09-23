@@ -1,0 +1,22 @@
+{
+	"title": "invalid options as array",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"courses_id": "310"
+					}
+				},
+				{
+					"IS": {
+						"courses_dept": "cpsc"
+					}
+				}
+			]
+		},
+		"OPTIONS": []
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

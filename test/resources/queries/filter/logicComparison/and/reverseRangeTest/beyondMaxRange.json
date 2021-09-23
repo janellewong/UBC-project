@@ -1,0 +1,25 @@
+{
+	"title": "beyondMaxRange",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"LT": {
+						"courses_avg": 95
+					}
+				},
+				{
+					"GT": {
+						"courses_avg": 100
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"with": []
+}

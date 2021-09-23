@@ -1,0 +1,25 @@
+{
+	"title": "unknown column",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"courses_id": "310"
+					}
+				},
+				{
+					"IS": {
+						"courses_dept": "cpsc"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg", "_"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

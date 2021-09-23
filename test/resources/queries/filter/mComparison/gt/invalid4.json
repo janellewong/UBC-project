@@ -1,0 +1,16 @@
+{
+	"title": "invalid GT as random string",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": "bruh"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

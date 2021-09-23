@@ -1,0 +1,14 @@
+{
+	"title": "array not",
+	"input": {
+		"WHERE": {
+			"NOT": []
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

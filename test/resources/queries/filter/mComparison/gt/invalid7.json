@@ -1,0 +1,17 @@
+{
+	"title": "invalid GT as multiple keys",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 69,
+				"courses_id": "150"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

@@ -1,0 +1,24 @@
+{
+	"title": "invalid AND as object with invalid filter",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"SOMEFILTERHERE": {
+						"courses_avg": 40
+					}
+				},
+				{
+					"LT": {
+						"courses_avg": 50
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

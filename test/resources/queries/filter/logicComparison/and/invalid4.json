@@ -1,0 +1,13 @@
+{
+	"title": "invalid AND as empty string",
+	"input": {
+		"WHERE": {
+			"AND": ""
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

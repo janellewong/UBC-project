@@ -1,0 +1,16 @@
+{
+	"title": "result too large LT",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"courses_avg": 69
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "ResultTooLargeError"
+}

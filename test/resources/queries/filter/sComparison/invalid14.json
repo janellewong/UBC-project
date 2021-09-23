@@ -1,0 +1,16 @@
+{
+	"title": "IS diff dataset",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"bruh_instructor": "kiczales, gregor"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg", "courses_instructor"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

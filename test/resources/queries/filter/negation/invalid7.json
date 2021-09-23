@@ -1,0 +1,20 @@
+{
+	"title": "invalid filter in double not",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"NOT": {
+					"LT": {
+						"courses_avg": "98"
+					}
+				}
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

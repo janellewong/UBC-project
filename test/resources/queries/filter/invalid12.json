@@ -1,0 +1,11 @@
+{
+	"title": "(WHERE: string) SELECT courses_uuid, courses_dept, courses_id",
+	"input": {
+		"WHERE": "bruh",
+		"OPTIONS": {
+			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id"]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}
