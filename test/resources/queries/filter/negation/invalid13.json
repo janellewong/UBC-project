@@ -1,0 +1,32 @@
+{
+	"title": "NOT with nested OR and NOT",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"AND": [
+					{
+						"EQ": {
+							"courses_avg": 50
+						}
+					},
+					{
+						"IS": {
+							"courses_dept": "*sc"
+						}
+					}
+				]
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "ResultTooLargeError"
+}
