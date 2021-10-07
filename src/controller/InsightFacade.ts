@@ -17,13 +17,18 @@ export type DatasetData = InsightDataset & { results: any[] }
 export default class InsightFacade implements IInsightFacade {
 	constructor() {
 		console.trace("InsightFacadeImpl::init()");
-		if (fs.existsSync(`${persistDir}/data.json`)) {
-			const buffer = fs.readFileSync(`${persistDir}/data.json`);
-			this.datasets = JSON.parse(buffer.toString());
-		} else {
-			fs.mkdirSync(persistDir);
-			this.datasets = [];
+		try {
+			if (fs.existsSync(`${persistDir}/data.json`)) {
+				const buffer = fs.readFileSync(`${persistDir}/data.json`);
+				this.datasets = JSON.parse(buffer.toString());
+				return;
+			} else {
+				fs.mkdirSync(persistDir);
+			}
+		} catch (e) {
+			// do nothing
 		}
+		this.datasets = [];
 	}
 
 	private readonly datasets: DatasetData[];
