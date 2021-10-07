@@ -1,6 +1,8 @@
 import {IInsightFacade, InsightDataset, InsightDatasetKind, InsightError, NotFoundError} from "./IInsightFacade";
 import JSZip from "jszip";
 
+import QueryValidatorHelper from "./QueryValidatorHelper";
+import QueryOperatorHelper from "./QueryOperatorHelper";
 
 /**
  * This is the main programmatic entry point for the project.
@@ -101,7 +103,12 @@ export default class InsightFacade implements IInsightFacade {
 	}
 
 	public performQuery(query: any): Promise<any[]> {
-		return Promise.reject("Not implemented.");
+		const queryValidatorHelper = new QueryValidatorHelper(this.datasets);
+		if (!queryValidatorHelper.queryValidator(query)) {
+			throw new InsightError("Invalid Query");
+		}
+		const queryOperatorHelper = new QueryOperatorHelper(this.dataInDatasets);
+		return queryOperatorHelper.queryAggregator(query);
 	}
 
 	public listDatasets(): Promise<InsightDataset[]> {
