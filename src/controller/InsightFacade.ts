@@ -1,5 +1,6 @@
 import {IInsightFacade, InsightDataset, InsightDatasetKind, InsightError, NotFoundError} from "./IInsightFacade";
 import JSZip from "jszip";
+import fs from "fs-extra";
 
 import QueryValidatorHelper from "./QueryValidatorHelper";
 import QueryOperatorHelper from "./QueryOperatorHelper";
@@ -9,13 +10,22 @@ import QueryOperatorHelper from "./QueryOperatorHelper";
  * Method documentation is in IInsightFacade
  *
  */
+const persistDir = "./data";
+
+export type DatasetData = InsightDataset & { results: any[] }
+
 export default class InsightFacade implements IInsightFacade {
 	constructor() {
 		console.trace("InsightFacadeImpl::init()");
+		if (fs.existsSync(persistDir)) {
+			const buffer = fs.readFileSync(`${persistDir}/data.json`);
+			this.datasets = JSON.parse(buffer.toString());
+		} else {
+			fs.mkdirSync(persistDir);
+		}
 	}
 
-	private datasets: InsightDataset[] = [];
-	private dataInDatasets: Record<string, any[]> = {};
+	private datasets: DatasetData[] = [];
 
 	private isValidID = (idName: string): boolean => {
 		return /^[^_]+$/.test(idName.trim());
@@ -32,7 +42,7 @@ export default class InsightFacade implements IInsightFacade {
 
 	public async addDataset(id: string, content: string, kind: InsightDatasetKind): Promise<string[]> {
 		// is ID valid?
-		if (this.isValidID(id) === false) {
+		if (!this.isValidID(id)) {
 			throw new InsightError("id is not valid");
 		}
 		// if dataset already exists in instance class
@@ -57,22 +67,21 @@ export default class InsightFacade implements IInsightFacade {
 			return !data[key].dir && data[key].name.startsWith("courses");
 		});
 
+		const results = [];
+
 		for (const key of keys){
 			const JSONString = await this.streamToString(zipData.files[key].nodeStream());
 			try {
 				const JSONData = JSON.parse(JSONString);
 				for (const result of JSONData.result) {
-					if (!this.dataInDatasets[id]) {
-						this.dataInDatasets[id] = []; // initialize
-					}
-					this.dataInDatasets[id].push(result);
+					results.push(result);
 				}
 			} catch (e) {
 				// do nothing
 			}
 		}
 
-		if (!this.dataInDatasets[id]) {
+		if (results.length === 0) {
 			throw new InsightError("no data");
 		}
 
@@ -80,15 +89,18 @@ export default class InsightFacade implements IInsightFacade {
 		this.datasets.push({
 			id,
 			kind,
-			numRows: this.dataInDatasets[id].length
+			numRows: results.length,
+			results
 		});
+
+		fs.writeFileSync(`${persistDir}/data.json`, JSON.stringify(this.datasets));
 
 		return this.datasets.map((dataset) => dataset.id);
 	}
 
 	public async removeDataset(id: string): Promise<string> {
 		// Helper function to determine if ID (string input) is valid
-		if (this.isValidID(id) === false) {
+		if (!this.isValidID(id)) {
 			throw new InsightError("id is not valid");
 		}
 		// find in this.datasets and if it exists, remove the index from datasets using Array.splice
@@ -107,11 +119,11 @@ export default class InsightFacade implements IInsightFacade {
 		if (!queryValidatorHelper.queryValidator(query)) {
 			throw new InsightError("Invalid Query");
 		}
-		const queryOperatorHelper = new QueryOperatorHelper(this.dataInDatasets);
+		const queryOperatorHelper = new QueryOperatorHelper(this.datasets);
 		return queryOperatorHelper.queryAggregator(query);
 	}
 
 	public listDatasets(): Promise<InsightDataset[]> {
-		return Promise.resolve(this.datasets);
+		return Promise.resolve(this.datasets.map(({ results, ...dataset }) => dataset));
 	}
 }

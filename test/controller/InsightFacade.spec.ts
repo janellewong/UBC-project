@@ -44,6 +44,60 @@ describe("InsightFacade", function () {
 		fs.removeSync(persistDir);
 	});
 
+	describe("Data Folder", function () {
+		before(function () {
+			console.info(`Before: ${this.test?.parent?.title}`);
+		});
+
+		beforeEach(function () {
+			// This section resets the insightFacade instance
+			// This runs before each test
+			console.info(`BeforeTest: ${this.currentTest?.title}`);
+			insightFacade = new InsightFacade();
+		});
+
+		after(function () {
+			// This section resets the data directory (removing any cached data)
+			// This runs after each test, which should make each test independent from the previous one
+			console.info(`After: ${this.test?.parent?.title}`);
+			fs.removeSync(persistDir);
+		});
+
+		afterEach(function () {
+			console.info(`AfterTest: ${this.currentTest?.title}`);
+		});
+
+		it("Adds first dataset", () => {
+			const idA: string = "a";
+			const contentA: string = datasetContents.get("a") ?? "";
+			return insightFacade
+				.addDataset(idA, contentA, InsightDatasetKind.Courses)
+				.then((result) => {
+					expect(result).to.deep.equal([idA]);
+				});
+		});
+
+		it("Adds second dataset", () => {
+			const idA: string = "a";
+			const idB: string = "b";
+			const contentB: string = datasetContents.get("b") ?? "";
+			return insightFacade
+				.addDataset(idB, contentB, InsightDatasetKind.Courses)
+				.then((result) => {
+					expect(result).to.deep.equal([idA, idB]);
+				});
+		});
+
+		it("Cannot add duplicate", () => {
+			const id: string = "a";
+			const contentA: string = datasetContents.get("a") ?? "";
+			return expect(
+				insightFacade
+					.addDataset(id, contentA, InsightDatasetKind.Courses)
+			).to.eventually.rejectedWith(InsightError);
+		});
+	});
+
 	describe("Add/Remove/List Dataset", function () {
 		before(function () {
 			console.info(`Before: ${this.test?.parent?.title}`);

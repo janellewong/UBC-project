@@ -1,4 +1,5 @@
 import {ResultTooLargeError} from "./IInsightFacade";
+import {DatasetData} from "./InsightFacade";
 
 const mapper: any = {
 	avg: "Avg",
@@ -15,10 +16,15 @@ const mapper: any = {
 
 export default class QueryOperatorHelper {
 
-	private dataInDatasets: Record<string, any[]> = {};
+	private datasets: DatasetData[];
 
-	constructor(dataInDatasets: Record<string, any[]>) {
-		this.dataInDatasets = dataInDatasets;
+	constructor(dataInDatasets: DatasetData[]) {
+		this.datasets = dataInDatasets;
+	}
+
+	private getDataset = (datasetId: string): any[] => {
+		const index = this.datasets.findIndex((dataset) => dataset.id === datasetId);
+		return this.datasets[index].results;
 	}
 
 	private getCommon = (arr1: any[], arr2: any[]) => {
@@ -37,7 +43,7 @@ export default class QueryOperatorHelper {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
 		const mKey = key.split("_")[1];
-		return this.dataInDatasets[dataset].filter((data) => {
+		return this.getDataset(dataset).filter((data) => {
 			return isNegated ? data[mapper[mKey]] !== query[key] : data[mapper[mKey]] === query[key];
 		});
 	}
@@ -46,7 +52,7 @@ export default class QueryOperatorHelper {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
 		const mKey = key.split("_")[1];
-		return this.dataInDatasets[dataset].filter((data) => {
+		return this.getDataset(dataset).filter((data) => {
 			return isNegated ? data[mapper[mKey]] <= query[key] : data[mapper[mKey]] > query[key];
 		});
 	}
@@ -55,7 +61,7 @@ export default class QueryOperatorHelper {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
 		const mKey = key.split("_")[1];
-		return this.dataInDatasets[dataset].filter((data) => {
+		return this.getDataset(dataset).filter((data) => {
 			return isNegated ? data[mapper[mKey]] >= query[key] : data[mapper[mKey]] < query[key];
 		});
 	}
@@ -90,7 +96,7 @@ export default class QueryOperatorHelper {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
 		const sKey = key.split("_")[1];
-		return this.dataInDatasets[dataset].filter((data) => {
+		return this.getDataset(dataset).filter((data) => {
 			const strToCheck: string = query[key];
 			const updatedStr = strToCheck.replace(/\*/g, "");
 			if (strToCheck.startsWith("*") && strToCheck.endsWith("*")) {
