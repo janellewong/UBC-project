@@ -32,7 +32,7 @@ export default class InsightFacade implements IInsightFacade {
 
 	public async addDataset(id: string, content: string, kind: InsightDatasetKind): Promise<string[]> {
 		// is ID valid?
-		if (this.isValidID(id) === false) {
+		if (!this.isValidID(id)) {
 			throw new InsightError("id is not valid");
 		}
 		// if dataset already exists in instance class
@@ -88,7 +88,7 @@ export default class InsightFacade implements IInsightFacade {
 
 	public async removeDataset(id: string): Promise<string> {
 		// Helper function to determine if ID (string input) is valid
-		if (this.isValidID(id) === false) {
+		if (!this.isValidID(id)) {
 			throw new InsightError("id is not valid");
 		}
 		// find in this.datasets and if it exists, remove the index from datasets using Array.splice
