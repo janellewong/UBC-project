@@ -17,15 +17,16 @@ export type DatasetData = InsightDataset & { results: any[] }
 export default class InsightFacade implements IInsightFacade {
 	constructor() {
 		console.trace("InsightFacadeImpl::init()");
-		if (fs.existsSync(persistDir)) {
+		if (fs.existsSync(`${persistDir}/data.json`)) {
 			const buffer = fs.readFileSync(`${persistDir}/data.json`);
 			this.datasets = JSON.parse(buffer.toString());
 		} else {
 			fs.mkdirSync(persistDir);
+			this.datasets = [];
 		}
 	}
 
-	private datasets: DatasetData[] = [];
+	private readonly datasets: DatasetData[];
 
 	private isValidID = (idName: string): boolean => {
 		return /^[^_]+$/.test(idName.trim());
