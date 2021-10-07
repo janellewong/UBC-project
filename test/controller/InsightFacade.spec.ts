@@ -98,6 +98,42 @@ describe("InsightFacade", function () {
 		});
 	});
 
+	describe("Data Folder Corrupted", function () {
+		before(function () {
+			console.info(`Before: ${this.test?.parent?.title}`);
+			fs.mkdirSync(persistDir);
+			fs.writeFileSync(`${persistDir}/data.json`, "not a json file");
+		});
+
+		beforeEach(function () {
+			// This section resets the insightFacade instance
+			// This runs before each test
+			console.info(`BeforeTest: ${this.currentTest?.title}`);
+			insightFacade = new InsightFacade();
+		});
+
+		after(function () {
+			// This section resets the data directory (removing any cached data)
+			// This runs after each test, which should make each test independent from the previous one
+			console.info(`After: ${this.test?.parent?.title}`);
+			fs.removeSync(persistDir);
+		});
+
+		afterEach(function () {
+			console.info(`AfterTest: ${this.currentTest?.title}`);
+		});
+
+		it("Adds first dataset", () => {
+			const idA: string = "a";
+			const contentA: string = datasetContents.get("a") ?? "";
+			return insightFacade
+				.addDataset(idA, contentA, InsightDatasetKind.Courses)
+				.then((result) => {
+					expect(result).to.deep.equal([idA]);
+				});
+		});
+	});
+
 	describe("Add/Remove/List Dataset", function () {
 		before(function () {
 			console.info(`Before: ${this.test?.parent?.title}`);
