@@ -576,7 +576,10 @@ describe("InsightFacade", function () {
 			(input) => insightFacade.performQuery(input),
 			"./test/resources/queries",
 			{
-				assertOnResult: (expected: any, actual: any[]): void => {
+				assertOnResult: (expected: any[], actual: any[], input: any): void => {
+					if (expected.length !== actual.length) {
+						chai.assert.fail();
+					}
 					expect(actual).to.have.deep.members(expected);
 				},
 				errorValidator: (error): error is PQErrorKind =>
