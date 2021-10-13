@@ -123,28 +123,28 @@ export default class QueryOperatorHelper {
 	private filterOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
 		const operator = Object.keys(query)[0];
 		switch (operator) {
-		case "EQ":
-			return this.eqOperator(query[operator], isNegated);
-		case "GT":
-			return this.gtOperator(query[operator], isNegated);
-		case "LT":
-			return this.ltOperator(query[operator], isNegated);
-		case "AND":
-			if (isNegated) {
-				return this.orOperator(query[operator], isNegated);
-			}
-			return this.andOperator(query[operator], isNegated);
-		case "OR":
-			if (isNegated) {
+			case "EQ":
+				return this.eqOperator(query[operator], isNegated);
+			case "GT":
+				return this.gtOperator(query[operator], isNegated);
+			case "LT":
+				return this.ltOperator(query[operator], isNegated);
+			case "AND":
+				if (isNegated) {
+					return this.orOperator(query[operator], isNegated);
+				}
 				return this.andOperator(query[operator], isNegated);
-			}
-			return this.orOperator(query[operator], isNegated);
-		case "NOT":
-			return this.notOperator(query[operator], isNegated);
-		case "IS":
-			return this.isOperator(query[operator], isNegated);
-		default:
-			throw new ResultTooLargeError();
+			case "OR":
+				if (isNegated) {
+					return this.andOperator(query[operator], isNegated);
+				}
+				return this.orOperator(query[operator], isNegated);
+			case "NOT":
+				return this.notOperator(query[operator], isNegated);
+			case "IS":
+				return this.isOperator(query[operator], isNegated);
+			default:
+				throw new ResultTooLargeError();
 		}
 	}
 
