@@ -1,0 +1,22 @@
+{
+	"title": "order w/o keys invalid dir",
+	"input": {
+		"WHERE": {
+			"EQ": {
+				"courses_avg": 69
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id"
+			],
+			"ORDER": {
+				"dir": "bruh"
+			}
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}
