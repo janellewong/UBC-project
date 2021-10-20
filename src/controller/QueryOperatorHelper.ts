@@ -174,19 +174,31 @@ export default class QueryOperatorHelper {
 			return updatedResult;
 		});
 		if (options.ORDER) {
-			return mappedResult.sort((courseA, courseB) => {
-				const dataset = options.ORDER.split("_")[0];
-				const splitKey = options.ORDER.split("_")[1];
-				if (courseA[`${dataset}_${splitKey}`] > courseB[`${dataset}_${splitKey}`]) {
-					return 1;
-				} else if (courseA[`${dataset}_${splitKey}`] < courseB[`${dataset}_${splitKey}`]) {
-					return -1;
-				} else {
-					return 0;
+			if (typeof options.ORDER === "string") {
+				return mappedResult.sort(this.orderSort(options.ORDER));
+			} else {
+				let res = mappedResult;
+				for (const key of options.ORDER.keys) {
+					res = res.sort(this.orderSort(key, options.ORDER.dir));
 				}
-			});
+				return res;
+			}
 		} else {
 			return mappedResult;
 		}
+	}
+
+	private orderSort = (order: string, pos: string = "UP") => {
+		return (courseA: Record<string, string | number>, courseB: Record<string, string | number>) => {
+			const dataset = order.split("_")[0];
+			const splitKey = order.split("_")[1];
+			if (courseA[`${dataset}_${splitKey}`] > courseB[`${dataset}_${splitKey}`]) {
+				return pos === "DOWN" ? -1 : 1;
+			} else if (courseA[`${dataset}_${splitKey}`] < courseB[`${dataset}_${splitKey}`]) {
+				return pos === "DOWN" ? 1 : -1;
+			} else {
+				return 0;
+			}
+		};
 	}
 }

@@ -91,6 +91,21 @@ export default class QueryValidatorHelper {
 		return keys.length === 0 && pred;
 	}
 
+	private orderKeyChecker = (query: any, col: string): boolean => {
+		if (!this.usedDatasets.includes(col.split("_")[0])) {
+			this.usedDatasets.push(col.split("_")[0]);
+		}
+		const validKeys = ["avg", "pass", "fail", "audit", "year", "dept", "id", "instructor", "title", "uuid"];
+		const key = col.split("_")[1];
+		if (!validKeys.includes(key)) {
+			return false;
+		}
+		if (Array.isArray(query["COLUMNS"]) && !query["COLUMNS"].includes(col)) {
+			return false;
+		}
+		return true;
+	}
+
 	private optionsValidator = (query: any): boolean => {
 		if (!(query instanceof Object && !Array.isArray(query))) {
 			return false;
@@ -107,20 +122,24 @@ export default class QueryValidatorHelper {
 			keys.splice(orderIndex, 1);
 		}
 		if (query["ORDER"] !== undefined) {
-			if (typeof query["ORDER"] !== "string") {
-				return false;
+			if (typeof query["ORDER"] === "string") {
+				if (!this.orderKeyChecker(query, query["ORDER"])) {
+					return false;
+				}
+			} else if (query["ORDER"] instanceof Object && !Array.isArray(query["ORDER"])) {
+				if (!(query["ORDER"]["dir"] === "DOWN" || query["ORDER"]["dir"] === "UP")) {
+					return false;
+				}
+				if (!Array.isArray(query["ORDER"]["keys"]) || query["ORDER"]["keys"].length === 0) {
+					return false;
+				}
+				for (const col of query["ORDER"]["keys"]) {
+					if (!(typeof (col as any) === "string" && this.orderKeyChecker(query, col))) {
+						return false;
+					}
+				}
 			} else {
-				if (!this.usedDatasets.includes(query["ORDER"].split("_")[0])) {
-					this.usedDatasets.push(query["ORDER"].split("_")[0]);
-				}
-				const validKeys = ["avg", "pass", "fail", "audit", "year", "dept", "id", "instructor", "title", "uuid"];
-				const key = query["ORDER"].split("_")[1];
-				if (!validKeys.includes(key)) {
-					return false;
-				}
-				if (Array.isArray(query["COLUMNS"]) && !query["COLUMNS"].includes(query["ORDER"])) {
-					return false;
-				}
+				return false;
 			}
 		}
 		return keys.length === 0 &&
