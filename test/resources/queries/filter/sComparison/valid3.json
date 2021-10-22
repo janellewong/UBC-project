@@ -7,7 +7,13 @@
 			}
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg", "courses_instructor"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg",
+				"courses_instructor"
+			],
 			"ORDER": "courses_avg"
 		}
 	},
@@ -42,14 +48,14 @@
 			"courses_instructor": "gregory, derek john"
 		},
 		{
-			"courses_uuid": "29089",
+			"courses_uuid": "11932",
 			"courses_dept": "geog",
 			"courses_id": "321",
 			"courses_avg": 69.11,
 			"courses_instructor": "gregory, derek john"
 		},
 		{
-			"courses_uuid": "11932",
+			"courses_uuid": "29089",
 			"courses_dept": "geog",
 			"courses_id": "321",
 			"courses_avg": 69.11,

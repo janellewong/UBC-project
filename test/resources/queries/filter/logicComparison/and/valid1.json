@@ -16,7 +16,12 @@
 			]
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
 			"ORDER": "courses_avg"
 		}
 	},
@@ -251,25 +256,25 @@
 			"courses_avg": 75.36
 		},
 		{
-			"courses_uuid": "67301",
-			"courses_dept": "cpsc",
-			"courses_id": "110",
-			"courses_avg": 75.81
-		},
-		{
 			"courses_uuid": "67300",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 75.81
 		},
 		{
-			"courses_uuid": "56854",
+			"courses_uuid": "67301",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 75.81
+		},
+		{
+			"courses_uuid": "56853",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 75.89
 		},
 		{
-			"courses_uuid": "56853",
+			"courses_uuid": "56854",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 75.89
@@ -299,13 +304,13 @@
 			"courses_avg": 77.11
 		},
 		{
-			"courses_uuid": "43189",
+			"courses_uuid": "43188",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 77.43
 		},
 		{
-			"courses_uuid": "43188",
+			"courses_uuid": "43189",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 77.43

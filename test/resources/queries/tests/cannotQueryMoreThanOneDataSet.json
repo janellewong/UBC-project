@@ -1,38 +1,38 @@
 {
-  "title": "cannot query more than one data set",
-  "input": {
-    "WHERE": {
-      "OR": [
-        {
-          "AND": [
-            {
-              "GT": {
-                "nothing_avg": 10
-              }
-            },
-            {
-              "IS": {
-                "courses_dept": "zool"
-              }
-            }
-          ]
-        },
-        {
-          "EQ": {
-            "courses_avg": 10
-          }
-        }
-      ]
-    },
-    "OPTIONS": {
-      "COLUMNS": [
-        "courses_dept",
-        "courses_id",
-        "courses_avg"
-      ],
-      "ORDER": "courses_avg"
-    }
-  },
-  "errorExpected": true,
-  "with": "InsightError"
+	"title": "cannot query more than one data set",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"nothing_avg": 10
+							}
+						},
+						{
+							"IS": {
+								"courses_dept": "zool"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"courses_avg": 10
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
 }

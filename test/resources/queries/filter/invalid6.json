@@ -3,7 +3,9 @@
 	"input": {
 		"WHERE": {},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid"]
+			"COLUMNS": [
+				"courses_uuid"
+			]
 		},
 		"MESLEEPY": {}
 	},

@@ -7,7 +7,11 @@
 			}
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id"
+			],
 			"ORDER": "courses_avg"
 		}
 	},

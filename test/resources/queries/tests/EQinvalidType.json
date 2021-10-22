@@ -1,41 +1,41 @@
 {
-  "title": "EQ as array and not number",
-  "input": {
-    "WHERE": {
-      "OR": [
-        {
-          "AND": [
-            {
-              "GT": {
-                "courses_avg": 90
-              }
-            },
-            {
-              "IS": {
-                "courses_dept": "adhe"
-              }
-            }
-          ]
-        },
-        {
-          "EQ": {
-            "courses_avg": [
-              78,
-              89
-            ]
-          }
-        }
-      ]
-    },
-    "OPTIONS": {
-      "COLUMNS": [
-        "courses_dept",
-        "courses_id",
-        "courses_avg"
-      ],
-      "ORDER": "courses_avg"
-    }
-  },
-  "errorExpected": true,
-  "with": "InsightError"
+	"title": "EQ as array and not number",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"courses_avg": 90
+							}
+						},
+						{
+							"IS": {
+								"courses_dept": "adhe"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"courses_avg": [
+							78,
+							89
+						]
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
 }

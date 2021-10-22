@@ -36,18 +36,6 @@
 		{
 			"courses_dept": "cpsc",
 			"courses_id": "310",
-			"courses_instructor": "",
-			"courses_title": "intr sftwr eng",
-			"courses_avg": 78.68,
-			"courses_pass": 22,
-			"courses_fail": 0,
-			"courses_audit": 0,
-			"courses_uuid": "75606",
-			"courses_year": 1900
-		},
-		{
-			"courses_dept": "cpsc",
-			"courses_id": "310",
 			"courses_instructor": "allen, meghan",
 			"courses_title": "intr sftwr eng",
 			"courses_avg": 78.68,
@@ -62,11 +50,11 @@
 			"courses_id": "310",
 			"courses_instructor": "",
 			"courses_title": "intr sftwr eng",
-			"courses_avg": 81.88,
-			"courses_pass": 31,
-			"courses_fail": 1,
+			"courses_avg": 78.68,
+			"courses_pass": 22,
+			"courses_fail": 0,
 			"courses_audit": 0,
-			"courses_uuid": "25819",
+			"courses_uuid": "75606",
 			"courses_year": 1900
 		},
 		{
@@ -86,11 +74,11 @@
 			"courses_id": "310",
 			"courses_instructor": "",
 			"courses_title": "intr sftwr eng",
-			"courses_avg": 84.6,
-			"courses_pass": 47,
-			"courses_fail": 0,
+			"courses_avg": 81.88,
+			"courses_pass": 31,
+			"courses_fail": 1,
 			"courses_audit": 0,
-			"courses_uuid": "39885",
+			"courses_uuid": "25819",
 			"courses_year": 1900
 		},
 		{
@@ -108,6 +96,18 @@
 		{
 			"courses_dept": "cpsc",
 			"courses_id": "310",
+			"courses_instructor": "",
+			"courses_title": "intr sftwr eng",
+			"courses_avg": 84.6,
+			"courses_pass": 47,
+			"courses_fail": 0,
+			"courses_audit": 0,
+			"courses_uuid": "39885",
+			"courses_year": 1900
+		},
+		{
+			"courses_dept": "cpsc",
+			"courses_id": "310",
 			"courses_instructor": "fritz, thomas",
 			"courses_title": "intr sftwr eng",
 			"courses_avg": 75.57,
@@ -116,18 +116,6 @@
 			"courses_audit": 0,
 			"courses_uuid": "72360",
 			"courses_year": 2010
-		},
-		{
-			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_instructor": "",
-			"courses_title": "intr sftwr eng",
-			"courses_avg": 80.34,
-			"courses_pass": 66,
-			"courses_fail": 1,
-			"courses_audit": 0,
-			"courses_uuid": "43203",
-			"courses_year": 1900
 		},
 		{
 			"courses_dept": "cpsc",
@@ -146,11 +134,11 @@
 			"courses_id": "310",
 			"courses_instructor": "",
 			"courses_title": "intr sftwr eng",
-			"courses_avg": 79.12,
-			"courses_pass": 75,
+			"courses_avg": 80.34,
+			"courses_pass": 66,
 			"courses_fail": 1,
-			"courses_audit": 2,
-			"courses_uuid": "67313",
+			"courses_audit": 0,
+			"courses_uuid": "43203",
 			"courses_year": 1900
 		},
 		{
@@ -164,6 +152,18 @@
 			"courses_audit": 1,
 			"courses_uuid": "67312",
 			"courses_year": 2014
+		},
+		{
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_instructor": "",
+			"courses_title": "intr sftwr eng",
+			"courses_avg": 79.12,
+			"courses_pass": 75,
+			"courses_fail": 1,
+			"courses_audit": 2,
+			"courses_uuid": "67313",
+			"courses_year": 1900
 		},
 		{
 			"courses_dept": "cpsc",
@@ -264,18 +264,6 @@
 		{
 			"courses_dept": "cpsc",
 			"courses_id": "310",
-			"courses_instructor": "allen, meghan",
-			"courses_title": "intr sftwr eng",
-			"courses_avg": 72.27,
-			"courses_pass": 101,
-			"courses_fail": 6,
-			"courses_audit": 0,
-			"courses_uuid": "83432",
-			"courses_year": 2012
-		},
-		{
-			"courses_dept": "cpsc",
-			"courses_id": "310",
 			"courses_instructor": "ernst, neil",
 			"courses_title": "intr sftwr eng",
 			"courses_avg": 77.78,
@@ -284,6 +272,18 @@
 			"courses_audit": 0,
 			"courses_uuid": "61122",
 			"courses_year": 2011
+		},
+		{
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_instructor": "allen, meghan",
+			"courses_title": "intr sftwr eng",
+			"courses_avg": 72.27,
+			"courses_pass": 101,
+			"courses_fail": 6,
+			"courses_audit": 0,
+			"courses_uuid": "83432",
+			"courses_year": 2012
 		},
 		{
 			"courses_dept": "cpsc",
@@ -300,18 +300,6 @@
 		{
 			"courses_dept": "cpsc",
 			"courses_id": "310",
-			"courses_instructor": "",
-			"courses_title": "intr sftwr eng",
-			"courses_avg": 81.17,
-			"courses_pass": 139,
-			"courses_fail": 3,
-			"courses_audit": 0,
-			"courses_uuid": "3394",
-			"courses_year": 1900
-		},
-		{
-			"courses_dept": "cpsc",
-			"courses_id": "310",
 			"courses_instructor": "holmes, reid",
 			"courses_title": "intr sftwr eng",
 			"courses_avg": 81.17,
@@ -320,6 +308,18 @@
 			"courses_audit": 0,
 			"courses_uuid": "3393",
 			"courses_year": 2016
+		},
+		{
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_instructor": "",
+			"courses_title": "intr sftwr eng",
+			"courses_avg": 81.17,
+			"courses_pass": 139,
+			"courses_fail": 3,
+			"courses_audit": 0,
+			"courses_uuid": "3394",
+			"courses_year": 1900
 		},
 		{
 			"courses_dept": "cpsc",
@@ -336,18 +336,6 @@
 		{
 			"courses_dept": "cpsc",
 			"courses_id": "310",
-			"courses_instructor": "allen, meghan",
-			"courses_title": "intr sftwr eng",
-			"courses_avg": 78.22,
-			"courses_pass": 154,
-			"courses_fail": 2,
-			"courses_audit": 0,
-			"courses_uuid": "83431",
-			"courses_year": 2012
-		},
-		{
-			"courses_dept": "cpsc",
-			"courses_id": "310",
 			"courses_instructor": "",
 			"courses_title": "intr sftwr eng",
 			"courses_avg": 78.32,
@@ -360,14 +348,14 @@
 		{
 			"courses_dept": "cpsc",
 			"courses_id": "310",
-			"courses_instructor": "wohlstadter, eric",
+			"courses_instructor": "allen, meghan",
 			"courses_title": "intr sftwr eng",
-			"courses_avg": 80.24,
-			"courses_pass": 156,
-			"courses_fail": 1,
+			"courses_avg": 78.22,
+			"courses_pass": 154,
+			"courses_fail": 2,
 			"courses_audit": 0,
-			"courses_uuid": "49892",
-			"courses_year": 2013
+			"courses_uuid": "83431",
+			"courses_year": 2012
 		},
 		{
 			"courses_dept": "cpsc",
@@ -380,6 +368,18 @@
 			"courses_audit": 0,
 			"courses_uuid": "1293",
 			"courses_year": 2014
+		},
+		{
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_instructor": "wohlstadter, eric",
+			"courses_title": "intr sftwr eng",
+			"courses_avg": 80.24,
+			"courses_pass": 156,
+			"courses_fail": 1,
+			"courses_audit": 0,
+			"courses_uuid": "49892",
+			"courses_year": 2013
 		},
 		{
 			"courses_dept": "cpsc",

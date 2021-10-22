@@ -21,20 +21,25 @@
 			]
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
 			"ORDER": "courses_avg"
 		}
 	},
 	"errorExpected": false,
 	"with": [
 		{
-			"courses_uuid": "16428",
+			"courses_uuid": "16427",
 			"courses_dept": "busi",
 			"courses_id": "330",
 			"courses_avg": 4
 		},
 		{
-			"courses_uuid": "16427",
+			"courses_uuid": "16428",
 			"courses_dept": "busi",
 			"courses_id": "330",
 			"courses_avg": 4
