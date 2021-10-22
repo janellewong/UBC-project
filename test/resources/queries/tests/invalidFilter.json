@@ -1,36 +1,36 @@
 {
-  "title": "Invalid filter key ET",
-  "input": {
-    "WHERE": {
-      "OR": [
-        {
-          "AND": [
-            {
-              "ET": {}
-            },
-            {
-              "IS": {
-                "courses_dept": "adhe"
-              }
-            }
-          ]
-        },
-        {
-          "EQ": {
-            "courses_avg": 95
-          }
-        }
-      ]
-    },
-    "OPTIONS": {
-      "COLUMNS": [
-        "courses_dept",
-        "courses_id",
-        "courses_avg"
-      ],
-      "ORDER": "courses_avg"
-    }
-  },
-  "errorExpected": true,
-  "with": "InsightError"
+	"title": "Invalid filter key ET",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"ET": {}
+						},
+						{
+							"IS": {
+								"courses_dept": "adhe"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"courses_avg": 95
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
 }

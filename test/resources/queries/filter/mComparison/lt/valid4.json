@@ -7,16 +7,21 @@
 			}
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
 			"ORDER": "courses_avg"
 		}
 	},
 	"errorExpected": false,
 	"with": [
 		{
-			"courses_uuid": "56403",
-			"courses_dept": "lfs",
-			"courses_id": "100",
+			"courses_uuid": "89536",
+			"courses_dept": "frst",
+			"courses_id": "202",
 			"courses_avg": 0
 		},
 		{
@@ -26,9 +31,9 @@
 			"courses_avg": 0
 		},
 		{
-			"courses_uuid": "89536",
-			"courses_dept": "frst",
-			"courses_id": "202",
+			"courses_uuid": "56403",
+			"courses_dept": "lfs",
+			"courses_id": "100",
 			"courses_avg": 0
 		}
 	]

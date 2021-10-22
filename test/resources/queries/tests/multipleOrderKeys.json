@@ -1,42 +1,42 @@
 {
-  "title": "multiple order keys",
-  "input": {
-    "WHERE": {
-      "OR": [
-        {
-          "AND": [
-            {
-              "GT": {
-                "courses_avg": 90
-              }
-            },
-            {
-              "IS": {
-                "courses_dept": "adhe"
-              }
-            }
-          ]
-        },
-        {
-          "EQ": {
-            "courses_fail": 95
-          }
-        }
-      ]
-    },
-    "OPTIONS": {
-      "COLUMNS": [
-        "courses_dept",
-        "courses_id",
-        "courses_avg"
-      ],
-      "ORDER": [
-        "courses_dept",
-        "courses_id",
-        "courses_avg"
-      ]
-    }
-  },
-  "errorExpected": true,
-  "with": "InsightError"
+	"title": "multiple order keys",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"courses_avg": 90
+							}
+						},
+						{
+							"IS": {
+								"courses_dept": "adhe"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"courses_fail": 95
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER": [
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
 }

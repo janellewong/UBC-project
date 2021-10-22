@@ -1,45 +1,44 @@
 {
-  "errorMsg": "ORDER key must be in COLUMNS",
-  "title": "order key not in column",
-  "input": {
-    "WHERE": {
-      "OR": [
-        {
-          "AND": [
-            {
-              "GT": {
-                "courses_avg": 90
-              }
-            },
-            {
-              "IS": {
-                "courses_dept": "adhe"
-              }
-            }
-          ]
-        },
-        {
-          "EQ": {
-            "courses_avg": 95
-          }
-        }
-      ]
-    },
-    "OPTIONS": {
-      "COLUMNS": [
-        "courses_dept",
-        "courses_avg",
-        "courses_instructor",
-        "courses_title",
-        "courses_pass",
-        "courses_fail",
-        "courses_audit",
-        "courses_uuid",
-        "courses_year"
-      ],
-      "ORDER": "courses_id"
-    }
-  },
-  "errorExpected": true,
-  "with": "InsightError"
+	"title": "order key not in column",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"courses_avg": 90
+							}
+						},
+						{
+							"IS": {
+								"courses_dept": "adhe"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"courses_avg": 95
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_avg",
+				"courses_instructor",
+				"courses_title",
+				"courses_pass",
+				"courses_fail",
+				"courses_audit",
+				"courses_uuid",
+				"courses_year"
+			],
+			"ORDER": "courses_id"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
 }

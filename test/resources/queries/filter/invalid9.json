@@ -2,7 +2,9 @@
 	"title": "no where",
 	"input": {
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid"]
+			"COLUMNS": [
+				"courses_uuid"
+			]
 		}
 	},
 	"errorExpected": true,

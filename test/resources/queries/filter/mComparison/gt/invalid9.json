@@ -7,7 +7,12 @@
 			}
 		},
 		"OPTIONS": {
-			"COLUMNS": ["bruh_uuid", "bruh_dept", "bruh_id", "bruh_avg"],
+			"COLUMNS": [
+				"bruh_uuid",
+				"bruh_dept",
+				"bruh_id",
+				"bruh_avg"
+			],
 			"ORDER": "bruh_avg"
 		}
 	},

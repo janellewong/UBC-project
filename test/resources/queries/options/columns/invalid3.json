@@ -16,7 +16,9 @@
 			]
 		},
 		"OPTIONS": {
-			"COLUMNS": [""],
+			"COLUMNS": [
+				""
+			],
 			"ORDER": "courses_avg"
 		}
 	},

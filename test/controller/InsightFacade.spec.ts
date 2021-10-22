@@ -580,7 +580,11 @@ describe("InsightFacade", function () {
 					if (expected.length !== actual.length) {
 						chai.assert.fail();
 					}
-					expect(actual).to.have.deep.members(expected);
+					if (input?.OPTIONS?.ORDER) {
+						expect(actual).to.have.deep.equal(expected);
+					} else {
+						expect(actual).to.have.deep.members(expected);
+					}
 				},
 				errorValidator: (error): error is PQErrorKind =>
 					error === "ResultTooLargeError" || error === "InsightError",

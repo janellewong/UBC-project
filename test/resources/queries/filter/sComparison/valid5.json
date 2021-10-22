@@ -16,25 +16,31 @@
 			]
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg", "courses_instructor"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg",
+				"courses_instructor"
+			],
 			"ORDER": "courses_avg"
 		}
 	},
 	"errorExpected": false,
 	"with": [
 		{
-			"courses_uuid": "46775",
-			"courses_dept": "cpsc",
-			"courses_id": "513",
-			"courses_avg": 64,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46774",
 			"courses_dept": "cpsc",
 			"courses_id": "513",
 			"courses_avg": 64,
 			"courses_instructor": "mitchell, ian"
+		},
+		{
+			"courses_uuid": "46775",
+			"courses_dept": "cpsc",
+			"courses_id": "513",
+			"courses_avg": 64,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "83409",
@@ -58,14 +64,14 @@
 			"courses_instructor": "hu, alan"
 		},
 		{
-			"courses_uuid": "52052",
+			"courses_uuid": "52051",
 			"courses_dept": "cpsc",
 			"courses_id": "422",
 			"courses_avg": 66.13,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52051",
+			"courses_uuid": "52052",
 			"courses_dept": "cpsc",
 			"courses_id": "422",
 			"courses_avg": 66.13,
@@ -156,18 +162,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "83421",
-			"courses_dept": "cpsc",
-			"courses_id": "261",
-			"courses_avg": 67.91,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "83420",
 			"courses_dept": "cpsc",
 			"courses_id": "261",
 			"courses_avg": 67.91,
 			"courses_instructor": "hutchinson, norman"
+		},
+		{
+			"courses_uuid": "83421",
+			"courses_dept": "cpsc",
+			"courses_id": "261",
+			"courses_avg": 67.91,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "72342",
@@ -191,18 +197,18 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "1283",
-			"courses_dept": "cpsc",
-			"courses_id": "261",
-			"courses_avg": 68.22,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "1282",
 			"courses_dept": "cpsc",
 			"courses_id": "261",
 			"courses_avg": 68.22,
 			"courses_instructor": "belleville, patrice"
+		},
+		{
+			"courses_uuid": "1283",
+			"courses_dept": "cpsc",
+			"courses_id": "261",
+			"courses_avg": 68.22,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62405",
@@ -212,13 +218,6 @@
 			"courses_instructor": "manuch, jan"
 		},
 		{
-			"courses_uuid": "90535",
-			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 68.35,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "90534",
 			"courses_dept": "cpsc",
 			"courses_id": "303",
@@ -226,10 +225,10 @@
 			"courses_instructor": "mitchell, ian"
 		},
 		{
-			"courses_uuid": "72384",
+			"courses_uuid": "90535",
 			"courses_dept": "cpsc",
-			"courses_id": "340",
-			"courses_avg": 68.4,
+			"courses_id": "303",
+			"courses_avg": 68.35,
 			"courses_instructor": ""
 		},
 		{
@@ -238,6 +237,13 @@
 			"courses_id": "340",
 			"courses_avg": 68.4,
 			"courses_instructor": "doucet, arnaud"
+		},
+		{
+			"courses_uuid": "72384",
+			"courses_dept": "cpsc",
+			"courses_id": "340",
+			"courses_avg": 68.4,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "52024",
@@ -268,14 +274,14 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "51998",
+			"courses_uuid": "51997",
 			"courses_dept": "cpsc",
 			"courses_id": "302",
 			"courses_avg": 68.64,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "51997",
+			"courses_uuid": "51998",
 			"courses_dept": "cpsc",
 			"courses_id": "302",
 			"courses_avg": 68.64,
@@ -303,9 +309,23 @@
 			"courses_instructor": "lakshmanan, laks"
 		},
 		{
-			"courses_uuid": "46738",
+			"courses_uuid": "72341",
 			"courses_dept": "cpsc",
-			"courses_id": "420",
+			"courses_id": "213",
+			"courses_avg": 68.77,
+			"courses_instructor": "darwish, mohammad mostafa"
+		},
+		{
+			"courses_uuid": "51990",
+			"courses_dept": "cpsc",
+			"courses_id": "221",
+			"courses_avg": 68.77,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "46714",
+			"courses_dept": "cpsc",
+			"courses_id": "320",
 			"courses_avg": 68.77,
 			"courses_instructor": ""
 		},
@@ -317,31 +337,10 @@
 			"courses_instructor": "kirkpatrick, david"
 		},
 		{
-			"courses_uuid": "46714",
+			"courses_uuid": "46738",
 			"courses_dept": "cpsc",
-			"courses_id": "320",
+			"courses_id": "420",
 			"courses_avg": 68.77,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "51990",
-			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 68.77,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "72341",
-			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 68.77,
-			"courses_instructor": "darwish, mohammad mostafa"
-		},
-		{
-			"courses_uuid": "72397",
-			"courses_dept": "cpsc",
-			"courses_id": "415",
-			"courses_avg": 68.79,
 			"courses_instructor": ""
 		},
 		{
@@ -352,10 +351,10 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "52042",
+			"courses_uuid": "72397",
 			"courses_dept": "cpsc",
 			"courses_id": "415",
-			"courses_avg": 68.81,
+			"courses_avg": 68.79,
 			"courses_instructor": ""
 		},
 		{
@@ -366,10 +365,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46742",
+			"courses_uuid": "52042",
 			"courses_dept": "cpsc",
-			"courses_id": "422",
-			"courses_avg": 68.84,
+			"courses_id": "415",
+			"courses_avg": 68.81,
 			"courses_instructor": ""
 		},
 		{
@@ -378,6 +377,13 @@
 			"courses_id": "422",
 			"courses_avg": 68.84,
 			"courses_instructor": "conati, cristina"
+		},
+		{
+			"courses_uuid": "46742",
+			"courses_dept": "cpsc",
+			"courses_id": "422",
+			"courses_avg": 68.84,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1313",
@@ -408,18 +414,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "49882",
-			"courses_dept": "cpsc",
-			"courses_id": "261",
-			"courses_avg": 69.1,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "49881",
 			"courses_dept": "cpsc",
 			"courses_id": "261",
 			"courses_avg": 69.1,
 			"courses_instructor": "hutchinson, norman"
+		},
+		{
+			"courses_uuid": "49882",
+			"courses_dept": "cpsc",
+			"courses_id": "261",
+			"courses_avg": 69.1,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "52023",
@@ -429,13 +435,6 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90552",
-			"courses_dept": "cpsc",
-			"courses_id": "317",
-			"courses_avg": 69.24,
-			"courses_instructor": "acton, donald"
-		},
-		{
 			"courses_uuid": "62347",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
@@ -443,17 +442,10 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "49931",
+			"courses_uuid": "90552",
 			"courses_dept": "cpsc",
-			"courses_id": "415",
-			"courses_avg": 69.25,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "49930",
-			"courses_dept": "cpsc",
-			"courses_id": "415",
-			"courses_avg": 69.25,
+			"courses_id": "317",
+			"courses_avg": 69.24,
 			"courses_instructor": "acton, donald"
 		},
 		{
@@ -464,6 +456,20 @@
 			"courses_instructor": "goldberg, murray"
 		},
 		{
+			"courses_uuid": "49930",
+			"courses_dept": "cpsc",
+			"courses_id": "415",
+			"courses_avg": 69.25,
+			"courses_instructor": "acton, donald"
+		},
+		{
+			"courses_uuid": "49931",
+			"courses_dept": "cpsc",
+			"courses_id": "415",
+			"courses_avg": 69.25,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "49906",
 			"courses_dept": "cpsc",
 			"courses_id": "317",
@@ -471,18 +477,18 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "49937",
-			"courses_dept": "cpsc",
-			"courses_id": "420",
-			"courses_avg": 69.35,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "49936",
 			"courses_dept": "cpsc",
 			"courses_id": "420",
 			"courses_avg": 69.35,
 			"courses_instructor": "kirkpatrick, david"
+		},
+		{
+			"courses_uuid": "49937",
+			"courses_dept": "cpsc",
+			"courses_id": "420",
+			"courses_avg": 69.35,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "49911",
@@ -499,14 +505,14 @@
 			"courses_instructor": "hu, alan"
 		},
 		{
-			"courses_uuid": "52050",
+			"courses_uuid": "52049",
 			"courses_dept": "cpsc",
 			"courses_id": "421",
 			"courses_avg": 69.47,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52049",
+			"courses_uuid": "52050",
 			"courses_dept": "cpsc",
 			"courses_id": "421",
 			"courses_avg": 69.47,
@@ -520,11 +526,11 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "72403",
+			"courses_uuid": "61152",
 			"courses_dept": "cpsc",
-			"courses_id": "420",
+			"courses_id": "404",
 			"courses_avg": 69.58,
-			"courses_instructor": ""
+			"courses_instructor": "knorr, edwin max"
 		},
 		{
 			"courses_uuid": "72402",
@@ -534,11 +540,11 @@
 			"courses_instructor": "kirkpatrick, david"
 		},
 		{
-			"courses_uuid": "61152",
+			"courses_uuid": "72403",
 			"courses_dept": "cpsc",
-			"courses_id": "404",
+			"courses_id": "420",
 			"courses_avg": 69.58,
-			"courses_instructor": "knorr, edwin max"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "46712",
@@ -576,18 +582,18 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "75596",
-			"courses_dept": "cpsc",
-			"courses_id": "121",
-			"courses_avg": 69.73,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "75595",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 69.73,
 			"courses_instructor": "allen, meghan"
+		},
+		{
+			"courses_uuid": "75596",
+			"courses_dept": "cpsc",
+			"courses_id": "121",
+			"courses_avg": 69.73,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "90561",
@@ -611,18 +617,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90585",
-			"courses_dept": "cpsc",
-			"courses_id": "421",
-			"courses_avg": 70.03,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "90584",
 			"courses_dept": "cpsc",
 			"courses_id": "421",
 			"courses_avg": 70.03,
 			"courses_instructor": "friedman, joel"
+		},
+		{
+			"courses_uuid": "90585",
+			"courses_dept": "cpsc",
+			"courses_id": "421",
+			"courses_avg": 70.03,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "52027",
@@ -639,18 +645,18 @@
 			"courses_instructor": "kiczales, gregor"
 		},
 		{
-			"courses_uuid": "61118",
-			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 70.16,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "61117",
 			"courses_dept": "cpsc",
 			"courses_id": "303",
 			"courses_avg": 70.16,
 			"courses_instructor": "mitchell, ian"
+		},
+		{
+			"courses_uuid": "61118",
+			"courses_dept": "cpsc",
+			"courses_id": "303",
+			"courses_avg": 70.16,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "83411",
@@ -695,18 +701,18 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "49912",
-			"courses_dept": "cpsc",
-			"courses_id": "320",
-			"courses_avg": 70.46,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "72367",
 			"courses_dept": "cpsc",
 			"courses_id": "313",
 			"courses_avg": 70.46,
 			"courses_instructor": "warfield, andrew"
+		},
+		{
+			"courses_uuid": "49912",
+			"courses_dept": "cpsc",
+			"courses_id": "320",
+			"courses_avg": 70.46,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62345",
@@ -765,18 +771,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61142",
-			"courses_dept": "cpsc",
-			"courses_id": "320",
-			"courses_avg": 70.66,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "49899",
 			"courses_dept": "cpsc",
 			"courses_id": "313",
 			"courses_avg": 70.66,
 			"courses_instructor": "acton, donald"
+		},
+		{
+			"courses_uuid": "61142",
+			"courses_dept": "cpsc",
+			"courses_id": "320",
+			"courses_avg": 70.66,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "72379",
@@ -786,11 +792,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61160",
+			"courses_uuid": "62356",
 			"courses_dept": "cpsc",
-			"courses_id": "415",
+			"courses_id": "210",
 			"courses_avg": 70.7,
-			"courses_instructor": ""
+			"courses_instructor": "hutchinson, norman"
 		},
 		{
 			"courses_uuid": "61159",
@@ -800,17 +806,10 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "62356",
+			"courses_uuid": "61160",
 			"courses_dept": "cpsc",
-			"courses_id": "210",
+			"courses_id": "415",
 			"courses_avg": 70.7,
-			"courses_instructor": "hutchinson, norman"
-		},
-		{
-			"courses_uuid": "52025",
-			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 70.75,
 			"courses_instructor": ""
 		},
 		{
@@ -819,6 +818,13 @@
 			"courses_id": "110",
 			"courses_avg": 70.75,
 			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "52025",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 70.75,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "83440",
@@ -835,13 +841,6 @@
 			"courses_instructor": "kiczales, gregor"
 		},
 		{
-			"courses_uuid": "61098",
-			"courses_dept": "cpsc",
-			"courses_id": "210",
-			"courses_avg": 70.83,
-			"courses_instructor": "feeley, michael"
-		},
-		{
 			"courses_uuid": "1250",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
@@ -849,11 +848,11 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "46732",
+			"courses_uuid": "61098",
 			"courses_dept": "cpsc",
-			"courses_id": "415",
-			"courses_avg": 70.87,
-			"courses_instructor": ""
+			"courses_id": "210",
+			"courses_avg": 70.83,
+			"courses_instructor": "feeley, michael"
 		},
 		{
 			"courses_uuid": "46731",
@@ -861,6 +860,13 @@
 			"courses_id": "415",
 			"courses_avg": 70.87,
 			"courses_instructor": "acton, donald"
+		},
+		{
+			"courses_uuid": "46732",
+			"courses_dept": "cpsc",
+			"courses_id": "415",
+			"courses_avg": 70.87,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "49851",
@@ -884,11 +890,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "83439",
+			"courses_uuid": "49887",
 			"courses_dept": "cpsc",
-			"courses_id": "313",
+			"courses_id": "303",
 			"courses_avg": 70.92,
-			"courses_instructor": "belleville, patrice"
+			"courses_instructor": "ascher, uri michael"
 		},
 		{
 			"courses_uuid": "49888",
@@ -898,16 +904,16 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "49887",
+			"courses_uuid": "83439",
 			"courses_dept": "cpsc",
-			"courses_id": "303",
+			"courses_id": "313",
 			"courses_avg": 70.92,
-			"courses_instructor": "ascher, uri michael"
+			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "83475",
+			"courses_uuid": "1314",
 			"courses_dept": "cpsc",
-			"courses_id": "420",
+			"courses_id": "320",
 			"courses_avg": 70.93,
 			"courses_instructor": ""
 		},
@@ -919,9 +925,9 @@
 			"courses_instructor": "kirkpatrick, david"
 		},
 		{
-			"courses_uuid": "1314",
+			"courses_uuid": "83475",
 			"courses_dept": "cpsc",
-			"courses_id": "320",
+			"courses_id": "420",
 			"courses_avg": 70.93,
 			"courses_instructor": ""
 		},
@@ -940,13 +946,6 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "72387",
-			"courses_dept": "cpsc",
-			"courses_id": "404",
-			"courses_avg": 70.96,
-			"courses_instructor": "knorr, edwin max"
-		},
-		{
 			"courses_uuid": "72380",
 			"courses_dept": "cpsc",
 			"courses_id": "322",
@@ -954,18 +953,11 @@
 			"courses_instructor": "conati, cristina"
 		},
 		{
-			"courses_uuid": "52000",
+			"courses_uuid": "72387",
 			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 70.98,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "51999",
-			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 70.98,
-			"courses_instructor": ""
+			"courses_id": "404",
+			"courses_avg": 70.96,
+			"courses_instructor": "knorr, edwin max"
 		},
 		{
 			"courses_uuid": "90526",
@@ -975,10 +967,17 @@
 			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "46686",
+			"courses_uuid": "51999",
 			"courses_dept": "cpsc",
-			"courses_id": "301",
-			"courses_avg": 71,
+			"courses_id": "303",
+			"courses_avg": 70.98,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "52000",
+			"courses_dept": "cpsc",
+			"courses_id": "303",
+			"courses_avg": 70.98,
 			"courses_instructor": ""
 		},
 		{
@@ -989,10 +988,10 @@
 			"courses_instructor": "mitchell, ian"
 		},
 		{
-			"courses_uuid": "75610",
+			"courses_uuid": "46686",
 			"courses_dept": "cpsc",
-			"courses_id": "320",
-			"courses_avg": 71.02,
+			"courses_id": "301",
+			"courses_avg": 71,
 			"courses_instructor": ""
 		},
 		{
@@ -1003,18 +1002,18 @@
 			"courses_instructor": "malka, lior"
 		},
 		{
+			"courses_uuid": "75610",
+			"courses_dept": "cpsc",
+			"courses_id": "320",
+			"courses_avg": 71.02,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "83405",
 			"courses_dept": "cpsc",
 			"courses_id": "210",
 			"courses_avg": 71.03,
 			"courses_instructor": "feeley, michael"
-		},
-		{
-			"courses_uuid": "90579",
-			"courses_dept": "cpsc",
-			"courses_id": "415",
-			"courses_avg": 71.04,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "90578",
@@ -1024,17 +1023,10 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "72372",
+			"courses_uuid": "90579",
 			"courses_dept": "cpsc",
-			"courses_id": "317",
-			"courses_avg": 71.05,
-			"courses_instructor": "acton, donald"
-		},
-		{
-			"courses_uuid": "83408",
-			"courses_dept": "cpsc",
-			"courses_id": "210",
-			"courses_avg": 71.05,
+			"courses_id": "415",
+			"courses_avg": 71.04,
 			"courses_instructor": ""
 		},
 		{
@@ -1045,6 +1037,20 @@
 			"courses_instructor": "hutchinson, norman"
 		},
 		{
+			"courses_uuid": "83408",
+			"courses_dept": "cpsc",
+			"courses_id": "210",
+			"courses_avg": 71.05,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "72372",
+			"courses_dept": "cpsc",
+			"courses_id": "317",
+			"courses_avg": 71.05,
+			"courses_instructor": "acton, donald"
+		},
+		{
 			"courses_uuid": "1248",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
@@ -1052,18 +1058,18 @@
 			"courses_instructor": "kiczales, gregor"
 		},
 		{
-			"courses_uuid": "62406",
-			"courses_dept": "cpsc",
-			"courses_id": "320",
-			"courses_avg": 71.09,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "1251",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 71.09,
 			"courses_instructor": "garcia, ronald"
+		},
+		{
+			"courses_uuid": "62406",
+			"courses_dept": "cpsc",
+			"courses_id": "320",
+			"courses_avg": 71.09,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "49876",
@@ -1094,6 +1100,13 @@
 			"courses_instructor": "mcgrenere, joanna"
 		},
 		{
+			"courses_uuid": "49856",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 71.22,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "72389",
 			"courses_dept": "cpsc",
 			"courses_id": "404",
@@ -1101,10 +1114,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "49856",
+			"courses_uuid": "72368",
 			"courses_dept": "cpsc",
-			"courses_id": "110",
-			"courses_avg": 71.22,
+			"courses_id": "313",
+			"courses_avg": 71.24,
 			"courses_instructor": ""
 		},
 		{
@@ -1115,23 +1128,16 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "72368",
+			"courses_uuid": "51992",
 			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 71.24,
+			"courses_id": "221",
+			"courses_avg": 71.27,
 			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "49907",
 			"courses_dept": "cpsc",
 			"courses_id": "317",
-			"courses_avg": 71.27,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "51992",
-			"courses_dept": "cpsc",
-			"courses_id": "221",
 			"courses_avg": 71.27,
 			"courses_instructor": ""
 		},
@@ -1150,18 +1156,18 @@
 			"courses_instructor": "hutchinson, norman"
 		},
 		{
-			"courses_uuid": "1332",
-			"courses_dept": "cpsc",
-			"courses_id": "415",
-			"courses_avg": 71.33,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "1331",
 			"courses_dept": "cpsc",
 			"courses_id": "415",
 			"courses_avg": 71.33,
 			"courses_instructor": "acton, donald"
+		},
+		{
+			"courses_uuid": "1332",
+			"courses_dept": "cpsc",
+			"courses_id": "415",
+			"courses_avg": 71.33,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "46678",
@@ -1185,13 +1191,6 @@
 			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "90547",
-			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 71.44,
-			"courses_instructor": "wolfman, steven"
-		},
-		{
 			"courses_uuid": "83392",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
@@ -1199,11 +1198,11 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "62375",
+			"courses_uuid": "90547",
 			"courses_dept": "cpsc",
-			"courses_id": "261",
-			"courses_avg": 71.45,
-			"courses_instructor": ""
+			"courses_id": "313",
+			"courses_avg": 71.44,
+			"courses_instructor": "wolfman, steven"
 		},
 		{
 			"courses_uuid": "62374",
@@ -1213,6 +1212,13 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
+			"courses_uuid": "62375",
+			"courses_dept": "cpsc",
+			"courses_id": "261",
+			"courses_avg": 71.45,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "61100",
 			"courses_dept": "cpsc",
 			"courses_id": "210",
@@ -1220,9 +1226,9 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90587",
+			"courses_uuid": "51993",
 			"courses_dept": "cpsc",
-			"courses_id": "422",
+			"courses_id": "221",
 			"courses_avg": 71.52,
 			"courses_instructor": ""
 		},
@@ -1234,9 +1240,9 @@
 			"courses_instructor": "conati, cristina"
 		},
 		{
-			"courses_uuid": "51993",
+			"courses_uuid": "90587",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
+			"courses_id": "422",
 			"courses_avg": 71.52,
 			"courses_instructor": ""
 		},
@@ -1283,13 +1289,6 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46709",
-			"courses_dept": "cpsc",
-			"courses_id": "317",
-			"courses_avg": 71.66,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46662",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
@@ -1297,10 +1296,10 @@
 			"courses_instructor": "wolfman, steven"
 		},
 		{
-			"courses_uuid": "43207",
+			"courses_uuid": "46709",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 71.67,
+			"courses_id": "317",
+			"courses_avg": 71.66,
 			"courses_instructor": ""
 		},
 		{
@@ -1309,6 +1308,13 @@
 			"courses_id": "322",
 			"courses_avg": 71.67,
 			"courses_instructor": "carenini, giuseppe"
+		},
+		{
+			"courses_uuid": "43207",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 71.67,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "83414",
@@ -1332,13 +1338,6 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90581",
-			"courses_dept": "cpsc",
-			"courses_id": "416",
-			"courses_avg": 71.75,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "90580",
 			"courses_dept": "cpsc",
 			"courses_id": "416",
@@ -1346,10 +1345,10 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "67317",
+			"courses_uuid": "90581",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 71.77,
+			"courses_id": "416",
+			"courses_avg": 71.75,
 			"courses_instructor": ""
 		},
 		{
@@ -1360,6 +1359,13 @@
 			"courses_instructor": "conati, cristina"
 		},
 		{
+			"courses_uuid": "67317",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 71.77,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "83404",
 			"courses_dept": "cpsc",
 			"courses_id": "210",
@@ -1367,14 +1373,14 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "52056",
+			"courses_uuid": "52055",
 			"courses_dept": "cpsc",
 			"courses_id": "425",
 			"courses_avg": 71.8,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52055",
+			"courses_uuid": "52056",
 			"courses_dept": "cpsc",
 			"courses_id": "425",
 			"courses_avg": 71.8,
@@ -1402,18 +1408,11 @@
 			"courses_instructor": "munzner, tamara"
 		},
 		{
-			"courses_uuid": "1340",
+			"courses_uuid": "62364",
 			"courses_dept": "cpsc",
-			"courses_id": "422",
+			"courses_id": "213",
 			"courses_avg": 71.89,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1339",
-			"courses_dept": "cpsc",
-			"courses_id": "422",
-			"courses_avg": 71.89,
-			"courses_instructor": "carenini, giuseppe"
+			"courses_instructor": "feeley, michael"
 		},
 		{
 			"courses_uuid": "46692",
@@ -1423,16 +1422,23 @@
 			"courses_instructor": "pottinger, rachel"
 		},
 		{
-			"courses_uuid": "62364",
+			"courses_uuid": "1339",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
+			"courses_id": "422",
 			"courses_avg": 71.89,
-			"courses_instructor": "feeley, michael"
+			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "1302",
+			"courses_uuid": "1340",
 			"courses_dept": "cpsc",
-			"courses_id": "313",
+			"courses_id": "422",
+			"courses_avg": 71.89,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "46655",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
 			"courses_avg": 71.92,
 			"courses_instructor": ""
 		},
@@ -1444,9 +1450,9 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "46655",
+			"courses_uuid": "1302",
 			"courses_dept": "cpsc",
-			"courses_id": "110",
+			"courses_id": "313",
 			"courses_avg": 71.92,
 			"courses_instructor": ""
 		},
@@ -1458,13 +1464,6 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "61154",
-			"courses_dept": "cpsc",
-			"courses_id": "404",
-			"courses_avg": 71.97,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "90528",
 			"courses_dept": "cpsc",
 			"courses_id": "221",
@@ -1472,10 +1471,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "43197",
+			"courses_uuid": "61154",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 71.99,
+			"courses_id": "404",
+			"courses_avg": 71.97,
 			"courses_instructor": ""
 		},
 		{
@@ -1486,16 +1485,16 @@
 			"courses_instructor": "warfield, andrew"
 		},
 		{
-			"courses_uuid": "46734",
+			"courses_uuid": "43197",
 			"courses_dept": "cpsc",
-			"courses_id": "416",
-			"courses_avg": 72,
+			"courses_id": "213",
+			"courses_avg": 71.99,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46733",
+			"courses_uuid": "62421",
 			"courses_dept": "cpsc",
-			"courses_id": "416",
+			"courses_id": "415",
 			"courses_avg": 72,
 			"courses_instructor": "acton, donald"
 		},
@@ -1507,11 +1506,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62421",
+			"courses_uuid": "46733",
 			"courses_dept": "cpsc",
-			"courses_id": "415",
+			"courses_id": "416",
 			"courses_avg": 72,
 			"courses_instructor": "acton, donald"
+		},
+		{
+			"courses_uuid": "46734",
+			"courses_dept": "cpsc",
+			"courses_id": "416",
+			"courses_avg": 72,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62352",
@@ -1528,11 +1534,11 @@
 			"courses_instructor": "murphy, gail"
 		},
 		{
-			"courses_uuid": "83452",
+			"courses_uuid": "75603",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
+			"courses_id": "304",
 			"courses_avg": 72.15,
-			"courses_instructor": "carenini, giuseppe"
+			"courses_instructor": "ng, raymond tak-yan"
 		},
 		{
 			"courses_uuid": "75604",
@@ -1542,11 +1548,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "75603",
+			"courses_uuid": "83452",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
+			"courses_id": "322",
 			"courses_avg": 72.15,
-			"courses_instructor": "ng, raymond tak-yan"
+			"courses_instructor": "carenini, giuseppe"
 		},
 		{
 			"courses_uuid": "49865",
@@ -1556,13 +1562,6 @@
 			"courses_instructor": "beschastnikh, ivan"
 		},
 		{
-			"courses_uuid": "46668",
-			"courses_dept": "cpsc",
-			"courses_id": "210",
-			"courses_avg": 72.17,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46667",
 			"courses_dept": "cpsc",
 			"courses_id": "210",
@@ -1570,10 +1569,10 @@
 			"courses_instructor": "murphy, gail"
 		},
 		{
-			"courses_uuid": "83454",
+			"courses_uuid": "46668",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 72.18,
+			"courses_id": "210",
+			"courses_avg": 72.17,
 			"courses_instructor": ""
 		},
 		{
@@ -1584,32 +1583,18 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
+			"courses_uuid": "83454",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 72.18,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "72377",
 			"courses_dept": "cpsc",
 			"courses_id": "320",
 			"courses_avg": 72.19,
 			"courses_instructor": "belleville, patrice"
-		},
-		{
-			"courses_uuid": "83453",
-			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 72.21,
-			"courses_instructor": "mackworth, alan"
-		},
-		{
-			"courses_uuid": "90548",
-			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 72.21,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "43195",
-			"courses_dept": "cpsc",
-			"courses_id": "210",
-			"courses_avg": 72.21,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "43194",
@@ -1619,6 +1604,27 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
+			"courses_uuid": "43195",
+			"courses_dept": "cpsc",
+			"courses_id": "210",
+			"courses_avg": 72.21,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "90548",
+			"courses_dept": "cpsc",
+			"courses_id": "313",
+			"courses_avg": 72.21,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "83453",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 72.21,
+			"courses_instructor": "mackworth, alan"
+		},
+		{
 			"courses_uuid": "1301",
 			"courses_dept": "cpsc",
 			"courses_id": "313",
@@ -1626,18 +1632,18 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "49929",
-			"courses_dept": "cpsc",
-			"courses_id": "411",
-			"courses_avg": 72.24,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "49928",
 			"courses_dept": "cpsc",
 			"courses_id": "411",
 			"courses_avg": 72.24,
 			"courses_instructor": "hutchinson, norman"
+		},
+		{
+			"courses_uuid": "49929",
+			"courses_dept": "cpsc",
+			"courses_id": "411",
+			"courses_avg": 72.24,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61137",
@@ -1668,9 +1674,9 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52044",
+			"courses_uuid": "61107",
 			"courses_dept": "cpsc",
-			"courses_id": "416",
+			"courses_id": "221",
 			"courses_avg": 72.36,
 			"courses_instructor": ""
 		},
@@ -1682,17 +1688,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61107",
+			"courses_uuid": "52044",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
+			"courses_id": "416",
 			"courses_avg": 72.36,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "90562",
-			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 72.39,
 			"courses_instructor": ""
 		},
 		{
@@ -1703,10 +1702,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62373",
+			"courses_uuid": "90562",
 			"courses_dept": "cpsc",
-			"courses_id": "259",
-			"courses_avg": 72.4,
+			"courses_id": "322",
+			"courses_avg": 72.39,
 			"courses_instructor": ""
 		},
 		{
@@ -1717,18 +1716,11 @@
 			"courses_instructor": "khosravi, hassan"
 		},
 		{
-			"courses_uuid": "61166",
+			"courses_uuid": "62373",
 			"courses_dept": "cpsc",
-			"courses_id": "420",
-			"courses_avg": 72.46,
+			"courses_id": "259",
+			"courses_avg": 72.4,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "61165",
-			"courses_dept": "cpsc",
-			"courses_id": "420",
-			"courses_avg": 72.46,
-			"courses_instructor": "kirkpatrick, david"
 		},
 		{
 			"courses_uuid": "83450",
@@ -1738,10 +1730,17 @@
 			"courses_instructor": "meyer, irmtraud margret"
 		},
 		{
-			"courses_uuid": "83483",
+			"courses_uuid": "61165",
 			"courses_dept": "cpsc",
-			"courses_id": "425",
-			"courses_avg": 72.48,
+			"courses_id": "420",
+			"courses_avg": 72.46,
+			"courses_instructor": "kirkpatrick, david"
+		},
+		{
+			"courses_uuid": "61166",
+			"courses_dept": "cpsc",
+			"courses_id": "420",
+			"courses_avg": 72.46,
 			"courses_instructor": ""
 		},
 		{
@@ -1752,10 +1751,10 @@
 			"courses_instructor": "woodham, robert"
 		},
 		{
-			"courses_uuid": "83427",
+			"courses_uuid": "83483",
 			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 72.5,
+			"courses_id": "425",
+			"courses_avg": 72.48,
 			"courses_instructor": ""
 		},
 		{
@@ -1766,11 +1765,18 @@
 			"courses_instructor": "mitchell, ian"
 		},
 		{
-			"courses_uuid": "61140",
+			"courses_uuid": "83427",
 			"courses_dept": "cpsc",
-			"courses_id": "320",
+			"courses_id": "303",
+			"courses_avg": 72.5,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "62369",
+			"courses_dept": "cpsc",
+			"courses_id": "221",
 			"courses_avg": 72.53,
-			"courses_instructor": "belleville, patrice"
+			"courses_instructor": "kotthoff, lars"
 		},
 		{
 			"courses_uuid": "83446",
@@ -1780,11 +1786,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62369",
+			"courses_uuid": "61140",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
+			"courses_id": "320",
 			"courses_avg": 72.53,
-			"courses_instructor": "kotthoff, lars"
+			"courses_instructor": "belleville, patrice"
 		},
 		{
 			"courses_uuid": "49924",
@@ -1808,11 +1814,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46719",
+			"courses_uuid": "62358",
 			"courses_dept": "cpsc",
-			"courses_id": "340",
+			"courses_id": "210",
 			"courses_avg": 72.65,
-			"courses_instructor": ""
+			"courses_instructor": "carter, paul martin"
 		},
 		{
 			"courses_uuid": "46718",
@@ -1822,11 +1828,11 @@
 			"courses_instructor": "de freitas, joao"
 		},
 		{
-			"courses_uuid": "62358",
+			"courses_uuid": "46719",
 			"courses_dept": "cpsc",
-			"courses_id": "210",
+			"courses_id": "340",
 			"courses_avg": 72.65,
-			"courses_instructor": "carter, paul martin"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "72331",
@@ -1843,18 +1849,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46690",
-			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 72.69,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46689",
 			"courses_dept": "cpsc",
 			"courses_id": "303",
 			"courses_avg": 72.69,
 			"courses_instructor": "greif, chen"
+		},
+		{
+			"courses_uuid": "46690",
+			"courses_dept": "cpsc",
+			"courses_id": "303",
+			"courses_avg": 72.69,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "72374",
@@ -1864,9 +1870,9 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90593",
+			"courses_uuid": "62394",
 			"courses_dept": "cpsc",
-			"courses_id": "430",
+			"courses_id": "313",
 			"courses_avg": 72.75,
 			"courses_instructor": ""
 		},
@@ -1878,25 +1884,11 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "62394",
+			"courses_uuid": "90593",
 			"courses_dept": "cpsc",
-			"courses_id": "313",
+			"courses_id": "430",
 			"courses_avg": 72.75,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "90538",
-			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 72.77,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "90537",
-			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 72.77,
-			"courses_instructor": "tsiknis, georgios"
 		},
 		{
 			"courses_uuid": "90536",
@@ -1906,9 +1898,30 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "67315",
+			"courses_uuid": "90537",
 			"courses_dept": "cpsc",
-			"courses_id": "320",
+			"courses_id": "304",
+			"courses_avg": 72.77,
+			"courses_instructor": "tsiknis, georgios"
+		},
+		{
+			"courses_uuid": "90538",
+			"courses_dept": "cpsc",
+			"courses_id": "304",
+			"courses_avg": 72.77,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "72328",
+			"courses_dept": "cpsc",
+			"courses_id": "121",
+			"courses_avg": 72.78,
+			"courses_instructor": "wolfman, steven"
+		},
+		{
+			"courses_uuid": "62400",
+			"courses_dept": "cpsc",
+			"courses_id": "317",
 			"courses_avg": 72.78,
 			"courses_instructor": ""
 		},
@@ -1920,18 +1933,11 @@
 			"courses_instructor": "schroeder, jonatan"
 		},
 		{
-			"courses_uuid": "62400",
+			"courses_uuid": "67315",
 			"courses_dept": "cpsc",
-			"courses_id": "317",
+			"courses_id": "320",
 			"courses_avg": 72.78,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "72328",
-			"courses_dept": "cpsc",
-			"courses_id": "121",
-			"courses_avg": 72.78,
-			"courses_instructor": "wolfman, steven"
 		},
 		{
 			"courses_uuid": "46707",
@@ -1941,14 +1947,14 @@
 			"courses_instructor": "krasic, charles"
 		},
 		{
-			"courses_uuid": "52008",
+			"courses_uuid": "52007",
 			"courses_dept": "cpsc",
 			"courses_id": "311",
 			"courses_avg": 72.83,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52007",
+			"courses_uuid": "52008",
 			"courses_dept": "cpsc",
 			"courses_id": "311",
 			"courses_avg": 72.83,
@@ -1983,13 +1989,6 @@
 			"courses_instructor": "ng, raymond tak-yan"
 		},
 		{
-			"courses_uuid": "83471",
-			"courses_dept": "cpsc",
-			"courses_id": "416",
-			"courses_avg": 72.91,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "83470",
 			"courses_dept": "cpsc",
 			"courses_id": "416",
@@ -1997,10 +1996,10 @@
 			"courses_instructor": "wagner, alan"
 		},
 		{
-			"courses_uuid": "1319",
+			"courses_uuid": "83471",
 			"courses_dept": "cpsc",
-			"courses_id": "340",
-			"courses_avg": 72.94,
+			"courses_id": "416",
+			"courses_avg": 72.91,
 			"courses_instructor": ""
 		},
 		{
@@ -2011,6 +2010,13 @@
 			"courses_instructor": "ng, raymond tak-yan"
 		},
 		{
+			"courses_uuid": "1319",
+			"courses_dept": "cpsc",
+			"courses_id": "340",
+			"courses_avg": 72.94,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "1307",
 			"courses_dept": "cpsc",
 			"courses_id": "317",
@@ -2018,9 +2024,9 @@
 			"courses_instructor": "hutchinson, norman"
 		},
 		{
-			"courses_uuid": "61172",
+			"courses_uuid": "61103",
 			"courses_dept": "cpsc",
-			"courses_id": "425",
+			"courses_id": "213",
 			"courses_avg": 73,
 			"courses_instructor": ""
 		},
@@ -2032,16 +2038,16 @@
 			"courses_instructor": "woodham, robert"
 		},
 		{
-			"courses_uuid": "61103",
+			"courses_uuid": "61172",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
+			"courses_id": "425",
 			"courses_avg": 73,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52048",
+			"courses_uuid": "61145",
 			"courses_dept": "cpsc",
-			"courses_id": "420",
+			"courses_id": "322",
 			"courses_avg": 73.03,
 			"courses_instructor": ""
 		},
@@ -2053,25 +2059,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61145",
+			"courses_uuid": "52048",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
+			"courses_id": "420",
 			"courses_avg": 73.03,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "63255",
-			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 73.07,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "63254",
-			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 73.07,
-			"courses_instructor": "voll, kimberly"
 		},
 		{
 			"courses_uuid": "83410",
@@ -2081,6 +2073,20 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
+			"courses_uuid": "63254",
+			"courses_dept": "cpsc",
+			"courses_id": "221",
+			"courses_avg": 73.07,
+			"courses_instructor": "voll, kimberly"
+		},
+		{
+			"courses_uuid": "63255",
+			"courses_dept": "cpsc",
+			"courses_id": "221",
+			"courses_avg": 73.07,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "61130",
 			"courses_dept": "cpsc",
 			"courses_id": "313",
@@ -2088,9 +2094,16 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "3402",
+			"courses_uuid": "1249",
 			"courses_dept": "cpsc",
-			"courses_id": "415",
+			"courses_id": "110",
+			"courses_avg": 73.13,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "51989",
+			"courses_dept": "cpsc",
+			"courses_id": "213",
 			"courses_avg": 73.13,
 			"courses_instructor": ""
 		},
@@ -2102,18 +2115,11 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "51989",
+			"courses_uuid": "3402",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
+			"courses_id": "415",
 			"courses_avg": 73.13,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1249",
-			"courses_dept": "cpsc",
-			"courses_id": "110",
-			"courses_avg": 73.13,
-			"courses_instructor": "kiczales, gregor"
 		},
 		{
 			"courses_uuid": "46695",
@@ -2123,9 +2129,9 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "49943",
+			"courses_uuid": "90554",
 			"courses_dept": "cpsc",
-			"courses_id": "425",
+			"courses_id": "317",
 			"courses_avg": 73.17,
 			"courses_instructor": ""
 		},
@@ -2137,23 +2143,23 @@
 			"courses_instructor": "little, james joseph"
 		},
 		{
-			"courses_uuid": "90554",
+			"courses_uuid": "49943",
 			"courses_dept": "cpsc",
-			"courses_id": "317",
+			"courses_id": "425",
 			"courses_avg": 73.17,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52060",
+			"courses_uuid": "72352",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
+			"courses_id": "302",
 			"courses_avg": 73.18,
-			"courses_instructor": ""
+			"courses_instructor": "rees, tyrone"
 		},
 		{
-			"courses_uuid": "52059",
+			"courses_uuid": "72353",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
+			"courses_id": "302",
 			"courses_avg": 73.18,
 			"courses_instructor": ""
 		},
@@ -2165,18 +2171,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "72353",
+			"courses_uuid": "52059",
 			"courses_dept": "cpsc",
-			"courses_id": "302",
+			"courses_id": "445",
 			"courses_avg": 73.18,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "72352",
+			"courses_uuid": "52060",
 			"courses_dept": "cpsc",
-			"courses_id": "302",
+			"courses_id": "445",
 			"courses_avg": 73.18,
-			"courses_instructor": "rees, tyrone"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "72346",
@@ -2193,9 +2199,9 @@
 			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "61176",
+			"courses_uuid": "62349",
 			"courses_dept": "cpsc",
-			"courses_id": "430",
+			"courses_id": "110",
 			"courses_avg": 73.25,
 			"courses_instructor": ""
 		},
@@ -2207,18 +2213,11 @@
 			"courses_instructor": "leyton-brown, kevin"
 		},
 		{
-			"courses_uuid": "62349",
+			"courses_uuid": "61176",
 			"courses_dept": "cpsc",
-			"courses_id": "110",
+			"courses_id": "430",
 			"courses_avg": 73.25,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1322",
-			"courses_dept": "cpsc",
-			"courses_id": "404",
-			"courses_avg": 73.27,
-			"courses_instructor": "knorr, edwin max"
 		},
 		{
 			"courses_uuid": "1265",
@@ -2228,6 +2227,13 @@
 			"courses_instructor": "baniassad, elisa"
 		},
 		{
+			"courses_uuid": "1322",
+			"courses_dept": "cpsc",
+			"courses_id": "404",
+			"courses_avg": 73.27,
+			"courses_instructor": "knorr, edwin max"
+		},
+		{
 			"courses_uuid": "49890",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
@@ -2235,14 +2241,14 @@
 			"courses_instructor": "lakshmanan, laks"
 		},
 		{
-			"courses_uuid": "52031",
+			"courses_uuid": "52030",
 			"courses_dept": "cpsc",
 			"courses_id": "344",
 			"courses_avg": 73.3,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52030",
+			"courses_uuid": "52031",
 			"courses_dept": "cpsc",
 			"courses_id": "344",
 			"courses_avg": 73.3,
@@ -2256,18 +2262,18 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "46724",
-			"courses_dept": "cpsc",
-			"courses_id": "404",
-			"courses_avg": 73.33,
-			"courses_instructor": "knorr, edwin max"
-		},
-		{
 			"courses_uuid": "83442",
 			"courses_dept": "cpsc",
 			"courses_id": "314",
 			"courses_avg": 73.33,
 			"courses_instructor": "munzner, tamara"
+		},
+		{
+			"courses_uuid": "46724",
+			"courses_dept": "cpsc",
+			"courses_id": "404",
+			"courses_avg": 73.33,
+			"courses_instructor": "knorr, edwin max"
 		},
 		{
 			"courses_uuid": "1266",
@@ -2277,11 +2283,11 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "83398",
+			"courses_uuid": "25806",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 73.36,
-			"courses_instructor": "belleville, patrice"
+			"courses_instructor": "allen, meghan"
 		},
 		{
 			"courses_uuid": "25807",
@@ -2291,18 +2297,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "25806",
+			"courses_uuid": "83398",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 73.36,
-			"courses_instructor": "allen, meghan"
-		},
-		{
-			"courses_uuid": "83469",
-			"courses_dept": "cpsc",
-			"courses_id": "415",
-			"courses_avg": 73.37,
-			"courses_instructor": ""
+			"courses_instructor": "belleville, patrice"
 		},
 		{
 			"courses_uuid": "83468",
@@ -2312,11 +2311,11 @@
 			"courses_instructor": "acton, donald"
 		},
 		{
-			"courses_uuid": "62404",
+			"courses_uuid": "83469",
 			"courses_dept": "cpsc",
-			"courses_id": "320",
-			"courses_avg": 73.38,
-			"courses_instructor": "manuch, jan"
+			"courses_id": "415",
+			"courses_avg": 73.37,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "46677",
@@ -2326,11 +2325,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "49933",
+			"courses_uuid": "62404",
 			"courses_dept": "cpsc",
-			"courses_id": "416",
-			"courses_avg": 73.41,
-			"courses_instructor": ""
+			"courses_id": "320",
+			"courses_avg": 73.38,
+			"courses_instructor": "manuch, jan"
 		},
 		{
 			"courses_uuid": "49932",
@@ -2338,6 +2337,13 @@
 			"courses_id": "416",
 			"courses_avg": 73.41,
 			"courses_instructor": "wagner, alan"
+		},
+		{
+			"courses_uuid": "49933",
+			"courses_dept": "cpsc",
+			"courses_id": "416",
+			"courses_avg": 73.41,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62398",
@@ -2382,11 +2388,11 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "52001",
+			"courses_uuid": "43190",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
+			"courses_id": "121",
 			"courses_avg": 73.58,
-			"courses_instructor": ""
+			"courses_instructor": "wolfman, steven"
 		},
 		{
 			"courses_uuid": "43191",
@@ -2396,11 +2402,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "43190",
+			"courses_uuid": "52001",
 			"courses_dept": "cpsc",
-			"courses_id": "121",
+			"courses_id": "304",
 			"courses_avg": 73.58,
-			"courses_instructor": "wolfman, steven"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62370",
@@ -2410,11 +2416,11 @@
 			"courses_instructor": "hu, alan"
 		},
 		{
-			"courses_uuid": "62392",
+			"courses_uuid": "46687",
 			"courses_dept": "cpsc",
-			"courses_id": "313",
+			"courses_id": "302",
 			"courses_avg": 73.62,
-			"courses_instructor": "belleville, patrice"
+			"courses_instructor": "ascher, uri michael"
 		},
 		{
 			"courses_uuid": "46688",
@@ -2424,24 +2430,17 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46687",
+			"courses_uuid": "62392",
 			"courses_dept": "cpsc",
-			"courses_id": "302",
+			"courses_id": "313",
 			"courses_avg": 73.62,
-			"courses_instructor": "ascher, uri michael"
+			"courses_instructor": "belleville, patrice"
 		},
 		{
 			"courses_uuid": "62371",
 			"courses_dept": "cpsc",
 			"courses_id": "221",
 			"courses_avg": 73.63,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62428",
-			"courses_dept": "cpsc",
-			"courses_id": "420",
-			"courses_avg": 73.64,
 			"courses_instructor": ""
 		},
 		{
@@ -2452,10 +2451,10 @@
 			"courses_instructor": "evans, william"
 		},
 		{
-			"courses_uuid": "63259",
+			"courses_uuid": "62428",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 73.68,
+			"courses_id": "420",
+			"courses_avg": 73.64,
 			"courses_instructor": ""
 		},
 		{
@@ -2466,17 +2465,17 @@
 			"courses_instructor": "pottinger, rachel"
 		},
 		{
+			"courses_uuid": "63259",
+			"courses_dept": "cpsc",
+			"courses_id": "304",
+			"courses_avg": 73.68,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "52012",
 			"courses_dept": "cpsc",
 			"courses_id": "313",
 			"courses_avg": 73.72,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62430",
-			"courses_dept": "cpsc",
-			"courses_id": "421",
-			"courses_avg": 73.73,
 			"courses_instructor": ""
 		},
 		{
@@ -2487,10 +2486,10 @@
 			"courses_instructor": "friedman, joel"
 		},
 		{
-			"courses_uuid": "25817",
+			"courses_uuid": "62430",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 73.75,
+			"courses_id": "421",
+			"courses_avg": 73.73,
 			"courses_instructor": ""
 		},
 		{
@@ -2501,32 +2500,18 @@
 			"courses_instructor": "ng, raymond tak-yan"
 		},
 		{
+			"courses_uuid": "25817",
+			"courses_dept": "cpsc",
+			"courses_id": "304",
+			"courses_avg": 73.75,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "72381",
 			"courses_dept": "cpsc",
 			"courses_id": "322",
 			"courses_avg": 73.79,
 			"courses_instructor": "hutter, frank"
-		},
-		{
-			"courses_uuid": "46716",
-			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 73.83,
-			"courses_instructor": "carenini, giuseppe"
-		},
-		{
-			"courses_uuid": "63261",
-			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 73.83,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "63260",
-			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 73.83,
-			"courses_instructor": "belleville, patrice"
 		},
 		{
 			"courses_uuid": "49853",
@@ -2536,9 +2521,30 @@
 			"courses_instructor": "little, james joseph"
 		},
 		{
-			"courses_uuid": "83487",
+			"courses_uuid": "63260",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
+			"courses_id": "313",
+			"courses_avg": 73.83,
+			"courses_instructor": "belleville, patrice"
+		},
+		{
+			"courses_uuid": "63261",
+			"courses_dept": "cpsc",
+			"courses_id": "313",
+			"courses_avg": 73.83,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "46716",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 73.83,
+			"courses_instructor": "carenini, giuseppe"
+		},
+		{
+			"courses_uuid": "1324",
+			"courses_dept": "cpsc",
+			"courses_id": "404",
 			"courses_avg": 73.88,
 			"courses_instructor": ""
 		},
@@ -2550,9 +2556,9 @@
 			"courses_instructor": "kirkpatrick, bonnie;manuch, jan"
 		},
 		{
-			"courses_uuid": "1324",
+			"courses_uuid": "83487",
 			"courses_dept": "cpsc",
-			"courses_id": "404",
+			"courses_id": "445",
 			"courses_avg": 73.88,
 			"courses_instructor": ""
 		},
@@ -2571,18 +2577,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62434",
-			"courses_dept": "cpsc",
-			"courses_id": "425",
-			"courses_avg": 73.95,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "62433",
 			"courses_dept": "cpsc",
 			"courses_id": "425",
 			"courses_avg": 73.95,
 			"courses_instructor": "tung, frederick"
+		},
+		{
+			"courses_uuid": "62434",
+			"courses_dept": "cpsc",
+			"courses_id": "425",
+			"courses_avg": 73.95,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "83461",
@@ -2599,11 +2605,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61205",
+			"courses_uuid": "49905",
 			"courses_dept": "cpsc",
-			"courses_id": "513",
+			"courses_id": "317",
 			"courses_avg": 74,
-			"courses_instructor": ""
+			"courses_instructor": "aiello, william"
 		},
 		{
 			"courses_uuid": "61204",
@@ -2613,11 +2619,11 @@
 			"courses_instructor": "hu, alan"
 		},
 		{
-			"courses_uuid": "49905",
+			"courses_uuid": "61205",
 			"courses_dept": "cpsc",
-			"courses_id": "317",
+			"courses_id": "513",
 			"courses_avg": 74,
-			"courses_instructor": "aiello, william"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "90550",
@@ -2627,25 +2633,11 @@
 			"courses_instructor": "munzner, tamara"
 		},
 		{
-			"courses_uuid": "52038",
+			"courses_uuid": "1260",
 			"courses_dept": "cpsc",
-			"courses_id": "410",
+			"courses_id": "121",
 			"courses_avg": 74.04,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "52037",
-			"courses_dept": "cpsc",
-			"courses_id": "410",
-			"courses_avg": 74.04,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1303",
-			"courses_dept": "cpsc",
-			"courses_id": "314",
-			"courses_avg": 74.04,
-			"courses_instructor": "van de panne, michiel"
+			"courses_instructor": "belleville, patrice"
 		},
 		{
 			"courses_uuid": "62368",
@@ -2655,16 +2647,37 @@
 			"courses_instructor": "evans, william"
 		},
 		{
-			"courses_uuid": "1260",
+			"courses_uuid": "1303",
 			"courses_dept": "cpsc",
-			"courses_id": "121",
+			"courses_id": "314",
 			"courses_avg": 74.04,
-			"courses_instructor": "belleville, patrice"
+			"courses_instructor": "van de panne, michiel"
 		},
 		{
-			"courses_uuid": "90583",
+			"courses_uuid": "52037",
 			"courses_dept": "cpsc",
-			"courses_id": "420",
+			"courses_id": "410",
+			"courses_avg": 74.04,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "52038",
+			"courses_dept": "cpsc",
+			"courses_id": "410",
+			"courses_avg": 74.04,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "46697",
+			"courses_dept": "cpsc",
+			"courses_id": "311",
+			"courses_avg": 74.06,
+			"courses_instructor": "de volder, kris"
+		},
+		{
+			"courses_uuid": "46698",
+			"courses_dept": "cpsc",
+			"courses_id": "311",
 			"courses_avg": 74.06,
 			"courses_instructor": ""
 		},
@@ -2676,18 +2689,11 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "46698",
+			"courses_uuid": "90583",
 			"courses_dept": "cpsc",
-			"courses_id": "311",
+			"courses_id": "420",
 			"courses_avg": 74.06,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "46697",
-			"courses_dept": "cpsc",
-			"courses_id": "311",
-			"courses_avg": 74.06,
-			"courses_instructor": "de volder, kris"
 		},
 		{
 			"courses_uuid": "1277",
@@ -2732,13 +2738,6 @@
 			"courses_instructor": "hutchinson, norman"
 		},
 		{
-			"courses_uuid": "62367",
-			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 74.15,
-			"courses_instructor": "hu, alan"
-		},
-		{
 			"courses_uuid": "1259",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
@@ -2746,18 +2745,11 @@
 			"courses_instructor": "cooper, kendra"
 		},
 		{
-			"courses_uuid": "72411",
+			"courses_uuid": "62367",
 			"courses_dept": "cpsc",
-			"courses_id": "425",
-			"courses_avg": 74.17,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "72410",
-			"courses_dept": "cpsc",
-			"courses_id": "425",
-			"courses_avg": 74.17,
-			"courses_instructor": "woodham, robert"
+			"courses_id": "221",
+			"courses_avg": 74.15,
+			"courses_instructor": "hu, alan"
 		},
 		{
 			"courses_uuid": "62357",
@@ -2767,32 +2759,25 @@
 			"courses_instructor": "baniassad, elisa"
 		},
 		{
+			"courses_uuid": "72410",
+			"courses_dept": "cpsc",
+			"courses_id": "425",
+			"courses_avg": 74.17,
+			"courses_instructor": "woodham, robert"
+		},
+		{
+			"courses_uuid": "72411",
+			"courses_dept": "cpsc",
+			"courses_id": "425",
+			"courses_avg": 74.17,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "83412",
 			"courses_dept": "cpsc",
 			"courses_id": "221",
 			"courses_avg": 74.2,
 			"courses_instructor": "evans, william"
-		},
-		{
-			"courses_uuid": "90549",
-			"courses_dept": "cpsc",
-			"courses_id": "314",
-			"courses_avg": 74.22,
-			"courses_instructor": "heidrich, wolfgang"
-		},
-		{
-			"courses_uuid": "61109",
-			"courses_dept": "cpsc",
-			"courses_id": "259",
-			"courses_avg": 74.22,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "61108",
-			"courses_dept": "cpsc",
-			"courses_id": "259",
-			"courses_avg": 74.22,
-			"courses_instructor": "knorr, edwin max"
 		},
 		{
 			"courses_uuid": "1273",
@@ -2802,11 +2787,25 @@
 			"courses_instructor": "feeley, michael"
 		},
 		{
-			"courses_uuid": "62381",
+			"courses_uuid": "61108",
 			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 74.23,
+			"courses_id": "259",
+			"courses_avg": 74.22,
+			"courses_instructor": "knorr, edwin max"
+		},
+		{
+			"courses_uuid": "61109",
+			"courses_dept": "cpsc",
+			"courses_id": "259",
+			"courses_avg": 74.22,
 			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "90549",
+			"courses_dept": "cpsc",
+			"courses_id": "314",
+			"courses_avg": 74.22,
+			"courses_instructor": "heidrich, wolfgang"
 		},
 		{
 			"courses_uuid": "62380",
@@ -2816,18 +2815,18 @@
 			"courses_instructor": "gelbart, michael"
 		},
 		{
+			"courses_uuid": "62381",
+			"courses_dept": "cpsc",
+			"courses_id": "303",
+			"courses_avg": 74.23,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "83389",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 74.24,
 			"courses_instructor": "kiczales, gregor"
-		},
-		{
-			"courses_uuid": "61156",
-			"courses_dept": "cpsc",
-			"courses_id": "410",
-			"courses_avg": 74.25,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61155",
@@ -2837,6 +2836,20 @@
 			"courses_instructor": "wohlstadter, eric"
 		},
 		{
+			"courses_uuid": "61156",
+			"courses_dept": "cpsc",
+			"courses_id": "410",
+			"courses_avg": 74.25,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "83399",
+			"courses_dept": "cpsc",
+			"courses_id": "121",
+			"courses_avg": 74.26,
+			"courses_instructor": "belleville, patrice"
+		},
+		{
 			"courses_uuid": "46701",
 			"courses_dept": "cpsc",
 			"courses_id": "313",
@@ -2844,10 +2857,10 @@
 			"courses_instructor": "feeley, michael"
 		},
 		{
-			"courses_uuid": "83399",
+			"courses_uuid": "83397",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
-			"courses_avg": 74.26,
+			"courses_avg": 74.29,
 			"courses_instructor": "belleville, patrice"
 		},
 		{
@@ -2858,18 +2871,11 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "83397",
+			"courses_uuid": "1323",
 			"courses_dept": "cpsc",
-			"courses_id": "121",
-			"courses_avg": 74.29,
-			"courses_instructor": "belleville, patrice"
-		},
-		{
-			"courses_uuid": "49941",
-			"courses_dept": "cpsc",
-			"courses_id": "422",
+			"courses_id": "404",
 			"courses_avg": 74.34,
-			"courses_instructor": ""
+			"courses_instructor": "knorr, edwin max"
 		},
 		{
 			"courses_uuid": "49940",
@@ -2879,11 +2885,11 @@
 			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "1323",
+			"courses_uuid": "49941",
 			"courses_dept": "cpsc",
-			"courses_id": "404",
+			"courses_id": "422",
 			"courses_avg": 74.34,
-			"courses_instructor": "knorr, edwin max"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "46693",
@@ -2907,18 +2913,18 @@
 			"courses_instructor": "voll, kimberly"
 		},
 		{
-			"courses_uuid": "46744",
-			"courses_dept": "cpsc",
-			"courses_id": "425",
-			"courses_avg": 74.43,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46743",
 			"courses_dept": "cpsc",
 			"courses_id": "425",
 			"courses_avg": 74.43,
 			"courses_instructor": "little, james joseph"
+		},
+		{
+			"courses_uuid": "46744",
+			"courses_dept": "cpsc",
+			"courses_id": "425",
+			"courses_avg": 74.43,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "52032",
@@ -2928,18 +2934,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "83456",
+			"courses_uuid": "51991",
 			"courses_dept": "cpsc",
-			"courses_id": "340",
+			"courses_id": "221",
 			"courses_avg": 74.45,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "83455",
-			"courses_dept": "cpsc",
-			"courses_id": "340",
-			"courses_avg": 74.45,
-			"courses_instructor": "de freitas, joao"
 		},
 		{
 			"courses_uuid": "90539",
@@ -2949,17 +2948,17 @@
 			"courses_instructor": "shepherd, david"
 		},
 		{
-			"courses_uuid": "51991",
+			"courses_uuid": "83455",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
+			"courses_id": "340",
 			"courses_avg": 74.45,
-			"courses_instructor": ""
+			"courses_instructor": "de freitas, joao"
 		},
 		{
-			"courses_uuid": "90533",
+			"courses_uuid": "83456",
 			"courses_dept": "cpsc",
-			"courses_id": "302",
-			"courses_avg": 74.46,
+			"courses_id": "340",
+			"courses_avg": 74.45,
 			"courses_instructor": ""
 		},
 		{
@@ -2968,6 +2967,13 @@
 			"courses_id": "302",
 			"courses_avg": 74.46,
 			"courses_instructor": "ascher, uri michael;greif, chen"
+		},
+		{
+			"courses_uuid": "90533",
+			"courses_dept": "cpsc",
+			"courses_id": "302",
+			"courses_avg": 74.46,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62409",
@@ -2991,9 +2997,9 @@
 			"courses_instructor": "feeley, michael"
 		},
 		{
-			"courses_uuid": "62432",
+			"courses_uuid": "52003",
 			"courses_dept": "cpsc",
-			"courses_id": "422",
+			"courses_id": "304",
 			"courses_avg": 74.54,
 			"courses_instructor": ""
 		},
@@ -3005,9 +3011,9 @@
 			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "52003",
+			"courses_uuid": "62432",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
+			"courses_id": "422",
 			"courses_avg": 74.54,
 			"courses_instructor": ""
 		},
@@ -3019,18 +3025,18 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "61126",
-			"courses_dept": "cpsc",
-			"courses_id": "311",
-			"courses_avg": 74.58,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "61125",
 			"courses_dept": "cpsc",
 			"courses_id": "311",
 			"courses_avg": 74.58,
 			"courses_instructor": "wolfman, steven"
+		},
+		{
+			"courses_uuid": "61126",
+			"courses_dept": "cpsc",
+			"courses_id": "311",
+			"courses_avg": 74.58,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1316",
@@ -3047,9 +3053,16 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "90589",
+			"courses_uuid": "25812",
 			"courses_dept": "cpsc",
-			"courses_id": "425",
+			"courses_id": "221",
+			"courses_avg": 74.67,
+			"courses_instructor": "voll, kimberly"
+		},
+		{
+			"courses_uuid": "25813",
+			"courses_dept": "cpsc",
+			"courses_id": "221",
 			"courses_avg": 74.67,
 			"courses_instructor": ""
 		},
@@ -3061,23 +3074,23 @@
 			"courses_instructor": "woodham, robert"
 		},
 		{
-			"courses_uuid": "25813",
+			"courses_uuid": "90589",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
+			"courses_id": "425",
 			"courses_avg": 74.67,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "25812",
+			"courses_uuid": "49877",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 74.67,
-			"courses_instructor": "voll, kimberly"
+			"courses_id": "259",
+			"courses_avg": 74.68,
+			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "1338",
+			"courses_uuid": "49878",
 			"courses_dept": "cpsc",
-			"courses_id": "421",
+			"courses_id": "259",
 			"courses_avg": 74.68,
 			"courses_instructor": ""
 		},
@@ -3089,18 +3102,11 @@
 			"courses_instructor": "friedman, joel"
 		},
 		{
-			"courses_uuid": "49878",
+			"courses_uuid": "1338",
 			"courses_dept": "cpsc",
-			"courses_id": "259",
+			"courses_id": "421",
 			"courses_avg": 74.68,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "49877",
-			"courses_dept": "cpsc",
-			"courses_id": "259",
-			"courses_avg": 74.68,
-			"courses_instructor": "knorr, edwin max"
 		},
 		{
 			"courses_uuid": "46726",
@@ -3117,13 +3123,6 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46705",
-			"courses_dept": "cpsc",
-			"courses_id": "314",
-			"courses_avg": 74.73,
-			"courses_instructor": "munzner, tamara"
-		},
-		{
 			"courses_uuid": "62365",
 			"courses_dept": "cpsc",
 			"courses_id": "213",
@@ -3131,9 +3130,16 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90577",
+			"courses_uuid": "46705",
 			"courses_dept": "cpsc",
-			"courses_id": "411",
+			"courses_id": "314",
+			"courses_avg": 74.73,
+			"courses_instructor": "munzner, tamara"
+		},
+		{
+			"courses_uuid": "1317",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
 			"courses_avg": 74.75,
 			"courses_instructor": ""
 		},
@@ -3145,9 +3151,9 @@
 			"courses_instructor": "de volder, kris"
 		},
 		{
-			"courses_uuid": "1317",
+			"courses_uuid": "90577",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
+			"courses_id": "411",
 			"courses_avg": 74.75,
 			"courses_instructor": ""
 		},
@@ -3166,9 +3172,9 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61116",
+			"courses_uuid": "46681",
 			"courses_dept": "cpsc",
-			"courses_id": "302",
+			"courses_id": "221",
 			"courses_avg": 74.82,
 			"courses_instructor": ""
 		},
@@ -3180,9 +3186,9 @@
 			"courses_instructor": "ascher, uri michael"
 		},
 		{
-			"courses_uuid": "46681",
+			"courses_uuid": "61116",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
+			"courses_id": "302",
 			"courses_avg": 74.82,
 			"courses_instructor": ""
 		},
@@ -3194,14 +3200,14 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "39875",
+			"courses_uuid": "39874",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 74.84,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "39874",
+			"courses_uuid": "39875",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 74.84,
@@ -3215,11 +3221,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61162",
+			"courses_uuid": "90560",
 			"courses_dept": "cpsc",
-			"courses_id": "416",
+			"courses_id": "322",
 			"courses_avg": 74.86,
-			"courses_instructor": ""
+			"courses_instructor": "leyton-brown, kevin"
 		},
 		{
 			"courses_uuid": "61161",
@@ -3229,25 +3235,11 @@
 			"courses_instructor": "wagner, alan"
 		},
 		{
-			"courses_uuid": "90560",
+			"courses_uuid": "61162",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
+			"courses_id": "416",
 			"courses_avg": 74.86,
-			"courses_instructor": "leyton-brown, kevin"
-		},
-		{
-			"courses_uuid": "1315",
-			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 74.88,
-			"courses_instructor": "little, james joseph"
-		},
-		{
-			"courses_uuid": "61135",
-			"courses_dept": "cpsc",
-			"courses_id": "317",
-			"courses_avg": 74.88,
-			"courses_instructor": "aiello, william"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "49867",
@@ -3257,9 +3249,23 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "61147",
+			"courses_uuid": "61135",
 			"courses_dept": "cpsc",
-			"courses_id": "340",
+			"courses_id": "317",
+			"courses_avg": 74.88,
+			"courses_instructor": "aiello, william"
+		},
+		{
+			"courses_uuid": "1315",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 74.88,
+			"courses_instructor": "little, james joseph"
+		},
+		{
+			"courses_uuid": "1274",
+			"courses_dept": "cpsc",
+			"courses_id": "213",
 			"courses_avg": 74.93,
 			"courses_instructor": ""
 		},
@@ -3271,9 +3277,9 @@
 			"courses_instructor": "de freitas, joao"
 		},
 		{
-			"courses_uuid": "1274",
+			"courses_uuid": "61147",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
+			"courses_id": "340",
 			"courses_avg": 74.93,
 			"courses_instructor": ""
 		},
@@ -3299,11 +3305,11 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "83541",
+			"courses_uuid": "90542",
 			"courses_dept": "cpsc",
-			"courses_id": "589",
+			"courses_id": "311",
 			"courses_avg": 75,
-			"courses_instructor": ""
+			"courses_instructor": "hutchinson, norman"
 		},
 		{
 			"courses_uuid": "90543",
@@ -3313,11 +3319,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90542",
+			"courses_uuid": "83541",
 			"courses_dept": "cpsc",
-			"courses_id": "311",
+			"courses_id": "589",
 			"courses_avg": 75,
-			"courses_instructor": "hutchinson, norman"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "49866",
@@ -3355,18 +3361,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "56866",
-			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 75.15,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "56865",
 			"courses_dept": "cpsc",
 			"courses_id": "313",
 			"courses_avg": 75.15,
 			"courses_instructor": "feeley, michael"
+		},
+		{
+			"courses_uuid": "56866",
+			"courses_dept": "cpsc",
+			"courses_id": "313",
+			"courses_avg": 75.15,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1305",
@@ -3397,18 +3403,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "83417",
-			"courses_dept": "cpsc",
-			"courses_id": "259",
-			"courses_avg": 75.2,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "83416",
 			"courses_dept": "cpsc",
 			"courses_id": "259",
 			"courses_avg": 75.2,
 			"courses_instructor": "knorr, edwin max"
+		},
+		{
+			"courses_uuid": "83417",
+			"courses_dept": "cpsc",
+			"courses_id": "259",
+			"courses_avg": 75.2,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61104",
@@ -3439,7 +3445,14 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90575",
+			"courses_uuid": "83464",
+			"courses_dept": "cpsc",
+			"courses_id": "410",
+			"courses_avg": 75.28,
+			"courses_instructor": "ernst, neil"
+		},
+		{
+			"courses_uuid": "83465",
 			"courses_dept": "cpsc",
 			"courses_id": "410",
 			"courses_avg": 75.28,
@@ -3453,30 +3466,23 @@
 			"courses_instructor": "wohlstadter, eric"
 		},
 		{
-			"courses_uuid": "83465",
+			"courses_uuid": "90575",
 			"courses_dept": "cpsc",
 			"courses_id": "410",
 			"courses_avg": 75.28,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "83464",
-			"courses_dept": "cpsc",
-			"courses_id": "410",
-			"courses_avg": 75.28,
-			"courses_instructor": "ernst, neil"
-		},
-		{
-			"courses_uuid": "49872",
-			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 75.29,
 			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61087",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
+			"courses_avg": 75.29,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "49872",
+			"courses_dept": "cpsc",
+			"courses_id": "213",
 			"courses_avg": 75.29,
 			"courses_instructor": ""
 		},
@@ -3516,18 +3522,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52002",
-			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 75.49,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46679",
 			"courses_dept": "cpsc",
 			"courses_id": "221",
 			"courses_avg": 75.49,
 			"courses_instructor": "knorr, edwin max"
+		},
+		{
+			"courses_uuid": "52002",
+			"courses_dept": "cpsc",
+			"courses_id": "304",
+			"courses_avg": 75.49,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "46664",
@@ -3537,18 +3543,18 @@
 			"courses_instructor": "woodham, robert"
 		},
 		{
-			"courses_uuid": "46740",
-			"courses_dept": "cpsc",
-			"courses_id": "421",
-			"courses_avg": 75.52,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46739",
 			"courses_dept": "cpsc",
 			"courses_id": "421",
 			"courses_avg": 75.52,
 			"courses_instructor": "friedman, joel"
+		},
+		{
+			"courses_uuid": "46740",
+			"courses_dept": "cpsc",
+			"courses_id": "421",
+			"courses_avg": 75.52,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "46696",
@@ -3565,18 +3571,18 @@
 			"courses_instructor": "aiello, william"
 		},
 		{
-			"courses_uuid": "49900",
-			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 75.57,
-			"courses_instructor": "tsiknis, georgios"
-		},
-		{
 			"courses_uuid": "72360",
 			"courses_dept": "cpsc",
 			"courses_id": "310",
 			"courses_avg": 75.57,
 			"courses_instructor": "fritz, thomas"
+		},
+		{
+			"courses_uuid": "49900",
+			"courses_dept": "cpsc",
+			"courses_id": "313",
+			"courses_avg": 75.57,
+			"courses_instructor": "tsiknis, georgios"
 		},
 		{
 			"courses_uuid": "46725",
@@ -3586,9 +3592,16 @@
 			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "61170",
+			"courses_uuid": "83472",
 			"courses_dept": "cpsc",
-			"courses_id": "422",
+			"courses_id": "418",
+			"courses_avg": 75.61,
+			"courses_instructor": "greenstreet, mark"
+		},
+		{
+			"courses_uuid": "83473",
+			"courses_dept": "cpsc",
+			"courses_id": "418",
 			"courses_avg": 75.61,
 			"courses_instructor": ""
 		},
@@ -3600,18 +3613,11 @@
 			"courses_instructor": "poole, david"
 		},
 		{
-			"courses_uuid": "83473",
+			"courses_uuid": "61170",
 			"courses_dept": "cpsc",
-			"courses_id": "418",
+			"courses_id": "422",
 			"courses_avg": 75.61,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "83472",
-			"courses_dept": "cpsc",
-			"courses_id": "418",
-			"courses_avg": 75.61,
-			"courses_instructor": "greenstreet, mark"
 		},
 		{
 			"courses_uuid": "72358",
@@ -3621,18 +3627,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "83459",
-			"courses_dept": "cpsc",
-			"courses_id": "404",
-			"courses_avg": 75.68,
-			"courses_instructor": "lakshmanan, laks"
-		},
-		{
 			"courses_uuid": "1271",
 			"courses_dept": "cpsc",
 			"courses_id": "213",
 			"courses_avg": 75.68,
 			"courses_instructor": "feeley, michael"
+		},
+		{
+			"courses_uuid": "83459",
+			"courses_dept": "cpsc",
+			"courses_id": "404",
+			"courses_avg": 75.68,
+			"courses_instructor": "lakshmanan, laks"
 		},
 		{
 			"courses_uuid": "52013",
@@ -3670,9 +3676,16 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "56858",
+			"courses_uuid": "67300",
 			"courses_dept": "cpsc",
-			"courses_id": "210",
+			"courses_id": "110",
+			"courses_avg": 75.81,
+			"courses_instructor": "allen, meghan"
+		},
+		{
+			"courses_uuid": "67301",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
 			"courses_avg": 75.81,
 			"courses_instructor": ""
 		},
@@ -3684,24 +3697,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "67301",
+			"courses_uuid": "56858",
 			"courses_dept": "cpsc",
-			"courses_id": "110",
+			"courses_id": "210",
 			"courses_avg": 75.81,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "67300",
-			"courses_dept": "cpsc",
-			"courses_id": "110",
-			"courses_avg": 75.81,
-			"courses_instructor": "allen, meghan"
-		},
-		{
-			"courses_uuid": "1281",
-			"courses_dept": "cpsc",
-			"courses_id": "259",
-			"courses_avg": 75.82,
 			"courses_instructor": ""
 		},
 		{
@@ -3712,18 +3711,18 @@
 			"courses_instructor": "khosravi, hassan"
 		},
 		{
+			"courses_uuid": "1281",
+			"courses_dept": "cpsc",
+			"courses_id": "259",
+			"courses_avg": 75.82,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "49889",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
 			"courses_avg": 75.86,
 			"courses_instructor": "pottinger, rachel"
-		},
-		{
-			"courses_uuid": "56854",
-			"courses_dept": "cpsc",
-			"courses_id": "110",
-			"courses_avg": 75.89,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "56853",
@@ -3733,37 +3732,16 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "83479",
+			"courses_uuid": "56854",
 			"courses_dept": "cpsc",
-			"courses_id": "422",
-			"courses_avg": 75.91,
+			"courses_id": "110",
+			"courses_avg": 75.89,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "83478",
+			"courses_uuid": "46717",
 			"courses_dept": "cpsc",
-			"courses_id": "422",
-			"courses_avg": 75.91,
-			"courses_instructor": "poole, david"
-		},
-		{
-			"courses_uuid": "72386",
-			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 75.91,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "72385",
-			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 75.91,
-			"courses_instructor": "maclean, karon"
-		},
-		{
-			"courses_uuid": "52029",
-			"courses_dept": "cpsc",
-			"courses_id": "340",
+			"courses_id": "322",
 			"courses_avg": 75.91,
 			"courses_instructor": ""
 		},
@@ -3775,9 +3753,37 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46717",
+			"courses_uuid": "52029",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
+			"courses_id": "340",
+			"courses_avg": 75.91,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "72385",
+			"courses_dept": "cpsc",
+			"courses_id": "344",
+			"courses_avg": 75.91,
+			"courses_instructor": "maclean, karon"
+		},
+		{
+			"courses_uuid": "72386",
+			"courses_dept": "cpsc",
+			"courses_id": "344",
+			"courses_avg": 75.91,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "83478",
+			"courses_dept": "cpsc",
+			"courses_id": "422",
+			"courses_avg": 75.91,
+			"courses_instructor": "poole, david"
+		},
+		{
+			"courses_uuid": "83479",
+			"courses_dept": "cpsc",
+			"courses_id": "422",
 			"courses_avg": 75.91,
 			"courses_instructor": ""
 		},
@@ -3796,14 +3802,14 @@
 			"courses_instructor": "feeley, michael"
 		},
 		{
-			"courses_uuid": "39883",
+			"courses_uuid": "39882",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
 			"courses_avg": 76,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "39882",
+			"courses_uuid": "39883",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
 			"courses_avg": 76,
@@ -3831,18 +3837,18 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "61121",
-			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 76.12,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "49858",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 76.12,
 			"courses_instructor": "wolfman, steven"
+		},
+		{
+			"courses_uuid": "61121",
+			"courses_dept": "cpsc",
+			"courses_id": "304",
+			"courses_avg": 76.12,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "72343",
@@ -3852,13 +3858,6 @@
 			"courses_instructor": "evans, william"
 		},
 		{
-			"courses_uuid": "1304",
-			"courses_dept": "cpsc",
-			"courses_id": "314",
-			"courses_avg": 76.17,
-			"courses_instructor": "pai, dinesh"
-		},
-		{
 			"courses_uuid": "62355",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
@@ -3866,17 +3865,17 @@
 			"courses_instructor": ""
 		},
 		{
+			"courses_uuid": "1304",
+			"courses_dept": "cpsc",
+			"courses_id": "314",
+			"courses_avg": 76.17,
+			"courses_instructor": "pai, dinesh"
+		},
+		{
 			"courses_uuid": "62384",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
 			"courses_avg": 76.2,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "83477",
-			"courses_dept": "cpsc",
-			"courses_id": "421",
-			"courses_avg": 76.24,
 			"courses_instructor": ""
 		},
 		{
@@ -3887,9 +3886,23 @@
 			"courses_instructor": "harvey, nicholas"
 		},
 		{
-			"courses_uuid": "83485",
+			"courses_uuid": "83477",
 			"courses_dept": "cpsc",
-			"courses_id": "430",
+			"courses_id": "421",
+			"courses_avg": 76.24,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "43198",
+			"courses_dept": "cpsc",
+			"courses_id": "221",
+			"courses_avg": 76.26,
+			"courses_instructor": "voll, kimberly"
+		},
+		{
+			"courses_uuid": "43199",
+			"courses_dept": "cpsc",
+			"courses_id": "221",
 			"courses_avg": 76.26,
 			"courses_instructor": ""
 		},
@@ -3901,18 +3914,11 @@
 			"courses_instructor": "leyton-brown, kevin"
 		},
 		{
-			"courses_uuid": "43199",
+			"courses_uuid": "83485",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
+			"courses_id": "430",
 			"courses_avg": 76.26,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "43198",
-			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 76.26,
-			"courses_instructor": "voll, kimberly"
 		},
 		{
 			"courses_uuid": "51977",
@@ -3922,18 +3928,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "1334",
+			"courses_uuid": "61123",
 			"courses_dept": "cpsc",
-			"courses_id": "416",
+			"courses_id": "310",
 			"courses_avg": 76.31,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1333",
-			"courses_dept": "cpsc",
-			"courses_id": "416",
-			"courses_avg": 76.31,
-			"courses_instructor": "acton, donald"
+			"courses_instructor": "ernst, neil"
 		},
 		{
 			"courses_uuid": "72370",
@@ -3943,11 +3942,18 @@
 			"courses_instructor": "heidrich, wolfgang"
 		},
 		{
-			"courses_uuid": "61123",
+			"courses_uuid": "1333",
 			"courses_dept": "cpsc",
-			"courses_id": "310",
+			"courses_id": "416",
 			"courses_avg": 76.31,
-			"courses_instructor": "ernst, neil"
+			"courses_instructor": "acton, donald"
+		},
+		{
+			"courses_uuid": "1334",
+			"courses_dept": "cpsc",
+			"courses_id": "416",
+			"courses_avg": 76.31,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1268",
@@ -3957,9 +3963,16 @@
 			"courses_instructor": "baniassad, elisa"
 		},
 		{
-			"courses_uuid": "46748",
+			"courses_uuid": "39878",
 			"courses_dept": "cpsc",
-			"courses_id": "430",
+			"courses_id": "213",
+			"courses_avg": 76.34,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "39879",
+			"courses_dept": "cpsc",
+			"courses_id": "213",
 			"courses_avg": 76.34,
 			"courses_instructor": ""
 		},
@@ -3971,16 +3984,9 @@
 			"courses_instructor": "voll, kimberly"
 		},
 		{
-			"courses_uuid": "39879",
+			"courses_uuid": "46748",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 76.34,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "39878",
-			"courses_dept": "cpsc",
-			"courses_id": "213",
+			"courses_id": "430",
 			"courses_avg": 76.34,
 			"courses_instructor": ""
 		},
@@ -3999,11 +4005,11 @@
 			"courses_instructor": "krasic, charles"
 		},
 		{
-			"courses_uuid": "67311",
+			"courses_uuid": "49859",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
+			"courses_id": "121",
 			"courses_avg": 76.43,
-			"courses_instructor": ""
+			"courses_instructor": "tsiknis, georgios"
 		},
 		{
 			"courses_uuid": "67310",
@@ -4013,24 +4019,10 @@
 			"courses_instructor": "khosravi, hassan"
 		},
 		{
-			"courses_uuid": "49859",
+			"courses_uuid": "67311",
 			"courses_dept": "cpsc",
-			"courses_id": "121",
+			"courses_id": "304",
 			"courses_avg": 76.43,
-			"courses_instructor": "tsiknis, georgios"
-		},
-		{
-			"courses_uuid": "62396",
-			"courses_dept": "cpsc",
-			"courses_id": "314",
-			"courses_avg": 76.46,
-			"courses_instructor": "munzner, tamara"
-		},
-		{
-			"courses_uuid": "63249",
-			"courses_dept": "cpsc",
-			"courses_id": "121",
-			"courses_avg": 76.46,
 			"courses_instructor": ""
 		},
 		{
@@ -4041,9 +4033,23 @@
 			"courses_instructor": "tompkins, david a d"
 		},
 		{
-			"courses_uuid": "3396",
+			"courses_uuid": "63249",
 			"courses_dept": "cpsc",
-			"courses_id": "312",
+			"courses_id": "121",
+			"courses_avg": 76.46,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "62396",
+			"courses_dept": "cpsc",
+			"courses_id": "314",
+			"courses_avg": 76.46,
+			"courses_instructor": "munzner, tamara"
+		},
+		{
+			"courses_uuid": "52005",
+			"courses_dept": "cpsc",
+			"courses_id": "310",
 			"courses_avg": 76.52,
 			"courses_instructor": ""
 		},
@@ -4055,9 +4061,9 @@
 			"courses_instructor": "poole, david"
 		},
 		{
-			"courses_uuid": "52005",
+			"courses_uuid": "3396",
 			"courses_dept": "cpsc",
-			"courses_id": "310",
+			"courses_id": "312",
 			"courses_avg": 76.52,
 			"courses_instructor": ""
 		},
@@ -4083,18 +4089,18 @@
 			"courses_instructor": "cooper, kendra"
 		},
 		{
-			"courses_uuid": "63253",
-			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 76.61,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "63252",
 			"courses_dept": "cpsc",
 			"courses_id": "213",
 			"courses_avg": 76.61,
 			"courses_instructor": "tsiknis, georgios"
+		},
+		{
+			"courses_uuid": "63253",
+			"courses_dept": "cpsc",
+			"courses_id": "213",
+			"courses_avg": 76.61,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62351",
@@ -4118,18 +4124,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90564",
-			"courses_dept": "cpsc",
-			"courses_id": "340",
-			"courses_avg": 76.75,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "90563",
 			"courses_dept": "cpsc",
 			"courses_id": "340",
 			"courses_avg": 76.75,
 			"courses_instructor": "murphy, kevin"
+		},
+		{
+			"courses_uuid": "90564",
+			"courses_dept": "cpsc",
+			"courses_id": "340",
+			"courses_avg": 76.75,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61129",
@@ -4146,18 +4152,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61128",
-			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 76.84,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "61127",
 			"courses_dept": "cpsc",
 			"courses_id": "312",
 			"courses_avg": 76.84,
 			"courses_instructor": "voll, kimberly"
+		},
+		{
+			"courses_uuid": "61128",
+			"courses_dept": "cpsc",
+			"courses_id": "312",
+			"courses_avg": 76.84,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "52018",
@@ -4174,18 +4180,18 @@
 			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "62391",
-			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 76.93,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "62390",
 			"courses_dept": "cpsc",
 			"courses_id": "312",
 			"courses_avg": 76.93,
 			"courses_instructor": "sagaii, sara mahboubeh"
+		},
+		{
+			"courses_uuid": "62391",
+			"courses_dept": "cpsc",
+			"courses_id": "312",
+			"courses_avg": 76.93,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61081",
@@ -4195,18 +4201,18 @@
 			"courses_instructor": "mcgrenere, joanna"
 		},
 		{
-			"courses_uuid": "72393",
-			"courses_dept": "cpsc",
-			"courses_id": "410",
-			"courses_avg": 76.96,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "72392",
 			"courses_dept": "cpsc",
 			"courses_id": "410",
 			"courses_avg": 76.96,
 			"courses_instructor": "wohlstadter, eric"
+		},
+		{
+			"courses_uuid": "72393",
+			"courses_dept": "cpsc",
+			"courses_id": "410",
+			"courses_avg": 76.96,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "72322",
@@ -4216,11 +4222,11 @@
 			"courses_instructor": "kiczales, gregor"
 		},
 		{
-			"courses_uuid": "83467",
+			"courses_uuid": "72356",
 			"courses_dept": "cpsc",
-			"courses_id": "411",
+			"courses_id": "304",
 			"courses_avg": 77,
-			"courses_instructor": ""
+			"courses_instructor": "tsiknis, georgios"
 		},
 		{
 			"courses_uuid": "83466",
@@ -4230,11 +4236,11 @@
 			"courses_instructor": "hutchinson, norman"
 		},
 		{
-			"courses_uuid": "72356",
+			"courses_uuid": "83467",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
+			"courses_id": "411",
 			"courses_avg": 77,
-			"courses_instructor": "tsiknis, georgios"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "83429",
@@ -4251,18 +4257,18 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "61124",
-			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_avg": 77.11,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "63245",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 77.11,
 			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "61124",
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_avg": 77.11,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62385",
@@ -4272,18 +4278,18 @@
 			"courses_instructor": "baniassad, elisa"
 		},
 		{
-			"courses_uuid": "61168",
-			"courses_dept": "cpsc",
-			"courses_id": "421",
-			"courses_avg": 77.15,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "61167",
 			"courses_dept": "cpsc",
 			"courses_id": "421",
 			"courses_avg": 77.15,
 			"courses_instructor": "friedman, joel"
+		},
+		{
+			"courses_uuid": "61168",
+			"courses_dept": "cpsc",
+			"courses_id": "421",
+			"courses_avg": 77.15,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1258",
@@ -4307,14 +4313,14 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "52058",
+			"courses_uuid": "52057",
 			"courses_dept": "cpsc",
 			"courses_id": "430",
 			"courses_avg": 77.26,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52057",
+			"courses_uuid": "52058",
 			"courses_dept": "cpsc",
 			"courses_id": "430",
 			"courses_avg": 77.26,
@@ -4328,13 +4334,6 @@
 			"courses_instructor": "pai, dinesh"
 		},
 		{
-			"courses_uuid": "46721",
-			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 77.3,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46720",
 			"courses_dept": "cpsc",
 			"courses_id": "344",
@@ -4342,10 +4341,10 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "75602",
+			"courses_uuid": "46721",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 77.38,
+			"courses_id": "344",
+			"courses_avg": 77.3,
 			"courses_instructor": ""
 		},
 		{
@@ -4356,10 +4355,10 @@
 			"courses_instructor": "voll, kimberly"
 		},
 		{
-			"courses_uuid": "25811",
+			"courses_uuid": "75602",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 77.39,
+			"courses_id": "221",
+			"courses_avg": 77.38,
 			"courses_instructor": ""
 		},
 		{
@@ -4370,10 +4369,10 @@
 			"courses_instructor": "feeley, michael"
 		},
 		{
-			"courses_uuid": "1289",
+			"courses_uuid": "25811",
 			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 77.4,
+			"courses_id": "213",
+			"courses_avg": 77.39,
 			"courses_instructor": ""
 		},
 		{
@@ -4384,10 +4383,10 @@
 			"courses_instructor": "greif, chen"
 		},
 		{
-			"courses_uuid": "72363",
+			"courses_uuid": "1289",
 			"courses_dept": "cpsc",
-			"courses_id": "311",
-			"courses_avg": 77.41,
+			"courses_id": "303",
+			"courses_avg": 77.4,
 			"courses_instructor": ""
 		},
 		{
@@ -4398,9 +4397,23 @@
 			"courses_instructor": "wolfman, steven"
 		},
 		{
-			"courses_uuid": "62438",
+			"courses_uuid": "72363",
 			"courses_dept": "cpsc",
-			"courses_id": "444",
+			"courses_id": "311",
+			"courses_avg": 77.41,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "43188",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
+			"courses_avg": 77.43,
+			"courses_instructor": "kiczales, gregor"
+		},
+		{
+			"courses_uuid": "43189",
+			"courses_dept": "cpsc",
+			"courses_id": "110",
 			"courses_avg": 77.43,
 			"courses_instructor": ""
 		},
@@ -4412,24 +4425,10 @@
 			"courses_instructor": "dawson, jessica"
 		},
 		{
-			"courses_uuid": "43189",
+			"courses_uuid": "62438",
 			"courses_dept": "cpsc",
-			"courses_id": "110",
+			"courses_id": "444",
 			"courses_avg": 77.43,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "43188",
-			"courses_dept": "cpsc",
-			"courses_id": "110",
-			"courses_avg": 77.43,
-			"courses_instructor": "kiczales, gregor"
-		},
-		{
-			"courses_uuid": "63263",
-			"courses_dept": "cpsc",
-			"courses_id": "430",
-			"courses_avg": 77.44,
 			"courses_instructor": ""
 		},
 		{
@@ -4440,17 +4439,17 @@
 			"courses_instructor": "luk, joseph"
 		},
 		{
+			"courses_uuid": "63263",
+			"courses_dept": "cpsc",
+			"courses_id": "430",
+			"courses_avg": 77.44,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "62397",
 			"courses_dept": "cpsc",
 			"courses_id": "314",
 			"courses_avg": 77.47,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "49939",
-			"courses_dept": "cpsc",
-			"courses_id": "421",
-			"courses_avg": 77.48,
 			"courses_instructor": ""
 		},
 		{
@@ -4461,10 +4460,10 @@
 			"courses_instructor": "harvey, nicholas"
 		},
 		{
-			"courses_uuid": "46706",
+			"courses_uuid": "49939",
 			"courses_dept": "cpsc",
-			"courses_id": "314",
-			"courses_avg": 77.5,
+			"courses_id": "421",
+			"courses_avg": 77.48,
 			"courses_instructor": ""
 		},
 		{
@@ -4473,6 +4472,13 @@
 			"courses_id": "121",
 			"courses_avg": 77.5,
 			"courses_instructor": "dulat, margaret"
+		},
+		{
+			"courses_uuid": "46706",
+			"courses_dept": "cpsc",
+			"courses_id": "314",
+			"courses_avg": 77.5,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "52011",
@@ -4489,18 +4495,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "72355",
-			"courses_dept": "cpsc",
-			"courses_id": "303",
-			"courses_avg": 77.62,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "72354",
 			"courses_dept": "cpsc",
 			"courses_id": "303",
 			"courses_avg": 77.62,
 			"courses_instructor": "ascher, uri michael"
+		},
+		{
+			"courses_uuid": "72355",
+			"courses_dept": "cpsc",
+			"courses_id": "303",
+			"courses_avg": 77.62,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "46694",
@@ -4510,13 +4516,6 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "63251",
-			"courses_dept": "cpsc",
-			"courses_id": "210",
-			"courses_avg": 77.64,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "63250",
 			"courses_dept": "cpsc",
 			"courses_id": "210",
@@ -4524,10 +4523,10 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "1344",
+			"courses_uuid": "63251",
 			"courses_dept": "cpsc",
-			"courses_id": "425",
-			"courses_avg": 77.68,
+			"courses_id": "210",
+			"courses_avg": 77.64,
 			"courses_instructor": ""
 		},
 		{
@@ -4536,6 +4535,13 @@
 			"courses_id": "425",
 			"courses_avg": 77.68,
 			"courses_instructor": "woodham, robert"
+		},
+		{
+			"courses_uuid": "1344",
+			"courses_dept": "cpsc",
+			"courses_id": "425",
+			"courses_avg": 77.68,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61083",
@@ -4552,18 +4558,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "61122",
-			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_avg": 77.78,
-			"courses_instructor": "ernst, neil"
-		},
-		{
 			"courses_uuid": "49873",
 			"courses_dept": "cpsc",
 			"courses_id": "221",
 			"courses_avg": 77.78,
 			"courses_instructor": "evans, william"
+		},
+		{
+			"courses_uuid": "61122",
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_avg": 77.78,
+			"courses_instructor": "ernst, neil"
 		},
 		{
 			"courses_uuid": "49894",
@@ -4587,13 +4593,6 @@
 			"courses_instructor": "mackworth, alan"
 		},
 		{
-			"courses_uuid": "49917",
-			"courses_dept": "cpsc",
-			"courses_id": "340",
-			"courses_avg": 77.93,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "49916",
 			"courses_dept": "cpsc",
 			"courses_id": "340",
@@ -4601,17 +4600,10 @@
 			"courses_instructor": "ng, raymond tak-yan"
 		},
 		{
-			"courses_uuid": "49923",
+			"courses_uuid": "49917",
 			"courses_dept": "cpsc",
-			"courses_id": "404",
-			"courses_avg": 77.95,
-			"courses_instructor": "tsiknis, georgios"
-		},
-		{
-			"courses_uuid": "83425",
-			"courses_dept": "cpsc",
-			"courses_id": "302",
-			"courses_avg": 77.95,
+			"courses_id": "340",
+			"courses_avg": 77.93,
 			"courses_instructor": ""
 		},
 		{
@@ -4622,11 +4614,18 @@
 			"courses_instructor": "greif, chen"
 		},
 		{
-			"courses_uuid": "49886",
+			"courses_uuid": "83425",
 			"courses_dept": "cpsc",
 			"courses_id": "302",
-			"courses_avg": 78.18,
+			"courses_avg": 77.95,
 			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "49923",
+			"courses_dept": "cpsc",
+			"courses_id": "404",
+			"courses_avg": 77.95,
+			"courses_instructor": "tsiknis, georgios"
 		},
 		{
 			"courses_uuid": "49885",
@@ -4636,18 +4635,11 @@
 			"courses_instructor": "ascher, uri michael;greif, chen"
 		},
 		{
-			"courses_uuid": "61149",
+			"courses_uuid": "49886",
 			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 78.22,
+			"courses_id": "302",
+			"courses_avg": 78.18,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "61148",
-			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 78.22,
-			"courses_instructor": "maclean, karon"
 		},
 		{
 			"courses_uuid": "83431",
@@ -4657,18 +4649,18 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "83435",
+			"courses_uuid": "61148",
 			"courses_dept": "cpsc",
-			"courses_id": "311",
-			"courses_avg": 78.24,
-			"courses_instructor": ""
+			"courses_id": "344",
+			"courses_avg": 78.22,
+			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "83434",
+			"courses_uuid": "61149",
 			"courses_dept": "cpsc",
-			"courses_id": "311",
-			"courses_avg": 78.24,
-			"courses_instructor": "eiselt, kurt"
+			"courses_id": "344",
+			"courses_avg": 78.22,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "46680",
@@ -4678,17 +4670,24 @@
 			"courses_instructor": "voll, kimberly"
 		},
 		{
+			"courses_uuid": "83434",
+			"courses_dept": "cpsc",
+			"courses_id": "311",
+			"courses_avg": 78.24,
+			"courses_instructor": "eiselt, kurt"
+		},
+		{
+			"courses_uuid": "83435",
+			"courses_dept": "cpsc",
+			"courses_id": "311",
+			"courses_avg": 78.24,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "83430",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
 			"courses_avg": 78.27,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62413",
-			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 78.28,
 			"courses_instructor": ""
 		},
 		{
@@ -4699,17 +4698,10 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "49913",
+			"courses_uuid": "62413",
 			"courses_dept": "cpsc",
-			"courses_id": "322",
-			"courses_avg": 78.29,
-			"courses_instructor": "carenini, giuseppe"
-		},
-		{
-			"courses_uuid": "39881",
-			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 78.29,
+			"courses_id": "344",
+			"courses_avg": 78.28,
 			"courses_instructor": ""
 		},
 		{
@@ -4720,11 +4712,18 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "72407",
+			"courses_uuid": "39881",
 			"courses_dept": "cpsc",
-			"courses_id": "422",
-			"courses_avg": 78.3,
+			"courses_id": "221",
+			"courses_avg": 78.29,
 			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "49913",
+			"courses_dept": "cpsc",
+			"courses_id": "322",
+			"courses_avg": 78.29,
+			"courses_instructor": "carenini, giuseppe"
 		},
 		{
 			"courses_uuid": "72406",
@@ -4734,23 +4733,16 @@
 			"courses_instructor": "poole, david"
 		},
 		{
-			"courses_uuid": "1336",
+			"courses_uuid": "72407",
 			"courses_dept": "cpsc",
-			"courses_id": "420",
-			"courses_avg": 78.32,
+			"courses_id": "422",
+			"courses_avg": 78.3,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "1335",
+			"courses_uuid": "72361",
 			"courses_dept": "cpsc",
-			"courses_id": "420",
-			"courses_avg": 78.32,
-			"courses_instructor": "kirkpatrick, david"
-		},
-		{
-			"courses_uuid": "46730",
-			"courses_dept": "cpsc",
-			"courses_id": "411",
+			"courses_id": "310",
 			"courses_avg": 78.32,
 			"courses_instructor": ""
 		},
@@ -4762,9 +4754,23 @@
 			"courses_instructor": "de volder, kris"
 		},
 		{
-			"courses_uuid": "72361",
+			"courses_uuid": "46730",
 			"courses_dept": "cpsc",
-			"courses_id": "310",
+			"courses_id": "411",
+			"courses_avg": 78.32,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "1335",
+			"courses_dept": "cpsc",
+			"courses_id": "420",
+			"courses_avg": 78.32,
+			"courses_instructor": "kirkpatrick, david"
+		},
+		{
+			"courses_uuid": "1336",
+			"courses_dept": "cpsc",
+			"courses_id": "420",
 			"courses_avg": 78.32,
 			"courses_instructor": ""
 		},
@@ -4783,13 +4789,6 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "46750",
-			"courses_dept": "cpsc",
-			"courses_id": "444",
-			"courses_avg": 78.42,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46749",
 			"courses_dept": "cpsc",
 			"courses_id": "444",
@@ -4797,10 +4796,10 @@
 			"courses_instructor": "mcgrenere, joanna"
 		},
 		{
-			"courses_uuid": "61178",
+			"courses_uuid": "46750",
 			"courses_dept": "cpsc",
 			"courses_id": "444",
-			"courses_avg": 78.48,
+			"courses_avg": 78.42,
 			"courses_instructor": ""
 		},
 		{
@@ -4811,10 +4810,10 @@
 			"courses_instructor": "mcgrenere, joanna"
 		},
 		{
-			"courses_uuid": "49896",
+			"courses_uuid": "61178",
 			"courses_dept": "cpsc",
-			"courses_id": "311",
-			"courses_avg": 78.56,
+			"courses_id": "444",
+			"courses_avg": 78.48,
 			"courses_instructor": ""
 		},
 		{
@@ -4825,17 +4824,10 @@
 			"courses_instructor": "wolfman, steven"
 		},
 		{
-			"courses_uuid": "52014",
+			"courses_uuid": "49896",
 			"courses_dept": "cpsc",
-			"courses_id": "314",
-			"courses_avg": 78.68,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "75606",
-			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_avg": 78.68,
+			"courses_id": "311",
+			"courses_avg": 78.56,
 			"courses_instructor": ""
 		},
 		{
@@ -4846,18 +4838,25 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
+			"courses_uuid": "75606",
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_avg": 78.68,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "52014",
+			"courses_dept": "cpsc",
+			"courses_id": "314",
+			"courses_avg": 78.68,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "1293",
 			"courses_dept": "cpsc",
 			"courses_id": "310",
 			"courses_avg": 78.69,
 			"courses_instructor": "palyart-lamarche, marc"
-		},
-		{
-			"courses_uuid": "62395",
-			"courses_dept": "cpsc",
-			"courses_id": "314",
-			"courses_avg": 78.7,
-			"courses_instructor": "bessmeltsev, mikhail"
 		},
 		{
 			"courses_uuid": "63247",
@@ -4867,11 +4866,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90545",
+			"courses_uuid": "62395",
 			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 78.72,
-			"courses_instructor": ""
+			"courses_id": "314",
+			"courses_avg": 78.7,
+			"courses_instructor": "bessmeltsev, mikhail"
 		},
 		{
 			"courses_uuid": "90544",
@@ -4881,18 +4880,18 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
+			"courses_uuid": "90545",
+			"courses_dept": "cpsc",
+			"courses_id": "312",
+			"courses_avg": 78.72,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "1290",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
 			"courses_avg": 78.75,
 			"courses_instructor": "tsiknis, georgios"
-		},
-		{
-			"courses_uuid": "67305",
-			"courses_dept": "cpsc",
-			"courses_id": "210",
-			"courses_avg": 78.79,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "67304",
@@ -4902,18 +4901,18 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
+			"courses_uuid": "67305",
+			"courses_dept": "cpsc",
+			"courses_id": "210",
+			"courses_avg": 78.79,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "72321",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 78.85,
 			"courses_instructor": "carter, paul martin"
-		},
-		{
-			"courses_uuid": "1357",
-			"courses_dept": "cpsc",
-			"courses_id": "500",
-			"courses_avg": 78.87,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1356",
@@ -4923,10 +4922,10 @@
 			"courses_instructor": "kirkpatrick, david"
 		},
 		{
-			"courses_uuid": "75600",
+			"courses_uuid": "1357",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 78.88,
+			"courses_id": "500",
+			"courses_avg": 78.87,
 			"courses_instructor": ""
 		},
 		{
@@ -4937,10 +4936,10 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "46711",
+			"courses_uuid": "75600",
 			"courses_dept": "cpsc",
-			"courses_id": "319",
-			"courses_avg": 78.93,
+			"courses_id": "213",
+			"courses_avg": 78.88,
 			"courses_instructor": ""
 		},
 		{
@@ -4951,10 +4950,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "72417",
+			"courses_uuid": "46711",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
-			"courses_avg": 78.95,
+			"courses_id": "319",
+			"courses_avg": 78.93,
 			"courses_instructor": ""
 		},
 		{
@@ -4965,6 +4964,13 @@
 			"courses_instructor": "meyer, irmtraud margret"
 		},
 		{
+			"courses_uuid": "72417",
+			"courses_dept": "cpsc",
+			"courses_id": "445",
+			"courses_avg": 78.95,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "62361",
 			"courses_dept": "cpsc",
 			"courses_id": "210",
@@ -4972,11 +4978,11 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "62418",
+			"courses_uuid": "62354",
 			"courses_dept": "cpsc",
-			"courses_id": "410",
+			"courses_id": "121",
 			"courses_avg": 79,
-			"courses_instructor": ""
+			"courses_instructor": "belleville, patrice"
 		},
 		{
 			"courses_uuid": "62417",
@@ -4986,11 +4992,11 @@
 			"courses_instructor": "holmes, reid"
 		},
 		{
-			"courses_uuid": "62354",
+			"courses_uuid": "62418",
 			"courses_dept": "cpsc",
-			"courses_id": "121",
+			"courses_id": "410",
 			"courses_avg": 79,
-			"courses_instructor": "belleville, patrice"
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "83441",
@@ -5007,11 +5013,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52016",
+			"courses_uuid": "67312",
 			"courses_dept": "cpsc",
-			"courses_id": "314",
+			"courses_id": "310",
 			"courses_avg": 79.12,
-			"courses_instructor": ""
+			"courses_instructor": "baniassad, elisa"
 		},
 		{
 			"courses_uuid": "67313",
@@ -5021,17 +5027,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "67312",
+			"courses_uuid": "52016",
 			"courses_dept": "cpsc",
-			"courses_id": "310",
+			"courses_id": "314",
 			"courses_avg": 79.12,
-			"courses_instructor": "baniassad, elisa"
-		},
-		{
-			"courses_uuid": "62436",
-			"courses_dept": "cpsc",
-			"courses_id": "430",
-			"courses_avg": 79.13,
 			"courses_instructor": ""
 		},
 		{
@@ -5042,10 +5041,10 @@
 			"courses_instructor": "dawson, jessica"
 		},
 		{
-			"courses_uuid": "1346",
+			"courses_uuid": "62436",
 			"courses_dept": "cpsc",
 			"courses_id": "430",
-			"courses_avg": 79.19,
+			"courses_avg": 79.13,
 			"courses_instructor": ""
 		},
 		{
@@ -5056,18 +5055,11 @@
 			"courses_instructor": "leyton-brown, kevin"
 		},
 		{
-			"courses_uuid": "49949",
+			"courses_uuid": "1346",
 			"courses_dept": "cpsc",
-			"courses_id": "444",
-			"courses_avg": 79.24,
+			"courses_id": "430",
+			"courses_avg": 79.19,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "49948",
-			"courses_dept": "cpsc",
-			"courses_id": "444",
-			"courses_avg": 79.24,
-			"courses_instructor": "mcgrenere, joanna"
 		},
 		{
 			"courses_uuid": "61133",
@@ -5077,10 +5069,17 @@
 			"courses_instructor": "bridson, robert"
 		},
 		{
-			"courses_uuid": "52073",
+			"courses_uuid": "49948",
 			"courses_dept": "cpsc",
-			"courses_id": "503",
-			"courses_avg": 79.25,
+			"courses_id": "444",
+			"courses_avg": 79.24,
+			"courses_instructor": "mcgrenere, joanna"
+		},
+		{
+			"courses_uuid": "49949",
+			"courses_dept": "cpsc",
+			"courses_id": "444",
+			"courses_avg": 79.24,
 			"courses_instructor": ""
 		},
 		{
@@ -5091,10 +5090,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62379",
+			"courses_uuid": "52073",
 			"courses_dept": "cpsc",
-			"courses_id": "302",
-			"courses_avg": 79.29,
+			"courses_id": "503",
+			"courses_avg": 79.25,
 			"courses_instructor": ""
 		},
 		{
@@ -5105,10 +5104,10 @@
 			"courses_instructor": "ascher, uri michael"
 		},
 		{
-			"courses_uuid": "72399",
+			"courses_uuid": "62379",
 			"courses_dept": "cpsc",
-			"courses_id": "416",
-			"courses_avg": 79.31,
+			"courses_id": "302",
+			"courses_avg": 79.29,
 			"courses_instructor": ""
 		},
 		{
@@ -5119,10 +5118,10 @@
 			"courses_instructor": "wagner, alan"
 		},
 		{
-			"courses_uuid": "1328",
+			"courses_uuid": "72399",
 			"courses_dept": "cpsc",
-			"courses_id": "410",
-			"courses_avg": 79.39,
+			"courses_id": "416",
+			"courses_avg": 79.31,
 			"courses_instructor": ""
 		},
 		{
@@ -5133,10 +5132,10 @@
 			"courses_instructor": "baniassad, elisa"
 		},
 		{
-			"courses_uuid": "56856",
+			"courses_uuid": "1328",
 			"courses_dept": "cpsc",
-			"courses_id": "121",
-			"courses_avg": 79.41,
+			"courses_id": "410",
+			"courses_avg": 79.39,
 			"courses_instructor": ""
 		},
 		{
@@ -5147,17 +5146,17 @@
 			"courses_instructor": "dulat, margaret"
 		},
 		{
+			"courses_uuid": "56856",
+			"courses_dept": "cpsc",
+			"courses_id": "121",
+			"courses_avg": 79.41,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "52015",
 			"courses_dept": "cpsc",
 			"courses_id": "314",
 			"courses_avg": 79.42,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "72413",
-			"courses_dept": "cpsc",
-			"courses_id": "430",
-			"courses_avg": 79.43,
 			"courses_instructor": ""
 		},
 		{
@@ -5168,6 +5167,13 @@
 			"courses_instructor": "luk, joseph"
 		},
 		{
+			"courses_uuid": "72413",
+			"courses_dept": "cpsc",
+			"courses_id": "430",
+			"courses_avg": 79.43,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "52033",
 			"courses_dept": "cpsc",
 			"courses_id": "404",
@@ -5175,9 +5181,16 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "1287",
+			"courses_uuid": "56859",
 			"courses_dept": "cpsc",
-			"courses_id": "302",
+			"courses_id": "213",
+			"courses_avg": 79.46,
+			"courses_instructor": "tsiknis, georgios"
+		},
+		{
+			"courses_uuid": "56860",
+			"courses_dept": "cpsc",
+			"courses_id": "213",
 			"courses_avg": 79.46,
 			"courses_instructor": ""
 		},
@@ -5189,31 +5202,17 @@
 			"courses_instructor": "ascher, uri michael"
 		},
 		{
-			"courses_uuid": "56860",
+			"courses_uuid": "1287",
 			"courses_dept": "cpsc",
-			"courses_id": "213",
+			"courses_id": "302",
 			"courses_avg": 79.46,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "56859",
-			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 79.46,
-			"courses_instructor": "tsiknis, georgios"
 		},
 		{
 			"courses_uuid": "1295",
 			"courses_dept": "cpsc",
 			"courses_id": "310",
 			"courses_avg": 79.5,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1330",
-			"courses_dept": "cpsc",
-			"courses_id": "411",
-			"courses_avg": 79.54,
 			"courses_instructor": ""
 		},
 		{
@@ -5224,11 +5223,11 @@
 			"courses_instructor": "hutchinson, norman"
 		},
 		{
-			"courses_uuid": "83428",
+			"courses_uuid": "1330",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 79.56,
-			"courses_instructor": "tsiknis, georgios"
+			"courses_id": "411",
+			"courses_avg": 79.54,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62383",
@@ -5238,11 +5237,11 @@
 			"courses_instructor": "lakshmanan, laks"
 		},
 		{
-			"courses_uuid": "49927",
+			"courses_uuid": "83428",
 			"courses_dept": "cpsc",
-			"courses_id": "410",
-			"courses_avg": 79.62,
-			"courses_instructor": ""
+			"courses_id": "304",
+			"courses_avg": 79.56,
+			"courses_instructor": "tsiknis, georgios"
 		},
 		{
 			"courses_uuid": "49926",
@@ -5252,10 +5251,10 @@
 			"courses_instructor": "baniassad, elisa"
 		},
 		{
-			"courses_uuid": "49947",
+			"courses_uuid": "49927",
 			"courses_dept": "cpsc",
-			"courses_id": "430",
-			"courses_avg": 79.69,
+			"courses_id": "410",
+			"courses_avg": 79.62,
 			"courses_instructor": ""
 		},
 		{
@@ -5266,10 +5265,10 @@
 			"courses_instructor": "leyton-brown, kevin"
 		},
 		{
-			"courses_uuid": "75608",
+			"courses_uuid": "49947",
 			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 79.76,
+			"courses_id": "430",
+			"courses_avg": 79.69,
 			"courses_instructor": ""
 		},
 		{
@@ -5280,10 +5279,10 @@
 			"courses_instructor": "feeley, michael"
 		},
 		{
-			"courses_uuid": "46752",
+			"courses_uuid": "75608",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
-			"courses_avg": 79.78,
+			"courses_id": "313",
+			"courses_avg": 79.76,
 			"courses_instructor": ""
 		},
 		{
@@ -5294,18 +5293,18 @@
 			"courses_instructor": "meyer, irmtraud margret"
 		},
 		{
+			"courses_uuid": "46752",
+			"courses_dept": "cpsc",
+			"courses_id": "445",
+			"courses_avg": 79.78,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "61091",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 79.83,
 			"courses_instructor": "tsiknis, georgios"
-		},
-		{
-			"courses_uuid": "49935",
-			"courses_dept": "cpsc",
-			"courses_id": "418",
-			"courses_avg": 79.87,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "49934",
@@ -5315,9 +5314,23 @@
 			"courses_instructor": "greenstreet, mark"
 		},
 		{
-			"courses_uuid": "61209",
+			"courses_uuid": "49935",
 			"courses_dept": "cpsc",
-			"courses_id": "515",
+			"courses_id": "418",
+			"courses_avg": 79.87,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "72404",
+			"courses_dept": "cpsc",
+			"courses_id": "421",
+			"courses_avg": 79.88,
+			"courses_instructor": "friedman, joel"
+		},
+		{
+			"courses_uuid": "72405",
+			"courses_dept": "cpsc",
+			"courses_id": "421",
 			"courses_avg": 79.88,
 			"courses_instructor": ""
 		},
@@ -5329,24 +5342,10 @@
 			"courses_instructor": "mitchell, ian"
 		},
 		{
-			"courses_uuid": "72405",
+			"courses_uuid": "61209",
 			"courses_dept": "cpsc",
-			"courses_id": "421",
+			"courses_id": "515",
 			"courses_avg": 79.88,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "72404",
-			"courses_dept": "cpsc",
-			"courses_id": "421",
-			"courses_avg": 79.88,
-			"courses_instructor": "friedman, joel"
-		},
-		{
-			"courses_uuid": "67307",
-			"courses_dept": "cpsc",
-			"courses_id": "213",
-			"courses_avg": 79.98,
 			"courses_instructor": ""
 		},
 		{
@@ -5357,10 +5356,10 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "46811",
+			"courses_uuid": "67307",
 			"courses_dept": "cpsc",
-			"courses_id": "589",
-			"courses_avg": 80,
+			"courses_id": "213",
+			"courses_avg": 79.98,
 			"courses_instructor": ""
 		},
 		{
@@ -5371,10 +5370,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "49884",
+			"courses_uuid": "46811",
 			"courses_dept": "cpsc",
-			"courses_id": "301",
-			"courses_avg": 80.09,
+			"courses_id": "589",
+			"courses_avg": 80,
 			"courses_instructor": ""
 		},
 		{
@@ -5385,10 +5384,10 @@
 			"courses_instructor": "mitchell, ian"
 		},
 		{
-			"courses_uuid": "90566",
+			"courses_uuid": "49884",
 			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 80.11,
+			"courses_id": "301",
+			"courses_avg": 80.09,
 			"courses_instructor": ""
 		},
 		{
@@ -5399,10 +5398,10 @@
 			"courses_instructor": "wolfman, steven"
 		},
 		{
-			"courses_uuid": "1297",
+			"courses_uuid": "90566",
 			"courses_dept": "cpsc",
-			"courses_id": "311",
-			"courses_avg": 80.15,
+			"courses_id": "344",
+			"courses_avg": 80.11,
 			"courses_instructor": ""
 		},
 		{
@@ -5413,10 +5412,10 @@
 			"courses_instructor": "wolfman, steven"
 		},
 		{
-			"courses_uuid": "46728",
+			"courses_uuid": "1297",
 			"courses_dept": "cpsc",
-			"courses_id": "410",
-			"courses_avg": 80.18,
+			"courses_id": "311",
+			"courses_avg": 80.15,
 			"courses_instructor": ""
 		},
 		{
@@ -5427,18 +5426,18 @@
 			"courses_instructor": "murphy-hill, emerson"
 		},
 		{
+			"courses_uuid": "46728",
+			"courses_dept": "cpsc",
+			"courses_id": "410",
+			"courses_avg": 80.18,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "72329",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 80.2,
 			"courses_instructor": "wolfman, steven"
-		},
-		{
-			"courses_uuid": "49919",
-			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 80.24,
-			"courses_instructor": "dawson, jessica;maclean, karon"
 		},
 		{
 			"courses_uuid": "49892",
@@ -5448,17 +5447,17 @@
 			"courses_instructor": "wohlstadter, eric"
 		},
 		{
+			"courses_uuid": "49919",
+			"courses_dept": "cpsc",
+			"courses_id": "344",
+			"courses_avg": 80.24,
+			"courses_instructor": "dawson, jessica;maclean, karon"
+		},
+		{
 			"courses_uuid": "61134",
 			"courses_dept": "cpsc",
 			"courses_id": "314",
 			"courses_avg": 80.26,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62411",
-			"courses_dept": "cpsc",
-			"courses_id": "340",
-			"courses_avg": 80.29,
 			"courses_instructor": ""
 		},
 		{
@@ -5469,10 +5468,10 @@
 			"courses_instructor": "schmidt, mark"
 		},
 		{
-			"courses_uuid": "83458",
+			"courses_uuid": "62411",
 			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 80.31,
+			"courses_id": "340",
+			"courses_avg": 80.29,
 			"courses_instructor": ""
 		},
 		{
@@ -5483,10 +5482,24 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
+			"courses_uuid": "83458",
+			"courses_dept": "cpsc",
+			"courses_id": "344",
+			"courses_avg": 80.31,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "72359",
 			"courses_dept": "cpsc",
 			"courses_id": "310",
 			"courses_avg": 80.32,
+			"courses_instructor": "allen, meghan"
+		},
+		{
+			"courses_uuid": "43202",
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_avg": 80.34,
 			"courses_instructor": "allen, meghan"
 		},
 		{
@@ -5497,25 +5510,11 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "43202",
-			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_avg": 80.34,
-			"courses_instructor": "allen, meghan"
-		},
-		{
 			"courses_uuid": "1294",
 			"courses_dept": "cpsc",
 			"courses_id": "310",
 			"courses_avg": 80.35,
 			"courses_instructor": "baniassad, elisa"
-		},
-		{
-			"courses_uuid": "1299",
-			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 80.52,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1298",
@@ -5525,10 +5524,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "25821",
+			"courses_uuid": "1299",
 			"courses_dept": "cpsc",
-			"courses_id": "430",
-			"courses_avg": 80.55,
+			"courses_id": "312",
+			"courses_avg": 80.52,
 			"courses_instructor": ""
 		},
 		{
@@ -5539,10 +5538,10 @@
 			"courses_instructor": "luk, joseph"
 		},
 		{
-			"courses_uuid": "72415",
+			"courses_uuid": "25821",
 			"courses_dept": "cpsc",
-			"courses_id": "444",
-			"courses_avg": 80.62,
+			"courses_id": "430",
+			"courses_avg": 80.55,
 			"courses_instructor": ""
 		},
 		{
@@ -5551,6 +5550,13 @@
 			"courses_id": "444",
 			"courses_avg": 80.62,
 			"courses_instructor": "mcgrenere, joanna"
+		},
+		{
+			"courses_uuid": "72415",
+			"courses_dept": "cpsc",
+			"courses_id": "444",
+			"courses_avg": 80.62,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1257",
@@ -5574,18 +5580,18 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "49918",
-			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 80.85,
-			"courses_instructor": "maclean, karon"
-		},
-		{
 			"courses_uuid": "1292",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
 			"courses_avg": 80.85,
 			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "49918",
+			"courses_dept": "cpsc",
+			"courses_id": "344",
+			"courses_avg": 80.85,
+			"courses_instructor": "maclean, karon"
 		},
 		{
 			"courses_uuid": "49868",
@@ -5595,13 +5601,6 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "83498",
-			"courses_dept": "cpsc",
-			"courses_id": "502",
-			"courses_avg": 81.06,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "83497",
 			"courses_dept": "cpsc",
 			"courses_id": "502",
@@ -5609,14 +5608,21 @@
 			"courses_instructor": "conati, cristina"
 		},
 		{
-			"courses_uuid": "52111",
+			"courses_uuid": "83498",
+			"courses_dept": "cpsc",
+			"courses_id": "502",
+			"courses_avg": 81.06,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "52110",
 			"courses_dept": "cpsc",
 			"courses_id": "540",
 			"courses_avg": 81.12,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52110",
+			"courses_uuid": "52111",
 			"courses_dept": "cpsc",
 			"courses_id": "540",
 			"courses_avg": 81.12,
@@ -5630,13 +5636,6 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "3394",
-			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_avg": 81.17,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "3393",
 			"courses_dept": "cpsc",
 			"courses_id": "310",
@@ -5644,9 +5643,30 @@
 			"courses_instructor": "holmes, reid"
 		},
 		{
-			"courses_uuid": "62424",
+			"courses_uuid": "3394",
 			"courses_dept": "cpsc",
-			"courses_id": "416",
+			"courses_id": "310",
+			"courses_avg": 81.17,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "62386",
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_avg": 81.18,
+			"courses_instructor": "baniassad, elisa"
+		},
+		{
+			"courses_uuid": "1320",
+			"courses_dept": "cpsc",
+			"courses_id": "344",
+			"courses_avg": 81.18,
+			"courses_instructor": "dawson, jessica"
+		},
+		{
+			"courses_uuid": "1321",
+			"courses_dept": "cpsc",
+			"courses_id": "344",
 			"courses_avg": 81.18,
 			"courses_instructor": ""
 		},
@@ -5658,31 +5678,10 @@
 			"courses_instructor": "beschastnikh, ivan"
 		},
 		{
-			"courses_uuid": "1321",
+			"courses_uuid": "62424",
 			"courses_dept": "cpsc",
-			"courses_id": "344",
+			"courses_id": "416",
 			"courses_avg": 81.18,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1320",
-			"courses_dept": "cpsc",
-			"courses_id": "344",
-			"courses_avg": 81.18,
-			"courses_instructor": "dawson, jessica"
-		},
-		{
-			"courses_uuid": "62386",
-			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_avg": 81.18,
-			"courses_instructor": "baniassad, elisa"
-		},
-		{
-			"courses_uuid": "90602",
-			"courses_dept": "cpsc",
-			"courses_id": "500",
-			"courses_avg": 81.25,
 			"courses_instructor": ""
 		},
 		{
@@ -5693,10 +5692,10 @@
 			"courses_instructor": "kirkpatrick, david"
 		},
 		{
-			"courses_uuid": "90595",
+			"courses_uuid": "90602",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
-			"courses_avg": 81.28,
+			"courses_id": "500",
+			"courses_avg": 81.25,
 			"courses_instructor": ""
 		},
 		{
@@ -5707,18 +5706,18 @@
 			"courses_instructor": "hoos, holger"
 		},
 		{
+			"courses_uuid": "90595",
+			"courses_dept": "cpsc",
+			"courses_id": "445",
+			"courses_avg": 81.28,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "61099",
 			"courses_dept": "cpsc",
 			"courses_id": "210",
 			"courses_avg": 81.5,
 			"courses_instructor": "feeley, michael"
-		},
-		{
-			"courses_uuid": "90606",
-			"courses_dept": "cpsc",
-			"courses_id": "502",
-			"courses_avg": 81.57,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "90605",
@@ -5728,10 +5727,10 @@
 			"courses_instructor": "mackworth, alan"
 		},
 		{
-			"courses_uuid": "62479",
+			"courses_uuid": "90606",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
-			"courses_avg": 81.64,
+			"courses_id": "502",
+			"courses_avg": 81.57,
 			"courses_instructor": ""
 		},
 		{
@@ -5742,14 +5741,21 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "52021",
+			"courses_uuid": "62479",
+			"courses_dept": "cpsc",
+			"courses_id": "544",
+			"courses_avg": 81.64,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "52020",
 			"courses_dept": "cpsc",
 			"courses_id": "319",
 			"courses_avg": 81.68,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52020",
+			"courses_uuid": "52021",
 			"courses_dept": "cpsc",
 			"courses_id": "319",
 			"courses_avg": 81.68,
@@ -5763,18 +5769,18 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "43201",
-			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 81.8,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "43200",
 			"courses_dept": "cpsc",
 			"courses_id": "304",
 			"courses_avg": 81.8,
 			"courses_instructor": "tsiknis, georgios"
+		},
+		{
+			"courses_uuid": "43201",
+			"courses_dept": "cpsc",
+			"courses_id": "304",
+			"courses_avg": 81.8,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "62414",
@@ -5784,13 +5790,6 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "72365",
-			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 81.84,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "72364",
 			"courses_dept": "cpsc",
 			"courses_id": "312",
@@ -5798,10 +5797,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "25819",
+			"courses_uuid": "72365",
 			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_avg": 81.88,
+			"courses_id": "312",
+			"courses_avg": 81.84,
 			"courses_instructor": ""
 		},
 		{
@@ -5812,10 +5811,10 @@
 			"courses_instructor": "allen, meghan"
 		},
 		{
-			"courses_uuid": "83437",
+			"courses_uuid": "25819",
 			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 81.9,
+			"courses_id": "310",
+			"courses_avg": 81.88,
 			"courses_instructor": ""
 		},
 		{
@@ -5826,10 +5825,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "83423",
+			"courses_uuid": "83437",
 			"courses_dept": "cpsc",
-			"courses_id": "301",
-			"courses_avg": 82.05,
+			"courses_id": "312",
+			"courses_avg": 81.9,
 			"courses_instructor": ""
 		},
 		{
@@ -5840,10 +5839,10 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "62477",
+			"courses_uuid": "83423",
 			"courses_dept": "cpsc",
-			"courses_id": "543",
-			"courses_avg": 82.07,
+			"courses_id": "301",
+			"courses_avg": 82.05,
 			"courses_instructor": ""
 		},
 		{
@@ -5854,10 +5853,10 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "83512",
+			"courses_uuid": "62477",
 			"courses_dept": "cpsc",
-			"courses_id": "515",
-			"courses_avg": 82.15,
+			"courses_id": "543",
+			"courses_avg": 82.07,
 			"courses_instructor": ""
 		},
 		{
@@ -5868,18 +5867,18 @@
 			"courses_instructor": "mitchell, ian"
 		},
 		{
+			"courses_uuid": "83512",
+			"courses_dept": "cpsc",
+			"courses_id": "515",
+			"courses_avg": 82.15,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "49860",
 			"courses_dept": "cpsc",
 			"courses_id": "121",
 			"courses_avg": 82.2,
 			"courses_instructor": "tsiknis, georgios"
-		},
-		{
-			"courses_uuid": "43205",
-			"courses_dept": "cpsc",
-			"courses_id": "313",
-			"courses_avg": 82.27,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "43204",
@@ -5889,10 +5888,10 @@
 			"courses_instructor": "feeley, michael"
 		},
 		{
-			"courses_uuid": "61242",
+			"courses_uuid": "43205",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
-			"courses_avg": 82.28,
+			"courses_id": "313",
+			"courses_avg": 82.27,
 			"courses_instructor": ""
 		},
 		{
@@ -5903,10 +5902,10 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "46765",
+			"courses_uuid": "61242",
 			"courses_dept": "cpsc",
-			"courses_id": "502",
-			"courses_avg": 82.31,
+			"courses_id": "544",
+			"courses_avg": 82.28,
 			"courses_instructor": ""
 		},
 		{
@@ -5915,6 +5914,13 @@
 			"courses_id": "502",
 			"courses_avg": 82.31,
 			"courses_instructor": "mackworth, alan"
+		},
+		{
+			"courses_uuid": "46765",
+			"courses_dept": "cpsc",
+			"courses_id": "502",
+			"courses_avg": 82.31,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "83394",
@@ -5931,13 +5937,6 @@
 			"courses_instructor": "bridson, robert"
 		},
 		{
-			"courses_uuid": "1285",
-			"courses_dept": "cpsc",
-			"courses_id": "301",
-			"courses_avg": 82.39,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "1284",
 			"courses_dept": "cpsc",
 			"courses_id": "301",
@@ -5945,11 +5944,11 @@
 			"courses_instructor": "mitchell, ian"
 		},
 		{
-			"courses_uuid": "1291",
+			"courses_uuid": "1285",
 			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 82.43,
-			"courses_instructor": "lakshmanan, laks"
+			"courses_id": "301",
+			"courses_avg": 82.39,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "63246",
@@ -5957,6 +5956,13 @@
 			"courses_id": "110",
 			"courses_avg": 82.43,
 			"courses_instructor": "eiselt, kurt"
+		},
+		{
+			"courses_uuid": "1291",
+			"courses_dept": "cpsc",
+			"courses_id": "304",
+			"courses_avg": 82.43,
+			"courses_instructor": "lakshmanan, laks"
 		},
 		{
 			"courses_uuid": "49855",
@@ -5973,9 +5979,16 @@
 			"courses_instructor": "wolfman, steven"
 		},
 		{
-			"courses_uuid": "52081",
+			"courses_uuid": "1347",
 			"courses_dept": "cpsc",
-			"courses_id": "507",
+			"courses_id": "445",
+			"courses_avg": 82.5,
+			"courses_instructor": "manuch, jan"
+		},
+		{
+			"courses_uuid": "1348",
+			"courses_dept": "cpsc",
+			"courses_id": "445",
 			"courses_avg": 82.5,
 			"courses_instructor": ""
 		},
@@ -5987,24 +6000,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "1348",
+			"courses_uuid": "52081",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
+			"courses_id": "507",
 			"courses_avg": 82.5,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1347",
-			"courses_dept": "cpsc",
-			"courses_id": "445",
-			"courses_avg": 82.5,
-			"courses_instructor": "manuch, jan"
-		},
-		{
-			"courses_uuid": "72451",
-			"courses_dept": "cpsc",
-			"courses_id": "522",
-			"courses_avg": 82.55,
 			"courses_instructor": ""
 		},
 		{
@@ -6013,6 +6012,13 @@
 			"courses_id": "522",
 			"courses_avg": 82.55,
 			"courses_instructor": "poole, david"
+		},
+		{
+			"courses_uuid": "72451",
+			"courses_dept": "cpsc",
+			"courses_id": "522",
+			"courses_avg": 82.55,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61132",
@@ -6029,9 +6035,16 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "72470",
+			"courses_uuid": "61212",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
+			"courses_id": "521",
+			"courses_avg": 82.65,
+			"courses_instructor": "wagner, alan"
+		},
+		{
+			"courses_uuid": "61213",
+			"courses_dept": "cpsc",
+			"courses_id": "521",
 			"courses_avg": 82.65,
 			"courses_instructor": ""
 		},
@@ -6043,24 +6056,10 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "61213",
+			"courses_uuid": "72470",
 			"courses_dept": "cpsc",
-			"courses_id": "521",
+			"courses_id": "544",
 			"courses_avg": 82.65,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "61212",
-			"courses_dept": "cpsc",
-			"courses_id": "521",
-			"courses_avg": 82.65,
-			"courses_instructor": "wagner, alan"
-		},
-		{
-			"courses_uuid": "3398",
-			"courses_dept": "cpsc",
-			"courses_id": "340",
-			"courses_avg": 82.66,
 			"courses_instructor": ""
 		},
 		{
@@ -6071,10 +6070,10 @@
 			"courses_instructor": "schmidt, mark"
 		},
 		{
-			"courses_uuid": "46800",
+			"courses_uuid": "3398",
 			"courses_dept": "cpsc",
-			"courses_id": "540",
-			"courses_avg": 82.82,
+			"courses_id": "340",
+			"courses_avg": 82.66,
 			"courses_instructor": ""
 		},
 		{
@@ -6085,10 +6084,10 @@
 			"courses_instructor": "murphy, kevin"
 		},
 		{
-			"courses_uuid": "52071",
+			"courses_uuid": "46800",
 			"courses_dept": "cpsc",
-			"courses_id": "502",
-			"courses_avg": 82.85,
+			"courses_id": "540",
+			"courses_avg": 82.82,
 			"courses_instructor": ""
 		},
 		{
@@ -6099,10 +6098,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62377",
+			"courses_uuid": "52071",
 			"courses_dept": "cpsc",
-			"courses_id": "301",
-			"courses_avg": 82.99,
+			"courses_id": "502",
+			"courses_avg": 82.85,
 			"courses_instructor": ""
 		},
 		{
@@ -6113,9 +6112,23 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "90645",
+			"courses_uuid": "62377",
 			"courses_dept": "cpsc",
-			"courses_id": "540",
+			"courses_id": "301",
+			"courses_avg": 82.99,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "61190",
+			"courses_dept": "cpsc",
+			"courses_id": "500",
+			"courses_avg": 83,
+			"courses_instructor": "evans, william"
+		},
+		{
+			"courses_uuid": "61191",
+			"courses_dept": "cpsc",
+			"courses_id": "500",
 			"courses_avg": 83,
 			"courses_instructor": ""
 		},
@@ -6127,31 +6140,17 @@
 			"courses_instructor": "doucet, arnaud"
 		},
 		{
-			"courses_uuid": "61191",
+			"courses_uuid": "90645",
 			"courses_dept": "cpsc",
-			"courses_id": "500",
+			"courses_id": "540",
 			"courses_avg": 83,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "61190",
-			"courses_dept": "cpsc",
-			"courses_id": "500",
-			"courses_avg": 83,
-			"courses_instructor": "evans, william"
 		},
 		{
 			"courses_uuid": "90600",
 			"courses_dept": "cpsc",
 			"courses_id": "449",
 			"courses_avg": 83.08,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "72376",
-			"courses_dept": "cpsc",
-			"courses_id": "319",
-			"courses_avg": 83.13,
 			"courses_instructor": ""
 		},
 		{
@@ -6162,10 +6161,10 @@
 			"courses_instructor": "voll, kimberly"
 		},
 		{
-			"courses_uuid": "83448",
+			"courses_uuid": "72376",
 			"courses_dept": "cpsc",
 			"courses_id": "319",
-			"courses_avg": 83.15,
+			"courses_avg": 83.13,
 			"courses_instructor": ""
 		},
 		{
@@ -6176,10 +6175,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "46761",
+			"courses_uuid": "83448",
 			"courses_dept": "cpsc",
-			"courses_id": "500",
-			"courses_avg": 83.17,
+			"courses_id": "319",
+			"courses_avg": 83.15,
 			"courses_instructor": ""
 		},
 		{
@@ -6190,10 +6189,10 @@
 			"courses_instructor": "evans, william"
 		},
 		{
-			"courses_uuid": "83518",
+			"courses_uuid": "46761",
 			"courses_dept": "cpsc",
-			"courses_id": "521",
-			"courses_avg": 83.2,
+			"courses_id": "500",
+			"courses_avg": 83.17,
 			"courses_instructor": ""
 		},
 		{
@@ -6204,9 +6203,23 @@
 			"courses_instructor": "wagner, alan"
 		},
 		{
-			"courses_uuid": "49963",
+			"courses_uuid": "83518",
 			"courses_dept": "cpsc",
-			"courses_id": "502",
+			"courses_id": "521",
+			"courses_avg": 83.2,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "49950",
+			"courses_dept": "cpsc",
+			"courses_id": "445",
+			"courses_avg": 83.32,
+			"courses_instructor": "manuch, jan"
+		},
+		{
+			"courses_uuid": "49951",
+			"courses_dept": "cpsc",
+			"courses_id": "445",
 			"courses_avg": 83.32,
 			"courses_instructor": ""
 		},
@@ -6218,23 +6231,23 @@
 			"courses_instructor": "poole, david"
 		},
 		{
-			"courses_uuid": "49951",
+			"courses_uuid": "49963",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
+			"courses_id": "502",
 			"courses_avg": 83.32,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "49950",
+			"courses_uuid": "62462",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
-			"courses_avg": 83.32,
-			"courses_instructor": "manuch, jan"
+			"courses_id": "515",
+			"courses_avg": 83.36,
+			"courses_instructor": "mitchell, ian"
 		},
 		{
-			"courses_uuid": "52116",
+			"courses_uuid": "62463",
 			"courses_dept": "cpsc",
-			"courses_id": "543",
+			"courses_id": "515",
 			"courses_avg": 83.36,
 			"courses_instructor": ""
 		},
@@ -6246,24 +6259,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62463",
+			"courses_uuid": "52116",
 			"courses_dept": "cpsc",
-			"courses_id": "515",
+			"courses_id": "543",
 			"courses_avg": 83.36,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62462",
-			"courses_dept": "cpsc",
-			"courses_id": "515",
-			"courses_avg": 83.36,
-			"courses_instructor": "mitchell, ian"
-		},
-		{
-			"courses_uuid": "62467",
-			"courses_dept": "cpsc",
-			"courses_id": "522",
-			"courses_avg": 83.39,
 			"courses_instructor": ""
 		},
 		{
@@ -6274,18 +6273,11 @@
 			"courses_instructor": "poole, david"
 		},
 		{
-			"courses_uuid": "46806",
+			"courses_uuid": "62467",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
-			"courses_avg": 83.41,
+			"courses_id": "522",
+			"courses_avg": 83.39,
 			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "46805",
-			"courses_dept": "cpsc",
-			"courses_id": "544",
-			"courses_avg": 83.41,
-			"courses_instructor": "mcgrenere, joanna"
 		},
 		{
 			"courses_uuid": "1261",
@@ -6295,18 +6287,18 @@
 			"courses_instructor": "belleville, patrice"
 		},
 		{
-			"courses_uuid": "62455",
+			"courses_uuid": "46805",
 			"courses_dept": "cpsc",
-			"courses_id": "502",
-			"courses_avg": 83.43,
-			"courses_instructor": ""
+			"courses_id": "544",
+			"courses_avg": 83.41,
+			"courses_instructor": "mcgrenere, joanna"
 		},
 		{
-			"courses_uuid": "62454",
+			"courses_uuid": "46806",
 			"courses_dept": "cpsc",
-			"courses_id": "502",
-			"courses_avg": 83.43,
-			"courses_instructor": "conati, cristina"
+			"courses_id": "544",
+			"courses_avg": 83.41,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "72324",
@@ -6316,10 +6308,17 @@
 			"courses_instructor": "carter, paul martin"
 		},
 		{
-			"courses_uuid": "62440",
+			"courses_uuid": "62454",
 			"courses_dept": "cpsc",
-			"courses_id": "445",
-			"courses_avg": 83.59,
+			"courses_id": "502",
+			"courses_avg": 83.43,
+			"courses_instructor": "conati, cristina"
+		},
+		{
+			"courses_uuid": "62455",
+			"courses_dept": "cpsc",
+			"courses_id": "502",
+			"courses_avg": 83.43,
 			"courses_instructor": ""
 		},
 		{
@@ -6330,10 +6329,10 @@
 			"courses_instructor": "hoos, holger"
 		},
 		{
-			"courses_uuid": "90649",
+			"courses_uuid": "62440",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
-			"courses_avg": 83.67,
+			"courses_id": "445",
+			"courses_avg": 83.59,
 			"courses_instructor": ""
 		},
 		{
@@ -6344,10 +6343,10 @@
 			"courses_instructor": "booth, kellogg"
 		},
 		{
-			"courses_uuid": "46785",
+			"courses_uuid": "90649",
 			"courses_dept": "cpsc",
-			"courses_id": "527",
-			"courses_avg": 83.78,
+			"courses_id": "544",
+			"courses_avg": 83.67,
 			"courses_instructor": ""
 		},
 		{
@@ -6358,10 +6357,10 @@
 			"courses_instructor": "vuong, son"
 		},
 		{
-			"courses_uuid": "62453",
+			"courses_uuid": "46785",
 			"courses_dept": "cpsc",
-			"courses_id": "501",
-			"courses_avg": 83.8,
+			"courses_id": "527",
+			"courses_avg": 83.78,
 			"courses_instructor": ""
 		},
 		{
@@ -6372,10 +6371,10 @@
 			"courses_instructor": "friedman, joel"
 		},
 		{
-			"courses_uuid": "61158",
+			"courses_uuid": "62453",
 			"courses_dept": "cpsc",
-			"courses_id": "411",
-			"courses_avg": 83.94,
+			"courses_id": "501",
+			"courses_avg": 83.8,
 			"courses_instructor": ""
 		},
 		{
@@ -6386,10 +6385,10 @@
 			"courses_instructor": "hutchinson, norman"
 		},
 		{
-			"courses_uuid": "61215",
+			"courses_uuid": "61158",
 			"courses_dept": "cpsc",
-			"courses_id": "522",
-			"courses_avg": 84,
+			"courses_id": "411",
+			"courses_avg": 83.94,
 			"courses_instructor": ""
 		},
 		{
@@ -6400,10 +6399,10 @@
 			"courses_instructor": "poole, david"
 		},
 		{
-			"courses_uuid": "52010",
+			"courses_uuid": "61215",
 			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 84.02,
+			"courses_id": "522",
+			"courses_avg": 84,
 			"courses_instructor": ""
 		},
 		{
@@ -6414,10 +6413,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62465",
+			"courses_uuid": "52010",
 			"courses_dept": "cpsc",
-			"courses_id": "521",
-			"courses_avg": 84.13,
+			"courses_id": "312",
+			"courses_avg": 84.02,
 			"courses_instructor": ""
 		},
 		{
@@ -6428,10 +6427,10 @@
 			"courses_instructor": "greenstreet, mark"
 		},
 		{
-			"courses_uuid": "1363",
+			"courses_uuid": "62465",
 			"courses_dept": "cpsc",
-			"courses_id": "509",
-			"courses_avg": 84.25,
+			"courses_id": "521",
+			"courses_avg": 84.13,
 			"courses_instructor": ""
 		},
 		{
@@ -6442,10 +6441,10 @@
 			"courses_instructor": "garcia, ronald"
 		},
 		{
-			"courses_uuid": "52085",
+			"courses_uuid": "1363",
 			"courses_dept": "cpsc",
-			"courses_id": "513",
-			"courses_avg": 84.33,
+			"courses_id": "509",
+			"courses_avg": 84.25,
 			"courses_instructor": ""
 		},
 		{
@@ -6456,10 +6455,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62389",
+			"courses_uuid": "52085",
 			"courses_dept": "cpsc",
-			"courses_id": "311",
-			"courses_avg": 84.39,
+			"courses_id": "513",
+			"courses_avg": 84.33,
 			"courses_instructor": ""
 		},
 		{
@@ -6470,10 +6469,10 @@
 			"courses_instructor": "dunfield, joshua"
 		},
 		{
-			"courses_uuid": "62449",
+			"courses_uuid": "62389",
 			"courses_dept": "cpsc",
-			"courses_id": "490",
-			"courses_avg": 84.5,
+			"courses_id": "311",
+			"courses_avg": 84.39,
 			"courses_instructor": ""
 		},
 		{
@@ -6484,10 +6483,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "67303",
+			"courses_uuid": "62449",
 			"courses_dept": "cpsc",
-			"courses_id": "121",
-			"courses_avg": 84.56,
+			"courses_id": "490",
+			"courses_avg": 84.5,
 			"courses_instructor": ""
 		},
 		{
@@ -6498,9 +6497,23 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "72464",
+			"courses_uuid": "67303",
 			"courses_dept": "cpsc",
-			"courses_id": "540",
+			"courses_id": "121",
+			"courses_avg": 84.56,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "39884",
+			"courses_dept": "cpsc",
+			"courses_id": "310",
+			"courses_avg": 84.6,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "39885",
+			"courses_dept": "cpsc",
+			"courses_id": "310",
 			"courses_avg": 84.6,
 			"courses_instructor": ""
 		},
@@ -6512,24 +6525,10 @@
 			"courses_instructor": "de freitas, joao"
 		},
 		{
-			"courses_uuid": "39885",
+			"courses_uuid": "72464",
 			"courses_dept": "cpsc",
-			"courses_id": "310",
+			"courses_id": "540",
 			"courses_avg": 84.6,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "39884",
-			"courses_dept": "cpsc",
-			"courses_id": "310",
-			"courses_avg": 84.6,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "49898",
-			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 84.66,
 			"courses_instructor": ""
 		},
 		{
@@ -6540,17 +6539,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "72477",
+			"courses_uuid": "49898",
 			"courses_dept": "cpsc",
-			"courses_id": "589",
-			"courses_avg": 84.67,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "61193",
-			"courses_dept": "cpsc",
-			"courses_id": "501",
-			"courses_avg": 84.67,
+			"courses_id": "312",
+			"courses_avg": 84.66,
 			"courses_instructor": ""
 		},
 		{
@@ -6561,9 +6553,30 @@
 			"courses_instructor": "friedman, joel"
 		},
 		{
-			"courses_uuid": "61203",
+			"courses_uuid": "61193",
 			"courses_dept": "cpsc",
-			"courses_id": "509",
+			"courses_id": "501",
+			"courses_avg": 84.67,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "72477",
+			"courses_dept": "cpsc",
+			"courses_id": "589",
+			"courses_avg": 84.67,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "72438",
+			"courses_dept": "cpsc",
+			"courses_id": "507",
+			"courses_avg": 84.75,
+			"courses_instructor": "wohlstadter, eric"
+		},
+		{
+			"courses_uuid": "72439",
+			"courses_dept": "cpsc",
+			"courses_id": "507",
 			"courses_avg": 84.75,
 			"courses_instructor": ""
 		},
@@ -6575,24 +6588,10 @@
 			"courses_instructor": "garcia, ronald"
 		},
 		{
-			"courses_uuid": "72439",
+			"courses_uuid": "61203",
 			"courses_dept": "cpsc",
-			"courses_id": "507",
+			"courses_id": "509",
 			"courses_avg": 84.75,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "72438",
-			"courses_dept": "cpsc",
-			"courses_id": "507",
-			"courses_avg": 84.75,
-			"courses_instructor": "wohlstadter, eric"
-		},
-		{
-			"courses_uuid": "52097",
-			"courses_dept": "cpsc",
-			"courses_id": "527",
-			"courses_avg": 84.83,
 			"courses_instructor": ""
 		},
 		{
@@ -6603,10 +6602,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62451",
+			"courses_uuid": "52097",
 			"courses_dept": "cpsc",
-			"courses_id": "500",
-			"courses_avg": 84.85,
+			"courses_id": "527",
+			"courses_avg": 84.83,
 			"courses_instructor": ""
 		},
 		{
@@ -6617,14 +6616,21 @@
 			"courses_instructor": "evans, william"
 		},
 		{
-			"courses_uuid": "52040",
+			"courses_uuid": "62451",
+			"courses_dept": "cpsc",
+			"courses_id": "500",
+			"courses_avg": 84.85,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "52039",
 			"courses_dept": "cpsc",
 			"courses_id": "411",
 			"courses_avg": 84.86,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52039",
+			"courses_uuid": "52040",
 			"courses_dept": "cpsc",
 			"courses_id": "411",
 			"courses_avg": 84.86,
@@ -6638,23 +6644,16 @@
 			"courses_instructor": "kiczales, gregor"
 		},
 		{
-			"courses_uuid": "83542",
+			"courses_uuid": "72394",
 			"courses_dept": "cpsc",
-			"courses_id": "589",
+			"courses_id": "411",
 			"courses_avg": 85,
-			"courses_instructor": ""
+			"courses_instructor": "hutchinson, norman"
 		},
 		{
-			"courses_uuid": "62485",
+			"courses_uuid": "72395",
 			"courses_dept": "cpsc",
-			"courses_id": "589",
-			"courses_avg": 85,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "49977",
-			"courses_dept": "cpsc",
-			"courses_id": "521",
+			"courses_id": "411",
 			"courses_avg": 85,
 			"courses_instructor": ""
 		},
@@ -6666,18 +6665,25 @@
 			"courses_instructor": "wagner, alan"
 		},
 		{
-			"courses_uuid": "72395",
+			"courses_uuid": "49977",
 			"courses_dept": "cpsc",
-			"courses_id": "411",
+			"courses_id": "521",
 			"courses_avg": 85,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "72394",
+			"courses_uuid": "62485",
 			"courses_dept": "cpsc",
-			"courses_id": "411",
+			"courses_id": "589",
 			"courses_avg": 85,
-			"courses_instructor": "hutchinson, norman"
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "83542",
+			"courses_dept": "cpsc",
+			"courses_id": "589",
+			"courses_avg": 85,
+			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "1254",
@@ -6687,13 +6693,6 @@
 			"courses_instructor": "kiczales, gregor"
 		},
 		{
-			"courses_uuid": "46700",
-			"courses_dept": "cpsc",
-			"courses_id": "312",
-			"courses_avg": 85.13,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "46699",
 			"courses_dept": "cpsc",
 			"courses_id": "312",
@@ -6701,10 +6700,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "50002",
+			"courses_uuid": "46700",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
-			"courses_avg": 85.17,
+			"courses_id": "312",
+			"courses_avg": 85.13,
 			"courses_instructor": ""
 		},
 		{
@@ -6715,17 +6714,17 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
+			"courses_uuid": "50002",
+			"courses_dept": "cpsc",
+			"courses_id": "544",
+			"courses_avg": 85.17,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "72478",
 			"courses_dept": "cpsc",
 			"courses_id": "589",
 			"courses_avg": 85.25,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "1379",
-			"courses_dept": "cpsc",
-			"courses_id": "544",
-			"courses_avg": 85.27,
 			"courses_instructor": ""
 		},
 		{
@@ -6736,10 +6735,10 @@
 			"courses_instructor": "dawson, jessica"
 		},
 		{
-			"courses_uuid": "46804",
+			"courses_uuid": "1379",
 			"courses_dept": "cpsc",
-			"courses_id": "543",
-			"courses_avg": 85.35,
+			"courses_id": "544",
+			"courses_avg": 85.27,
 			"courses_instructor": ""
 		},
 		{
@@ -6750,18 +6749,18 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
+			"courses_uuid": "46804",
+			"courses_dept": "cpsc",
+			"courses_id": "543",
+			"courses_avg": 85.35,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "61086",
 			"courses_dept": "cpsc",
 			"courses_id": "110",
 			"courses_avg": 85.46,
 			"courses_instructor": "greif, chen"
-		},
-		{
-			"courses_uuid": "56864",
-			"courses_dept": "cpsc",
-			"courses_id": "304",
-			"courses_avg": 85.5,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "56863",
@@ -6771,10 +6770,10 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "49909",
+			"courses_uuid": "56864",
 			"courses_dept": "cpsc",
-			"courses_id": "319",
-			"courses_avg": 85.59,
+			"courses_id": "304",
+			"courses_avg": 85.5,
 			"courses_instructor": ""
 		},
 		{
@@ -6785,17 +6784,17 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
+			"courses_uuid": "49909",
+			"courses_dept": "cpsc",
+			"courses_id": "319",
+			"courses_avg": 85.59,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "62487",
 			"courses_dept": "cpsc",
 			"courses_id": "589",
 			"courses_avg": 85.6,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "46779",
-			"courses_dept": "cpsc",
-			"courses_id": "521",
-			"courses_avg": 85.65,
 			"courses_instructor": ""
 		},
 		{
@@ -6806,10 +6805,10 @@
 			"courses_instructor": "wagner, alan"
 		},
 		{
-			"courses_uuid": "1310",
+			"courses_uuid": "46779",
 			"courses_dept": "cpsc",
-			"courses_id": "319",
-			"courses_avg": 85.72,
+			"courses_id": "521",
+			"courses_avg": 85.65,
 			"courses_instructor": ""
 		},
 		{
@@ -6820,6 +6819,13 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
+			"courses_uuid": "1310",
+			"courses_dept": "cpsc",
+			"courses_id": "319",
+			"courses_avg": 85.72,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "62486",
 			"courses_dept": "cpsc",
 			"courses_id": "589",
@@ -6827,14 +6833,14 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52069",
+			"courses_uuid": "52068",
 			"courses_dept": "cpsc",
 			"courses_id": "500",
 			"courses_avg": 85.78,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52068",
+			"courses_uuid": "52069",
 			"courses_dept": "cpsc",
 			"courses_id": "500",
 			"courses_avg": 85.78,
@@ -6848,13 +6854,6 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "67309",
-			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 85.87,
-			"courses_instructor": ""
-		},
-		{
 			"courses_uuid": "67308",
 			"courses_dept": "cpsc",
 			"courses_id": "221",
@@ -6862,10 +6861,10 @@
 			"courses_instructor": "harvey, nicholas"
 		},
 		{
-			"courses_uuid": "83508",
+			"courses_uuid": "67309",
 			"courses_dept": "cpsc",
-			"courses_id": "509",
-			"courses_avg": 85.9,
+			"courses_id": "221",
+			"courses_avg": 85.87,
 			"courses_instructor": ""
 		},
 		{
@@ -6876,9 +6875,23 @@
 			"courses_instructor": "garcia, ronald"
 		},
 		{
-			"courses_uuid": "61250",
+			"courses_uuid": "83508",
 			"courses_dept": "cpsc",
-			"courses_id": "589",
+			"courses_id": "509",
+			"courses_avg": 85.9,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "62419",
+			"courses_dept": "cpsc",
+			"courses_id": "411",
+			"courses_avg": 86,
+			"courses_instructor": "garcia, ronald"
+		},
+		{
+			"courses_uuid": "62420",
+			"courses_dept": "cpsc",
+			"courses_id": "411",
 			"courses_avg": 86,
 			"courses_instructor": ""
 		},
@@ -6890,24 +6903,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62420",
+			"courses_uuid": "61250",
 			"courses_dept": "cpsc",
-			"courses_id": "411",
+			"courses_id": "589",
 			"courses_avg": 86,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62419",
-			"courses_dept": "cpsc",
-			"courses_id": "411",
-			"courses_avg": 86,
-			"courses_instructor": "garcia, ronald"
-		},
-		{
-			"courses_uuid": "62426",
-			"courses_dept": "cpsc",
-			"courses_id": "418",
-			"courses_avg": 86.04,
 			"courses_instructor": ""
 		},
 		{
@@ -6918,10 +6917,10 @@
 			"courses_instructor": "greenstreet, mark"
 		},
 		{
-			"courses_uuid": "83534",
+			"courses_uuid": "62426",
 			"courses_dept": "cpsc",
-			"courses_id": "540",
-			"courses_avg": 86.06,
+			"courses_id": "418",
+			"courses_avg": 86.04,
 			"courses_instructor": ""
 		},
 		{
@@ -6932,10 +6931,10 @@
 			"courses_instructor": "de freitas, joao"
 		},
 		{
-			"courses_uuid": "90556",
+			"courses_uuid": "83534",
 			"courses_dept": "cpsc",
-			"courses_id": "319",
-			"courses_avg": 86.12,
+			"courses_id": "540",
+			"courses_avg": 86.06,
 			"courses_instructor": ""
 		},
 		{
@@ -6946,10 +6945,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "72427",
+			"courses_uuid": "90556",
 			"courses_dept": "cpsc",
-			"courses_id": "500",
-			"courses_avg": 86.13,
+			"courses_id": "319",
+			"courses_avg": 86.12,
 			"courses_instructor": ""
 		},
 		{
@@ -6960,18 +6959,18 @@
 			"courses_instructor": "evans, william"
 		},
 		{
+			"courses_uuid": "72427",
+			"courses_dept": "cpsc",
+			"courses_id": "500",
+			"courses_avg": 86.13,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "1269",
 			"courses_dept": "cpsc",
 			"courses_id": "210",
 			"courses_avg": 86.15,
 			"courses_instructor": "baniassad, elisa"
-		},
-		{
-			"courses_uuid": "61195",
-			"courses_dept": "cpsc",
-			"courses_id": "502",
-			"courses_avg": 86.2,
-			"courses_instructor": ""
 		},
 		{
 			"courses_uuid": "61194",
@@ -6981,10 +6980,10 @@
 			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "83494",
+			"courses_uuid": "61195",
 			"courses_dept": "cpsc",
-			"courses_id": "500",
-			"courses_avg": 86.22,
+			"courses_id": "502",
+			"courses_avg": 86.2,
 			"courses_instructor": ""
 		},
 		{
@@ -6995,10 +6994,10 @@
 			"courses_instructor": "evans, william"
 		},
 		{
-			"courses_uuid": "49961",
+			"courses_uuid": "83494",
 			"courses_dept": "cpsc",
 			"courses_id": "500",
-			"courses_avg": 86.33,
+			"courses_avg": 86.22,
 			"courses_instructor": ""
 		},
 		{
@@ -7009,10 +7008,10 @@
 			"courses_instructor": "friedman, joel"
 		},
 		{
-			"courses_uuid": "61114",
+			"courses_uuid": "49961",
 			"courses_dept": "cpsc",
-			"courses_id": "301",
-			"courses_avg": 86.34,
+			"courses_id": "500",
+			"courses_avg": 86.33,
 			"courses_instructor": ""
 		},
 		{
@@ -7023,10 +7022,10 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "56862",
+			"courses_uuid": "61114",
 			"courses_dept": "cpsc",
-			"courses_id": "221",
-			"courses_avg": 86.47,
+			"courses_id": "301",
+			"courses_avg": 86.34,
 			"courses_instructor": ""
 		},
 		{
@@ -7037,17 +7036,10 @@
 			"courses_instructor": "eiselt, kurt"
 		},
 		{
-			"courses_uuid": "43210",
+			"courses_uuid": "56862",
 			"courses_dept": "cpsc",
-			"courses_id": "589",
-			"courses_avg": 86.5,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "50000",
-			"courses_dept": "cpsc",
-			"courses_id": "543",
-			"courses_avg": 86.5,
+			"courses_id": "221",
+			"courses_avg": 86.47,
 			"courses_instructor": ""
 		},
 		{
@@ -7058,9 +7050,30 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "83538",
+			"courses_uuid": "50000",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
+			"courses_id": "543",
+			"courses_avg": 86.5,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "43210",
+			"courses_dept": "cpsc",
+			"courses_id": "589",
+			"courses_avg": 86.5,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "49972",
+			"courses_dept": "cpsc",
+			"courses_id": "513",
+			"courses_avg": 86.71,
+			"courses_instructor": "hu, alan"
+		},
+		{
+			"courses_uuid": "49973",
+			"courses_dept": "cpsc",
+			"courses_id": "513",
 			"courses_avg": 86.71,
 			"courses_instructor": ""
 		},
@@ -7072,30 +7085,16 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "49973",
+			"courses_uuid": "83538",
 			"courses_dept": "cpsc",
-			"courses_id": "513",
+			"courses_id": "544",
 			"courses_avg": 86.71,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "49972",
+			"courses_uuid": "52090",
 			"courses_dept": "cpsc",
-			"courses_id": "513",
-			"courses_avg": 86.71,
-			"courses_instructor": "hu, alan"
-		},
-		{
-			"courses_uuid": "56870",
-			"courses_dept": "cpsc",
-			"courses_id": "589",
-			"courses_avg": 87,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "56869",
-			"courses_dept": "cpsc",
-			"courses_id": "589",
+			"courses_id": "521",
 			"courses_avg": 87,
 			"courses_instructor": ""
 		},
@@ -7107,17 +7106,17 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52090",
+			"courses_uuid": "56869",
 			"courses_dept": "cpsc",
-			"courses_id": "521",
+			"courses_id": "589",
 			"courses_avg": 87,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62461",
+			"courses_uuid": "56870",
 			"courses_dept": "cpsc",
-			"courses_id": "509",
-			"courses_avg": 87.2,
+			"courses_id": "589",
+			"courses_avg": 87,
 			"courses_instructor": ""
 		},
 		{
@@ -7128,10 +7127,10 @@
 			"courses_instructor": "garcia, ronald"
 		},
 		{
-			"courses_uuid": "72431",
+			"courses_uuid": "62461",
 			"courses_dept": "cpsc",
-			"courses_id": "503",
-			"courses_avg": 87.36,
+			"courses_id": "509",
+			"courses_avg": 87.2,
 			"courses_instructor": ""
 		},
 		{
@@ -7142,10 +7141,10 @@
 			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "83510",
+			"courses_uuid": "72431",
 			"courses_dept": "cpsc",
-			"courses_id": "513",
-			"courses_avg": 87.58,
+			"courses_id": "503",
+			"courses_avg": 87.36,
 			"courses_instructor": ""
 		},
 		{
@@ -7156,10 +7155,10 @@
 			"courses_instructor": "greenstreet, mark"
 		},
 		{
-			"courses_uuid": "61236",
+			"courses_uuid": "83510",
 			"courses_dept": "cpsc",
-			"courses_id": "540",
-			"courses_avg": 87.61,
+			"courses_id": "513",
+			"courses_avg": 87.58,
 			"courses_instructor": ""
 		},
 		{
@@ -7170,10 +7169,10 @@
 			"courses_instructor": "de freitas, joao"
 		},
 		{
-			"courses_uuid": "1365",
+			"courses_uuid": "61236",
 			"courses_dept": "cpsc",
-			"courses_id": "513",
-			"courses_avg": 87.64,
+			"courses_id": "540",
+			"courses_avg": 87.61,
 			"courses_instructor": ""
 		},
 		{
@@ -7184,10 +7183,10 @@
 			"courses_instructor": "hu, alan"
 		},
 		{
-			"courses_uuid": "61240",
+			"courses_uuid": "1365",
 			"courses_dept": "cpsc",
-			"courses_id": "543",
-			"courses_avg": 87.67,
+			"courses_id": "513",
+			"courses_avg": 87.64,
 			"courses_instructor": ""
 		},
 		{
@@ -7198,10 +7197,10 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
-			"courses_uuid": "72449",
+			"courses_uuid": "61240",
 			"courses_dept": "cpsc",
-			"courses_id": "521",
-			"courses_avg": 87.78,
+			"courses_id": "543",
+			"courses_avg": 87.67,
 			"courses_instructor": ""
 		},
 		{
@@ -7212,10 +7211,10 @@
 			"courses_instructor": "greenstreet, mark"
 		},
 		{
-			"courses_uuid": "52064",
+			"courses_uuid": "72449",
 			"courses_dept": "cpsc",
-			"courses_id": "449",
-			"courses_avg": 87.83,
+			"courses_id": "521",
+			"courses_avg": 87.78,
 			"courses_instructor": ""
 		},
 		{
@@ -7226,10 +7225,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62402",
+			"courses_uuid": "52064",
 			"courses_dept": "cpsc",
-			"courses_id": "319",
-			"courses_avg": 87.93,
+			"courses_id": "449",
+			"courses_avg": 87.83,
 			"courses_instructor": ""
 		},
 		{
@@ -7240,23 +7239,23 @@
 			"courses_instructor": "awad, ahmed"
 		},
 		{
-			"courses_uuid": "52118",
+			"courses_uuid": "62402",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
-			"courses_avg": 88,
+			"courses_id": "319",
+			"courses_avg": 87.93,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "52117",
+			"courses_uuid": "72350",
 			"courses_dept": "cpsc",
-			"courses_id": "544",
+			"courses_id": "301",
 			"courses_avg": 88,
-			"courses_instructor": ""
+			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "49971",
+			"courses_uuid": "72351",
 			"courses_dept": "cpsc",
-			"courses_id": "509",
+			"courses_id": "301",
 			"courses_avg": 88,
 			"courses_instructor": ""
 		},
@@ -7268,24 +7267,24 @@
 			"courses_instructor": "garcia, ronald"
 		},
 		{
-			"courses_uuid": "72351",
+			"courses_uuid": "49971",
 			"courses_dept": "cpsc",
-			"courses_id": "301",
+			"courses_id": "509",
 			"courses_avg": 88,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "72350",
+			"courses_uuid": "52117",
 			"courses_dept": "cpsc",
-			"courses_id": "301",
+			"courses_id": "544",
 			"courses_avg": 88,
-			"courses_instructor": "tsiknis, georgios"
+			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "90618",
+			"courses_uuid": "52118",
 			"courses_dept": "cpsc",
-			"courses_id": "513",
-			"courses_avg": 88.22,
+			"courses_id": "544",
+			"courses_avg": 88,
 			"courses_instructor": ""
 		},
 		{
@@ -7296,10 +7295,10 @@
 			"courses_instructor": "hu, alan"
 		},
 		{
-			"courses_uuid": "61139",
+			"courses_uuid": "90618",
 			"courses_dept": "cpsc",
-			"courses_id": "319",
-			"courses_avg": 88.39,
+			"courses_id": "513",
+			"courses_avg": 88.22,
 			"courses_instructor": ""
 		},
 		{
@@ -7310,10 +7309,10 @@
 			"courses_instructor": "voll, kimberly"
 		},
 		{
-			"courses_uuid": "1381",
+			"courses_uuid": "61139",
 			"courses_dept": "cpsc",
-			"courses_id": "547",
-			"courses_avg": 88.47,
+			"courses_id": "319",
+			"courses_avg": 88.39,
 			"courses_instructor": ""
 		},
 		{
@@ -7324,10 +7323,10 @@
 			"courses_instructor": "munzner, tamara"
 		},
 		{
-			"courses_uuid": "72423",
+			"courses_uuid": "1381",
 			"courses_dept": "cpsc",
-			"courses_id": "449",
-			"courses_avg": 88.5,
+			"courses_id": "547",
+			"courses_avg": 88.47,
 			"courses_instructor": ""
 		},
 		{
@@ -7338,10 +7337,10 @@
 			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "62481",
+			"courses_uuid": "72423",
 			"courses_dept": "cpsc",
-			"courses_id": "547",
-			"courses_avg": 88.68,
+			"courses_id": "449",
+			"courses_avg": 88.5,
 			"courses_instructor": ""
 		},
 		{
@@ -7352,10 +7351,10 @@
 			"courses_instructor": "munzner, tamara"
 		},
 		{
-			"courses_uuid": "83500",
+			"courses_uuid": "62481",
 			"courses_dept": "cpsc",
-			"courses_id": "503",
-			"courses_avg": 88.82,
+			"courses_id": "547",
+			"courses_avg": 88.68,
 			"courses_instructor": ""
 		},
 		{
@@ -7366,16 +7365,23 @@
 			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "61249",
+			"courses_uuid": "83500",
 			"courses_dept": "cpsc",
-			"courses_id": "589",
-			"courses_avg": 89,
+			"courses_id": "503",
+			"courses_avg": 88.82,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "62459",
+			"courses_uuid": "46758",
 			"courses_dept": "cpsc",
-			"courses_id": "507",
+			"courses_id": "490",
+			"courses_avg": 89,
+			"courses_instructor": "allen, meghan"
+		},
+		{
+			"courses_uuid": "46759",
+			"courses_dept": "cpsc",
+			"courses_id": "490",
 			"courses_avg": 89,
 			"courses_instructor": ""
 		},
@@ -7387,24 +7393,17 @@
 			"courses_instructor": "holmes, reid"
 		},
 		{
-			"courses_uuid": "46759",
+			"courses_uuid": "62459",
 			"courses_dept": "cpsc",
-			"courses_id": "490",
+			"courses_id": "507",
 			"courses_avg": 89,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46758",
+			"courses_uuid": "61249",
 			"courses_dept": "cpsc",
-			"courses_id": "490",
+			"courses_id": "589",
 			"courses_avg": 89,
-			"courses_instructor": "allen, meghan"
-		},
-		{
-			"courses_uuid": "72443",
-			"courses_dept": "cpsc",
-			"courses_id": "513",
-			"courses_avg": 89.09,
 			"courses_instructor": ""
 		},
 		{
@@ -7415,10 +7414,10 @@
 			"courses_instructor": "hu, alan"
 		},
 		{
-			"courses_uuid": "46767",
+			"courses_uuid": "72443",
 			"courses_dept": "cpsc",
-			"courses_id": "503",
-			"courses_avg": 89.1,
+			"courses_id": "513",
+			"courses_avg": 89.09,
 			"courses_instructor": ""
 		},
 		{
@@ -7429,10 +7428,10 @@
 			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "61201",
+			"courses_uuid": "46767",
 			"courses_dept": "cpsc",
-			"courses_id": "507",
-			"courses_avg": 89.17,
+			"courses_id": "503",
+			"courses_avg": 89.1,
 			"courses_instructor": ""
 		},
 		{
@@ -7443,10 +7442,10 @@
 			"courses_instructor": "wohlstadter, eric"
 		},
 		{
-			"courses_uuid": "62457",
+			"courses_uuid": "61201",
 			"courses_dept": "cpsc",
-			"courses_id": "503",
-			"courses_avg": 89.47,
+			"courses_id": "507",
+			"courses_avg": 89.17,
 			"courses_instructor": ""
 		},
 		{
@@ -7457,10 +7456,10 @@
 			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "61189",
+			"courses_uuid": "62457",
 			"courses_dept": "cpsc",
-			"courses_id": "490",
-			"courses_avg": 89.64,
+			"courses_id": "503",
+			"courses_avg": 89.47,
 			"courses_instructor": ""
 		},
 		{
@@ -7471,10 +7470,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "72468",
+			"courses_uuid": "61189",
 			"courses_dept": "cpsc",
-			"courses_id": "543",
-			"courses_avg": 89.75,
+			"courses_id": "490",
+			"courses_avg": 89.64,
 			"courses_instructor": ""
 		},
 		{
@@ -7485,17 +7484,17 @@
 			"courses_instructor": "maclean, karon"
 		},
 		{
+			"courses_uuid": "72468",
+			"courses_dept": "cpsc",
+			"courses_id": "543",
+			"courses_avg": 89.75,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "52066",
 			"courses_dept": "cpsc",
 			"courses_id": "490",
 			"courses_avg": 89.86,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "90630",
-			"courses_dept": "cpsc",
-			"courses_id": "527",
-			"courses_avg": 90.11,
 			"courses_instructor": ""
 		},
 		{
@@ -7506,17 +7505,17 @@
 			"courses_instructor": "krasic, charles"
 		},
 		{
+			"courses_uuid": "90630",
+			"courses_dept": "cpsc",
+			"courses_id": "527",
+			"courses_avg": 90.11,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "52067",
 			"courses_dept": "cpsc",
 			"courses_id": "490",
 			"courses_avg": 90.14,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62447",
-			"courses_dept": "cpsc",
-			"courses_id": "449",
-			"courses_avg": 90.25,
 			"courses_instructor": ""
 		},
 		{
@@ -7527,17 +7526,17 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
+			"courses_uuid": "62447",
+			"courses_dept": "cpsc",
+			"courses_id": "449",
+			"courses_avg": 90.25,
+			"courses_instructor": ""
+		},
+		{
 			"courses_uuid": "52065",
 			"courses_dept": "cpsc",
 			"courses_id": "490",
 			"courses_avg": 90.27,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62475",
-			"courses_dept": "cpsc",
-			"courses_id": "540",
-			"courses_avg": 90.53,
 			"courses_instructor": ""
 		},
 		{
@@ -7548,10 +7547,10 @@
 			"courses_instructor": "schmidt, mark"
 		},
 		{
-			"courses_uuid": "49959",
+			"courses_uuid": "62475",
 			"courses_dept": "cpsc",
-			"courses_id": "490",
-			"courses_avg": 90.6,
+			"courses_id": "540",
+			"courses_avg": 90.53,
 			"courses_instructor": ""
 		},
 		{
@@ -7562,10 +7561,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "83520",
+			"courses_uuid": "49959",
 			"courses_dept": "cpsc",
-			"courses_id": "522",
-			"courses_avg": 90.71,
+			"courses_id": "490",
+			"courses_avg": 90.6,
 			"courses_instructor": ""
 		},
 		{
@@ -7576,10 +7575,10 @@
 			"courses_instructor": "poole, david"
 		},
 		{
-			"courses_uuid": "72429",
+			"courses_uuid": "83520",
 			"courses_dept": "cpsc",
-			"courses_id": "501",
-			"courses_avg": 91,
+			"courses_id": "522",
+			"courses_avg": 90.71,
 			"courses_instructor": ""
 		},
 		{
@@ -7590,9 +7589,23 @@
 			"courses_instructor": "friedman, joel"
 		},
 		{
-			"courses_uuid": "1377",
+			"courses_uuid": "72429",
 			"courses_dept": "cpsc",
-			"courses_id": "540",
+			"courses_id": "501",
+			"courses_avg": 91,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "62468",
+			"courses_dept": "cpsc",
+			"courses_id": "527",
+			"courses_avg": 91.22,
+			"courses_instructor": "beschastnikh, ivan"
+		},
+		{
+			"courses_uuid": "62469",
+			"courses_dept": "cpsc",
+			"courses_id": "527",
 			"courses_avg": 91.22,
 			"courses_instructor": ""
 		},
@@ -7604,24 +7617,10 @@
 			"courses_instructor": "schmidt, mark"
 		},
 		{
-			"courses_uuid": "62469",
+			"courses_uuid": "1377",
 			"courses_dept": "cpsc",
-			"courses_id": "527",
+			"courses_id": "540",
 			"courses_avg": 91.22,
-			"courses_instructor": ""
-		},
-		{
-			"courses_uuid": "62468",
-			"courses_dept": "cpsc",
-			"courses_id": "527",
-			"courses_avg": 91.22,
-			"courses_instructor": "beschastnikh, ivan"
-		},
-		{
-			"courses_uuid": "61180",
-			"courses_dept": "cpsc",
-			"courses_id": "445",
-			"courses_avg": 91.25,
 			"courses_instructor": ""
 		},
 		{
@@ -7632,10 +7631,10 @@
 			"courses_instructor": "hoos, holger"
 		},
 		{
-			"courses_uuid": "49967",
+			"courses_uuid": "61180",
 			"courses_dept": "cpsc",
-			"courses_id": "507",
-			"courses_avg": 91.79,
+			"courses_id": "445",
+			"courses_avg": 91.25,
 			"courses_instructor": ""
 		},
 		{
@@ -7646,10 +7645,10 @@
 			"courses_instructor": "wohlstadter, eric"
 		},
 		{
-			"courses_uuid": "72425",
+			"courses_uuid": "49967",
 			"courses_dept": "cpsc",
-			"courses_id": "490",
-			"courses_avg": 92,
+			"courses_id": "507",
+			"courses_avg": 91.79,
 			"courses_instructor": ""
 		},
 		{
@@ -7660,10 +7659,10 @@
 			"courses_instructor": "wolfman, steven"
 		},
 		{
-			"courses_uuid": "1355",
+			"courses_uuid": "72425",
 			"courses_dept": "cpsc",
 			"courses_id": "490",
-			"courses_avg": 92.4,
+			"courses_avg": 92,
 			"courses_instructor": ""
 		},
 		{
@@ -7674,10 +7673,10 @@
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "46763",
+			"courses_uuid": "1355",
 			"courses_dept": "cpsc",
-			"courses_id": "501",
-			"courses_avg": 92.43,
+			"courses_id": "490",
+			"courses_avg": 92.4,
 			"courses_instructor": ""
 		},
 		{
@@ -7688,10 +7687,10 @@
 			"courses_instructor": "friedman, joel"
 		},
 		{
-			"courses_uuid": "83492",
+			"courses_uuid": "46763",
 			"courses_dept": "cpsc",
-			"courses_id": "449",
-			"courses_avg": 92.5,
+			"courses_id": "501",
+			"courses_avg": 92.43,
 			"courses_instructor": ""
 		},
 		{
@@ -7702,10 +7701,10 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "46757",
+			"courses_uuid": "83492",
 			"courses_dept": "cpsc",
 			"courses_id": "449",
-			"courses_avg": 92.63,
+			"courses_avg": 92.5,
 			"courses_instructor": ""
 		},
 		{
@@ -7716,10 +7715,10 @@
 			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "83496",
+			"courses_uuid": "46757",
 			"courses_dept": "cpsc",
-			"courses_id": "501",
-			"courses_avg": 92.75,
+			"courses_id": "449",
+			"courses_avg": 92.63,
 			"courses_instructor": ""
 		},
 		{
@@ -7730,10 +7729,10 @@
 			"courses_instructor": "harvey, nicholas"
 		},
 		{
-			"courses_uuid": "49957",
+			"courses_uuid": "83496",
 			"courses_dept": "cpsc",
-			"courses_id": "449",
-			"courses_avg": 93.38,
+			"courses_id": "501",
+			"courses_avg": 92.75,
 			"courses_instructor": ""
 		},
 		{
@@ -7744,10 +7743,10 @@
 			"courses_instructor": "tsiknis, georgios"
 		},
 		{
-			"courses_uuid": "61187",
+			"courses_uuid": "49957",
 			"courses_dept": "cpsc",
 			"courses_id": "449",
-			"courses_avg": 93.5,
+			"courses_avg": 93.38,
 			"courses_instructor": ""
 		},
 		{
@@ -7758,10 +7757,10 @@
 			"courses_instructor": "knorr, edwin max"
 		},
 		{
-			"courses_uuid": "90604",
+			"courses_uuid": "61187",
 			"courses_dept": "cpsc",
-			"courses_id": "501",
-			"courses_avg": 94,
+			"courses_id": "449",
+			"courses_avg": 93.5,
 			"courses_instructor": ""
 		},
 		{
@@ -7772,10 +7771,10 @@
 			"courses_instructor": "friedman, joel"
 		},
 		{
-			"courses_uuid": "90608",
+			"courses_uuid": "90604",
 			"courses_dept": "cpsc",
-			"courses_id": "503",
-			"courses_avg": 94.5,
+			"courses_id": "501",
+			"courses_avg": 94,
 			"courses_instructor": ""
 		},
 		{
@@ -7786,14 +7785,21 @@
 			"courses_instructor": "carenini, giuseppe"
 		},
 		{
-			"courses_uuid": "1386",
+			"courses_uuid": "90608",
+			"courses_dept": "cpsc",
+			"courses_id": "503",
+			"courses_avg": 94.5,
+			"courses_instructor": ""
+		},
+		{
+			"courses_uuid": "1385",
 			"courses_dept": "cpsc",
 			"courses_id": "589",
 			"courses_avg": 95,
 			"courses_instructor": ""
 		},
 		{
-			"courses_uuid": "1385",
+			"courses_uuid": "1386",
 			"courses_dept": "cpsc",
 			"courses_id": "589",
 			"courses_avg": 95,

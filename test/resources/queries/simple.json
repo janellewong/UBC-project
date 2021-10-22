@@ -14,21 +14,22 @@
 			"ORDER": "courses_avg"
 		}
 	},
+	"errorExpected": false,
 	"with": [
 		{
 			"courses_dept": "epse",
 			"courses_avg": 97.09
 		},
 		{
-			"courses_dept": "math",
-			"courses_avg": 97.09
-		},
-		{
-			"courses_dept": "math",
-			"courses_avg": 97.09
-		},
-		{
 			"courses_dept": "epse",
+			"courses_avg": 97.09
+		},
+		{
+			"courses_dept": "math",
+			"courses_avg": 97.09
+		},
+		{
+			"courses_dept": "math",
 			"courses_avg": 97.09
 		},
 		{
@@ -144,19 +145,19 @@
 			"courses_avg": 98.5
 		},
 		{
-			"courses_dept": "nurs",
-			"courses_avg": 98.58
-		},
-		{
-			"courses_dept": "nurs",
-			"courses_avg": 98.58
-		},
-		{
 			"courses_dept": "epse",
 			"courses_avg": 98.58
 		},
 		{
 			"courses_dept": "epse",
+			"courses_avg": 98.58
+		},
+		{
+			"courses_dept": "nurs",
+			"courses_avg": 98.58
+		},
+		{
+			"courses_dept": "nurs",
 			"courses_avg": 98.58
 		},
 		{

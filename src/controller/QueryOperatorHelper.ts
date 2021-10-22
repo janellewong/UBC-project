@@ -82,7 +82,7 @@ export default class QueryOperatorHelper {
 			return this.filterOperator(query, isNegated);
 		}));
 		let finalArray: any[] = [];
-		for (const item of results) {
+		for (const item of isNegated ? results : results.reverse()) {
 			finalArray = finalArray.concat(item);
 		}
 		return [...new Set(finalArray)];
@@ -178,7 +178,7 @@ export default class QueryOperatorHelper {
 				return mappedResult.sort(this.orderSort(options.ORDER));
 			} else {
 				let res = mappedResult;
-				for (const key of options.ORDER.keys) {
+				for (const key of options.ORDER.keys.reverse()) {
 					res = res.sort(this.orderSort(key, options.ORDER.dir));
 				}
 				return res;

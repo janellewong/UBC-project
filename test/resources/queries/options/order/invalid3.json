@@ -7,7 +7,12 @@
 			}
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
 			"ORDER": "courses_dept"
 		}
 	},
@@ -20,9 +25,9 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "64832",
+			"courses_uuid": "70063",
 			"courses_dept": "chem",
-			"courses_id": "313",
+			"courses_id": "121",
 			"courses_avg": 69
 		},
 		{
@@ -32,9 +37,9 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "70063",
+			"courses_uuid": "64832",
 			"courses_dept": "chem",
-			"courses_id": "121",
+			"courses_id": "313",
 			"courses_avg": 69
 		},
 		{
@@ -50,21 +55,15 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "11512",
-			"courses_dept": "econ",
-			"courses_id": "350",
-			"courses_avg": 69
-		},
-		{
 			"courses_uuid": "11511",
 			"courses_dept": "econ",
 			"courses_id": "350",
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "14416",
-			"courses_dept": "educ",
-			"courses_id": "172",
+			"courses_uuid": "11512",
+			"courses_dept": "econ",
+			"courses_id": "350",
 			"courses_avg": 69
 		},
 		{
@@ -74,9 +73,9 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "97164",
-			"courses_dept": "geog",
-			"courses_id": "429",
+			"courses_uuid": "14416",
+			"courses_dept": "educ",
+			"courses_id": "172",
 			"courses_avg": 69
 		},
 		{
@@ -86,9 +85,9 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "16039",
-			"courses_dept": "ital",
-			"courses_id": "405",
+			"courses_uuid": "97164",
+			"courses_dept": "geog",
+			"courses_id": "429",
 			"courses_avg": 69
 		},
 		{
@@ -98,9 +97,9 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "66916",
-			"courses_dept": "japn",
-			"courses_id": "103",
+			"courses_uuid": "16039",
+			"courses_dept": "ital",
+			"courses_id": "405",
 			"courses_avg": 69
 		},
 		{
@@ -110,19 +109,25 @@
 			"courses_avg": 69
 		},
 		{
+			"courses_uuid": "66916",
+			"courses_dept": "japn",
+			"courses_id": "103",
+			"courses_avg": 69
+		},
+		{
 			"courses_uuid": "5134",
 			"courses_dept": "math",
 			"courses_id": "102",
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "93342",
+			"courses_uuid": "93341",
 			"courses_dept": "musc",
 			"courses_id": "354",
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "93341",
+			"courses_uuid": "93342",
 			"courses_dept": "musc",
 			"courses_id": "354",
 			"courses_avg": 69
@@ -134,15 +139,9 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "80937",
+			"courses_uuid": "67908",
 			"courses_dept": "psyc",
-			"courses_id": "331",
-			"courses_avg": 69
-		},
-		{
-			"courses_uuid": "89766",
-			"courses_dept": "psyc",
-			"courses_id": "320",
+			"courses_id": "304",
 			"courses_avg": 69
 		},
 		{
@@ -152,9 +151,15 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "67908",
+			"courses_uuid": "89766",
 			"courses_dept": "psyc",
-			"courses_id": "304",
+			"courses_id": "320",
+			"courses_avg": 69
+		},
+		{
+			"courses_uuid": "80937",
+			"courses_dept": "psyc",
+			"courses_id": "331",
 			"courses_avg": 69
 		},
 		{
@@ -164,9 +169,9 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "48934",
+			"courses_uuid": "23832",
 			"courses_dept": "span",
-			"courses_id": "202",
+			"courses_id": "101",
 			"courses_avg": 69
 		},
 		{
@@ -176,9 +181,9 @@
 			"courses_avg": 69
 		},
 		{
-			"courses_uuid": "23832",
+			"courses_uuid": "48934",
 			"courses_dept": "span",
-			"courses_id": "101",
+			"courses_id": "202",
 			"courses_avg": 69
 		},
 		{

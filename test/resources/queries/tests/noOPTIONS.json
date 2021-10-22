@@ -1,8 +1,8 @@
 {
-  "title": "no OPTIONS",
-  "input": {
-    "WHERE": {}
-  },
-  "errorExpected": true,
-  "with": "InsightError"
+	"title": "no OPTIONS",
+	"input": {
+		"WHERE": {}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
 }

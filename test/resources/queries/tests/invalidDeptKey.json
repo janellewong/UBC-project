@@ -1,20 +1,20 @@
 {
-  "title": "invalid department id",
-  "input": {
-    "WHERE": {
-      "IS": {
-        "courses_depart": "zool"
-      }
-    },
-    "OPTIONS": {
-      "COLUMNS": [
-        "courses_depart",
-        "courses_id",
-        "courses_avg"
-      ],
-      "ORDER": "courses_avg"
-    }
-  },
-  "errorExpected": true,
-  "with": "InsightError"
+	"title": "invalid department id",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_depart": "zool"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_depart",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
 }

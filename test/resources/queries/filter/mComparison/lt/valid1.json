@@ -7,16 +7,21 @@
 			}
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
 			"ORDER": "courses_avg"
 		}
 	},
 	"errorExpected": false,
 	"with": [
 		{
-			"courses_uuid": "56403",
-			"courses_dept": "lfs",
-			"courses_id": "100",
+			"courses_uuid": "89536",
+			"courses_dept": "frst",
+			"courses_id": "202",
 			"courses_avg": 0
 		},
 		{
@@ -26,9 +31,9 @@
 			"courses_avg": 0
 		},
 		{
-			"courses_uuid": "89536",
-			"courses_dept": "frst",
-			"courses_id": "202",
+			"courses_uuid": "56403",
+			"courses_dept": "lfs",
+			"courses_id": "100",
 			"courses_avg": 0
 		},
 		{
@@ -38,13 +43,13 @@
 			"courses_avg": 1
 		},
 		{
-			"courses_uuid": "16428",
+			"courses_uuid": "16427",
 			"courses_dept": "busi",
 			"courses_id": "330",
 			"courses_avg": 4
 		},
 		{
-			"courses_uuid": "16427",
+			"courses_uuid": "16428",
 			"courses_dept": "busi",
 			"courses_id": "330",
 			"courses_avg": 4
@@ -74,13 +79,13 @@
 			"courses_avg": 34
 		},
 		{
-			"courses_uuid": "50478",
+			"courses_uuid": "50477",
 			"courses_dept": "educ",
 			"courses_id": "172",
 			"courses_avg": 39.03
 		},
 		{
-			"courses_uuid": "50477",
+			"courses_uuid": "50478",
 			"courses_dept": "educ",
 			"courses_id": "172",
 			"courses_avg": 39.03
@@ -98,13 +103,13 @@
 			"courses_avg": 42.5
 		},
 		{
-			"courses_uuid": "71038",
+			"courses_uuid": "71037",
 			"courses_dept": "busi",
 			"courses_id": "398",
 			"courses_avg": 42.64
 		},
 		{
-			"courses_uuid": "71037",
+			"courses_uuid": "71038",
 			"courses_dept": "busi",
 			"courses_id": "398",
 			"courses_avg": 42.64
@@ -122,13 +127,13 @@
 			"courses_avg": 44.88
 		},
 		{
-			"courses_uuid": "17601",
+			"courses_uuid": "17600",
 			"courses_dept": "hist",
 			"courses_id": "102",
 			"courses_avg": 46.33
 		},
 		{
-			"courses_uuid": "17600",
+			"courses_uuid": "17601",
 			"courses_dept": "hist",
 			"courses_id": "102",
 			"courses_avg": 46.33
@@ -218,13 +223,13 @@
 			"courses_avg": 49.25
 		},
 		{
-			"courses_uuid": "79793",
+			"courses_uuid": "79792",
 			"courses_dept": "busi",
 			"courses_id": "344",
 			"courses_avg": 49.47
 		},
 		{
-			"courses_uuid": "79792",
+			"courses_uuid": "79793",
 			"courses_dept": "busi",
 			"courses_id": "344",
 			"courses_avg": 49.47

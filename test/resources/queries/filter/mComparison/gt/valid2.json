@@ -7,7 +7,12 @@
 			}
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
 			"ORDER": "courses_avg"
 		}
 	},
@@ -20,13 +25,13 @@
 			"courses_avg": 99.19
 		},
 		{
-			"courses_uuid": "5374",
+			"courses_uuid": "5373",
 			"courses_dept": "math",
 			"courses_id": "527",
 			"courses_avg": 99.78
 		},
 		{
-			"courses_uuid": "5373",
+			"courses_uuid": "5374",
 			"courses_dept": "math",
 			"courses_id": "527",
 			"courses_avg": 99.78

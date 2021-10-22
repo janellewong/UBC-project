@@ -16,7 +16,13 @@
 			]
 		},
 		"OPTIONS": {
-			"COLUMNS": ["courses_uuid", "courses_dept", "courses_id", "courses_avg", "courses_bruh"],
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_dept",
+				"courses_id",
+				"courses_avg",
+				"courses_bruh"
+			],
 			"ORDER": "courses_avg"
 		}
 	},
