@@ -579,8 +579,7 @@ describe("InsightFacade", function () {
 				assertOnResult: (expected: any[], actual: any[], input: any): void => {
 					if (expected.length !== actual.length) {
 						chai.assert.fail();
-					}
-					if (input?.OPTIONS?.ORDER) {
+					} else if (input?.OPTIONS?.ORDER) {
 						expect(actual).to.have.deep.equal(expected);
 					} else {
 						expect(actual).to.have.deep.members(expected);
