@@ -28,15 +28,7 @@ export default class QueryOperatorHelper {
 	}
 
 	private getCommon = (arr1: any[], arr2: any[]) => {
-		const common = [];
-		for (const item1 of arr1) {
-			for (const item2 of arr2) {
-				if (item1[mapper["uuid"]] === item2[mapper["uuid"]]) {
-					common.push(item1);
-				}
-			}
-		}
-		return common;
+		return arr1.filter((elem) => arr2.indexOf(elem) !== -1);
 	}
 
 	private eqOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
