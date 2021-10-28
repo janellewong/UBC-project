@@ -1,19 +1,6 @@
 import {ResultTooLargeError} from "./IInsightFacade";
 import {DatasetData} from "./InsightFacade";
 
-const mapper: any = {
-	avg: "Avg",
-	pass: "Pass",
-	fail: "Fail",
-	audit: "Audit",
-	year: "Year",
-	dept: "Subject",
-	id: "Course",
-	instructor: "Professor",
-	title: "Title",
-	uuid: "id",
-};
-
 export default class QueryOperatorHelper {
 
 	private datasets: DatasetData[];
@@ -36,7 +23,7 @@ export default class QueryOperatorHelper {
 		const dataset = key.split("_")[0];
 		const mKey = key.split("_")[1];
 		return this.getDataset(dataset).filter((data) => {
-			return isNegated ? data[mapper[mKey]] !== query[key] : data[mapper[mKey]] === query[key];
+			return isNegated ? data[mKey] !== query[key] : data[mKey] === query[key];
 		});
 	}
 
@@ -45,7 +32,7 @@ export default class QueryOperatorHelper {
 		const dataset = key.split("_")[0];
 		const mKey = key.split("_")[1];
 		return this.getDataset(dataset).filter((data) => {
-			return isNegated ? data[mapper[mKey]] <= query[key] : data[mapper[mKey]] > query[key];
+			return isNegated ? data[mKey] <= query[key] : data[mKey] > query[key];
 		});
 	}
 
@@ -54,7 +41,7 @@ export default class QueryOperatorHelper {
 		const dataset = key.split("_")[0];
 		const mKey = key.split("_")[1];
 		return this.getDataset(dataset).filter((data) => {
-			return isNegated ? data[mapper[mKey]] >= query[key] : data[mapper[mKey]] < query[key];
+			return isNegated ? data[mKey] >= query[key] : data[mKey] < query[key];
 		});
 	}
 
@@ -93,20 +80,20 @@ export default class QueryOperatorHelper {
 			const updatedStr = strToCheck.replace(/\*/g, "");
 			if (strToCheck.startsWith("*") && strToCheck.endsWith("*")) {
 				return isNegated ?
-					!(data[mapper[sKey]].includes(updatedStr)) :
-					data[mapper[sKey]].includes(updatedStr);
+					!(data[sKey].includes(updatedStr)) :
+					data[sKey].includes(updatedStr);
 			} else if (strToCheck.startsWith("*")) {
 				return isNegated ?
-					!(data[mapper[sKey]].endsWith(updatedStr)) :
-					data[mapper[sKey]].endsWith(updatedStr);
+					!(data[sKey].endsWith(updatedStr)) :
+					data[sKey].endsWith(updatedStr);
 			} else if (strToCheck.endsWith("*")) {
 				return isNegated ?
-					!(data[mapper[sKey]].startsWith(updatedStr)) :
-					data[mapper[sKey]].startsWith(updatedStr);
+					!(data[sKey].startsWith(updatedStr)) :
+					data[sKey].startsWith(updatedStr);
 			} else {
 				return isNegated ?
-					!(updatedStr === data[mapper[sKey]]) :
-					updatedStr === data[mapper[sKey]];
+					!(updatedStr === data[sKey]) :
+					updatedStr === data[sKey];
 			}
 		});
 	}
@@ -152,16 +139,7 @@ export default class QueryOperatorHelper {
 			for (const key of options.COLUMNS) {
 				const dataset = key.split("_")[0];
 				const splitKey = key.split("_")[1];
-				updatedResult[`${dataset}_${splitKey}`] = courses[mapper[splitKey]];
-				if (splitKey === "uuid") {
-					updatedResult[`${dataset}_uuid`] = String(courses[mapper["uuid"]]);
-				} else if (splitKey === "year") {
-					if (courses["Section"] === "overall") {
-						updatedResult[`${dataset}_year`] = 1900;
-					} else {
-						updatedResult[`${dataset}_year`] = Number(courses[mapper["year"]]);
-					}
-				}
+				updatedResult[`${dataset}_${splitKey}`] = courses[splitKey];
 			}
 			return updatedResult;
 		});
