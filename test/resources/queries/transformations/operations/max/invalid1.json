@@ -1,0 +1,33 @@
+{
+	"title": "Invalid MAX (dept)",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"overallMax"
+			],
+			"ORDER": "overallMax"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"overallMax": {
+						"MAX": "courses_dept"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

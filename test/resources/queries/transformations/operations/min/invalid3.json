@@ -1,0 +1,33 @@
+{
+	"title": "Invalid MIN (instructor)",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"overallMIN"
+			],
+			"ORDER": "overallMIN"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"overallMIN": {
+						"MIN": "courses_instructor"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

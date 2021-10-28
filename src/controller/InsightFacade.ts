@@ -12,6 +12,19 @@ import QueryOperatorHelper from "./QueryOperatorHelper";
  */
 const persistDir = "./data";
 
+const courseMapper: any = {
+	avg: "Avg",
+	pass: "Pass",
+	fail: "Fail",
+	audit: "Audit",
+	year: "Year",
+	dept: "Subject",
+	id: "Course",
+	instructor: "Professor",
+	title: "Title",
+	uuid: "id",
+};
+
 export type DatasetData = InsightDataset & { results: any[] }
 
 export default class InsightFacade implements IInsightFacade {
@@ -44,6 +57,24 @@ export default class InsightFacade implements IInsightFacade {
 			stream.on("data", (chunk) => chunks.push(Buffer.from(chunk)));
 			stream.on("end", () => resolve(Buffer.concat(chunks).toString("utf8")));
 		});
+	}
+
+	private static mapCourseDataset(id: string, result: any): any {
+		const obj: any = {};
+		for (const mapperKey of Object.keys(courseMapper)) {
+			if (mapperKey === "uuid") {
+				obj[`${id}_uuid`] = String(result[courseMapper["uuid"]]);
+			} else if (mapperKey === "year") {
+				if (result["Section"] === "overall") {
+					obj[`${id}_year`] = 1900;
+				} else {
+					obj[`${id}_year`] = Number(result[courseMapper["year"]]);
+				}
+			} else {
+				obj[`${id}_${mapperKey}`] = result[courseMapper[mapperKey]];
+			}
+		}
+		return obj;
 	}
 
 	public async addDataset(id: string, content: string, kind: InsightDatasetKind): Promise<string[]> {
@@ -80,7 +111,7 @@ export default class InsightFacade implements IInsightFacade {
 			try {
 				const JSONData = JSON.parse(JSONString);
 				for (const result of JSONData.result) {
-					results.push(result);
+					results.push(InsightFacade.mapCourseDataset(id, result));
 				}
 			} catch (e) {
 				// do nothing

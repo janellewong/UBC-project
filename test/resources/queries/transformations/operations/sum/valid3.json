@@ -1,0 +1,139 @@
+{
+	"title": "Valid SUM (fail)",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"courses_avg": 50
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"failingSUM"
+			],
+			"ORDER": "failingSUM"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"failingSUM": {
+						"SUM": "courses_fail"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_title": "wtr treat&wst mg",
+			"courses_dept": "civl",
+			"failingSUM": 1
+		},
+		{
+			"courses_title": "forest ecology",
+			"courses_dept": "frst",
+			"failingSUM": 1
+		},
+		{
+			"courses_title": "health psycholgy",
+			"courses_dept": "psyc",
+			"failingSUM": 1
+		},
+		{
+			"courses_title": "found re apprai",
+			"courses_dept": "busi",
+			"failingSUM": 2
+		},
+		{
+			"courses_title": "in land food com",
+			"courses_dept": "lfs",
+			"failingSUM": 2
+		},
+		{
+			"courses_title": "prpty,ident&uses",
+			"courses_dept": "wood",
+			"failingSUM": 2
+		},
+		{
+			"courses_title": "chem integ lab i",
+			"courses_dept": "chem",
+			"failingSUM": 3
+		},
+		{
+			"courses_title": "engr econ anlys",
+			"courses_dept": "civl",
+			"failingSUM": 3
+		},
+		{
+			"courses_title": "cpt aid ms pr as",
+			"courses_dept": "busi",
+			"failingSUM": 4
+		},
+		{
+			"courses_title": "sustnbt&frst ops",
+			"courses_dept": "fopr",
+			"failingSUM": 4
+		},
+		{
+			"courses_title": "log & crit think",
+			"courses_dept": "phil",
+			"failingSUM": 5
+		},
+		{
+			"courses_title": "electrochem eng",
+			"courses_dept": "chbe",
+			"failingSUM": 6
+		},
+		{
+			"courses_title": "re crit analysis",
+			"courses_dept": "busi",
+			"failingSUM": 7
+		},
+		{
+			"courses_title": "intr biometrics",
+			"courses_dept": "frst",
+			"failingSUM": 8
+		},
+		{
+			"courses_title": "financial acctng",
+			"courses_dept": "comm",
+			"failingSUM": 12
+		},
+		{
+			"courses_title": "dif calc phys ap",
+			"courses_dept": "math",
+			"failingSUM": 16
+		},
+		{
+			"courses_title": "resdnt prp study",
+			"courses_dept": "busi",
+			"failingSUM": 18
+		},
+		{
+			"courses_title": "hist 1500 - 20 c",
+			"courses_dept": "hist",
+			"failingSUM": 22
+		},
+		{
+			"courses_title": "intro acad writ",
+			"courses_dept": "lled",
+			"failingSUM": 23
+		},
+		{
+			"courses_title": "language & curr",
+			"courses_dept": "educ",
+			"failingSUM": 68
+		},
+		{
+			"courses_title": "stat&comp ap val",
+			"courses_dept": "busi",
+			"failingSUM": 70
+		}
+	]
+}

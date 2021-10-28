@@ -1,30 +1,36 @@
 import {InsightDataset} from "./IInsightFacade";
 
+const validMKeys = ["avg", "pass", "fail", "audit", "year"];
+const validSKeys = ["dept", "id", "instructor", "title", "uuid"];
+const validKeys = [...validMKeys, ...validSKeys];
+const validActionKeys = ["MAX", "MIN", "AVG", "COUNT", "SUM"];
+const validOperatorKeys = ["AND", "OR", "LT", "GT", "EQ", "IS", "NOT"];
+
 export default class QueryValidatorHelper {
 
 	private datasetIds: string[] = []
 	private usedDatasets: string[] = []
+	private usedTransformationColumns: string[] = []
+	private usedGroupColumns: string[] = []
 
 	constructor(datasets: InsightDataset[]) {
 		this.datasetIds = datasets.map((dataset) => dataset.id);
 	}
 
-	private keyValidator = (key: string, validKeys: string[],): boolean => {
-		const index = validKeys.findIndex((validKey) => validKey === key.split("_")[1]);
-		if (!this.usedDatasets.includes(key.split("_")[0])) {
+	private keyValidator = (key: string, validTempKeys: string[],): boolean => {
+		const index = validTempKeys.findIndex((validKey) => validKey === key.split("_")[1]);
+		if (key.split("_").length > 1 && !this.usedDatasets.includes(key.split("_")[0])) {
 			this.usedDatasets.push(key.split("_")[0]);
 		}
 		return index !== -1;
 	}
 
 	private mKeyValidator = (key: string): boolean => {
-		const validKeys = ["avg", "pass", "fail", "audit", "year"];
-		return this.keyValidator(key, validKeys);
+		return this.keyValidator(key, validMKeys);
 	}
 
 	private sKeyValidator = (key: string): boolean => {
-		const validKeys = ["dept", "id", "instructor", "title", "uuid"];
-		return this.keyValidator(key, validKeys);
+		return this.keyValidator(key, validSKeys);
 	}
 
 	private logicComparatorValidator = (query: any): boolean => {
@@ -68,9 +74,8 @@ export default class QueryValidatorHelper {
 			return false;
 		}
 		const keys = Object.keys(query);
-		const validKeys = ["AND", "OR", "LT", "GT", "EQ", "IS", "NOT"];
 		let mainKey: string = "";
-		for (const requiredKey of validKeys) {
+		for (const requiredKey of validOperatorKeys) {
 			const index = keys.findIndex((key) => key === requiredKey);
 			if (index !== -1) {
 				mainKey = requiredKey;
@@ -92,18 +97,14 @@ export default class QueryValidatorHelper {
 	}
 
 	private orderKeyChecker = (query: any, col: string): boolean => {
-		if (!this.usedDatasets.includes(col.split("_")[0])) {
+		if (col.split("_").length > 1 && !this.usedDatasets.includes(col.split("_")[0])) {
 			this.usedDatasets.push(col.split("_")[0]);
 		}
-		const validKeys = ["avg", "pass", "fail", "audit", "year", "dept", "id", "instructor", "title", "uuid"];
 		const key = col.split("_")[1];
-		if (!validKeys.includes(key)) {
+		if (!(validKeys.includes(key) || this.usedTransformationColumns.includes(col))) {
 			return false;
 		}
-		if (Array.isArray(query["COLUMNS"]) && !query["COLUMNS"].includes(col)) {
-			return false;
-		}
-		return true;
+		return !(Array.isArray(query["COLUMNS"]) && !query["COLUMNS"].includes(col));
 	}
 
 	private optionsValidator = (query: any): boolean => {
@@ -146,13 +147,64 @@ export default class QueryValidatorHelper {
 			Array.isArray(query["COLUMNS"]) &&
 			query["COLUMNS"].length > 0 &&
 			query["COLUMNS"].every((column: any) => {
-				if (!this.usedDatasets.includes(column.split("_")[0])) {
+				if (column.split("_").length > 1 && !this.usedDatasets.includes(column.split("_")[0])) {
 					this.usedDatasets.push(column.split("_")[0]);
 				}
-				const validKeys = ["avg", "pass", "fail", "audit", "year", "dept", "id", "instructor", "title", "uuid"];
 				const key = column.split("_")[1];
+				if (this.usedGroupColumns.length > 0) {
+					return this.usedGroupColumns.includes(column) || this.usedTransformationColumns.includes(column);
+				}
 				return validKeys.includes(key);
 			});
+	}
+
+	private transformationValidator = (query: any): boolean => {
+		if (!(query instanceof Object && !Array.isArray(query))) {
+			return false;
+		}
+		const keys = Object.keys(query);
+		const requiredKeys = ["GROUP", "APPLY"];
+		for (const requiredKey of requiredKeys) {
+			const index = keys.findIndex((key) => key === requiredKey);
+			if (index === -1) {
+				return false;
+			} else {
+				keys.splice(index, 1);
+			}
+		}
+		const groupingValidation = query["GROUP"].every((column: any) => {
+			if (column.split("_").length > 1 && !this.usedDatasets.includes(column.split("_")[0])) {
+				this.usedDatasets.push(column.split("_")[0]);
+			}
+			const key = column.split("_")[1];
+			return validKeys.includes(key);
+		});
+		if (!groupingValidation) {
+			return false;
+		}
+		this.usedGroupColumns = query["GROUP"];
+		for (const action of query["APPLY"]) {
+			const actionKeys = Object.keys(action);
+			if (actionKeys.length !== 1) {
+				return false;
+			}
+			const specialKey = actionKeys[0];
+			const actionKey = Object.keys(action[specialKey]);
+			const datasetKey = action[specialKey][actionKey[0]];
+			if (
+				actionKey.length !== 1 ||
+				!validActionKeys.includes(actionKey[0]) ||
+				!this.datasetIds.includes(datasetKey.split("_")[0]) ||
+				(actionKey[0] === "COUNT" ?
+					!validKeys.includes(datasetKey.split("_")[1]) :
+					!validMKeys.includes(datasetKey.split("_")[1])) ||
+				this.usedTransformationColumns.includes(specialKey)
+			) {
+				return false;
+			}
+			this.usedTransformationColumns.push(specialKey);
+		}
+		return keys.length === 0;
 	}
 
 	public queryValidator = (query: any): boolean => {
@@ -161,12 +213,24 @@ export default class QueryValidatorHelper {
 		}
 		const keys = Object.keys(query);
 		const requiredKeys = ["WHERE", "OPTIONS"];
+		const optionalKeys = ["TRANSFORMATIONS"];
 		for (const requiredKey of requiredKeys) {
 			const index = keys.findIndex((key) => key === requiredKey);
 			if (index === -1) {
 				return false;
 			} else {
 				keys.splice(index, 1);
+			}
+		}
+		for (const requiredKey of optionalKeys) {
+			const index = keys.findIndex((key) => key === requiredKey);
+			if (index !== -1) {
+				keys.splice(index, 1);
+			}
+		}
+		if (query["TRANSFORMATIONS"]) {
+			if (!this.transformationValidator(query["TRANSFORMATIONS"])) {
+				return false;
 			}
 		}
 		const whereValidatorResult = this.whereValidator(query["WHERE"]);

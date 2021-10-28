@@ -1,0 +1,129 @@
+{
+	"title": "Valid MAX (year)",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"yearMax"
+			],
+			"ORDER": "yearMax"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"yearMax": {
+						"MAX": "courses_year"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_title": "cor des ed res",
+			"courses_dept": "epse",
+			"yearMax": 2007
+		},
+		{
+			"courses_title": "coll&uni teachng",
+			"courses_dept": "epse",
+			"yearMax": 2007
+		},
+		{
+			"courses_title": "multimedia sys",
+			"courses_dept": "eece",
+			"yearMax": 2009
+		},
+		{
+			"courses_title": "acad assess schl",
+			"courses_dept": "epse",
+			"yearMax": 2009
+		},
+		{
+			"courses_title": "algb topology i",
+			"courses_dept": "math",
+			"yearMax": 2009
+		},
+		{
+			"courses_title": "assess lrn diffi",
+			"courses_dept": "epse",
+			"yearMax": 2010
+		},
+		{
+			"courses_title": "algb geometry i",
+			"courses_dept": "math",
+			"yearMax": 2010
+		},
+		{
+			"courses_title": "harmonic anal i",
+			"courses_dept": "math",
+			"yearMax": 2010
+		},
+		{
+			"courses_title": "eth&profl issues",
+			"courses_dept": "nurs",
+			"yearMax": 2010
+		},
+		{
+			"courses_title": "dev el sk df&hrd",
+			"courses_dept": "epse",
+			"yearMax": 2011
+		},
+		{
+			"courses_title": "career planning",
+			"courses_dept": "cnps",
+			"yearMax": 2012
+		},
+		{
+			"courses_title": "thesis",
+			"courses_dept": "crwr",
+			"yearMax": 2013
+		},
+		{
+			"courses_title": "sem in autism",
+			"courses_dept": "epse",
+			"yearMax": 2013
+		},
+		{
+			"courses_title": "educ stds autism",
+			"courses_dept": "epse",
+			"yearMax": 2014
+		},
+		{
+			"courses_title": "res mthd in educ",
+			"courses_dept": "educ",
+			"yearMax": 2015
+		},
+		{
+			"courses_title": "cl pro prim care",
+			"courses_dept": "nurs",
+			"yearMax": 2015
+		},
+		{
+			"courses_title": "fam nrs pract",
+			"courses_dept": "nurs",
+			"yearMax": 2015
+		},
+		{
+			"courses_title": "work int health",
+			"courses_dept": "spph",
+			"yearMax": 2015
+		},
+		{
+			"courses_title": "diff geometry i",
+			"courses_dept": "math",
+			"yearMax": 2016
+		}
+	]
+}

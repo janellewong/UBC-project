@@ -1,0 +1,128 @@
+{
+	"title": "Valid COUNT (year)",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"yearCOUNT"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"yearCOUNT": {
+						"COUNT": "courses_year"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_title": "career planning",
+			"courses_dept": "cnps",
+			"yearCOUNT": 3
+		},
+		{
+			"courses_title": "thesis",
+			"courses_dept": "crwr",
+			"yearCOUNT": 1
+		},
+		{
+			"courses_title": "res mthd in educ",
+			"courses_dept": "educ",
+			"yearCOUNT": 1
+		},
+		{
+			"courses_title": "multimedia sys",
+			"courses_dept": "eece",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "assess lrn diffi",
+			"courses_dept": "epse",
+			"yearCOUNT": 3
+		},
+		{
+			"courses_title": "educ stds autism",
+			"courses_dept": "epse",
+			"yearCOUNT": 4
+		},
+		{
+			"courses_title": "dev el sk df&hrd",
+			"courses_dept": "epse",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "acad assess schl",
+			"courses_dept": "epse",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "sem in autism",
+			"courses_dept": "epse",
+			"yearCOUNT": 1
+		},
+		{
+			"courses_title": "cor des ed res",
+			"courses_dept": "epse",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "coll&uni teachng",
+			"courses_dept": "epse",
+			"yearCOUNT": 1
+		},
+		{
+			"courses_title": "diff geometry i",
+			"courses_dept": "math",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "algb topology i",
+			"courses_dept": "math",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "algb geometry i",
+			"courses_dept": "math",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "harmonic anal i",
+			"courses_dept": "math",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "cl pro prim care",
+			"courses_dept": "nurs",
+			"yearCOUNT": 3
+		},
+		{
+			"courses_title": "fam nrs pract",
+			"courses_dept": "nurs",
+			"yearCOUNT": 4
+		},
+		{
+			"courses_title": "eth&profl issues",
+			"courses_dept": "nurs",
+			"yearCOUNT": 2
+		},
+		{
+			"courses_title": "work int health",
+			"courses_dept": "spph",
+			"yearCOUNT": 2
+		}
+	]
+}
