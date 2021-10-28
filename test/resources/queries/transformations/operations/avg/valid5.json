@@ -1,0 +1,129 @@
+{
+	"title": "Valid AVG (year)",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"yearAvg"
+			],
+			"ORDER": "yearAvg"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"yearAvg": {
+						"AVG": "courses_year"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_title": "cor des ed res",
+			"courses_dept": "epse",
+			"yearAvg": 1953.5
+		},
+		{
+			"courses_title": "multimedia sys",
+			"courses_dept": "eece",
+			"yearAvg": 1954.5
+		},
+		{
+			"courses_title": "acad assess schl",
+			"courses_dept": "epse",
+			"yearAvg": 1954.5
+		},
+		{
+			"courses_title": "algb topology i",
+			"courses_dept": "math",
+			"yearAvg": 1954.5
+		},
+		{
+			"courses_title": "algb geometry i",
+			"courses_dept": "math",
+			"yearAvg": 1955
+		},
+		{
+			"courses_title": "harmonic anal i",
+			"courses_dept": "math",
+			"yearAvg": 1955
+		},
+		{
+			"courses_title": "eth&profl issues",
+			"courses_dept": "nurs",
+			"yearAvg": 1955
+		},
+		{
+			"courses_title": "dev el sk df&hrd",
+			"courses_dept": "epse",
+			"yearAvg": 1955.5
+		},
+		{
+			"courses_title": "fam nrs pract",
+			"courses_dept": "nurs",
+			"yearAvg": 1956.33
+		},
+		{
+			"courses_title": "cl pro prim care",
+			"courses_dept": "nurs",
+			"yearAvg": 1956.5
+		},
+		{
+			"courses_title": "work int health",
+			"courses_dept": "spph",
+			"yearAvg": 1957.5
+		},
+		{
+			"courses_title": "diff geometry i",
+			"courses_dept": "math",
+			"yearAvg": 1958
+		},
+		{
+			"courses_title": "assess lrn diffi",
+			"courses_dept": "epse",
+			"yearAvg": 1965.6
+		},
+		{
+			"courses_title": "career planning",
+			"courses_dept": "cnps",
+			"yearAvg": 1973.67
+		},
+		{
+			"courses_title": "educ stds autism",
+			"courses_dept": "epse",
+			"yearAvg": 1974.83
+		},
+		{
+			"courses_title": "coll&uni teachng",
+			"courses_dept": "epse",
+			"yearAvg": 2007
+		},
+		{
+			"courses_title": "thesis",
+			"courses_dept": "crwr",
+			"yearAvg": 2013
+		},
+		{
+			"courses_title": "sem in autism",
+			"courses_dept": "epse",
+			"yearAvg": 2013
+		},
+		{
+			"courses_title": "res mthd in educ",
+			"courses_dept": "educ",
+			"yearAvg": 2015
+		}
+	]
+}

@@ -1,0 +1,129 @@
+{
+	"title": "Valid SUM (year)",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"yearSUM"
+			],
+			"ORDER": "yearSUM"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"yearSUM": {
+						"SUM": "courses_year"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_title": "coll&uni teachng",
+			"courses_dept": "epse",
+			"yearSUM": 2007
+		},
+		{
+			"courses_title": "sem in autism",
+			"courses_dept": "epse",
+			"yearSUM": 2013
+		},
+		{
+			"courses_title": "res mthd in educ",
+			"courses_dept": "educ",
+			"yearSUM": 2015
+		},
+		{
+			"courses_title": "cor des ed res",
+			"courses_dept": "epse",
+			"yearSUM": 3907
+		},
+		{
+			"courses_title": "multimedia sys",
+			"courses_dept": "eece",
+			"yearSUM": 3909
+		},
+		{
+			"courses_title": "acad assess schl",
+			"courses_dept": "epse",
+			"yearSUM": 3909
+		},
+		{
+			"courses_title": "algb topology i",
+			"courses_dept": "math",
+			"yearSUM": 3909
+		},
+		{
+			"courses_title": "algb geometry i",
+			"courses_dept": "math",
+			"yearSUM": 3910
+		},
+		{
+			"courses_title": "harmonic anal i",
+			"courses_dept": "math",
+			"yearSUM": 3910
+		},
+		{
+			"courses_title": "eth&profl issues",
+			"courses_dept": "nurs",
+			"yearSUM": 3910
+		},
+		{
+			"courses_title": "dev el sk df&hrd",
+			"courses_dept": "epse",
+			"yearSUM": 3911
+		},
+		{
+			"courses_title": "work int health",
+			"courses_dept": "spph",
+			"yearSUM": 3915
+		},
+		{
+			"courses_title": "diff geometry i",
+			"courses_dept": "math",
+			"yearSUM": 3916
+		},
+		{
+			"courses_title": "thesis",
+			"courses_dept": "crwr",
+			"yearSUM": 4026
+		},
+		{
+			"courses_title": "career planning",
+			"courses_dept": "cnps",
+			"yearSUM": 5921
+		},
+		{
+			"courses_title": "cl pro prim care",
+			"courses_dept": "nurs",
+			"yearSUM": 7826
+		},
+		{
+			"courses_title": "assess lrn diffi",
+			"courses_dept": "epse",
+			"yearSUM": 9828
+		},
+		{
+			"courses_title": "fam nrs pract",
+			"courses_dept": "nurs",
+			"yearSUM": 11738
+		},
+		{
+			"courses_title": "educ stds autism",
+			"courses_dept": "epse",
+			"yearSUM": 11849
+		}
+	]
+}

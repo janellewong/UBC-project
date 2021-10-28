@@ -1,5 +1,6 @@
 import {ResultTooLargeError} from "./IInsightFacade";
 import {DatasetData} from "./InsightFacade";
+import ApplyTransformationHelper from "./ApplyTransformationHelper";
 
 export default class QueryOperatorHelper {
 
@@ -21,27 +22,24 @@ export default class QueryOperatorHelper {
 	private eqOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
-		const mKey = key.split("_")[1];
 		return this.getDataset(dataset).filter((data) => {
-			return isNegated ? data[mKey] !== query[key] : data[mKey] === query[key];
+			return isNegated ? data[key] !== query[key] : data[key] === query[key];
 		});
 	}
 
 	private gtOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
-		const mKey = key.split("_")[1];
 		return this.getDataset(dataset).filter((data) => {
-			return isNegated ? data[mKey] <= query[key] : data[mKey] > query[key];
+			return isNegated ? data[key] <= query[key] : data[key] > query[key];
 		});
 	}
 
 	private ltOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
-		const mKey = key.split("_")[1];
 		return this.getDataset(dataset).filter((data) => {
-			return isNegated ? data[mKey] >= query[key] : data[mKey] < query[key];
+			return isNegated ? data[key] >= query[key] : data[key] < query[key];
 		});
 	}
 
@@ -74,26 +72,25 @@ export default class QueryOperatorHelper {
 	private isOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
-		const sKey = key.split("_")[1];
 		return this.getDataset(dataset).filter((data) => {
 			const strToCheck: string = query[key];
 			const updatedStr = strToCheck.replace(/\*/g, "");
 			if (strToCheck.startsWith("*") && strToCheck.endsWith("*")) {
 				return isNegated ?
-					!(data[sKey].includes(updatedStr)) :
-					data[sKey].includes(updatedStr);
+					!(data[key].includes(updatedStr)) :
+					data[key].includes(updatedStr);
 			} else if (strToCheck.startsWith("*")) {
 				return isNegated ?
-					!(data[sKey].endsWith(updatedStr)) :
-					data[sKey].endsWith(updatedStr);
+					!(data[key].endsWith(updatedStr)) :
+					data[key].endsWith(updatedStr);
 			} else if (strToCheck.endsWith("*")) {
 				return isNegated ?
-					!(data[sKey].startsWith(updatedStr)) :
-					data[sKey].startsWith(updatedStr);
+					!(data[key].startsWith(updatedStr)) :
+					data[key].startsWith(updatedStr);
 			} else {
 				return isNegated ?
-					!(updatedStr === data[sKey]) :
-					updatedStr === data[sKey];
+					!(updatedStr === data[key]) :
+					updatedStr === data[key];
 			}
 		});
 	}
@@ -123,48 +120,91 @@ export default class QueryOperatorHelper {
 			case "IS":
 				return this.isOperator(query[operator], isNegated);
 			default:
-				throw new ResultTooLargeError();
+				return this.getDataset(this.datasets[0].id);
 		}
+	}
+
+	private deepEqualObject = (obj1: any, obj2: any, relevantFields: string[]) => {
+		return relevantFields.every((field) => {
+			return obj1[field] === obj2[field];
+		});
+	}
+
+	private applyTransformations = (result: any[], transformations: any): any => {
+		const relevantGroupFields = transformations.GROUP;
+		const applyFields = transformations.APPLY;
+		const relevantApplyFields = applyFields.map((x: any) => {
+			return x[Object.keys(x)[0]][Object.keys(x[Object.keys(x)[0]])[0]];
+		});
+		const filterResultWithRelevantFieldsOnly: any[] = [];
+		result.forEach((x: any) => {
+			const obj: any = {};
+			relevantGroupFields.forEach((y: string) => {
+				obj[y] = x[y];
+			});
+			const findResult = filterResultWithRelevantFieldsOnly.findIndex((y: any) => {
+				return this.deepEqualObject(obj, y, relevantGroupFields);
+			});
+			if (findResult === -1) {
+				for (const field of relevantApplyFields) {
+					obj[field] = [x[field]];
+				}
+				filterResultWithRelevantFieldsOnly.push(obj);
+			} else {
+				for (const field of relevantApplyFields) {
+					filterResultWithRelevantFieldsOnly[findResult][field].push(x[field]);
+				}
+			}
+		});
+		return filterResultWithRelevantFieldsOnly.map((x) => {
+			for (const applyField of applyFields) {
+				const field = Object.keys(applyField)[0];
+				const applyFunction = Object.keys(applyField[field])[0];
+				const applyFunctionArg = applyField[field][applyFunction];
+				x[field] = ApplyTransformationHelper.useTransformation(applyFunction, x[applyFunctionArg]);
+			}
+			return x;
+		});
 	}
 
 	public queryAggregator = async (query: any): Promise<any[]> => {
 		const where = query.WHERE;
 		const options = query.OPTIONS;
-		const result = await this.filterOperator(where, false);
+		const transformations = query.TRANSFORMATIONS;
+		let result = await this.filterOperator(where, false);
+		if (transformations) {
+			result = this.applyTransformations(result, transformations);
+		}
 		if (result.length > 5000) {
 			throw new ResultTooLargeError();
 		}
-		const mappedResult = result.map((courses) => {
+		result = result.map((courses) => {
 			const updatedResult: any = {};
 			for (const key of options.COLUMNS) {
-				const dataset = key.split("_")[0];
-				const splitKey = key.split("_")[1];
-				updatedResult[`${dataset}_${splitKey}`] = courses[splitKey];
+				updatedResult[key] = courses[key];
 			}
 			return updatedResult;
 		});
 		if (options.ORDER) {
 			if (typeof options.ORDER === "string") {
-				return mappedResult.sort(this.orderSort(options.ORDER));
+				return result.sort(this.orderSort(options.ORDER));
 			} else {
-				let res = mappedResult;
+				let res = result;
 				for (const key of options.ORDER.keys.reverse()) {
 					res = res.sort(this.orderSort(key, options.ORDER.dir));
 				}
 				return res;
 			}
 		} else {
-			return mappedResult;
+			return result;
 		}
 	}
 
 	private orderSort = (order: string, pos: string = "UP") => {
 		return (courseA: Record<string, string | number>, courseB: Record<string, string | number>) => {
-			const dataset = order.split("_")[0];
-			const splitKey = order.split("_")[1];
-			if (courseA[`${dataset}_${splitKey}`] > courseB[`${dataset}_${splitKey}`]) {
+			if (courseA[order] > courseB[order]) {
 				return pos === "DOWN" ? -1 : 1;
-			} else if (courseA[`${dataset}_${splitKey}`] < courseB[`${dataset}_${splitKey}`]) {
+			} else if (courseA[order] < courseB[order]) {
 				return pos === "DOWN" ? 1 : -1;
 			} else {
 				return 0;

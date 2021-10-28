@@ -1,0 +1,129 @@
+{
+	"title": "Valid SUM (avg)",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"overallSUM"
+			],
+			"ORDER": "overallSUM"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"overallSUM": {
+						"SUM": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_title": "res mthd in educ",
+			"courses_dept": "educ",
+			"overallSUM": 97.5
+		},
+		{
+			"courses_title": "coll&uni teachng",
+			"courses_dept": "epse",
+			"overallSUM": 97.67
+		},
+		{
+			"courses_title": "sem in autism",
+			"courses_dept": "epse",
+			"overallSUM": 97.69
+		},
+		{
+			"courses_title": "cor des ed res",
+			"courses_dept": "epse",
+			"overallSUM": 194.18
+		},
+		{
+			"courses_title": "harmonic anal i",
+			"courses_dept": "math",
+			"overallSUM": 194.18
+		},
+		{
+			"courses_title": "diff geometry i",
+			"courses_dept": "math",
+			"overallSUM": 194.5
+		},
+		{
+			"courses_title": "eth&profl issues",
+			"courses_dept": "nurs",
+			"overallSUM": 194.66
+		},
+		{
+			"courses_title": "algb geometry i",
+			"courses_dept": "math",
+			"overallSUM": 194.96
+		},
+		{
+			"courses_title": "acad assess schl",
+			"courses_dept": "epse",
+			"overallSUM": 195.19
+		},
+		{
+			"courses_title": "thesis",
+			"courses_dept": "crwr",
+			"overallSUM": 196
+		},
+		{
+			"courses_title": "dev el sk df&hrd",
+			"courses_dept": "epse",
+			"overallSUM": 196.9
+		},
+		{
+			"courses_title": "multimedia sys",
+			"courses_dept": "eece",
+			"overallSUM": 197.5
+		},
+		{
+			"courses_title": "work int health",
+			"courses_dept": "spph",
+			"overallSUM": 197.96
+		},
+		{
+			"courses_title": "algb topology i",
+			"courses_dept": "math",
+			"overallSUM": 199.56
+		},
+		{
+			"courses_title": "career planning",
+			"courses_dept": "cnps",
+			"overallSUM": 294.13
+		},
+		{
+			"courses_title": "cl pro prim care",
+			"courses_dept": "nurs",
+			"overallSUM": 393.84
+		},
+		{
+			"courses_title": "assess lrn diffi",
+			"courses_dept": "epse",
+			"overallSUM": 489.72
+		},
+		{
+			"courses_title": "fam nrs pract",
+			"courses_dept": "nurs",
+			"overallSUM": 589.22
+		},
+		{
+			"courses_title": "educ stds autism",
+			"courses_dept": "epse",
+			"overallSUM": 590.89
+		}
+	]
+}

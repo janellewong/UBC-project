@@ -59,19 +59,19 @@ export default class InsightFacade implements IInsightFacade {
 		});
 	}
 
-	private static mapCourseDataset(result: any): any {
+	private static mapCourseDataset(id: string, result: any): any {
 		const obj: any = {};
 		for (const mapperKey of Object.keys(courseMapper)) {
 			if (mapperKey === "uuid") {
-				obj["uuid"] = String(result[courseMapper["uuid"]]);
+				obj[`${id}_uuid`] = String(result[courseMapper["uuid"]]);
 			} else if (mapperKey === "year") {
 				if (result["Section"] === "overall") {
-					obj["year"] = 1900;
+					obj[`${id}_year`] = 1900;
 				} else {
-					obj["year"] = Number(result[courseMapper["year"]]);
+					obj[`${id}_year`] = Number(result[courseMapper["year"]]);
 				}
 			} else {
-				obj[mapperKey] = result[courseMapper[mapperKey]];
+				obj[`${id}_${mapperKey}`] = result[courseMapper[mapperKey]];
 			}
 		}
 		return obj;
@@ -111,7 +111,7 @@ export default class InsightFacade implements IInsightFacade {
 			try {
 				const JSONData = JSON.parse(JSONString);
 				for (const result of JSONData.result) {
-					results.push(InsightFacade.mapCourseDataset(result));
+					results.push(InsightFacade.mapCourseDataset(id, result));
 				}
 			} catch (e) {
 				// do nothing

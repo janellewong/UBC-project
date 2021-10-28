@@ -1,0 +1,139 @@
+{
+	"title": "Valid MIN (fail)",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"courses_avg": 50
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"failingMIN"
+			],
+			"ORDER": "failingMIN"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"failingMIN": {
+						"MIN": "courses_fail"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_title": "found re apprai",
+			"courses_dept": "busi",
+			"failingMIN": 1
+		},
+		{
+			"courses_title": "wtr treat&wst mg",
+			"courses_dept": "civl",
+			"failingMIN": 1
+		},
+		{
+			"courses_title": "forest ecology",
+			"courses_dept": "frst",
+			"failingMIN": 1
+		},
+		{
+			"courses_title": "hist 1500 - 20 c",
+			"courses_dept": "hist",
+			"failingMIN": 1
+		},
+		{
+			"courses_title": "in land food com",
+			"courses_dept": "lfs",
+			"failingMIN": 1
+		},
+		{
+			"courses_title": "health psycholgy",
+			"courses_dept": "psyc",
+			"failingMIN": 1
+		},
+		{
+			"courses_title": "intr biometrics",
+			"courses_dept": "frst",
+			"failingMIN": 2
+		},
+		{
+			"courses_title": "prpty,ident&uses",
+			"courses_dept": "wood",
+			"failingMIN": 2
+		},
+		{
+			"courses_title": "electrochem eng",
+			"courses_dept": "chbe",
+			"failingMIN": 3
+		},
+		{
+			"courses_title": "chem integ lab i",
+			"courses_dept": "chem",
+			"failingMIN": 3
+		},
+		{
+			"courses_title": "engr econ anlys",
+			"courses_dept": "civl",
+			"failingMIN": 3
+		},
+		{
+			"courses_title": "intro acad writ",
+			"courses_dept": "lled",
+			"failingMIN": 3
+		},
+		{
+			"courses_title": "cpt aid ms pr as",
+			"courses_dept": "busi",
+			"failingMIN": 4
+		},
+		{
+			"courses_title": "financial acctng",
+			"courses_dept": "comm",
+			"failingMIN": 4
+		},
+		{
+			"courses_title": "sustnbt&frst ops",
+			"courses_dept": "fopr",
+			"failingMIN": 4
+		},
+		{
+			"courses_title": "resdnt prp study",
+			"courses_dept": "busi",
+			"failingMIN": 5
+		},
+		{
+			"courses_title": "log & crit think",
+			"courses_dept": "phil",
+			"failingMIN": 5
+		},
+		{
+			"courses_title": "re crit analysis",
+			"courses_dept": "busi",
+			"failingMIN": 7
+		},
+		{
+			"courses_title": "dif calc phys ap",
+			"courses_dept": "math",
+			"failingMIN": 7
+		},
+		{
+			"courses_title": "language & curr",
+			"courses_dept": "educ",
+			"failingMIN": 34
+		},
+		{
+			"courses_title": "stat&comp ap val",
+			"courses_dept": "busi",
+			"failingMIN": 35
+		}
+	]
+}

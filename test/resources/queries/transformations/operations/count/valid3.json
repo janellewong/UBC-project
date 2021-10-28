@@ -1,0 +1,138 @@
+{
+	"title": "Valid COUNT (fail)",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"courses_avg": 50
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"courses_dept",
+				"failingCOUNT"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"failingCOUNT": {
+						"COUNT": "courses_fail"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_title": "found re apprai",
+			"courses_dept": "busi",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "stat&comp ap val",
+			"courses_dept": "busi",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "resdnt prp study",
+			"courses_dept": "busi",
+			"failingCOUNT": 2
+		},
+		{
+			"courses_title": "cpt aid ms pr as",
+			"courses_dept": "busi",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "re crit analysis",
+			"courses_dept": "busi",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "electrochem eng",
+			"courses_dept": "chbe",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "chem integ lab i",
+			"courses_dept": "chem",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "engr econ anlys",
+			"courses_dept": "civl",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "wtr treat&wst mg",
+			"courses_dept": "civl",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "financial acctng",
+			"courses_dept": "comm",
+			"failingCOUNT": 2
+		},
+		{
+			"courses_title": "language & curr",
+			"courses_dept": "educ",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "sustnbt&frst ops",
+			"courses_dept": "fopr",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "forest ecology",
+			"courses_dept": "frst",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "intr biometrics",
+			"courses_dept": "frst",
+			"failingCOUNT": 2
+		},
+		{
+			"courses_title": "hist 1500 - 20 c",
+			"courses_dept": "hist",
+			"failingCOUNT": 4
+		},
+		{
+			"courses_title": "in land food com",
+			"courses_dept": "lfs",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "intro acad writ",
+			"courses_dept": "lled",
+			"failingCOUNT": 4
+		},
+		{
+			"courses_title": "dif calc phys ap",
+			"courses_dept": "math",
+			"failingCOUNT": 2
+		},
+		{
+			"courses_title": "log & crit think",
+			"courses_dept": "phil",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "health psycholgy",
+			"courses_dept": "psyc",
+			"failingCOUNT": 1
+		},
+		{
+			"courses_title": "prpty,ident&uses",
+			"courses_dept": "wood",
+			"failingCOUNT": 1
+		}
+	]
+}
