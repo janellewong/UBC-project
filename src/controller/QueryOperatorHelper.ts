@@ -147,12 +147,20 @@ export default class QueryOperatorHelper {
 			});
 			if (findResult === -1) {
 				for (const field of relevantApplyFields) {
-					obj[field] = [x[field]];
+					if (!relevantGroupFields.includes(field)) {
+						obj[field] = [x[field]];
+					} else {
+						obj[`${field}_temp`] = [x[field]];
+					}
 				}
 				filterResultWithRelevantFieldsOnly.push(obj);
 			} else {
 				for (const field of relevantApplyFields) {
-					filterResultWithRelevantFieldsOnly[findResult][field].push(x[field]);
+					if (Array.isArray(filterResultWithRelevantFieldsOnly[findResult][field])) {
+						filterResultWithRelevantFieldsOnly[findResult][field].push(x[field]);
+					} else {
+						filterResultWithRelevantFieldsOnly[findResult][`${field}_temp`].push(x[field]);
+					}
 				}
 			}
 		});
@@ -160,7 +168,10 @@ export default class QueryOperatorHelper {
 			for (const applyField of applyFields) {
 				const field = Object.keys(applyField)[0];
 				const applyFunction = Object.keys(applyField[field])[0];
-				const applyFunctionArg = applyField[field][applyFunction];
+				let applyFunctionArg = applyField[field][applyFunction];
+				if (relevantGroupFields.includes(applyFunctionArg)) {
+					applyFunctionArg = `${applyFunctionArg}_temp`;
+				}
 				x[field] = ApplyTransformationHelper.useTransformation(applyFunction, x[applyFunctionArg]);
 			}
 			return x;
