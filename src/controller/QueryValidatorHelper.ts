@@ -1,21 +1,13 @@
-import {InsightDataset} from "./IInsightFacade";
+import {InsightDataset, InsightDatasetKind} from "./IInsightFacade";
 
-const validMKeys = ["avg", "pass", "fail", "audit", "year", "lat", "lon", "seats"];
-const validSKeys = [
-	"dept",
-	"id",
-	"instructor",
-	"title",
-	"uuid",
-	"fullname",
-	"shortname",
-	"number",
-	"name",
-	"address",
-	"type",
-	"furniture",
-	"href"
-];
+const validCoursesMKeys = ["avg", "pass", "fail", "audit", "year"];
+const validRoomsMKeys = ["lat", "lon", "seats"];
+const validCoursesSKeys = ["dept", "id", "instructor", "title", "uuid"];
+const validRoomsSKeys = ["fullname", "shortname", "number", "name", "address", "type", "furniture", "href"];
+const validCoursesKeys = [...validCoursesMKeys, ...validCoursesSKeys];
+const validRoomsKeys = [...validRoomsMKeys, ...validRoomsSKeys];
+const validMKeys = [...validCoursesMKeys, ...validRoomsMKeys];
+const validSKeys = [...validCoursesSKeys, ...validRoomsSKeys];
 const validKeys = [...validMKeys, ...validSKeys];
 const validActionKeys = ["MAX", "MIN", "AVG", "COUNT", "SUM"];
 const validOperatorKeys = ["AND", "OR", "LT", "GT", "EQ", "IS", "NOT"];
@@ -23,19 +15,29 @@ const validOperatorKeys = ["AND", "OR", "LT", "GT", "EQ", "IS", "NOT"];
 export default class QueryValidatorHelper {
 
 	private datasetIds: string[] = []
+	private datasets: InsightDataset[] = []
 	private usedDatasets: string[] = []
 	private usedTransformationColumns: string[] = []
 	private usedGroupColumns: string[] = []
+	private usedKeys: string[] = []
 
 	constructor(datasets: InsightDataset[]) {
 		this.datasetIds = datasets.map((dataset) => dataset.id);
+		this.datasets = datasets;
 	}
 
-	private keyValidator = (key: string, validTempKeys: string[],): boolean => {
-		const index = validTempKeys.findIndex((validKey) => validKey === key.split("_")[1]);
-		if (key.split("_").length > 1 && !this.usedDatasets.includes(key.split("_")[0])) {
-			this.usedDatasets.push(key.split("_")[0]);
+	private updateUsedDatasetsAndKeys = (key: string): void => {
+		if (key.split("_").length > 1) {
+			if (!this.usedDatasets.includes(key.split("_")[0])) {
+				this.usedDatasets.push(key.split("_")[0]);
+			}
+			this.usedKeys.push(key.split("_")[1]);
 		}
+	}
+
+	private keyValidator = (key: string, validTempKeys: string[]): boolean => {
+		const index = validTempKeys.findIndex((validKey) => validKey === key.split("_")[1]);
+		this.updateUsedDatasetsAndKeys(key);
 		return index !== -1;
 	}
 
@@ -111,9 +113,7 @@ export default class QueryValidatorHelper {
 	}
 
 	private orderKeyChecker = (query: any, col: string): boolean => {
-		if (col.split("_").length > 1 && !this.usedDatasets.includes(col.split("_")[0])) {
-			this.usedDatasets.push(col.split("_")[0]);
-		}
+		this.updateUsedDatasetsAndKeys(col);
 		const key = col.split("_")[1];
 		if (!(validKeys.includes(key) || this.usedTransformationColumns.includes(col))) {
 			return false;
@@ -161,9 +161,7 @@ export default class QueryValidatorHelper {
 			Array.isArray(query["COLUMNS"]) &&
 			query["COLUMNS"].length > 0 &&
 			query["COLUMNS"].every((column: any) => {
-				if (column.split("_").length > 1 && !this.usedDatasets.includes(column.split("_")[0])) {
-					this.usedDatasets.push(column.split("_")[0]);
-				}
+				this.updateUsedDatasetsAndKeys(column);
 				const key = column.split("_")[1];
 				if (this.usedGroupColumns.length > 0) {
 					return this.usedGroupColumns.includes(column) || this.usedTransformationColumns.includes(column);
@@ -187,9 +185,7 @@ export default class QueryValidatorHelper {
 			}
 		}
 		const groupingValidation = query["GROUP"].every((column: any) => {
-			if (column.split("_").length > 1 && !this.usedDatasets.includes(column.split("_")[0])) {
-				this.usedDatasets.push(column.split("_")[0]);
-			}
+			this.updateUsedDatasetsAndKeys(column);
 			const key = column.split("_")[1];
 			return validKeys.includes(key);
 		});
@@ -202,9 +198,9 @@ export default class QueryValidatorHelper {
 			if (actionKeys.length !== 1) {
 				return false;
 			}
-			const specialKey = actionKeys[0];
-			const actionKey = Object.keys(action[specialKey]);
-			const datasetKey = action[specialKey][actionKey[0]];
+			const specialKey = actionKeys[0], actionKey = Object.keys(action[specialKey]),
+				datasetKey = action[specialKey][actionKey[0]];
+			this.updateUsedDatasetsAndKeys(datasetKey);
 			if (
 				actionKey.length !== 1 ||
 				!validActionKeys.includes(actionKey[0]) ||
@@ -256,6 +252,19 @@ export default class QueryValidatorHelper {
 				return false;
 			}
 		}
-		return Boolean(keys.length === 0 && whereValidatorResult && optionsValidatorResult) && this.usedDatasets[0];
+		if (!(keys.length === 0 && whereValidatorResult && optionsValidatorResult)) {
+			return false;
+		}
+		const dataset = this.usedDatasets[0];
+		const datasetIndex = this.datasets.findIndex((x) => x.id === dataset);
+		if (
+			!([...new Set(this.usedKeys)])
+				.every((x) => (
+					this.datasets[datasetIndex].kind === InsightDatasetKind.Courses ? validCoursesKeys : validRoomsKeys
+				).includes(x))
+		) {
+			return false;
+		}
+		return dataset;
 	}
 }
