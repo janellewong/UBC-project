@@ -20,24 +20,29 @@ export type DatasetData = InsightDataset & { results: any[] }
 export default class InsightFacade implements IInsightFacade {
 	constructor() {
 		console.trace("InsightFacadeImpl::init()");
+		if (fs.existsSync(persistDir)) {
+			fs.removeSync(persistDir);
+		}
+	}
+
+	private isValidID = (idName: string): boolean => {
+		return /^[^_]+$/.test(idName.trim());
+	}
+
+	private getDatasetsData = (): any[] => {
 		try {
 			if (fs.existsSync(`${persistDir}/data.json`)) {
 				const buffer = fs.readFileSync(`${persistDir}/data.json`);
-				this.datasets = JSON.parse(buffer.toString());
-				return;
+				return JSON.parse(buffer.toString());
 			} else {
-				fs.mkdirSync(persistDir);
+				if (!fs.existsSync(persistDir)) {
+					fs.mkdirSync(persistDir);
+				}
 			}
 		} catch (e) {
 			// do nothing
 		}
-		this.datasets = [];
-	}
-
-	private readonly datasets: DatasetData[];
-
-	private isValidID = (idName: string): boolean => {
-		return /^[^_]+$/.test(idName.trim());
+		return [];
 	}
 
 	public async addDataset(id: string, content: string, kind: InsightDatasetKind): Promise<string[]> {
@@ -45,8 +50,11 @@ export default class InsightFacade implements IInsightFacade {
 		if (!this.isValidID(id)) {
 			throw new InsightError("id is not valid");
 		}
+
+		const datasets = this.getDatasetsData();
+
 		// if dataset already exists in instance class
-		if (this.datasets.some((current) => current.id === id)) {
+		if (datasets.some((current: any) => current.id === id)) {
 			throw new InsightError("id already exists");
 		}
 
@@ -74,16 +82,16 @@ export default class InsightFacade implements IInsightFacade {
 		}
 
 		// iterate through each file and push result to array
-		this.datasets.push({
+		datasets.push({
 			id,
 			kind,
 			numRows: results.length,
 			results
 		});
 
-		fs.writeFileSync(`${persistDir}/data.json`, JSON.stringify(this.datasets));
+		fs.writeFileSync(`${persistDir}/data.json`, JSON.stringify(datasets));
 
-		return this.datasets.map((dataset) => dataset.id);
+		return datasets.map((dataset: any) => dataset.id);
 	}
 
 	public async removeDataset(id: string): Promise<string> {
@@ -94,25 +102,31 @@ export default class InsightFacade implements IInsightFacade {
 		// find in this.datasets and if it exists, remove the index from datasets using Array.splice
 		// if it does not exist in this.datasets, throw NotFoundError
 		// Remove dataset from data folder
-		const index = this.datasets.findIndex((dataset) => dataset.id === id);
+
+		const datasets = this.getDatasetsData();
+
+		const index = datasets.findIndex((dataset: any) => dataset.id === id);
 		if (index === -1) {
 			throw new NotFoundError();
 		}
-		this.datasets.splice(index, 1);
+		datasets.splice(index, 1);
+		fs.writeFileSync(`${persistDir}/data.json`, JSON.stringify(datasets));
 		return id;
 	}
 
 	public performQuery(query: any): Promise<any[]> {
-		const queryValidatorHelper = new QueryValidatorHelper(this.datasets);
+		const datasets = this.getDatasetsData();
+		const queryValidatorHelper = new QueryValidatorHelper(datasets);
 		const usedDataset = queryValidatorHelper.queryValidator(query);
 		if (!usedDataset) {
 			throw new InsightError("Invalid Query");
 		}
-		const queryOperatorHelper = new QueryOperatorHelper(this.datasets, usedDataset);
+		const queryOperatorHelper = new QueryOperatorHelper(datasets, usedDataset);
 		return queryOperatorHelper.queryAggregator(query);
 	}
 
 	public listDatasets(): Promise<InsightDataset[]> {
-		return Promise.resolve(this.datasets.map(({ results, ...dataset }) => dataset));
+		const datasets = this.getDatasetsData();
+		return Promise.resolve(datasets.map(({ results, ...dataset }: any) => dataset));
 	}
 }
