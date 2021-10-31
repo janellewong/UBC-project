@@ -104,10 +104,11 @@ export default class InsightFacade implements IInsightFacade {
 
 	public performQuery(query: any): Promise<any[]> {
 		const queryValidatorHelper = new QueryValidatorHelper(this.datasets);
-		if (!queryValidatorHelper.queryValidator(query)) {
+		const usedDataset = queryValidatorHelper.queryValidator(query);
+		if (!usedDataset) {
 			throw new InsightError("Invalid Query");
 		}
-		const queryOperatorHelper = new QueryOperatorHelper(this.datasets);
+		const queryOperatorHelper = new QueryOperatorHelper(this.datasets, usedDataset);
 		return queryOperatorHelper.queryAggregator(query);
 	}
 
