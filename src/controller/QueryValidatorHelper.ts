@@ -1,7 +1,21 @@
 import {InsightDataset} from "./IInsightFacade";
 
-const validMKeys = ["avg", "pass", "fail", "audit", "year"];
-const validSKeys = ["dept", "id", "instructor", "title", "uuid"];
+const validMKeys = ["avg", "pass", "fail", "audit", "year", "lat", "lon", "seats"];
+const validSKeys = [
+	"dept",
+	"id",
+	"instructor",
+	"title",
+	"uuid",
+	"fullname",
+	"shortname",
+	"number",
+	"name",
+	"address",
+	"type",
+	"furniture",
+	"href"
+];
 const validKeys = [...validMKeys, ...validSKeys];
 const validActionKeys = ["MAX", "MIN", "AVG", "COUNT", "SUM"];
 const validOperatorKeys = ["AND", "OR", "LT", "GT", "EQ", "IS", "NOT"];

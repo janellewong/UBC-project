@@ -5,7 +5,7 @@ import ApplyTransformationHelper from "./ApplyTransformationHelper";
 export default class QueryOperatorHelper {
 
 	private datasets: DatasetData[];
-	private dataset: string
+	private dataset: string;
 
 	constructor(dataInDatasets: DatasetData[], dataset: string) {
 		this.datasets = dataInDatasets;

@@ -4,6 +4,9 @@ import fs from "fs-extra";
 
 import QueryValidatorHelper from "./QueryValidatorHelper";
 import QueryOperatorHelper from "./QueryOperatorHelper";
+import {AddDatasetHelper} from "./AddDatasetHelpers/AddDatasetHelper";
+import AddCoursesDatasetHelper from "./AddDatasetHelpers/AddCoursesDatasetHelper";
+import AddRoomsDatasetHelper from "./AddDatasetHelpers/AddRoomsDatasetHelper";
 
 /**
  * This is the main programmatic entry point for the project.
@@ -11,19 +14,6 @@ import QueryOperatorHelper from "./QueryOperatorHelper";
  *
  */
 const persistDir = "./data";
-
-const courseMapper: any = {
-	avg: "Avg",
-	pass: "Pass",
-	fail: "Fail",
-	audit: "Audit",
-	year: "Year",
-	dept: "Subject",
-	id: "Course",
-	instructor: "Professor",
-	title: "Title",
-	uuid: "id",
-};
 
 export type DatasetData = InsightDataset & { results: any[] }
 
@@ -50,33 +40,6 @@ export default class InsightFacade implements IInsightFacade {
 		return /^[^_]+$/.test(idName.trim());
 	}
 
-	// Code from: https://stackoverflow.com/questions/10623798/how-do-i-read-the-contents-of-a-node-js-stream-into-a-string-variable
-	private streamToString = (stream: NodeJS.ReadableStream): Promise<string> => {
-		const chunks: Buffer[] = [];
-		return new Promise((resolve) => {
-			stream.on("data", (chunk) => chunks.push(Buffer.from(chunk)));
-			stream.on("end", () => resolve(Buffer.concat(chunks).toString("utf8")));
-		});
-	}
-
-	private static mapCourseDataset(id: string, result: any): any {
-		const obj: any = {};
-		for (const mapperKey of Object.keys(courseMapper)) {
-			if (mapperKey === "uuid") {
-				obj[`${id}_uuid`] = String(result[courseMapper["uuid"]]);
-			} else if (mapperKey === "year") {
-				if (result["Section"] === "overall") {
-					obj[`${id}_year`] = 1900;
-				} else {
-					obj[`${id}_year`] = Number(result[courseMapper["year"]]);
-				}
-			} else {
-				obj[`${id}_${mapperKey}`] = result[courseMapper[mapperKey]];
-			}
-		}
-		return obj;
-	}
-
 	public async addDataset(id: string, content: string, kind: InsightDatasetKind): Promise<string[]> {
 		// is ID valid?
 		if (!this.isValidID(id)) {
@@ -95,28 +58,16 @@ export default class InsightFacade implements IInsightFacade {
 			throw new InsightError("Unable to import ZIP file");
 		}
 
-		// filter zip files if file is under "courses"
+		const addDatasetHelper: AddDatasetHelper | undefined = kind === InsightDatasetKind.Rooms ?
+			new AddRoomsDatasetHelper() :
+			kind === InsightDatasetKind.Courses ? new AddCoursesDatasetHelper() : undefined;
 
-		const data = zipData.files;
-		// console.log(zipData.files);
-		const keys = Object.keys(data).filter((key) => {
-			// not a directory and the file is under courses
-			return !data[key].dir && data[key].name.startsWith("courses");
-		});
-
-		const results = [];
-
-		for (const key of keys){
-			const JSONString = await this.streamToString(zipData.files[key].nodeStream());
-			try {
-				const JSONData = JSON.parse(JSONString);
-				for (const result of JSONData.result) {
-					results.push(InsightFacade.mapCourseDataset(id, result));
-				}
-			} catch (e) {
-				// do nothing
-			}
+		if (!addDatasetHelper) {
+			throw new InsightError("Not a valid dataset type");
 		}
+
+		let results: any[] = [];
+		await addDatasetHelper.makeResult(id, zipData, results);
 
 		if (results.length === 0) {
 			throw new InsightError("no data");
