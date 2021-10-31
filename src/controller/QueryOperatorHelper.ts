@@ -126,28 +126,21 @@ export default class QueryOperatorHelper {
 		}
 	}
 
-	private deepEqualObject = (obj1: any, obj2: any, relevantFields: string[]) => {
-		return relevantFields.every((field) => {
-			return obj1[field] === obj2[field];
-		});
-	}
-
 	private applyTransformations = (result: any[], transformations: any): any => {
 		const relevantGroupFields = transformations.GROUP;
 		const applyFields = transformations.APPLY;
 		const relevantApplyFields = applyFields.map((x: any) => {
 			return x[Object.keys(x)[0]][Object.keys(x[Object.keys(x)[0]])[0]];
 		});
-		const filterResultWithRelevantFieldsOnly: any[] = [];
+		const filterResultHashMap: Record<string, any> = {};
 		result.forEach((x: any) => {
 			const obj: any = {};
+			let hash = "";
 			relevantGroupFields.forEach((y: string) => {
 				obj[y] = x[y];
+				hash += `${y}:${x[y]};`;
 			});
-			const findResult = filterResultWithRelevantFieldsOnly.findIndex((y: any) => {
-				return this.deepEqualObject(obj, y, relevantGroupFields);
-			});
-			if (findResult === -1) {
+			if (!filterResultHashMap[hash]) {
 				for (const field of relevantApplyFields) {
 					if (!relevantGroupFields.includes(field)) {
 						obj[field] = [x[field]];
@@ -155,18 +148,22 @@ export default class QueryOperatorHelper {
 						obj[`${field}_temp`] = [x[field]];
 					}
 				}
-				filterResultWithRelevantFieldsOnly.push(obj);
+				filterResultHashMap[hash] = obj;
 			} else {
 				for (const field of relevantApplyFields) {
-					if (Array.isArray(filterResultWithRelevantFieldsOnly[findResult][field])) {
-						filterResultWithRelevantFieldsOnly[findResult][field].push(x[field]);
+					if (Array.isArray(filterResultHashMap[hash][field])) {
+						filterResultHashMap[hash][field].push(x[field]);
 					} else {
-						filterResultWithRelevantFieldsOnly[findResult][`${field}_temp`].push(x[field]);
+						filterResultHashMap[hash][`${field}_temp`].push(x[field]);
 					}
 				}
 			}
 		});
-		return filterResultWithRelevantFieldsOnly.map((x) => {
+		if (Object.keys(filterResultHashMap).length > 5000) {
+			throw new ResultTooLargeError();
+		}
+		return Object.keys(filterResultHashMap).map((key) => {
+			const x = filterResultHashMap[key];
 			for (const applyField of applyFields) {
 				const field = Object.keys(applyField)[0];
 				const applyFunction = Object.keys(applyField[field])[0];
