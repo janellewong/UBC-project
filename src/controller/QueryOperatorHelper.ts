@@ -5,11 +5,9 @@ import ApplyTransformationHelper from "./ApplyTransformationHelper";
 export default class QueryOperatorHelper {
 
 	private datasets: DatasetData[];
-	private dataset: string
 
-	constructor(dataInDatasets: DatasetData[], dataset: string) {
+	constructor(dataInDatasets: DatasetData[]) {
 		this.datasets = dataInDatasets;
-		this.dataset = dataset;
 	}
 
 	private getDataset = (datasetId: string): any[] => {
@@ -122,7 +120,7 @@ export default class QueryOperatorHelper {
 			case "IS":
 				return this.isOperator(query[operator], isNegated);
 			default:
-				return this.getDataset(this.dataset);
+				return this.getDataset(this.datasets[0].id);
 		}
 	}
 
