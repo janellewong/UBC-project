@@ -207,7 +207,7 @@ export default class QueryValidatorHelper {
 		return keys.length === 0;
 	}
 
-	public queryValidator = (query: any): boolean => {
+	public queryValidator = (query: any): string | false => {
 		if (!(query instanceof Object && !Array.isArray(query))) {
 			return false;
 		}
@@ -242,6 +242,6 @@ export default class QueryValidatorHelper {
 				return false;
 			}
 		}
-		return keys.length === 0 && whereValidatorResult && optionsValidatorResult;
+		return Boolean(keys.length === 0 && whereValidatorResult && optionsValidatorResult) && this.usedDatasets[0];
 	}
 }
