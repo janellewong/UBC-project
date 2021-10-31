@@ -1,0 +1,295 @@
+{
+	"title": "GT rooms_lat = 49.26826",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"rooms_lat": 49.26826
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_fullname",
+				"rooms_shortname",
+				"rooms_number",
+				"rooms_name",
+				"rooms_address",
+				"rooms_lat",
+				"rooms_lon",
+				"rooms_seats",
+				"rooms_type",
+				"rooms_furniture",
+				"rooms_href"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"rooms_name",
+					"rooms_number"
+				]
+			}
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_shortname": "ALRD",
+			"rooms_number": "105",
+			"rooms_name": "ALRD_105",
+			"rooms_address": "1822 East Mall",
+			"rooms_lat": 49.2699,
+			"rooms_lon": -123.25318,
+			"rooms_seats": 94,
+			"rooms_type": "Case Style",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-105"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_shortname": "ALRD",
+			"rooms_number": "112",
+			"rooms_name": "ALRD_112",
+			"rooms_address": "1822 East Mall",
+			"rooms_lat": 49.2699,
+			"rooms_lon": -123.25318,
+			"rooms_seats": 20,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-112"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_shortname": "ALRD",
+			"rooms_number": "113",
+			"rooms_name": "ALRD_113",
+			"rooms_address": "1822 East Mall",
+			"rooms_lat": 49.2699,
+			"rooms_lon": -123.25318,
+			"rooms_seats": 20,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-113"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_shortname": "ALRD",
+			"rooms_number": "121",
+			"rooms_name": "ALRD_121",
+			"rooms_address": "1822 East Mall",
+			"rooms_lat": 49.2699,
+			"rooms_lon": -123.25318,
+			"rooms_seats": 50,
+			"rooms_type": "Case Style",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-121"
+		},
+		{
+			"rooms_fullname": "Allard Hall (LAW)",
+			"rooms_shortname": "ALRD",
+			"rooms_number": "B101",
+			"rooms_name": "ALRD_B101",
+			"rooms_address": "1822 East Mall",
+			"rooms_lat": 49.2699,
+			"rooms_lon": -123.25318,
+			"rooms_seats": 44,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-B101"
+		},
+		{
+			"rooms_fullname": "Anthropology and Sociology",
+			"rooms_shortname": "ANSO",
+			"rooms_number": "202",
+			"rooms_name": "ANSO_202",
+			"rooms_address": "6303 North West Marine Drive",
+			"rooms_lat": 49.26958,
+			"rooms_lon": -123.25741,
+			"rooms_seats": 26,
+			"rooms_type": "Small Group",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANSO-202"
+		},
+		{
+			"rooms_fullname": "Anthropology and Sociology",
+			"rooms_shortname": "ANSO",
+			"rooms_number": "203",
+			"rooms_name": "ANSO_203",
+			"rooms_address": "6303 North West Marine Drive",
+			"rooms_lat": 49.26958,
+			"rooms_lon": -123.25741,
+			"rooms_seats": 33,
+			"rooms_type": "Small Group",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANSO-203"
+		},
+		{
+			"rooms_fullname": "Anthropology and Sociology",
+			"rooms_shortname": "ANSO",
+			"rooms_number": "205",
+			"rooms_name": "ANSO_205",
+			"rooms_address": "6303 North West Marine Drive",
+			"rooms_lat": 49.26958,
+			"rooms_lon": -123.25741,
+			"rooms_seats": 37,
+			"rooms_type": "Small Group",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANSO-205"
+		},
+		{
+			"rooms_fullname": "Anthropology and Sociology",
+			"rooms_shortname": "ANSO",
+			"rooms_number": "207",
+			"rooms_name": "ANSO_207",
+			"rooms_address": "6303 North West Marine Drive",
+			"rooms_lat": 49.26958,
+			"rooms_lon": -123.25741,
+			"rooms_seats": 90,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Moveable Tablets",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANSO-207"
+		},
+		{
+			"rooms_fullname": "Brock Hall Annex",
+			"rooms_shortname": "BRKX",
+			"rooms_number": "2365",
+			"rooms_name": "BRKX_2365",
+			"rooms_address": "1874 East Mall",
+			"rooms_lat": 49.26862,
+			"rooms_lon": -123.25237,
+			"rooms_seats": 70,
+			"rooms_type": "Tiered Large Group",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/BRKX-2365"
+		},
+		{
+			"rooms_fullname": "Brock Hall Annex",
+			"rooms_shortname": "BRKX",
+			"rooms_number": "2367",
+			"rooms_name": "BRKX_2367",
+			"rooms_address": "1874 East Mall",
+			"rooms_lat": 49.26862,
+			"rooms_lon": -123.25237,
+			"rooms_seats": 24,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/BRKX-2367"
+		},
+		{
+			"rooms_fullname": "Iona Building",
+			"rooms_shortname": "IONA",
+			"rooms_number": "301",
+			"rooms_name": "IONA_301",
+			"rooms_address": "6000 Iona Drive",
+			"rooms_lat": 49.27106,
+			"rooms_lon": -123.25042,
+			"rooms_seats": 100,
+			"rooms_type": "Case Style",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/IONA-301"
+		},
+		{
+			"rooms_fullname": "Iona Building",
+			"rooms_shortname": "IONA",
+			"rooms_number": "633",
+			"rooms_name": "IONA_633",
+			"rooms_address": "6000 Iona Drive",
+			"rooms_lat": 49.27106,
+			"rooms_lon": -123.25042,
+			"rooms_seats": 50,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/IONA-633"
+		},
+		{
+			"rooms_fullname": "Student Recreation Centre",
+			"rooms_shortname": "SRC",
+			"rooms_number": "220A",
+			"rooms_name": "SRC_220A",
+			"rooms_address": "6000 Student Union Blvd",
+			"rooms_lat": 49.2683,
+			"rooms_lon": -123.24894,
+			"rooms_seats": 299,
+			"rooms_type": "TBD",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/SRC-220A"
+		},
+		{
+			"rooms_fullname": "Student Recreation Centre",
+			"rooms_shortname": "SRC",
+			"rooms_number": "220B",
+			"rooms_name": "SRC_220B",
+			"rooms_address": "6000 Student Union Blvd",
+			"rooms_lat": 49.2683,
+			"rooms_lon": -123.24894,
+			"rooms_seats": 299,
+			"rooms_type": "TBD",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/SRC-220B"
+		},
+		{
+			"rooms_fullname": "Student Recreation Centre",
+			"rooms_shortname": "SRC",
+			"rooms_number": "220C",
+			"rooms_name": "SRC_220C",
+			"rooms_address": "6000 Student Union Blvd",
+			"rooms_lat": 49.2683,
+			"rooms_lon": -123.24894,
+			"rooms_seats": 299,
+			"rooms_type": "TBD",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/SRC-220C"
+		},
+		{
+			"rooms_fullname": "The Leon and Thea Koerner University Centre",
+			"rooms_shortname": "UCLL",
+			"rooms_number": "101",
+			"rooms_name": "UCLL_101",
+			"rooms_address": "6331 Crescent Road V6T 1Z1",
+			"rooms_lat": 49.26867,
+			"rooms_lon": -123.25692,
+			"rooms_seats": 30,
+			"rooms_type": "Small Group",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/UCLL-101"
+		},
+		{
+			"rooms_fullname": "The Leon and Thea Koerner University Centre",
+			"rooms_shortname": "UCLL",
+			"rooms_number": "103",
+			"rooms_name": "UCLL_103",
+			"rooms_address": "6331 Crescent Road V6T 1Z1",
+			"rooms_lat": 49.26867,
+			"rooms_lon": -123.25692,
+			"rooms_seats": 55,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/UCLL-103"
+		},
+		{
+			"rooms_fullname": "The Leon and Thea Koerner University Centre",
+			"rooms_shortname": "UCLL",
+			"rooms_number": "107",
+			"rooms_name": "UCLL_107",
+			"rooms_address": "6331 Crescent Road V6T 1Z1",
+			"rooms_lat": 49.26867,
+			"rooms_lon": -123.25692,
+			"rooms_seats": 48,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/UCLL-107"
+		},
+		{
+			"rooms_fullname": "The Leon and Thea Koerner University Centre",
+			"rooms_shortname": "UCLL",
+			"rooms_number": "109",
+			"rooms_name": "UCLL_109",
+			"rooms_address": "6331 Crescent Road V6T 1Z1",
+			"rooms_lat": 49.26867,
+			"rooms_lon": -123.25692,
+			"rooms_seats": 30,
+			"rooms_type": "Studio Lab",
+			"rooms_furniture": "Classroom-Learn Lab",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/UCLL-109"
+		}
+	]
+}

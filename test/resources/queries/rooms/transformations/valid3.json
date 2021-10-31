@@ -1,0 +1,84 @@
+{
+	"title": "Valid AVG (lng + lat)",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_furniture",
+				"overallAVGLat",
+				"overallAVGLon"
+			],
+			"ORDER": "rooms_furniture"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_furniture"
+			],
+			"APPLY": [
+				{
+					"overallAVGLat": {
+						"AVG": "rooms_lat"
+					}
+				},
+				{
+					"overallAVGLon": {
+						"AVG": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"overallAVGLat": 49.27,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"overallAVGLat": 49.26,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Fixed Tables/Moveable Chairs",
+			"overallAVGLat": 49.27,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"overallAVGLat": 49.27,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"overallAVGLat": 49.26,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Learn Lab",
+			"overallAVGLat": 49.26,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"overallAVGLat": 49.26,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"overallAVGLat": 49.27,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"overallAVGLat": 49.26,
+			"overallAVGLon": -123.25
+		},
+		{
+			"rooms_furniture": "Classroom-Moveable Tablets",
+			"overallAVGLat": 49.27,
+			"overallAVGLon": -123.26
+		}
+	]
+}
