@@ -48,13 +48,13 @@ describe("InsightFacade", function () {
 	describe("Data Folder", function () {
 		before(function () {
 			console.info(`Before: ${this.test?.parent?.title}`);
+			insightFacade = new InsightFacade();
 		});
 
 		beforeEach(function () {
 			// This section resets the insightFacade instance
 			// This runs before each test
 			console.info(`BeforeTest: ${this.currentTest?.title}`);
-			insightFacade = new InsightFacade();
 		});
 
 		after(function () {
@@ -560,19 +560,30 @@ describe("InsightFacade", function () {
 	 * You can still make tests the normal way, this is just a convenient tool for a majority of queries.
 	 */
 	describe("PerformQuery", () => {
-		before(function () {
+		before(async function () {
 			console.info(`Before: ${this.test?.parent?.title}`);
 
 			insightFacade = new InsightFacade();
 
-			// Load the datasets specified in datasetsToQuery and add them to InsightFacade.
-			// Will *fail* if there is a problem reading ANY dataset.
-			const loadDatasetPromises = [
-				insightFacade.addDataset("courses", datasetContents.get("courses") ?? "", InsightDatasetKind.Courses),
-				insightFacade.addDataset("rooms", datasetContents.get("rooms") ?? "", InsightDatasetKind.Rooms),
+			const datasets = [
+				{
+					id: "courses",
+					kind: InsightDatasetKind.Courses
+				},
+				{
+					id: "rooms",
+					kind: InsightDatasetKind.Rooms
+				}
 			];
 
-			return Promise.all(loadDatasetPromises);
+			const datasetsResults = [];
+			for (const dataset of datasets) {
+				datasetsResults.push(
+					await insightFacade.addDataset(dataset.id, datasetContents.get(dataset.id) ?? "", dataset.kind)
+				);
+			}
+
+			return datasetsResults;
 		});
 
 		after(function () {
