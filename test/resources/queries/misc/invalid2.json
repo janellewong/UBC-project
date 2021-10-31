@@ -1,0 +1,27 @@
+{
+	"title": "Limit Transformations",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_uuid",
+				"maxPass"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_uuid",
+				"courses_dept"
+			],
+			"APPLY": [
+				{
+					"maxPass": {
+						"MAX": "courses_pass"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"with": "ResultTooLargeError"
+}
