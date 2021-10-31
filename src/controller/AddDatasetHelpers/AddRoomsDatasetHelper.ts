@@ -64,13 +64,18 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 					const address = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
 						"views-field views-field-field-building-address").getTextValues()[0];
+					const buildingHref = this.getNodesWithClassAttribute(
+						tableRowNodeTree,
+						"views-field views-field-nothing"
+					).getThChildNode(0)[0].attrs.find((attr) => attr.name === "href")?.value;
 					const { lat, lon } = await this.getCoordinates(address);
 					buildings.push({
 						fullName,
 						shortName,
 						address,
 						lat,
-						lon
+						lon,
+						buildingHref: buildingHref?.replace("./", "")
 					});
 				} catch (e) {
 					// do nothing
@@ -150,7 +155,7 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 		const indexHTMLTree = parse(indexHTMLString);
 		const buildings = await this.getBuildings(indexHTMLTree as any as Element);
 		for (const building of buildings) {
-			const htmlFileLocation = `rooms/campus/discover/buildings-and-classrooms/${building.shortName}`;
+			const htmlFileLocation = `rooms/${building.buildingHref}`;
 			const buildingHTMLString = await this.streamToString(data[htmlFileLocation].nodeStream());
 			const buildingHTMLTree = parse(buildingHTMLString);
 			const rooms = this.getRooms(buildingHTMLTree as any as Element, building, id);
