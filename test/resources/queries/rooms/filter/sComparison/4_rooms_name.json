@@ -1,0 +1,48 @@
+{
+	"title": "IS rooms_name",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_name": "ORCH_4074"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_fullname",
+				"rooms_shortname",
+				"rooms_number",
+				"rooms_name",
+				"rooms_address",
+				"rooms_lat",
+				"rooms_lon",
+				"rooms_seats",
+				"rooms_type",
+				"rooms_furniture",
+				"rooms_href"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"rooms_name",
+					"rooms_number"
+				]
+			}
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4074",
+			"rooms_name": "ORCH_4074",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 72,
+			"rooms_type": "Studio Lab",
+			"rooms_furniture": "Classroom-Learn Lab",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4074"
+		}
+	]
+}

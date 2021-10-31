@@ -1,0 +1,308 @@
+{
+	"title": "IS rooms_name",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_name": "ORCH_*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_fullname",
+				"rooms_shortname",
+				"rooms_number",
+				"rooms_name",
+				"rooms_address",
+				"rooms_lat",
+				"rooms_lon",
+				"rooms_seats",
+				"rooms_type",
+				"rooms_furniture",
+				"rooms_href"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"rooms_name",
+					"rooms_number"
+				]
+			}
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "1001",
+			"rooms_name": "ORCH_1001",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 72,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-1001"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3002",
+			"rooms_name": "ORCH_3002",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3002"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3004",
+			"rooms_name": "ORCH_3004",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3004"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3016",
+			"rooms_name": "ORCH_3016",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3016"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3018",
+			"rooms_name": "ORCH_3018",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 48,
+			"rooms_type": "Studio Lab",
+			"rooms_furniture": "Classroom-Learn Lab",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3018"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3052",
+			"rooms_name": "ORCH_3052",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3052"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3058",
+			"rooms_name": "ORCH_3058",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3058"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3062",
+			"rooms_name": "ORCH_3062",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 16,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3062"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3068",
+			"rooms_name": "ORCH_3068",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 16,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3068"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3072",
+			"rooms_name": "ORCH_3072",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 16,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3072"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "3074",
+			"rooms_name": "ORCH_3074",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 72,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3074"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4002",
+			"rooms_name": "ORCH_4002",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4002"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4004",
+			"rooms_name": "ORCH_4004",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4004"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4016",
+			"rooms_name": "ORCH_4016",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4016"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4018",
+			"rooms_name": "ORCH_4018",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 48,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4018"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4052",
+			"rooms_name": "ORCH_4052",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4052"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4058",
+			"rooms_name": "ORCH_4058",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 25,
+			"rooms_type": "Open Design General Purpose",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4058"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4062",
+			"rooms_name": "ORCH_4062",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 16,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4062"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4068",
+			"rooms_name": "ORCH_4068",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 16,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4068"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4072",
+			"rooms_name": "ORCH_4072",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 20,
+			"rooms_type": "Active Learning",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4072"
+		},
+		{
+			"rooms_fullname": "Orchard Commons",
+			"rooms_shortname": "ORCH",
+			"rooms_number": "4074",
+			"rooms_name": "ORCH_4074",
+			"rooms_address": "6363 Agronomy Road",
+			"rooms_lat": 49.26048,
+			"rooms_lon": -123.24944,
+			"rooms_seats": 72,
+			"rooms_type": "Studio Lab",
+			"rooms_furniture": "Classroom-Learn Lab",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-4074"
+		}
+	]
+}

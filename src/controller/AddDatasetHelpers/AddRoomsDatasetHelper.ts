@@ -50,9 +50,9 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 	private getBuildings = async (documentTree: Element): Promise<any[]> => {
 		const tableNodesTree: Element[] = this.getNodesWithNodeName(documentTree, "tbody");
 		let buildings: any[] = [];
-		await Promise.all(tableNodesTree.map(async (tableNode) => {
+		for (const tableNode of tableNodesTree) {
 			const tableRowNodesTree: Element[] = this.getNodesWithNodeName(tableNode, "tr");
-			await Promise.all(tableRowNodesTree.map(async (tableRowNodeTree) => {
+			for (const tableRowNodeTree of tableRowNodesTree) {
 				try {
 					const shortName = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
@@ -75,8 +75,8 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 				} catch (e) {
 					// do nothing
 				}
-			}));
-		}));
+			}
+		}
 		return buildings;
 	}
 
@@ -113,7 +113,7 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 					obj[`${id}_address`] = address;
 					obj[`${id}_lat`] = lat;
 					obj[`${id}_lon`] = lon;
-					obj[`${id}_seats`] = seats;
+					obj[`${id}_seats`] = Number(seats);
 					obj[`${id}_type`] = type;
 					obj[`${id}_furniture`] = furniture;
 					obj[`${id}_href`] = href;
@@ -149,13 +149,12 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 		const indexHTMLString = await this.streamToString(data["rooms/index.htm"].nodeStream());
 		const indexHTMLTree = parse(indexHTMLString);
 		const buildings = await this.getBuildings(indexHTMLTree as any as Element);
-		await Promise.all(buildings.map(async (building) => {
+		for (const building of buildings) {
 			const htmlFileLocation = `rooms/campus/discover/buildings-and-classrooms/${building.shortName}`;
 			const buildingHTMLString = await this.streamToString(data[htmlFileLocation].nodeStream());
 			const buildingHTMLTree = parse(buildingHTMLString);
 			const rooms = this.getRooms(buildingHTMLTree as any as Element, building, id);
 			rooms.forEach((room) => results.push(room));
-			return;
-		}));
+		}
 	}
 }

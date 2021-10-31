@@ -1,0 +1,39 @@
+{
+	"title": "Valid SUM (rooms_seats)",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_shortname": "ANGU"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_fullname",
+				"rooms_shortname",
+				"overallSUM"
+			],
+			"ORDER": "overallSUM"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_fullname",
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"overallSUM": {
+						"SUM": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_fullname": "Henry Angus",
+			"rooms_shortname": "ANGU",
+			"overallSUM": 1546
+		}
+	]
+}
