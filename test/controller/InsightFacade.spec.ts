@@ -1,4 +1,5 @@
 import {
+	InsightDataset,
 	InsightDatasetKind,
 	InsightError,
 	NotFoundError,
@@ -33,6 +34,7 @@ describe("InsightFacade", function () {
 		noCourses: "./test/resources/archives/noCourses.zip",
 		invalidJSON: "./test/resources/archives/invalidJSON.zip",
 		rooms: "./test/resources/archives/rooms.zip",
+		brokenRooms: "./test/resources/archives/brokenRooms.zip",
 	};
 
 	before(function () {
@@ -174,7 +176,54 @@ describe("InsightFacade", function () {
 			const expected: string[] = [id];
 			return insightFacade.addDataset(id, content, InsightDatasetKind.Rooms).then((result: string[]) => {
 				expect(result).to.deep.equal(expected);
+				return expect(insightFacade.listDatasets()).to.eventually.deep.equal([
+					{
+						id: "rooms",
+						kind: InsightDatasetKind.Rooms,
+						numRows: 364,
+					}
+				]);
 			});
+		});
+
+		it("Should add a valid rooms dataset (ignore broken building)", function () {
+			const id: string = "rooms";
+			const content: string = datasetContents.get("brokenRooms") ?? "";
+			const expected: string[] = [id];
+			return insightFacade.addDataset(id, content, InsightDatasetKind.Rooms).then((result: string[]) => {
+				expect(result).to.deep.equal(expected);
+				return expect(insightFacade.listDatasets()).to.eventually.deep.equal([
+					{
+						id: "rooms",
+						kind: InsightDatasetKind.Rooms,
+						numRows: 359,
+					}
+				]);
+			});
+		});
+
+		it("Unable to add dataset (unknown dataset type)", () => {
+			const id: string = "a";
+			const content: string = datasetContents.get("a") ?? "";
+			return expect(insightFacade.addDataset(id, content, "test" as any)).to.eventually.rejectedWith(
+				InsightError
+			);
+		});
+
+		it("Unable to add dataset (add courses in rooms)", () => {
+			const id: string = "a";
+			const content: string = datasetContents.get("courses") ?? "";
+			return expect(insightFacade.addDataset(id, content, InsightDatasetKind.Rooms)).to.eventually.rejectedWith(
+				InsightError
+			);
+		});
+
+		it("Unable to add dataset (add rooms in courses)", () => {
+			const id: string = "a";
+			const content: string = datasetContents.get("rooms") ?? "";
+			return expect(insightFacade.addDataset(id, content, InsightDatasetKind.Courses)).to.eventually.rejectedWith(
+				InsightError
+			);
 		});
 
 		it("Unable to add dataset (is underscore)", () => {

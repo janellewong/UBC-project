@@ -1,0 +1,18 @@
+{
+  "title": "Invalid Syntax",
+  "input": {
+    "WHERE": {},
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_title",
+        "courses_dept",
+	    "courses_id",
+	    "courses_avg",
+        "overallAvg"
+      ]
+    },
+    "TRANSFORMATIONS": []
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}
