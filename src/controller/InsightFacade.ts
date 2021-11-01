@@ -114,7 +114,7 @@ export default class InsightFacade implements IInsightFacade {
 		return id;
 	}
 
-	public performQuery(query: any): Promise<any[]> {
+	public async performQuery(query: any): Promise<any[]> {
 		const datasets = this.getDatasetsData();
 		const queryValidatorHelper = new QueryValidatorHelper(datasets);
 		const usedDataset = queryValidatorHelper.queryValidator(query);

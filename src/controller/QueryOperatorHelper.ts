@@ -21,7 +21,7 @@ export default class QueryOperatorHelper {
 		return arr1.filter((elem) => arr2.indexOf(elem) !== -1);
 	}
 
-	private eqOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
+	private eqOperator = (query: any, isNegated: boolean): any[] => {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
 		return this.getDataset(dataset).filter((data) => {
@@ -29,7 +29,7 @@ export default class QueryOperatorHelper {
 		});
 	}
 
-	private gtOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
+	private gtOperator = (query: any, isNegated: boolean): any[] => {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
 		return this.getDataset(dataset).filter((data) => {
@@ -37,7 +37,7 @@ export default class QueryOperatorHelper {
 		});
 	}
 
-	private ltOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
+	private ltOperator = (query: any, isNegated: boolean): any[] => {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
 		return this.getDataset(dataset).filter((data) => {
@@ -45,10 +45,10 @@ export default class QueryOperatorHelper {
 		});
 	}
 
-	private andOperator = async (queries: any[], isNegated: boolean): Promise<any[]> => {
-		const results = await Promise.all(queries.map((query) => {
+	private andOperator = (queries: any[], isNegated: boolean): any[] => {
+		const results = queries.map((query) => {
 			return this.filterOperator(query, isNegated);
-		}));
+		});
 		let finalArray = results[0];
 		for (let i = 1; i < results.length; i++) {
 			finalArray = this.getCommon(finalArray, results[i]);
@@ -56,10 +56,10 @@ export default class QueryOperatorHelper {
 		return finalArray;
 	}
 
-	private orOperator = async (queries: any[], isNegated: boolean): Promise<any[]> => {
-		const results = await Promise.all(queries.map((query) => {
+	private orOperator = (queries: any[], isNegated: boolean): any[] => {
+		const results = queries.map((query) => {
 			return this.filterOperator(query, isNegated);
-		}));
+		});
 		let finalArray: any[] = [];
 		for (const item of isNegated ? results : results.reverse()) {
 			finalArray = finalArray.concat(item);
@@ -67,11 +67,11 @@ export default class QueryOperatorHelper {
 		return [...new Set(finalArray)];
 	}
 
-	private notOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
+	private notOperator = (query: any, isNegated: boolean): any[] => {
 		return this.filterOperator(query, !isNegated);
 	}
 
-	private isOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
+	private isOperator = (query: any, isNegated: boolean): any[] => {
 		const key = Object.keys(query)[0];
 		const dataset = key.split("_")[0];
 		return this.getDataset(dataset).filter((data) => {
@@ -98,7 +98,7 @@ export default class QueryOperatorHelper {
 	}
 
 
-	private filterOperator = async (query: any, isNegated: boolean): Promise<any[]> => {
+	private filterOperator = (query: any, isNegated: boolean): any[] => {
 		const operator = Object.keys(query)[0];
 		switch (operator) {
 			case "EQ":
@@ -177,11 +177,11 @@ export default class QueryOperatorHelper {
 		});
 	}
 
-	public queryAggregator = async (query: any): Promise<any[]> => {
+	public queryAggregator = (query: any): any[] => {
 		const where = query.WHERE;
 		const options = query.OPTIONS;
 		const transformations = query.TRANSFORMATIONS;
-		let result = await this.filterOperator(where, false);
+		let result = this.filterOperator(where, false);
 		if (transformations) {
 			result = this.applyTransformations(result, transformations);
 		}

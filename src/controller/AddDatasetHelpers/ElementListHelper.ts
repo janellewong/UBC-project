@@ -4,7 +4,7 @@ export default class ElementListHelper extends Array<Element> {
 	public getTextValues = (): string[] => {
 		return this.map((node) => {
 			const childNodeAsElement = node as any as Element;
-			return (childNodeAsElement.childNodes[0] as TextNode).value.replace(/\n/, "").trim();
+			return (childNodeAsElement?.childNodes[0] as TextNode).value.replace(/\n/, "").trim();
 		});
 	}
 
@@ -12,7 +12,7 @@ export default class ElementListHelper extends Array<Element> {
 		const elementListHelper = new ElementListHelper();
 		this.forEach((node) => {
 			elementListHelper.push((node.childNodes as any[] as Element[])
-				.filter((subNode: Element) => !subNode.nodeName.startsWith("#"))[index]);
+				.filter((subNode: Element) => !subNode.nodeName?.startsWith("#"))[index]);
 		});
 		return elementListHelper;
 	}

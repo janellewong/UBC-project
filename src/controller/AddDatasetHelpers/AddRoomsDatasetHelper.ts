@@ -57,18 +57,18 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 				try {
 					const shortName = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
-						"views-field views-field-field-building-code").getTextValues()[0];
+						"views-field views-field-field-building-code").getTextValues()?.[0];
 					const fullName = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
 						"views-field views-field-title"
-					).getThChildNode(0).getTextValues()[0];
+					).getThChildNode(0)?.getTextValues()?.[0];
 					const address = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
-						"views-field views-field-field-building-address").getTextValues()[0];
+						"views-field views-field-field-building-address")?.getTextValues()?.[0];
 					const buildingHref = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
 						"views-field views-field-nothing"
-					).getThChildNode(0)[0].attrs.find((attr) => attr.name === "href")?.value;
+					).getThChildNode(0)?.[0].attrs?.find((attr) => attr.name === "href")?.value;
 					const { lat, lon } = await this.getCoordinates(address);
 					buildings.push({
 						fullName,
@@ -97,20 +97,20 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 					const number = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
 						"views-field views-field-field-room-number"
-					).getThChildNode(0).getTextValues()[0];
+					).getThChildNode(0)?.getTextValues()?.[0];
 					const href = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
 						"views-field views-field-field-room-number"
-					).getThChildNode(0)[0].attrs.find((attr) => attr.name === "href")?.value;
+					).getThChildNode(0)?.[0].attrs?.find((attr) => attr.name === "href")?.value;
 					const seats = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
-						"views-field views-field-field-room-capacity").getTextValues()[0];
+						"views-field views-field-field-room-capacity").getTextValues()?.[0];
 					const furniture = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
-						"views-field views-field-field-room-furniture").getTextValues()[0];
+						"views-field views-field-field-room-furniture").getTextValues()?.[0];
 					const type = this.getNodesWithClassAttribute(
 						tableRowNodeTree,
-						"views-field views-field-field-room-type").getTextValues()[0];
+						"views-field views-field-field-room-type").getTextValues()?.[0];
 					const obj: any = {};
 					obj[`${id}_fullname`] = fullName;
 					obj[`${id}_shortname`] = shortName;
