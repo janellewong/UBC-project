@@ -1,5 +1,4 @@
 import {
-	InsightDataset,
 	InsightDatasetKind,
 	InsightError,
 	NotFoundError,
@@ -35,6 +34,11 @@ describe("InsightFacade", function () {
 		invalidJSON: "./test/resources/archives/invalidJSON.zip",
 		rooms: "./test/resources/archives/rooms.zip",
 		brokenRooms: "./test/resources/archives/brokenRooms.zip",
+		noRoomsData: "./test/resources/archives/noRoomsData.zip",
+		missingRooms: "./test/resources/archives/missingRooms.zip",
+		indexNotHTML: "./test/resources/archives/indexNotHTML.zip",
+		buildingNotHTML: "./test/resources/archives/buildingNotHTML.zip",
+		roomsMissingValues: "./test/resources/archives/roomsMissingValues.zip"
 	};
 
 	before(function () {
@@ -186,7 +190,7 @@ describe("InsightFacade", function () {
 			});
 		});
 
-		it("Should add a valid rooms dataset (ignore broken building)", function () {
+		it("Should add a valid rooms dataset (ignore broken building geolocation)", function () {
 			const id: string = "rooms";
 			const content: string = datasetContents.get("brokenRooms") ?? "";
 			const expected: string[] = [id];
@@ -200,6 +204,62 @@ describe("InsightFacade", function () {
 					}
 				]);
 			});
+		});
+
+		it("Should add a valid rooms dataset (ignore missing buildings)", function () {
+			const id: string = "rooms";
+			const content: string = datasetContents.get("missingRooms") ?? "";
+			const expected: string[] = [id];
+			return insightFacade.addDataset(id, content, InsightDatasetKind.Rooms).then((result: string[]) => {
+				expect(result).to.deep.equal(expected);
+				return expect(insightFacade.listDatasets()).to.eventually.deep.equal([
+					{
+						id: "rooms",
+						kind: InsightDatasetKind.Rooms,
+						numRows: 28,
+					}
+				]);
+			});
+		});
+
+		it("Should add a valid rooms dataset (ignore missing data)", function () {
+			const id: string = "rooms";
+			const content: string = datasetContents.get("roomsMissingValues") ?? "";
+			const expected: string[] = [id];
+			return insightFacade.addDataset(id, content, InsightDatasetKind.Rooms).then((result: string[]) => {
+				expect(result).to.deep.equal(expected);
+				return expect(insightFacade.listDatasets()).to.eventually.deep.equal([
+					{
+						id: "rooms",
+						kind: InsightDatasetKind.Rooms,
+						numRows: 28,
+					}
+				]);
+			});
+		});
+
+		it("Unable to add dataset (rooms index.htm is not valid HTML)", () => {
+			const id: string = "a";
+			const content: string = datasetContents.get("indexNotHTML") ?? "";
+			return expect(insightFacade.addDataset(id, content, InsightDatasetKind.Rooms)).to.eventually.rejectedWith(
+				InsightError
+			);
+		});
+
+		it("Unable to add dataset (rooms building is not valid HTML)", () => {
+			const id: string = "a";
+			const content: string = datasetContents.get("buildingNotHTML") ?? "";
+			return expect(insightFacade.addDataset(id, content, InsightDatasetKind.Rooms)).to.eventually.rejectedWith(
+				InsightError
+			);
+		});
+
+		it("Unable to add dataset (no rooms data)", () => {
+			const id: string = "a";
+			const content: string = datasetContents.get("noRoomsData") ?? "";
+			return expect(insightFacade.addDataset(id, content, InsightDatasetKind.Rooms)).to.eventually.rejectedWith(
+				InsightError
+			);
 		});
 
 		it("Unable to add dataset (unknown dataset type)", () => {
@@ -297,6 +357,22 @@ describe("InsightFacade", function () {
 			const id: string = "a";
 			const content: string = "aGVsbG8gd29ybGQ=";
 			return expect(insightFacade.addDataset(id, content, InsightDatasetKind.Courses)).to.eventually.rejectedWith(
+				InsightError
+			);
+		});
+
+		it("Unable to add rooms dataset (is invalid base64)", () => {
+			const id: string = "a";
+			const content: string = "lorem ipsum dolor sit amet";
+			return expect(insightFacade.addDataset(id, content, InsightDatasetKind.Rooms)).to.eventually.rejectedWith(
+				InsightError
+			);
+		});
+
+		it("Unable to add rooms dataset (is invalid zip)", () => {
+			const id: string = "a";
+			const content: string = "aGVsbG8gd29ybGQ=";
+			return expect(insightFacade.addDataset(id, content, InsightDatasetKind.Rooms)).to.eventually.rejectedWith(
 				InsightError
 			);
 		});

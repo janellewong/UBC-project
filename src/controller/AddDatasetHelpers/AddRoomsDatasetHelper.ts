@@ -160,10 +160,12 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 		const buildings = await this.getBuildings(indexHTMLTree as any as Element);
 		for (const building of buildings) {
 			const htmlFileLocation = `rooms/${building.buildingHref}`;
-			const buildingHTMLString = await this.streamToString(data[htmlFileLocation].nodeStream());
-			const buildingHTMLTree = parse(buildingHTMLString);
-			const rooms = this.getRooms(buildingHTMLTree as any as Element, building, id);
-			rooms.forEach((room) => results.push(room));
+			if (data[htmlFileLocation]) {
+				const buildingHTMLString = await this.streamToString(data[htmlFileLocation].nodeStream());
+				const buildingHTMLTree = parse(buildingHTMLString);
+				const rooms = this.getRooms(buildingHTMLTree as any as Element, building, id);
+				rooms.forEach((room) => results.push(room));
+			}
 		}
 	}
 }
