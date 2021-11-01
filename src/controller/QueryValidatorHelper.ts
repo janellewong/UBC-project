@@ -255,16 +255,6 @@ export default class QueryValidatorHelper {
 		if (!(keys.length === 0 && whereValidatorResult && optionsValidatorResult)) {
 			return false;
 		}
-		const dataset = this.usedDatasets[0];
-		const datasetIndex = this.datasets.findIndex((x) => x.id === dataset);
-		if (
-			!([...new Set(this.usedKeys)])
-				.every((x) => (
-					this.datasets[datasetIndex].kind === InsightDatasetKind.Courses ? validCoursesKeys : validRoomsKeys
-				).includes(x))
-		) {
-			return false;
-		}
-		return dataset;
+		return this.usedDatasets[0];
 	}
 }

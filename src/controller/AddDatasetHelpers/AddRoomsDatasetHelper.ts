@@ -3,6 +3,7 @@ import JSZip from "jszip";
 import {ChildNode, Element, parse} from "parse5";
 import {get} from "http";
 import ElementListHelper from "./ElementListHelper";
+import {InsightError} from "../IInsightFacade";
 
 const API_URL = "http://cs310.students.cs.ubc.ca:11316/api/v1/project_team084/";
 
@@ -19,8 +20,8 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 			return;
 		}
 		if (node.childNodes) {
-			const childNodes = node.childNodes.filter((subNode: ChildNode) => !subNode.nodeName.startsWith("#"));
-			for (const child of childNodes) {
+			// const childNodes = node.childNodes.filter((subNode: ChildNode) => !subNode.nodeName.startsWith("#"));
+			for (const child of node.childNodes) {
 				this.recursivelyFindNodesName(child as any, name, arr);
 			}
 		}
@@ -34,13 +35,13 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 	}
 
 	private recursivelyFindClassAttribute = (node: Element, value: string, arr: any[]): void => {
-		if (node.attrs.some((keyVal) => keyVal.name === "class" && keyVal.value === value)) {
+		if (node.attrs?.some((keyVal) => keyVal.name === "class" && keyVal.value === value)) {
 			arr.push(node);
 			return;
 		}
 		if (node.childNodes) {
-			const childNodes = node.childNodes.filter((subNode: ChildNode) => !subNode.nodeName.startsWith("#"));
-			for (const child of childNodes) {
+			// const childNodes = node.childNodes.filter((subNode: ChildNode) => !subNode.nodeName.startsWith("#"));
+			for (const child of node.childNodes) {
 				this.recursivelyFindClassAttribute(child as any, value, arr);
 			}
 		}
@@ -151,15 +152,20 @@ export default class AddRoomsDatasetHelper extends AddDatasetHelper {
 
 	public makeResult = async (id: string, zipData: JSZip, results: any[]): Promise<void> => {
 		const data = zipData.files;
+		if (!data["rooms/index.htm"]) {
+			throw new InsightError("Not a valid rooms dataset (no index.htm)");
+		}
 		const indexHTMLString = await this.streamToString(data["rooms/index.htm"].nodeStream());
 		const indexHTMLTree = parse(indexHTMLString);
 		const buildings = await this.getBuildings(indexHTMLTree as any as Element);
 		for (const building of buildings) {
 			const htmlFileLocation = `rooms/${building.buildingHref}`;
-			const buildingHTMLString = await this.streamToString(data[htmlFileLocation].nodeStream());
-			const buildingHTMLTree = parse(buildingHTMLString);
-			const rooms = this.getRooms(buildingHTMLTree as any as Element, building, id);
-			rooms.forEach((room) => results.push(room));
+			if (data[htmlFileLocation]) {
+				const buildingHTMLString = await this.streamToString(data[htmlFileLocation].nodeStream());
+				const buildingHTMLTree = parse(buildingHTMLString);
+				const rooms = this.getRooms(buildingHTMLTree as any as Element, building, id);
+				rooms.forEach((room) => results.push(room));
+			}
 		}
 	}
 }
