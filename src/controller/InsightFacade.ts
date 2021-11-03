@@ -23,6 +23,7 @@ export default class InsightFacade implements IInsightFacade {
 		if (fs.existsSync(persistDir)) {
 			fs.removeSync(persistDir);
 		}
+		this.datasets = [];
 	}
 
 	private isValidID = (idName: string): boolean => {
@@ -35,15 +36,15 @@ export default class InsightFacade implements IInsightFacade {
 				const buffer = fs.readFileSync(`${persistDir}/data.json`);
 				return JSON.parse(buffer.toString());
 			} else {
-				if (!fs.existsSync(persistDir)) {
-					fs.mkdirSync(persistDir);
-				}
+				fs.mkdirSync(persistDir);
 			}
 		} catch (e) {
 			// do nothing
 		}
 		return [];
 	}
+
+	private readonly datasets: DatasetData[];
 
 	public async addDataset(id: string, content: string, kind: InsightDatasetKind): Promise<string[]> {
 		// is ID valid?
@@ -54,7 +55,7 @@ export default class InsightFacade implements IInsightFacade {
 		const datasets = this.getDatasetsData();
 
 		// if dataset already exists in instance class
-		if (datasets.some((current: any) => current.id === id)) {
+		if (this.datasets.some((current: any) => current.id === id)) {
 			throw new InsightError("id already exists");
 		}
 
@@ -82,16 +83,16 @@ export default class InsightFacade implements IInsightFacade {
 		}
 
 		// iterate through each file and push result to array
-		datasets.push({
+		this.datasets.push({
 			id,
 			kind,
 			numRows: results.length,
 			results
 		});
 
-		fs.writeFileSync(`${persistDir}/data.json`, JSON.stringify(datasets));
+		fs.writeFileSync(`${persistDir}/data.json`, JSON.stringify(this.datasets));
 
-		return datasets.map((dataset: any) => dataset.id);
+		return this.datasets.map((dataset: any) => dataset.id);
 	}
 
 	public async removeDataset(id: string): Promise<string> {
@@ -103,30 +104,34 @@ export default class InsightFacade implements IInsightFacade {
 		// if it does not exist in this.datasets, throw NotFoundError
 		// Remove dataset from data folder
 
-		const datasets = this.getDatasetsData();
-
-		const index = datasets.findIndex((dataset: any) => dataset.id === id);
+		const index = this.datasets.findIndex((dataset) => dataset.id === id);
+		// const datasets = this.getDatasetsData();
+		//
+		// const index = datasets.findIndex((dataset: any) => dataset.id === id);
 		if (index === -1) {
 			throw new NotFoundError();
 		}
-		datasets.splice(index, 1);
-		fs.writeFileSync(`${persistDir}/data.json`, JSON.stringify(datasets));
+		this.datasets.splice(index, 1);
+		// datasets.splice(index, 1);
+		fs.writeFileSync(`${persistDir}/data.json`, JSON.stringify(this.datasets));
 		return id;
 	}
 
 	public async performQuery(query: any): Promise<any[]> {
-		const datasets = this.getDatasetsData();
-		const queryValidatorHelper = new QueryValidatorHelper(datasets);
+		// const datasets = this.getDatasetsData();
+		// const queryValidatorHelper = new QueryValidatorHelper(datasets);
+		const queryValidatorHelper = new QueryValidatorHelper(this.datasets);
 		const usedDataset = queryValidatorHelper.queryValidator(query);
 		if (!usedDataset) {
 			throw new InsightError("Invalid Query");
 		}
-		const queryOperatorHelper = new QueryOperatorHelper(datasets, usedDataset);
+		const queryOperatorHelper = new QueryOperatorHelper(this.datasets, usedDataset);
 		return queryOperatorHelper.queryAggregator(query);
 	}
 
 	public listDatasets(): Promise<InsightDataset[]> {
-		const datasets = this.getDatasetsData();
-		return Promise.resolve(datasets.map(({ results, ...dataset }: any) => dataset));
+		// const datasets = this.getDatasetsData();
+		// return Promise.resolve(datasets.map(({ results, ...dataset }: any) => dataset));
+		return Promise.resolve(this.datasets.map(({ results, ...dataset }: any) => dataset));
 	}
 }
