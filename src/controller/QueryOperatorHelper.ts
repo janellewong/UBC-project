@@ -201,21 +201,21 @@ export default class QueryOperatorHelper {
 			} else {
 				let res = result;
 				for (const key of options.ORDER.keys.reverse()) {
-					res = res.sort(this.orderSort(key, options.ORDER.dir));
+					res = res.sort(this.orderSort(key));
 				}
-				return res;
+				return options.ORDER.dir === "DOWN" ? res.reverse() : res;
 			}
 		} else {
 			return result;
 		}
 	}
 
-	private orderSort = (order: string, pos: string = "UP") => {
+	private orderSort = (order: string) => {
 		return (courseA: Record<string, string | number>, courseB: Record<string, string | number>) => {
 			if (courseA[order] > courseB[order]) {
-				return pos === "DOWN" ? -1 : 1;
+				return 1;
 			} else if (courseA[order] < courseB[order]) {
-				return pos === "DOWN" ? 1 : -1;
+				return -1;
 			} else {
 				return 0;
 			}

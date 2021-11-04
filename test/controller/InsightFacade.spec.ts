@@ -727,7 +727,19 @@ describe("InsightFacade", function () {
 					if (expected.length !== actual.length) {
 						chai.assert.fail();
 					} else if (input?.OPTIONS?.ORDER) {
-						expect(actual).to.have.deep.equal(expected);
+						if (typeof input.OPTIONS.ORDER === "string") {
+							const expectedFilteredArr = expected.map((x: any) => x[input.OPTIONS.ORDER]);
+							const actualFilteredArr = actual.map((x: any) => x[input.OPTIONS.ORDER]);
+							expect(expectedFilteredArr).to.have.deep.equal(actualFilteredArr);
+						} else {
+							const expectedFilteredArr = expected.map((x: any) => {
+								return input.OPTIONS.ORDER.keys.map((y: string) => x[y]);
+							});
+							const actualFilteredArr = actual.map((x: any) => {
+								return input.OPTIONS.ORDER.keys.map((y: string) => x[y]);
+							});
+							expect(expectedFilteredArr).to.have.deep.equal(actualFilteredArr);
+						}
 					} else {
 						expect(actual).to.have.deep.members(expected);
 					}
