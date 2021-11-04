@@ -1,6 +1,11 @@
 import express, {Application, Request, Response} from "express";
 import * as http from "http";
 import cors from "cors";
+import next from "next";
+import {parse} from "url";
+
+const nextJSApp = next({ dir: "./frontend", dev: process.env.NODE_ENV !== "production" });
+const handle = nextJSApp.getRequestHandler();
 
 export default class Server {
 	private readonly port: number;
@@ -35,13 +40,15 @@ export default class Server {
 				console.error("Server::start() - server already listening");
 				reject();
 			} else {
-				this.server = this.express.listen(this.port, () => {
-					console.info(`Server::start() - server listening on port: ${this.port}`);
-					resolve();
-				}).on("error", (err: Error) => {
-					// catches errors in server start
-					console.error(`Server::start() - server ERROR: ${err.message}`);
-					reject(err);
+				nextJSApp.prepare().then(() => {
+					this.server = this.express.listen(this.port, () => {
+						console.info(`Server::start() - server listening on port: ${this.port}`);
+						resolve();
+					}).on("error", (err: Error) => {
+						// catches errors in server start
+						console.error(`Server::start() - server ERROR: ${err.message}`);
+						reject(err);
+					});
 				});
 			}
 		});
@@ -70,6 +77,12 @@ export default class Server {
 
 	// Registers middleware to parse request before passing them to request handlers
 	private registerMiddleware() {
+
+		this.express.use((req, res) => {
+			const parsedUrl = parse(req.url, true);
+			handle(req, res, parsedUrl);
+		});
+
 		// JSON parser must be place before raw parser because of wildcard matching done by raw parser below
 		this.express.use(express.json());
 		this.express.use(express.raw({type: "application/*", limit: "10mb"}));
