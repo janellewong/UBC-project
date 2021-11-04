@@ -55,7 +55,7 @@ export default class InsightFacade implements IInsightFacade {
 		const datasets = this.getDatasetsData();
 
 		// if dataset already exists in instance class
-		if (this.datasets.some((current: any) => current.id === id)) {
+		if (datasets.some((current: any) => current.id === id)) {
 			throw new InsightError("id already exists");
 		}
 
