@@ -1,16 +1,20 @@
 import express, {Application, Request, Response} from "express";
 import * as http from "http";
 import cors from "cors";
+import InsightFacade from "../controller/InsightFacade";
+import {InsightDatasetKind, NotFoundError} from "../controller/IInsightFacade";
 
 export default class Server {
 	private readonly port: number;
 	private express: Application;
 	private server: http.Server | undefined;
+	private insightFacade: InsightFacade;
 
 	constructor(port: number) {
 		console.info(`Server::<init>( ${port} )`);
 		this.port = port;
 		this.express = express();
+		this.insightFacade = new InsightFacade();
 
 		this.registerMiddleware();
 		this.registerRoutes();
@@ -84,8 +88,67 @@ export default class Server {
 		// http://localhost:4321/echo/hello
 		this.express.get("/echo/:msg", Server.echo);
 
-		// TODO: your other endpoints should go here
+		this.express.put("/dataset/:id/:kind", this.addDataset);
+		this.express.delete("/dataset/:id", this.deleteDataset);
+		this.express.post("/query", this.queryDataset);
+		this.express.get("/datasets", this.getDatasets);
+	}
 
+	private static formResult = (result: any) => {
+		return {
+			result
+		};
+	}
+
+	private static formError = (error: Error) => {
+		return {
+			error: error.toString()
+		};
+	}
+
+	private addDataset = (req: Request, res: Response) => {
+		let id = req.params.id;
+		let content = req.body;
+		let kind = req.params.kind === "courses" ?
+			InsightDatasetKind.Courses :
+			req.params.kind === "rooms" ?
+				InsightDatasetKind.Rooms :
+				undefined;
+		if (!kind) {
+			res.status(400).json(Server.formError(new Error("Not a valid InsightDatasetKind")));
+			return;
+		}
+		return this.insightFacade.addDataset(id, content, kind).then((result) => {
+			res.status(200).json(Server.formResult(result));
+		}).catch((error) => {
+			res.status(400).json(Server.formError(error));
+		});
+	}
+
+	private deleteDataset = (req: Request, res: Response) => {
+		let id = req.params.id;
+		return this.insightFacade.removeDataset(id).then((result) => {
+			res.status(200).json(Server.formResult(result));
+		}).catch((error) => {
+			res.status(error instanceof NotFoundError ? 404 : 400).json(Server.formError(error));
+		});
+	}
+
+	private queryDataset = (req: Request, res: Response) => {
+		let query = req.body;
+		return this.insightFacade.performQuery(query).then((result) => {
+			res.status(200).json(Server.formResult(result));
+		}).catch((error) => {
+			res.status(400).json(Server.formError(error));
+		});
+	}
+
+	private getDatasets = (_req: Request, res: Response) => {
+		return this.insightFacade.listDatasets().then((result: any) => {
+			res.status(200).json(Server.formResult(result));
+		}).catch((err: any) => {
+			res.status(400).json(Server.formError(err));
+		});
 	}
 
 	// The next two methods handle the echo service.
