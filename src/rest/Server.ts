@@ -2,8 +2,17 @@ import express, {Application, Request, Response} from "express";
 import * as http from "http";
 import cors from "cors";
 import fs from "fs-extra";
+import {parse} from "url";
 import InsightFacade from "../controller/InsightFacade";
 import {InsightDatasetKind, NotFoundError} from "../controller/IInsightFacade";
+let nextJSApp: any, handle: any;
+try {
+	const next = require("next");
+	nextJSApp = next({ dir: "./frontend", dev: process.env.NODE_ENV !== "production" });
+	handle = nextJSApp.getRequestHandler();
+} catch (e) {
+	// do nothing
+}
 
 export default class Server {
 	private readonly port: number;
@@ -26,6 +35,19 @@ export default class Server {
 		// this.express.use(express.static("./frontend/public"))
 	}
 
+	private listenServer = (): Promise<void> => {
+		return new Promise((resolve, reject) => {
+			this.server = this.express.listen(this.port, () => {
+				console.info(`Server::start() - server listening on port: ${this.port}`);
+				resolve();
+			}).on("error", (err: Error) => {
+				// catches errors in server start
+				console.error(`Server::start() - server ERROR: ${err.message}`);
+				reject(err);
+			});
+		});
+	}
+
 	/**
 	 * Starts the server. Returns a promise that resolves if success. Promises are used
 	 * here because starting the server takes some time and we want to know when it
@@ -40,14 +62,11 @@ export default class Server {
 				console.error("Server::start() - server already listening");
 				reject();
 			} else {
-				this.server = this.express.listen(this.port, () => {
-					console.info(`Server::start() - server listening on port: ${this.port}`);
-					resolve();
-				}).on("error", (err: Error) => {
-					// catches errors in server start
-					console.error(`Server::start() - server ERROR: ${err.message}`);
-					reject(err);
-				});
+				if (nextJSApp) {
+					nextJSApp.prepare().then(this.listenServer).then(resolve).catch(reject);
+				} else {
+					return this.listenServer().then(resolve).catch(reject);
+				}
 			}
 		});
 	}
@@ -94,6 +113,13 @@ export default class Server {
 		this.express.delete("/dataset/:id", this.deleteDataset);
 		this.express.post("/query", this.queryDataset);
 		this.express.get("/datasets", this.getDatasets);
+
+		if (nextJSApp) {
+			this.express.use((req, res) => {
+				const parsedUrl = parse(req.url, true);
+				handle(req, res, parsedUrl);
+			});
+		}
 	}
 
 	private static formResult = (result: any) => {
@@ -120,8 +146,12 @@ export default class Server {
 			}
 		};
 		for (const key of Object.keys(datasetsToLoad)) {
-			const content = fs.readFileSync(datasetsToLoad[key].path).toString("base64");
-			await this.insightFacade.addDataset(key, content, datasetsToLoad[key].kind);
+			try {
+				const content = fs.readFileSync(datasetsToLoad[key].path).toString("base64");
+				await this.insightFacade.addDataset(key, content, datasetsToLoad[key].kind);
+			} catch (e) {
+				// do nothing
+			}
 		}
 		return res.json({ message: "success" });
 	}
