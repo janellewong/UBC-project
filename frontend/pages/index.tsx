@@ -1,10 +1,15 @@
-import { NextPage } from 'next';
-import {Button} from "@mui/material";
+import {NextPage} from "next";
+import React from "react";
+import CoursesSearch from "../src/components/CoursesSearch";
 
 const Home: NextPage = () => {
-  return (
-  <Button variant="text">Text</Button>
-  )
-}
+	return (
+		<>
+			<br />
+			<br />
+			<CoursesSearch />
+		</>
+	);
+};
 
-export default Home
+export default Home;
