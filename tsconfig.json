@@ -6,13 +6,17 @@
 		"removeComments": true,
 		"preserveConstEnums": true,
 		"sourceMap": true,
+		"jsx": "preserve",
 		"typeRoots": [
 			"./node_modules/@types"
 		]
 	},
 	"include": [
 		"src/**/*.ts",
-		"test/**/*.ts"
+		"test/**/*.ts",
+		"frontend/next-env.d.ts",
+		"frontend/**/*.ts",
+		"frontend/**/*.tsx"
 	],
 	"exclude": [
 		"node_modules"

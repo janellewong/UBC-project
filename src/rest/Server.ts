@@ -1,8 +1,17 @@
 import express, {Application, Request, Response} from "express";
 import * as http from "http";
 import cors from "cors";
+import {parse} from "url";
 import InsightFacade from "../controller/InsightFacade";
 import {InsightDatasetKind, NotFoundError} from "../controller/IInsightFacade";
+let nextJSApp: any, handle: any;
+try {
+	const next = require("next");
+	nextJSApp = next({ dir: "./frontend", dev: process.env.NODE_ENV !== "production" });
+	handle = nextJSApp.getRequestHandler();
+} catch (e) {
+	// do nothing
+}
 
 export default class Server {
 	private readonly port: number;
@@ -25,6 +34,19 @@ export default class Server {
 		// this.express.use(express.static("./frontend/public"))
 	}
 
+	private listenServer = (): Promise<void> => {
+		return new Promise((resolve, reject) => {
+			this.server = this.express.listen(this.port, () => {
+				console.info(`Server::start() - server listening on port: ${this.port}`);
+				resolve();
+			}).on("error", (err: Error) => {
+				// catches errors in server start
+				console.error(`Server::start() - server ERROR: ${err.message}`);
+				reject(err);
+			});
+		});
+	}
+
 	/**
 	 * Starts the server. Returns a promise that resolves if success. Promises are used
 	 * here because starting the server takes some time and we want to know when it
@@ -39,14 +61,11 @@ export default class Server {
 				console.error("Server::start() - server already listening");
 				reject();
 			} else {
-				this.server = this.express.listen(this.port, () => {
-					console.info(`Server::start() - server listening on port: ${this.port}`);
-					resolve();
-				}).on("error", (err: Error) => {
-					// catches errors in server start
-					console.error(`Server::start() - server ERROR: ${err.message}`);
-					reject(err);
-				});
+				if (nextJSApp) {
+					nextJSApp.prepare().then(this.listenServer).then(resolve).catch(reject);
+				} else {
+					return this.listenServer().then(resolve).catch(reject);
+				}
 			}
 		});
 	}
@@ -74,6 +93,14 @@ export default class Server {
 
 	// Registers middleware to parse request before passing them to request handlers
 	private registerMiddleware() {
+
+		if (nextJSApp) {
+			this.express.use((req, res) => {
+				const parsedUrl = parse(req.url, true);
+				handle(req, res, parsedUrl);
+			});
+		}
+
 		// JSON parser must be place before raw parser because of wildcard matching done by raw parser below
 		this.express.use(express.json());
 		this.express.use(express.raw({type: "application/*", limit: "10mb"}));
