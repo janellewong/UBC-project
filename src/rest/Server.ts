@@ -1,6 +1,7 @@
 import express, {Application, Request, Response} from "express";
 import * as http from "http";
 import cors from "cors";
+import fs from "fs-extra";
 import InsightFacade from "../controller/InsightFacade";
 import {InsightDatasetKind, NotFoundError} from "../controller/IInsightFacade";
 
@@ -88,6 +89,7 @@ export default class Server {
 		// http://localhost:4321/echo/hello
 		this.express.get("/echo/:msg", Server.echo);
 
+		this.express.post("/datasets/initialize", this.initializeDataset);
 		this.express.put("/dataset/:id/:kind", this.addDataset);
 		this.express.delete("/dataset/:id", this.deleteDataset);
 		this.express.post("/query", this.queryDataset);
@@ -104,6 +106,24 @@ export default class Server {
 		return {
 			error: error.toString()
 		};
+	}
+
+	private initializeDataset = async (req: Request, res: Response) => {
+		const datasetsToLoad: any = {
+			courses: {
+				path: "./default/courses.zip",
+				kind: InsightDatasetKind.Courses
+			},
+			rooms: {
+				path: "./default/rooms.zip",
+				kind: InsightDatasetKind.Rooms
+			}
+		};
+		for (const key of Object.keys(datasetsToLoad)) {
+			const content = fs.readFileSync(datasetsToLoad[key].path).toString("base64");
+			await this.insightFacade.addDataset(key, content, datasetsToLoad[key].kind);
+		}
+		return res.json({ message: "success" });
 	}
 
 	private addDataset = (req: Request, res: Response) => {
