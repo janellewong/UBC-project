@@ -4,10 +4,8 @@ import performQuery from "../../performQuery";
 import CardComponent from "../CardComponent";
 import makeQuery from "./makeQuery";
 
-const CoursesSearch = () => {
-	const [year, setYear] = useState<string>("");
-	const [dept, setDept] = useState<string>("");
-	const [id, setId] = useState<string>("");
+const RoomsSearch = () => {
+	const [roomName, setRoomName] = useState<string>("");
 
 	const [result, setResult] = useState<any[]>([]);
 	const [error, setError] = useState<string>("");
@@ -20,12 +18,12 @@ const CoursesSearch = () => {
 						<Grid container spacing={2}>
 							<Grid item sm={5} xs={12}>
 								<Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
-									Searching Courses
+									Searching Rooms
 								</Typography>
 								<form
 									onSubmit={async (e): Promise<void> => {
 										e.preventDefault();
-										const query = makeQuery(year, dept, id)
+										const query = makeQuery(roomName)
 										try {
 											const queryResult = await performQuery(query);
 											if (queryResult.result) setResult(queryResult.result);
@@ -36,34 +34,12 @@ const CoursesSearch = () => {
 									}}
 								>
 									<TextField
-										label={"Year"}
+										label={"Room name (ex. \"ANGU_098\" = Henry Angus, Room 098)"}
 										fullWidth
-										value={year}
+										value={roomName}
 										required
 										onChange={(e): void => {
-											setYear(e.target.value);
-										}}
-									/>
-									<br />
-									<br />
-									<TextField
-										label={"Course Department (ex. CPSC)"}
-										fullWidth
-										value={dept}
-										required
-										onChange={(e): void => {
-											setDept(e.target.value);
-										}}
-									/>
-									<br />
-									<br />
-									<TextField
-										label={"Course ID (ex. 310)"}
-										fullWidth
-										value={id}
-										required
-										onChange={(e): void => {
-											setId(e.target.value);
+											setRoomName(e.target.value);
 										}}
 									/>
 									<br />
@@ -87,7 +63,7 @@ const CoursesSearch = () => {
 										return (
 											<CardComponent>
 												<Container>
-													<h1>{x.failed} people failed {x.courses_dept.toUpperCase()} {x.courses_id} in {x.courses_year}.</h1>
+													<h1>{x.seats} seats are available in Room {x.rooms_name}.</h1>
 												</Container>
 											</CardComponent>
 										)
@@ -104,4 +80,4 @@ const CoursesSearch = () => {
 	);
 };
 
-export default CoursesSearch;
+export default RoomsSearch;
