@@ -1,6 +1,7 @@
 import express, {Application, Request, Response} from "express";
 import * as http from "http";
 import cors from "cors";
+import fs from "fs-extra";
 import {parse} from "url";
 import InsightFacade from "../controller/InsightFacade";
 import {InsightDatasetKind, NotFoundError} from "../controller/IInsightFacade";
@@ -93,14 +94,6 @@ export default class Server {
 
 	// Registers middleware to parse request before passing them to request handlers
 	private registerMiddleware() {
-
-		if (nextJSApp) {
-			this.express.use((req, res) => {
-				const parsedUrl = parse(req.url, true);
-				handle(req, res, parsedUrl);
-			});
-		}
-
 		// JSON parser must be place before raw parser because of wildcard matching done by raw parser below
 		this.express.use(express.json());
 		this.express.use(express.raw({type: "application/*", limit: "10mb"}));
@@ -115,10 +108,18 @@ export default class Server {
 		// http://localhost:4321/echo/hello
 		this.express.get("/echo/:msg", Server.echo);
 
+		this.express.post("/datasets/initialize", this.initializeDataset);
 		this.express.put("/dataset/:id/:kind", this.addDataset);
 		this.express.delete("/dataset/:id", this.deleteDataset);
 		this.express.post("/query", this.queryDataset);
 		this.express.get("/datasets", this.getDatasets);
+
+		if (nextJSApp) {
+			this.express.use((req, res) => {
+				const parsedUrl = parse(req.url, true);
+				handle(req, res, parsedUrl);
+			});
+		}
 	}
 
 	private static formResult = (result: any) => {
@@ -131,6 +132,28 @@ export default class Server {
 		return {
 			error: error.toString()
 		};
+	}
+
+	private initializeDataset = async (req: Request, res: Response) => {
+		const datasetsToLoad: any = {
+			courses: {
+				path: "./default/courses.zip",
+				kind: InsightDatasetKind.Courses
+			},
+			rooms: {
+				path: "./default/rooms.zip",
+				kind: InsightDatasetKind.Rooms
+			}
+		};
+		for (const key of Object.keys(datasetsToLoad)) {
+			try {
+				const content = fs.readFileSync(datasetsToLoad[key].path).toString("base64");
+				await this.insightFacade.addDataset(key, content, datasetsToLoad[key].kind);
+			} catch (e) {
+				// do nothing
+			}
+		}
+		return res.json({ message: "success" });
 	}
 
 	private addDataset = (req: Request, res: Response) => {
