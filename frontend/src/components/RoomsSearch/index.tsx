@@ -9,6 +9,7 @@ const RoomsSearch = () => {
 
 	const [result, setResult] = useState<any[]>([]);
 	const [error, setError] = useState<string>("");
+	const [loading, setLoading] = useState<boolean>(false);
 
 	return (
 		<Container>
@@ -23,13 +24,17 @@ const RoomsSearch = () => {
 								<form
 									onSubmit={async (e): Promise<void> => {
 										e.preventDefault();
+										setLoading(true)
+										setResult([]);
 										const query = makeQuery(roomName)
 										try {
 											const queryResult = await performQuery(query);
 											if (queryResult.result) setResult(queryResult.result);
 											else setError(queryResult.error)
+											setLoading(false)
 										} catch (e) {
 											setError(String(e));
+											setLoading(false)
 										}
 									}}
 								>
@@ -63,13 +68,15 @@ const RoomsSearch = () => {
 										return (
 											<CardComponent>
 												<Container>
-													<h1>{x.seats} seats are available in Room {x.rooms_name}.</h1>
+													<h1>{x.seats} seats are available in Room {x.rooms_name.replace("_", " ")}.</h1>
 												</Container>
 											</CardComponent>
 										)
 									})
-								: (
-									<Alert severity="error">{error ? error : "No Results Found."}</Alert>
+								: loading ? (
+									<Alert severity="warning">{"Loading"}</Alert>
+								) : (
+									<Alert severity="error">{"No Results Found."}</Alert>
 								)}
 							</Grid>
 						</Grid>

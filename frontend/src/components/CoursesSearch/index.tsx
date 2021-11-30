@@ -11,6 +11,7 @@ const CoursesSearch = () => {
 
 	const [result, setResult] = useState<any[]>([]);
 	const [error, setError] = useState<string>("");
+	const [loading, setLoading] = useState<boolean>(false);
 
 	return (
 		<Container>
@@ -25,13 +26,17 @@ const CoursesSearch = () => {
 								<form
 									onSubmit={async (e): Promise<void> => {
 										e.preventDefault();
+										setResult([]);
+										setLoading(true);
 										const query = makeQuery(year, dept, id)
 										try {
 											const queryResult = await performQuery(query);
 											if (queryResult.result) setResult(queryResult.result);
 											else setError(queryResult.error)
+											setLoading(false)
 										} catch (e) {
 											setError(String(e));
+											setLoading(false)
 										}
 									}}
 								>
@@ -92,8 +97,10 @@ const CoursesSearch = () => {
 											</CardComponent>
 										)
 									})
-								: (
-									<Alert severity="error">{error ? error : "No Results Found."}</Alert>
+								: loading ? (
+									<Alert severity="warning">{"Loading"}</Alert>
+								) : (
+									<Alert severity="error">{"No Results Found."}</Alert>
 								)}
 							</Grid>
 						</Grid>
